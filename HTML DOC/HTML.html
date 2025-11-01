@@ -14,7 +14,7 @@ Markup Language = Special Syntax like Heading, Paragraph, Images, Numbered list(
 <head> <!-- Head Section,Contains meta-information about the document (not displayed on the page).-->
     <meta charset="UTF-8"> <!-- Character Encoding, Ensures the page supports all characters (UTF-8 encoding).-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive Design,Makes the page adjust properly on mobile and desktop screens.-->
-    <title>HTML Doc</title> <!-- Page Title,Sets the title that appears on the browser tab.-->
+    <title>HTML Doc Home page</title> <!-- Page Title,Sets the title that appears on the browser tab.-->
    <link rel="icon" href="./html logo.png"> <!-- Favicon Link, Sets a small icon that appears beside the page title in the browser tab. -->
 </head>
 <body> <!-- Page Body,Contains all the visible content of the webpage (text, images, etc.) -->
@@ -64,11 +64,19 @@ Iure nostrum autem aliquid perspiciatis sapiente vero amet ea, impedit velit, ip
         <li>Item 3.2</li>
         <li>Item 3.4</li>
     </ul>
-    <li>Item 4</li>
+    <li id="list">Item 4</li>
     <li>Item 5</li>
 </ul>
 <p> Comments(<!--  -->): Notes inside the HTML doc that are not displayed in the browser. Inspect the page to check the comments </p>
 <p>The shortcut <ul><li>I key in windows is `shift+Alt+A`. </li> <li> For Mac I don't have buget will update soon.</li></ul>
-    
+    <ul>
+        <li>Relative File Path: A path that starts from the current file's location.</li>
+        <li>Absolute File Path: A path that starts from the root directory or full URL</li>
+    </ul>
+<!-- Links or Hyperlinks -->
+ <!-- Atrribute name is href and attribute value is ./HTML2.html -->
+    <a href="./HTML2.html">A Hyperlinks may be in form images, text or any elements that helps to navigate to another website</a>
+    <br> <!-- Anchor Linking / Internal Linking --> 
+    <a href="#list">Relative Links</a>
 </body> <!-- Body End Tag, Closes the body section. -->
 </html> <!-- Closes the entire HTML document. -->
