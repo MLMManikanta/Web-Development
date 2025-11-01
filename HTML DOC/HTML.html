@@ -1,82 +1,299 @@
 <!-- 
- H =Hyper, T= Test, M=Markup, L=Language
-Hyper text = Linking between pages
-Markup Language = Special Syntax like Heading, Paragraph, Images, Numbered list(In simple words taking content any applying some special rules)
+HTML = Hyper Text Markup Language
+Hyper Text = Linking between pages
+Markup Language = Uses special syntax like headings, paragraphs, images, and lists.
+(In simple words: taking content and applying special rules to structure it.)
 -->
 
-<!--HTML is needed on every webpage in order to display content-->
-<!--HTML Tags wraps content and provides instruction to the browser -->
-<!-- To generate the Boilerplate(means basic format of HTML with html,head, body without any pre-defined iteams), the shortcut is use '!'press enter key. -->
-<!-- Nesting: HTML elements are places inside one another creating a hirarchal structure like html is parent and head & body tags are child -->
-<!--Identing: Visually organises code to quickly identify the hierarchy of elements (In short easy to see and understand it) -->
-<!DOCTYPE html> <!--Document Type, Tells the browser this is an HTML5 document.-->
-<html lang="en"> <!--Root Element, Wraps the entire webpage content; lang="en" specifies English as the page language, we can change lang based on pre-defined attributes values  -->
-<head> <!-- Head Section,Contains meta-information about the document (not displayed on the page).-->
-    <meta charset="UTF-8"> <!-- Character Encoding, Ensures the page supports all characters (UTF-8 encoding).-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive Design,Makes the page adjust properly on mobile and desktop screens.-->
-    <title>HTML Doc Home page</title> <!-- Page Title,Sets the title that appears on the browser tab.-->
-   <link rel="icon" href="./html logo.png"> <!-- Favicon Link, Sets a small icon that appears beside the page title in the browser tab. -->
+<!-- HTML is required on every webpage to display content -->
+<!-- HTML Tags wrap content and give instructions to the browser -->
+<!-- Boilerplate = Basic HTML setup (html, head, body). Shortcut: type '!' + Enter -->
+<!-- Nesting = Placing elements inside each other (html is parent; head and body are children) -->
+<!-- Indenting = Visually organizing code to understand hierarchy easily -->
+
+<!DOCTYPE html> 
+<!-- Document Type: Tells the browser this is an HTML5 document -->
+
+<html lang="en"> 
+<!-- Root element; wraps the entire page. lang="en" means English -->
+
+<head> 
+    <!-- Contains page information (not visible on the webpage) -->
+
+    <meta charset="UTF-8"> 
+    <!-- Character encoding: UTF-8 supports all characters -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Makes the website responsive on mobile and desktop -->
+
+    <title>HTML Doc Home Page</title> 
+    <!-- Title of the webpage shown on browser tab -->
+
+    <link rel="icon" href="./html logo.png"> 
+    <!-- Favicon: small icon shown in the browser tab -->
 </head>
-<body> <!-- Page Body,Contains all the visible content of the webpage (text, images, etc.) -->
- <!-- Heading Tags  -->
-<!-- Heading hierarchy in the page h1 > h2 > h3 > h4 > h5 > h6 -->
-  <!-- H1. Page contains only oncein a page, main title  -->
-  <h1>H1 = Largest heading in page </h1>
-  <!-- Sub heading below h2,h3,h4,h5,h6 -->
-  <h2>H2 = Second largest heading in the page</h2>
-  <h3>H3 = Third largest heading in the page</h3>
-  <h4>H4 = Fourth largest heading in the page</h4>
-  <h5>H5 = Firth largest heading in the page</h5>
-  <h6>H6 = Smallest heading in the page</h6>
 
- <!-- Paragraph tags for para -->   
-<p>P = Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui vel laborum mollitia harum animi libero maiores, suscipit, aperiam totam velit exercitationem reprehenderit. Sequi eveniet cumque mollitia placeat unde laboriosam excepturi.
-Quod labore ex sunt animi molestias iste sint, nisi vel doloremque quo accusamus inventore dolorum, reprehenderit, veritatis delectus tempora sit placeat at magni! Magnam tempore cupiditate reprehenderit quibusdam facere pariatur.
-Iste nemo, doloremque commodi cum perferendis excepturi cumque ipsam sapiente eius aliquid rerum distinctio incidunt eligendi nisi porro nobis eos facilis minus, quod inventore sint exercitationem dignissimos molestias. Eligendi, praesentium!
-Deleniti et fugit, quisquam itaque, exercitationem saepe fuga, odit incidunt nisi nesciunt est veniam doloribus praesentium recusandae. Est sed distinctio veritatis, consectetur quod dicta tempore consequatur beatae quas deserunt quaerat.
-Iure nostrum autem aliquid perspiciatis sapiente vero amet ea, impedit velit, ipsum repellat consequuntur laudantium optio ad, asperiores aliquam reiciendis facilis qui cumque. Reprehenderit molestiae officia nostrum consequuntur. Nemo, qui. </p>
-<p> P = I am above is <br> <!-- Line break tag --> (br to break line) paragraph</p>
+<body> 
+    <!-- Contains the visible content of the webpage -->
 
-<!-- List <li>
- 1. Ordered list like number, alphabets, Tags: <ol>
- 2. Unordered list like bullet points , arrows can be desgined using the CSS as well <ul> -->
-<h2>Ordered list</h2>
-<ol>
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
-    <ol>
-        <li>Item 3.1</li>
-        <li>Item 3.2</li>
-        <li>Item 3.4</li>
-    </ol>
-    <li>Item 4</li>
-    <li>Item 5</li>
-</ol>
-<h2>Unordered list</h2>
-<h2>Ordered list</h2>
+    <!-- Heading Tags -->
+    <!-- Heading hierarchy: h1 > h2 > h3 > h4 > h5 > h6 -->
+    <!-- h1 should be used only once (main title) -->
+
+   <h1>HTML Basic Concepts</h1>
+
+<h2>What is HTML?</h2>
 <ul>
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
-    <ul>
-        <li>Item 3.1</li>
-        <li>Item 3.2</li>
-        <li>Item 3.4</li>
-    </ul>
-    <li id="list">Item 4</li>
-    <li>Item 5</li>
+    <li>
+        <strong>HTML</strong> – Hyper Text Markup Language.<br>
+        Example: <code>&lt;html&gt;...&lt;/html&gt;</code>
+    </li>
+
+    <li>
+        <strong>Hyper Text</strong> – Linking between web pages.<br>
+        Example: <code>&lt;a href="page.html"&gt;Go&lt;/a&gt;</code>
+    </li>
+
+    <li>
+        <strong>Markup Language</strong> – Uses special syntax to structure content like headings, images, paragraphs.<br>
+        Example: <code>&lt;h1&gt;Heading&lt;/h1&gt;</code>
+    </li>
 </ul>
-<p> Comments(<!--  -->): Notes inside the HTML doc that are not displayed in the browser. Inspect the page to check the comments </p>
-<p>The shortcut <ul><li>I key in windows is `shift+Alt+A`. </li> <li> For Mac I don't have buget will update soon.</li></ul>
-    <ul>
-        <li>Relative File Path: A path that starts from the current file's location.</li>
-        <li>Absolute File Path: A path that starts from the root directory or full URL</li>
-    </ul>
-<!-- Links or Hyperlinks -->
- <!-- Atrribute name is href and attribute value is ./HTML2.html -->
-    <a href="./HTML2.html">A Hyperlinks may be in form images, text or any elements that helps to navigate to another website</a>
-    <br> <!-- Anchor Linking / Internal Linking --> 
-    <a href="#list">Relative Links</a>
-</body> <!-- Body End Tag, Closes the body section. -->
-</html> <!-- Closes the entire HTML document. -->
+<hr>
+<h2>HTML Boilerplate</h2>
+<ul>
+    <li>
+        <strong>Shortcut:</strong> Type <code>!</code> and press Enter to generate boilerplate.
+    </li>
+    <li>
+        <strong>Nesting:</strong> Elements placed inside each other (HTML → Head & Body).<br>
+        Example: <code>&lt;body&gt; &lt;h1&gt;Hello&lt;/h1&gt; &lt;/body&gt;</code>
+    </li>
+    <li>
+        <strong>Indenting:</strong> Organized spacing to show hierarchy clearly.
+    </li>
+</ul>
+
+<h2>Boilerplate Code</h2>
+<ul>
+    <li>
+        <strong>&lt;!DOCTYPE html&gt;</strong> – Declares HTML5 document.<br>
+        Example: <code>&lt;!DOCTYPE html&gt;</code>
+    </li>
+
+    <li>
+        <strong>&lt;html lang="en"&gt;</strong> – Root element with language set to English.<br>
+        Example: <code>&lt;html lang="en"&gt;</code>
+    </li>
+
+    <li>
+        <strong>&lt;head&gt;</strong> – Holds metadata like title, charset, styles.<br>
+        Example: <code>&lt;head&gt;...&lt;/head&gt;</code>
+    </li>
+
+    <li>
+        <strong>&lt;meta charset="UTF-8"&gt;</strong> – Supports all characters.<br>
+        Example: <code>&lt;meta charset="UTF-8"&gt;</code>
+    </li>
+
+    <li>
+        <strong>&lt;meta name="viewport"&gt;</strong> – Makes page responsive.<br>
+        Example: <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+    </li>
+
+    <li>
+        <strong>&lt;title&gt;</strong> – Shows title on browser tab.<br>
+        Example: <code>&lt;title&gt;Home Page&lt;/title&gt;</code>
+    </li>
+
+    <li>
+        <strong>&lt;link rel="icon"&gt;</strong> – Adds favicon icon.<br>
+        Example: <code>&lt;link rel="icon" href="logo.png"&gt;</code>
+    </li>
+</ul>
+<hr>
+<h2>Heading Tags</h2>
+<ul>
+    <li><strong>&lt;h1&gt;</strong> – Main largest heading.<br>
+        Example: <code>&lt;h1&gt;Main Title&lt;/h1&gt;</code>
+    </li>
+    <li><strong>&lt;h2&gt;</strong> – Sub-heading.<br>
+        Example: <code>&lt;h2&gt;Sub Heading&lt;/h2&gt;</code>
+    </li>
+    <li><strong>&lt;h3&gt;</strong> – Section heading.<br>
+        Example: <code>&lt;h3&gt;Section&lt;/h3&gt;</code>
+    </li>
+    <li><strong>&lt;h4&gt;</strong>, <strong>&lt;h5&gt;</strong>, <strong>&lt;h6&gt;</strong> – Smaller headings.<br>
+        Example: <code>&lt;h6&gt;Smallest Heading&lt;/h6&gt;</code>
+    </li>
+</ul>
+<hr>
+<h2>Paragraph & Line Break</h2>
+<ul>
+    <li>
+        <strong>&lt;p&gt;</strong> – Used for paragraph text.<br>
+        Example: <code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code>
+    </li>
+    <li>
+        <strong>&lt;br&gt;</strong> – Inserts a line break.<br>
+        Example: <code>Hello&lt;br&gt;World</code>
+    </li>
+</ul>
+<hr>
+
+<!-- ================= LISTS IN HTML ================= -->
+
+<h2>Types of Lists in HTML</h2>
+
+
+<!--  ORDERED LIST -->
+<h3>1. Ordered List (&lt;ol&gt;)</h3>
+
+<p><strong>Explanation:</strong>  
+An Ordered List displays items in a numbered order such as 1, 2, 3.  
+Each item is written inside an <code>&lt;li&gt;</code> tag.</p>
+
+<p><strong>Example Code:</strong></p>
+<pre><code>&lt;ol&gt;
+    &lt;li&gt;HTML Basics&lt;/li&gt;
+    &lt;li&gt;CSS Styling&lt;/li&gt;
+    &lt;li&gt;JavaScript Concepts
+        &lt;ol&gt;
+            &lt;li&gt;Variables&lt;/li&gt;
+            &lt;li&gt;Functions&lt;/li&gt;
+            &lt;li&gt;Loops&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;React Framework&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+<!-- Rendered Output -->
+<ol>
+    <li>HTML Basics</li>
+    <li>CSS Styling</li>
+    <li>JavaScript Concepts
+        <ol>
+            <li>Variables</li>
+            <li>Functions</li>
+            <li>Loops</li>
+        </ol>
+    </li>
+    <li>React Framework</li>
+</ol>
+
+<hr>
+
+
+<!--  UNORDERED LIST -->
+<h3>2. Unordered List (&lt;ul&gt;)</h3>
+
+<p><strong>Explanation:</strong>  
+An Unordered List displays items with bullet points.  
+Useful for categories or unordered items.</p>
+
+<p><strong>Example Code:</strong></p>
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;Frontend Technologies&lt;/li&gt;
+    &lt;li&gt;Backend Technologies&lt;/li&gt;
+    &lt;li&gt;Databases
+        &lt;ul&gt;
+            &lt;li&gt;MySQL&lt;/li&gt;
+            &lt;li&gt;MongoDB&lt;/li&gt;
+            &lt;li&gt;PostgreSQL&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;DevOps Tools&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<!-- Rendered Output -->
+<ul>
+    <li>Frontend Technologies</li>
+    <li>Backend Technologies</li>
+    <li>Databases
+        <ul>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+            <li>PostgreSQL</li>
+        </ul>
+    </li>
+    <li>DevOps Tools</li>
+</ul>
+
+<hr>
+
+
+<!--  DESCRIPTION LIST -->
+<h3>3. Description List (&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;)</h3>
+
+<p><strong>Explanation:</strong>  
+A Description List contains terms and descriptions.  
+Ideal for definitions, FAQs, or glossary sections.</p>
+
+<p><strong>Example Code:</strong></p>
+<pre><code>&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;A markup language used to structure webpages.&lt;/dd&gt;
+
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Used for styling webpages with layouts and colors.&lt;/dd&gt;
+
+    &lt;dt&gt;JavaScript&lt;/dt&gt;
+    &lt;dd&gt;A scripting language for interactivity.&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+
+<hr>
+<!-- Rendered Output -->
+<dl>
+    <dt><strong>HTML</strong></dt>
+    <dd>A markup language used to structure webpages.</dd>
+
+    <dt><strong>CSS</strong></dt>
+    <dd>Used for styling webpages with layouts and colors.</dd>
+
+    <dt><strong>JavaScript</strong></dt>
+    <dd>A scripting language for interactivity.</dd>
+</dl>
+
+<hr>
+<h2>Comments</h2>
+<ul>
+    <li>
+        <strong>HTML Comments</strong> – Notes not shown on the webpage.<br>
+        Example: <code>&lt;!-- This is a comment --&gt;</code>
+    </li>
+    <li>
+        Shortcut (Windows): <strong>Shift + Alt + A</strong>
+    </li>
+</ul>
+<hr>
+<h2>File Paths</h2>
+<ul>
+    <li>
+        <strong>Relative Path</strong> – Starts from current file.<br>
+        Example: <code>./images/pic.jpg</code>
+    </li>
+
+    <li>
+        <strong>Absolute Path</strong> – Full location or full URL.<br>
+        Example: <code>https://example.com/image.jpg</code>
+    </li>
+</ul>
+<hr>
+<h2>Hyperlinks</h2>
+<ul>
+    <li>
+        <strong>&lt;a&gt;</strong> – Creates clickable links.<br>
+        Example: <code>&lt;a href="page.html"&gt;Go to Page&lt;/a&gt;</code>
+    </li>
+
+    <li>
+        <strong>Internal Link</strong> – Uses ID to jump within page.<br>
+        Example: <code>&lt;a href="#section"&gt;Go Down&lt;/a&gt;</code>
+    </li>
+</ul>
+
+</body> <!-- End of visible body section -->
+</html> <!-- End of HTML document -->
