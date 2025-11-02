@@ -1,0 +1,60 @@
+/* Full page layout */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for all sections */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Common style for each section */
+.section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Section colors */
+.html-section {
+    background-color: #E85B27;
+}
+
+.css-section {
+    background-color: #2C60E7;
+}
+
+.js-section {
+    background-color: #F6D821;
+}
+
+.react-section {
+    background-color: #48CEF6;
+}
+
+/* Centering React image + text vertically */
+.react-content {
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Link style */
+.section a {
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
