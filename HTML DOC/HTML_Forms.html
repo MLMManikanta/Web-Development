@@ -208,14 +208,64 @@
         <li><code>value=""</code> → Data sent to server when the option is selected</li>
         <li>First option can be used as a placeholder</li>
     </ul>
+    <hr>
+    
+    <!--  BUTTON TAG - SHORT NOTES -->
+
+    <h3>About the &lt;button&gt; Tag</h3>
+
+    <p>The <code>&lt;button&gt;</code> tag is used to create clickable buttons in forms or web pages.</p>
+
+    <h4>Types of Buttons</h4>
+    <ul>
+    <li><b>button</b> – normal clickable button (does not submit form)</li>
+    <li><b>submit</b> – submits the form</li>
+    <li><b>reset</b> – resets all form fields to default</li>
+    </ul>
+
+    <h4>Basic Examples</h4>
+
+    <!-- Default Button -->
+    <label>Normal Button:</label>
+    <button type="button">Click Me</button>
+    <br><br>
+
+    <!-- Submit Button -->
+    <label>Submit Button:</label>
+    <button type="submit">Submit</button>
+    <br><br>
+
+    <!-- Reset Button -->
+    <label>Reset Button:</label>
+    <button type="reset">Reset</button>
+    <br><br>
+
+    <h4>Useful Attributes</h4>
+    <ul>
+    <li><b>type</b> — "button", "submit", or "reset"</li>
+    <li><b>disabled</b> — makes the button unclickable</li>
+    <li><b>name</b> — used to send value in a form</li>
+    <li><b>value</b> — value sent when form is submitted</li>
+    <li><b>id</b> — used for JavaScript or CSS</li>
+    </ul>
+
+    <h4>Example With Attributes</h4>
+    <button type="submit" name="registerBtn" value="register" id="btn1" disabled>
+    Register Now
+    </button>
+    <!-- Hyperlink Description -->
+    <p><strong>Hyperlink:</strong> A hyperlink is used to navigate to another webpage or location when clicked.</p>
+
+    <!-- Button Description -->
+    <p><strong>Button:</strong> A button performs an action such as submitting a form or triggering a function.</p>
 
 
     <hr><hr>
         
-    <form action="/register" method="post">
+    <form action="" method="get">
 
     <label for="username">Username:</label>
-    <input type="text" id="username" name="username" placeholder="Enter the username"><br><br>
+    <input type="text" id="username" name="username" placeholder="Enter the username" required ><br><br>
 
     <label for="password">Password:</label>
     <input type="password" id="password" name="password"><br><br>
@@ -227,7 +277,7 @@
     <input type="date" id="dob" name="dob"><br><br>
 
     <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone"><br><br>
+    <input type="tel" id="phone" name="phone" required ><br><br>
 
     <label for="age">Age:</label>
     <input type="number" id="age" name="age"><br><br>
@@ -273,7 +323,7 @@
         <option value="java">Java</option>
     </select>
     <br><br>
-    <input type="button" value="Submit">
+    <input type="submit" value="Submit">
 </form>
 
 </body>
