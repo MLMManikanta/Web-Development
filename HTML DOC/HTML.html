@@ -35,13 +35,11 @@ Markup Language = Uses special syntax like headings, paragraphs, images, and lis
 
 <body> 
     <!-- Contains the visible content of the webpage -->
-
     <!-- Heading Tags -->
     <!-- Heading hierarchy: h1 > h2 > h3 > h4 > h5 > h6 -->
     <!-- h1 should be used only once (main title) -->
 
    <h1>HTML Basic Concepts</h1>
-
 <h2>What is HTML?</h2>
 <ul>
     <li>
@@ -142,9 +140,7 @@ Markup Language = Uses special syntax like headings, paragraphs, images, and lis
 <hr>
 
 <!-- ================= LISTS IN HTML ================= -->
-
 <h2>Types of Lists in HTML</h2>
-
 
 <!--  ORDERED LIST -->
 <h3>1. Ordered List (&lt;ol&gt;)</h3>
@@ -243,8 +239,6 @@ Ideal for definitions, FAQs, or glossary sections.</p>
     &lt;dd&gt;A scripting language for interactivity.&lt;/dd&gt;
 &lt;/dl&gt;
 </code></pre>
-
-<hr>
 <!-- Rendered Output -->
 <dl>
     <dt><strong>HTML</strong></dt>
@@ -273,7 +267,7 @@ Ideal for definitions, FAQs, or glossary sections.</p>
 <ul>
     <li>
         <strong>Relative Path</strong> – Starts from current file.<br>
-        Example: <code>./images/pic.jpg</code>
+        Example: <code>./images/pic.png</code>
     </li>
 
     <li>
@@ -294,6 +288,102 @@ Ideal for definitions, FAQs, or glossary sections.</p>
         Example: <code>&lt;a href="#section"&gt;Go Down&lt;/a&gt;</code>
     </li>
 </ul>
+<hr>
 
+<!-- Image tags -->
+<h3>Image Tag (&lt;img&gt;)</h3>
+
+<p><strong>Explanation:</strong><br>
+The <code>&lt;img&gt;</code> tag is used to display images in a webpage.  
+It is a <strong>self-closing tag</strong> and requires key attributes like:
+</p>
+
+<ul>
+    <li><strong>src</strong> → Source of the image (file path or URL)</li>
+    <li><strong>alt</strong> → Text shown when image fails to load (important for accessibility)</li>
+    <li><strong>height</strong> → Sets the image height</li>
+    <li><strong>width</strong> → Sets the image width</li>
+</ul>
+
+<p><strong>Additional Info:</strong></p>
+<ul>
+    <li><strong>Relative Path</strong>: Loads image from the current folder (e.g., <code>./images/logo.png</code>)</li>
+    <li><strong>Absolute Path</strong>: Full URL to an image on the internet</li>
+    <li><strong>alt text</strong> improves accessibility and SEO</li>
+    <li>If only height is given, width adjusts automatically (and vice-versa)</li>
+</ul>
+
+<p><strong>Example Code:</strong></p>
+
+<pre><code>&lt;img src="./html logo.png" alt="HTML Logo" height="100px" width="100px"&gt;
+</code></pre>
+
+<p><strong>Rendered Output:</strong></p>
+
+<img src="./html logo.png" alt="HTML Logo" height="100px" width="100px">
+<br>
+<!-- ================= SVG IMAGE ================= -->
+
+<h3>SVG Image (&lt;svg&gt; / .svg file)</h3>
+
+<p><strong>Explanation:</strong><br>
+SVG (Scalable Vector Graphics) is a vector-based image format.  
+Unlike PNG or JPG, SVG images never lose quality when zoomed in.  
+They are ideal for logos, icons, charts, and shapes.</p>
+
+<ul>
+    <li><strong>Scalable:</strong> Does not pixelate when enlarged</li>
+    <li><strong>Editable:</strong> You can style SVG with CSS</li>
+    <li><strong>Lightweight:</strong> File size is very small</li>
+    <li><strong>Interactive:</strong> Can animate and use JavaScript inside</li>
+</ul>
+
+<p><strong>Example Code:</strong></p>
+<pre><code>&lt;svg width="120" height="120"&gt;
+    &lt;circle cx="60" cy="60" r="50" fill="orange" stroke="black" stroke-width="3"&gt;&lt;/circle&gt;
+&lt;/svg&gt;
+</code></pre>
+
+<p><strong>Rendered Output:</strong></p>
+
+<svg width="120" height="120">
+    <circle cx="60" cy="60" r="50" fill="orange" stroke="black" stroke-width="3"></circle>
+</svg>
+
+<hr>
+
+<!-- ================= BITMAP IMAGE ================= -->
+
+<h3>Bitmap Image (BMP Format)</h3>
+
+<p><strong>Explanation:</strong><br>
+BMP (Bitmap) is an uncompressed image format.  
+It stores every pixel exactly, giving very high quality —  
+but the file size becomes extremely large.  
+Because of this, BMP is <strong>not recommended for websites</strong>.</p>
+
+<ul>
+    <li><strong>High Quality:</strong> No compression applied</li>
+    <li><strong>Very Large Size:</strong> Slows down webpages</li>
+    <li><strong>Not Web Friendly:</strong> Browsers support it, but it's rarely used</li>
+    <li><strong>Better Alternatives:</strong> JPG, PNG, WebP</li>
+</ul>
+
+<p><strong>Example Code:</strong></p>
+<pre><code>&lt;img 
+    src="example.bmp" 
+    alt="Bitmap Image Example" 
+    width="150px"&gt;
+</code></pre>
+
+<p><strong>Rendered Output (Example):</strong></p>
+<img src="./bitmap.bmp" alt="Bitmap Image Example" width="150px">
+
+
+
+<hr><hr>
+<footer>
+    <a href="./HTML2.html">HTML Basic Concepts Page2</a>
+</footer>
 </body> <!-- End of visible body section -->
 </html> <!-- End of HTML document -->
