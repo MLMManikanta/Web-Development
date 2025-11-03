@@ -378,8 +378,247 @@ Because of this, BMP is <strong>not recommended for websites</strong>.</p>
 
 <p><strong>Rendered Output (Example):</strong></p>
 <img src="./bitmap.bmp" alt="Bitmap Image Example" width="150px">
+<hr>
+
+<h2>Block and Inline Elements</h2>
+
+<h3>Block Elements</h3>
+<p>
+    <strong>Definition:</strong> Block-level elements always start on a new line and take the full width available in the container.
+</p>
+
+<h4>Common Block Elements:</h4>
+<ul>
+    <li>&lt;div&gt;</li>
+    <li>&lt;p&gt;</li>
+    <li>&lt;h1&gt; to &lt;h6&gt;</li>
+    <li>&lt;section&gt;</li>
+    <li>&lt;article&gt;</li>
+    <li>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</li>
+    <li>&lt;form&gt;</li>
+</ul>
+
+<h4>Example:</h4>
+<pre>
+<code>
+<div style="background-color: lightblue; padding: 10px;">
+    This is a block element (div). It starts on a new line.
+</div>
+
+<p>This is a paragraph block element.</p>
+</code>
+</pre>
 
 
+<hr>
+
+
+<h3>Inline Elements</h3>
+<p>
+    <strong>Definition:</strong> Inline elements do not start on a new line and take only the space required by their content.
+</p>
+
+<h4>Common Inline Elements:</h4>
+<ul>
+    <li>&lt;span&gt;</li>
+    <li>&lt;a&gt;</li>
+    <li>&lt;img&gt;</li>
+    <li>&lt;label&gt;</li>
+    <li>&lt;input&gt;</li>
+    <li>&lt;strong&gt;, &lt;em&gt;</li>
+</ul>
+
+<h4>Example:</h4>
+<pre>
+<code>
+<p>
+    This is a paragraph with an 
+    <span style="color: red;">inline span element</span> inside it.
+</p>
+
+<a href="#">This inline link does not break the line.</a>
+</code>
+</pre>
+
+
+<hr>
+
+<h3>Block vs Inline (Quick Summary)</h3>
+<ul>
+    <li><strong>Block:</strong> Starts a new line, takes full width.</li>
+    <li><strong>Inline:</strong> Stays in the same line, takes only required width.</li>
+</ul>
+<hr>
+<h2>HTML Containers, &lt;div&gt;, &lt;span&gt; and Difference</h2>
+
+<h3>1. What is a Container?</h3>
+<p>
+    <strong>Definition:</strong> A container is any HTML element used to hold or group other elements.  
+    It helps structure a webpage, organize layout, apply styling, and control sections.
+</p>
+
+<h4>Example of a Container:</h4>
+<pre><code>
+<div style="border:1px solid black; padding:10px;">
+    This is a container holding a heading and a paragraph.
+    <h3>Title Inside Container</h3>
+    <p>Paragraph inside container.</p>
+</div>
+</code></pre>
+
+
+<hr>
+
+
+<h3>2. What is &lt;div&gt;?</h3>
+<p>
+    <strong>Definition:</strong> The &lt;div&gt; (Division) tag is a <strong>block-level container</strong> 
+    used to group large sections of content. It always starts on a new line.
+</p>
+
+<h4>Example of &lt;div&gt;:</h4>
+<pre><code>
+<div style="background-color: lightyellow; padding: 10px;">
+    This is a div block. It takes full width.
+</div>
+</code></pre>
+
+
+<hr>
+
+
+<h3>3. What is &lt;span&gt;?</h3>
+<p>
+    <strong>Definition:</strong> The &lt;span&gt; tag is an <strong>inline container</strong> used for 
+    styling or grouping small parts of text inside a line.
+</p>
+
+<h4>Example of &lt;span&gt;:</h4>
+<pre><code>
+<p>
+    This is a sentence with a 
+    <span style="color: red;">highlighted word</span> using span.
+</p>
+</code></pre>
+
+
+<hr>
+
+
+<h3>4. Difference Between &lt;div&gt; and &lt;span&gt;</h3>
+
+<h4>Summary:</h4>
+<ul>
+    <li><strong>&lt;div&gt; = Block Element</strong> (Starts new line, full width)</li>
+    <li><strong>&lt;span&gt; = Inline Element</strong> (Stays in same line, only content width)</li>
+    <li><strong>&lt;div&gt; is for large sections</strong>, layouts, containers</li>
+    <li><strong>&lt;span&gt; is for small text styling</strong> or inline formatting</li>
+</ul>
+
+<h4>Example Showing div vs span:</h4>
+<pre><code>
+<div style="background-color: lightblue; margin-bottom: 10px;">
+    This is a DIV block. It starts on a new line and stretches across the page.
+</div>
+
+<p>
+    This is a line with 
+    <span style="background-color: yellow;">SPAN inside it</span> 
+    which does not break the line.
+</p>
+</code></pre>
+<hr>
+<h2>HTML Landmark Tags</h2>
+<p>
+    Landmark tags help define the main structure of a webpage, improve accessibility,
+    and make navigation easier for screen readers.
+</p>
+
+<h3>1. &lt;header&gt;</h3>
+<p>
+    <strong>Definition:</strong> Represents the top section of a webpage or a section.
+    It usually contains the logo, title, or navigation.
+</p>
+<pre><code>
+<header>
+    <h1>Website Title</h1>
+</header>
+</code></pre>
+
+
+<h3>2. &lt;nav&gt;</h3>
+<p>
+    <strong>Definition:</strong> Represents the navigation area that contains links
+    to other pages or sections.
+</p>
+<pre><code>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+</nav>
+</code></pre>
+
+
+<h3>3. &lt;main&gt;</h3>
+<p>
+    <strong>Definition:</strong> Contains the main content of the webpage.
+    There should be only one &lt;main&gt; tag per page.
+</p>
+<pre><code>
+<main>
+    <p>This is the main content area.</p>
+</main>
+</code></pre>
+
+
+<h3>4. &lt;section&gt;</h3>
+<p>
+    <strong>Definition:</strong> Represents a thematic grouping of content, like chapters,
+    topics, or parts of a page.
+</p>
+<pre><code>
+<section>
+    <h2>About Us</h2>
+    <p>Information about the company.</p>
+</section>
+</code></pre>
+
+
+<h3>5. &lt;article&gt;</h3>
+<p>
+    <strong>Definition:</strong> Represents independent content that can stand alone,
+    such as blog posts, news articles, or forum posts.
+</p>
+<pre><code>
+<article>
+    <h2>Blog Post</h2>
+    <p>This is an article that can be shared independently.</p>
+</article>
+</code></pre>
+
+
+<h3>6. &lt;aside&gt;</h3>
+<p>
+    <strong>Definition:</strong> Represents related content placed to the side,
+    such as ads, sidebars, or extra notes.
+</p>
+<pre><code>
+<aside>
+    <p>Sidebar information or ads go here.</p>
+</aside>
+</code></pre>
+
+
+<h3>7. &lt;footer&gt;</h3>
+<p>
+    <strong>Definition:</strong> Represents the bottom section of a webpage or section.
+    It usually includes copyright, contact info, or links.
+</p>
+<pre><code>
+<footer>
+    <p>&copy; 2025 All Rights Reserved</p>
+</footer>
+</code></pre>
 
 <hr><hr>
 <footer>
