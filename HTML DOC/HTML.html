@@ -1,632 +1,220 @@
-<!-- 
-HTML = Hyper Text Markup Language
-Hyper Text = Linking between pages
-Markup Language = Uses special syntax like headings, paragraphs, images, and lists.
-(In simple words: taking content and applying special rules to structure it.)
--->
-
-<!-- HTML is required on every webpage to display content -->
-<!-- HTML Tags wrap content and give instructions to the browser -->
-<!-- Boilerplate = Basic HTML setup (html, head, body). Shortcut: type '!' + Enter -->
-<!-- Nesting = Placing elements inside each other (html is parent; head and body are children) -->
-<!-- Indenting = Visually organizing code to understand hierarchy easily -->
-
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <!-- Document Type: Tells the browser this is an HTML5 document -->
 
-<html lang="en"> 
+<html lang="en">
 <!-- Root element; wraps the entire page. lang="en" means English -->
 
-<head> 
+<head>
     <!-- Contains page information (not visible on the webpage) -->
 
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <!-- Character encoding: UTF-8 supports all characters -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Makes the website responsive on mobile and desktop -->
 
-    <title>HTML Doc Home Page</title> 
+    <title>HTML Basic Concepts</title>
     <!-- Title of the webpage shown on browser tab -->
+    <meta name="description" content="Learn HTML step by step — covering tags, attributes, tables, layouts, and forms with examples and explanations.">
 
-    <link rel="icon" href="./html logo.png"> 
+    <link rel="icon" href="./html logo.png">
     <!-- Favicon: small icon shown in the browser tab -->
+
+    <link rel="stylesheet" href="./style.css">
+    <!-- External CSS file linked for styling -->
 </head>
 
-<body> 
+<body>
     <!-- Contains the visible content of the webpage -->
-    <!-- Heading Tags -->
-    <!-- Heading hierarchy: h1 > h2 > h3 > h4 > h5 > h6 -->
-    <!-- h1 should be used only once (main title) -->
 
-   <h1>HTML Basic Concepts</h1>
-<h2>What is HTML?</h2>
-<ul>
-    <li>
-        <strong>HTML</strong> – Hyper Text Markup Language.<br>
-        Example: <code>&lt;html&gt;...&lt;/html&gt;</code>
-    </li>
+    <!-- ================= HEADER SECTION ================= -->
+    <header>
+        <h1>HTML Basic Concepts</h1>
+        <p class="subtitle">Understanding the foundation of web structure and content organization</p>
+    </header>
 
-    <li>
-        <strong>Hyper Text</strong> – Linking between web pages.<br>
-        Example: <code>&lt;a href="page.html"&gt;Go&lt;/a&gt;</code>
-    </li>
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
 
-    <li>
-        <strong>Markup Language</strong> – Uses special syntax to structure content like headings, images, paragraphs.<br>
-        Example: <code>&lt;h1&gt;Heading&lt;/h1&gt;</code>
-    </li>
-</ul>
-<hr>
-<h2>HTML Boilerplate</h2>
-<ul>
-    <li>
-        <strong>Shortcut:</strong> Type <code>!</code> and press Enter to generate boilerplate.
-    </li>
-    <li>
-        <strong>Nesting:</strong> Elements placed inside each other (HTML → Head & Body).<br>
-        Example: <code>&lt;body&gt; &lt;h1&gt;Hello&lt;/h1&gt; &lt;/body&gt;</code>
-    </li>
-    <li>
-        <strong>Indenting:</strong> Organized spacing to show hierarchy clearly.
-    </li>
-</ul>
+        <!-- 1️⃣ WHAT IS HTML -->
+        <section>
+            <h2>What is HTML?</h2>
+            <ul>
+                <li>
+                    <strong>HTML</strong> – Hyper Text Markup Language.<br>
+                    Example: <code>&lt;html&gt;...&lt;/html&gt;</code>
+                </li>
 
-<h2>Boilerplate Code</h2>
-<ul>
-    <li>
-        <strong>&lt;!DOCTYPE html&gt;</strong> – Declares HTML5 document.<br>
-        Example: <code>&lt;!DOCTYPE html&gt;</code>
-    </li>
+                <li>
+                    <strong>Hyper Text</strong> – Linking between web pages.<br>
+                    Example: <code>&lt;a href="page.html"&gt;Go&lt;/a&gt;</code>
+                </li>
 
-    <li>
-        <strong>&lt;html lang="en"&gt;</strong> – Root element with language set to English.<br>
-        Example: <code>&lt;html lang="en"&gt;</code>
-    </li>
+                <li>
+                    <strong>Markup Language</strong> – Uses special syntax to structure content like headings, images, paragraphs.<br>
+                    Example: <code>&lt;h1&gt;Heading&lt;/h1&gt;</code>
+                </li>
+            </ul>
+        </section>
 
-    <li>
-        <strong>&lt;head&gt;</strong> – Holds metadata like title, charset, styles.<br>
-        Example: <code>&lt;head&gt;...&lt;/head&gt;</code>
-    </li>
+        <hr>
 
-    <li>
-        <strong>&lt;meta charset="UTF-8"&gt;</strong> – Supports all characters.<br>
-        Example: <code>&lt;meta charset="UTF-8"&gt;</code>
-    </li>
+        <!-- 2️⃣ HTML BOILERPLATE -->
+        <section>
+            <h2>HTML Boilerplate</h2>
+            <ul>
+                <li><strong>Shortcut:</strong> Type <code>!</code> and press Enter to generate boilerplate.</li>
+                <li><strong>Nesting:</strong> Elements placed inside each other (HTML → Head & Body).</li>
+                <li><strong>Indenting:</strong> Organized spacing to show hierarchy clearly.</li>
+            </ul>
 
-    <li>
-        <strong>&lt;meta name="viewport"&gt;</strong> – Makes page responsive.<br>
-        Example: <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
-    </li>
+            <h3>Boilerplate Code</h3>
+            <ul>
+                <li><strong>&lt;!DOCTYPE html&gt;</strong> – Declares HTML5 document.</li>
+                <li><strong>&lt;html lang="en"&gt;</strong> – Root element with language set to English.</li>
+                <li><strong>&lt;head&gt;</strong> – Holds metadata like title, charset, styles.</li>
+                <li><strong>&lt;meta charset="UTF-8"&gt;</strong> – Supports all characters.</li>
+                <li><strong>&lt;meta name="viewport"&gt;</strong> – Makes page responsive.</li>
+                <li><strong>&lt;title&gt;</strong> – Shows title on browser tab.</li>
+                <li><strong>&lt;link rel="icon"&gt;</strong> – Adds favicon icon.</li>
+            </ul>
+        </section>
 
-    <li>
-        <strong>&lt;title&gt;</strong> – Shows title on browser tab.<br>
-        Example: <code>&lt;title&gt;Home Page&lt;/title&gt;</code>
-    </li>
+        <hr>
 
-    <li>
-        <strong>&lt;link rel="icon"&gt;</strong> – Adds favicon icon.<br>
-        Example: <code>&lt;link rel="icon" href="logo.png"&gt;</code>
-    </li>
-</ul>
-<hr>
-<h2>Heading Tags</h2>
-<ul>
-    <li><strong>&lt;h1&gt;</strong> – Main largest heading.<br>
-        Example: <code>&lt;h1&gt;Main Title&lt;/h1&gt;</code>
-    </li>
-    <li><strong>&lt;h2&gt;</strong> – Sub-heading.<br>
-        Example: <code>&lt;h2&gt;Sub Heading&lt;/h2&gt;</code>
-    </li>
-    <li><strong>&lt;h3&gt;</strong> – Section heading.<br>
-        Example: <code>&lt;h3&gt;Section&lt;/h3&gt;</code>
-    </li>
-    <li><strong>&lt;h4&gt;</strong>, <strong>&lt;h5&gt;</strong>, <strong>&lt;h6&gt;</strong> – Smaller headings.<br>
-        Example: <code>&lt;h6&gt;Smallest Heading&lt;/h6&gt;</code>
-    </li>
-</ul>
-<hr>
-<h2>Paragraph & Line Break</h2>
-<ul>
-    <li>
-        <strong>&lt;p&gt;</strong> – Used for paragraph text.<br>
-        Example: <code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code>
-    </li>
-    <li>
-        <strong>&lt;br&gt;</strong> – Inserts a line break.<br>
-        Example: <code>Hello&lt;br&gt;World</code>
-    </li>
-</ul>
-<hr>
+        <!-- 3️⃣ TYPES OF LISTS -->
+        <section>
+            <h2>Types of Lists in HTML</h2>
 
-<!-- ================= LISTS IN HTML ================= -->
-<h2>Types of Lists in HTML</h2>
-
-<!--  ORDERED LIST -->
-<h3>1. Ordered List (&lt;ol&gt;)</h3>
-
-<p><strong>Explanation:</strong>  
-An Ordered List displays items in a numbered order such as 1, 2, 3.  
-Each item is written inside an <code>&lt;li&gt;</code> tag.</p>
-
-<p><strong>Example Code:</strong></p>
-<pre><code>&lt;ol&gt;
+            <!-- ORDERED LIST -->
+            <h3>1. Ordered List (&lt;ol&gt;)</h3>
+            <p><strong>Explanation:</strong> Ordered lists display items in numbered order.</p>
+            <pre><code>&lt;ol&gt;
     &lt;li&gt;HTML Basics&lt;/li&gt;
     &lt;li&gt;CSS Styling&lt;/li&gt;
-    &lt;li&gt;JavaScript Concepts
-        &lt;ol&gt;
-            &lt;li&gt;Variables&lt;/li&gt;
-            &lt;li&gt;Functions&lt;/li&gt;
-            &lt;li&gt;Loops&lt;/li&gt;
-        &lt;/ol&gt;
-    &lt;/li&gt;
-    &lt;li&gt;React Framework&lt;/li&gt;
 &lt;/ol&gt;
 </code></pre>
 
-<!-- Rendered Output -->
-<ol>
-    <li>HTML Basics</li>
-    <li>CSS Styling</li>
-    <li>JavaScript Concepts
-        <ol>
-            <li>Variables</li>
-            <li>Functions</li>
-            <li>Loops</li>
-        </ol>
-    </li>
-    <li>React Framework</li>
-</ol>
-
-<hr>
-
-
-<!--  UNORDERED LIST -->
-<h3>2. Unordered List (&lt;ul&gt;)</h3>
-
-<p><strong>Explanation:</strong>  
-An Unordered List displays items with bullet points.  
-Useful for categories or unordered items.</p>
-
-<p><strong>Example Code:</strong></p>
-<pre><code>&lt;ul&gt;
-    &lt;li&gt;Frontend Technologies&lt;/li&gt;
-    &lt;li&gt;Backend Technologies&lt;/li&gt;
-    &lt;li&gt;Databases
-        &lt;ul&gt;
-            &lt;li&gt;MySQL&lt;/li&gt;
-            &lt;li&gt;MongoDB&lt;/li&gt;
-            &lt;li&gt;PostgreSQL&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;DevOps Tools&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
-
-<!-- Rendered Output -->
-<ul>
-    <li>Frontend Technologies</li>
-    <li>Backend Technologies</li>
-    <li>Databases
-        <ul>
-            <li>MySQL</li>
-            <li>MongoDB</li>
-            <li>PostgreSQL</li>
-        </ul>
-    </li>
-    <li>DevOps Tools</li>
-</ul>
-
-<hr>
-
-
-<!--  DESCRIPTION LIST -->
-<h3>3. Description List (&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;)</h3>
-
-<p><strong>Explanation:</strong>  
-A Description List contains terms and descriptions.  
-Ideal for definitions, FAQs, or glossary sections.</p>
-
-<p><strong>Example Code:</strong></p>
-<pre><code>&lt;dl&gt;
-    &lt;dt&gt;HTML&lt;/dt&gt;
-    &lt;dd&gt;A markup language used to structure webpages.&lt;/dd&gt;
-
-    &lt;dt&gt;CSS&lt;/dt&gt;
-    &lt;dd&gt;Used for styling webpages with layouts and colors.&lt;/dd&gt;
-
-    &lt;dt&gt;JavaScript&lt;/dt&gt;
-    &lt;dd&gt;A scripting language for interactivity.&lt;/dd&gt;
-&lt;/dl&gt;
-</code></pre>
-<!-- Rendered Output -->
-<dl>
-    <dt><strong>HTML</strong></dt>
-    <dd>A markup language used to structure webpages.</dd>
-
-    <dt><strong>CSS</strong></dt>
-    <dd>Used for styling webpages with layouts and colors.</dd>
-
-    <dt><strong>JavaScript</strong></dt>
-    <dd>A scripting language for interactivity.</dd>
-</dl>
-
-<hr>
-<h2>Comments</h2>
-<ul>
-    <li>
-        <strong>HTML Comments</strong> – Notes not shown on the webpage.<br>
-        Example: <code>&lt;!-- This is a comment --&gt;</code>
-    </li>
-    <li>
-        Shortcut (Windows): <strong>Shift + Alt + A</strong>
-    </li>
-</ul>
-<hr>
-<h2>File Paths</h2>
-<ul>
-    <li>
-        <strong>Relative Path</strong> – Starts from current file.<br>
-        Example: <code>./images/pic.png</code>
-    </li>
-
-    <li>
-        <strong>Absolute Path</strong> – Full location or full URL.<br>
-        Example: <code>https://example.com/image.jpg</code>
-    </li>
-</ul>
-<hr>
-<h2>Hyperlinks</h2>
-<ul>
-    <li>
-        <strong>&lt;a&gt;</strong> – Creates clickable links.<br>
-        Example: <code>&lt;a href="page.html"&gt;Go to Page&lt;/a&gt;</code>
-    </li>
-
-    <li>
-        <strong>Internal Link</strong> – Uses ID to jump within page.<br>
-        Example: <code>&lt;a href="#section"&gt;Go Down&lt;/a&gt;</code>
-    </li>
-</ul>
-<hr>
-
-<!-- Image tags -->
-<h3>Image Tag (&lt;img&gt;)</h3>
-
-<p><strong>Explanation:</strong><br>
-The <code>&lt;img&gt;</code> tag is used to display images in a webpage.  
-It is a <strong>self-closing tag</strong> and requires key attributes like:
-</p>
-
-<ul>
-    <li><strong>src</strong> → Source of the image (file path or URL)</li>
-    <li><strong>alt</strong> → Text shown when image fails to load (important for accessibility)</li>
-    <li><strong>height</strong> → Sets the image height</li>
-    <li><strong>width</strong> → Sets the image width</li>
-</ul>
-
-<p><strong>Additional Info:</strong></p>
-<ul>
-    <li><strong>Relative Path</strong>: Loads image from the current folder (e.g., <code>./images/logo.png</code>)</li>
-    <li><strong>Absolute Path</strong>: Full URL to an image on the internet</li>
-    <li><strong>alt text</strong> improves accessibility and SEO</li>
-    <li>If only height is given, width adjusts automatically (and vice-versa)</li>
-</ul>
-
-<p><strong>Example Code:</strong></p>
-
-<pre><code>&lt;img src="./html logo.png" alt="HTML Logo" height="100px" width="100px"&gt;
-</code></pre>
-
-<p><strong>Rendered Output:</strong></p>
-
-<img src="./html logo.png" alt="HTML Logo" height="100px" width="100px">
-<br>
-<!-- ================= SVG IMAGE ================= -->
-
-<h3>SVG Image (&lt;svg&gt; / .svg file)</h3>
-
-<p><strong>Explanation:</strong><br>
-SVG (Scalable Vector Graphics) is a vector-based image format.  
-Unlike PNG or JPG, SVG images never lose quality when zoomed in.  
-They are ideal for logos, icons, charts, and shapes.</p>
-
-<ul>
-    <li><strong>Scalable:</strong> Does not pixelate when enlarged</li>
-    <li><strong>Editable:</strong> You can style SVG with CSS</li>
-    <li><strong>Lightweight:</strong> File size is very small</li>
-    <li><strong>Interactive:</strong> Can animate and use JavaScript inside</li>
-</ul>
-
-<p><strong>Example Code:</strong></p>
-<pre><code>&lt;svg width="120" height="120"&gt;
-    &lt;circle cx="60" cy="60" r="50" fill="orange" stroke="black" stroke-width="3"&gt;&lt;/circle&gt;
-&lt;/svg&gt;
-</code></pre>
-
-<p><strong>Rendered Output:</strong></p>
-
-<svg width="120" height="120">
-    <circle cx="60" cy="60" r="50" fill="orange" stroke="black" stroke-width="3"></circle>
-</svg>
-
-<hr>
-
-<!-- ================= BITMAP IMAGE ================= -->
-
-<h3>Bitmap Image (BMP Format)</h3>
-
-<p><strong>Explanation:</strong><br>
-BMP (Bitmap) is an uncompressed image format.  
-It stores every pixel exactly, giving very high quality —  
-but the file size becomes extremely large.  
-Because of this, BMP is <strong>not recommended for websites</strong>.</p>
-
-<ul>
-    <li><strong>High Quality:</strong> No compression applied</li>
-    <li><strong>Very Large Size:</strong> Slows down webpages</li>
-    <li><strong>Not Web Friendly:</strong> Browsers support it, but it's rarely used</li>
-    <li><strong>Better Alternatives:</strong> JPG, PNG, WebP</li>
-</ul>
-
-<p><strong>Example Code:</strong></p>
-<pre><code>&lt;img 
-    src="example.bmp" 
-    alt="Bitmap Image Example" 
-    width="150px"&gt;
-</code></pre>
-
-<p><strong>Rendered Output (Example):</strong></p>
-<img src="./bitmap.bmp" alt="Bitmap Image Example" width="150px">
-<hr>
-
-<h2>Block and Inline Elements</h2>
-
-<h3>Block Elements</h3>
-<p>
-    <strong>Definition:</strong> Block-level elements always start on a new line and take the full width available in the container.
-</p>
-
-<h4>Common Block Elements:</h4>
-<ul>
-    <li>&lt;div&gt;</li>
-    <li>&lt;p&gt;</li>
-    <li>&lt;h1&gt; to &lt;h6&gt;</li>
-    <li>&lt;section&gt;</li>
-    <li>&lt;article&gt;</li>
-    <li>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</li>
-    <li>&lt;form&gt;</li>
-</ul>
-
-<h4>Example:</h4>
-<pre>
-<code>
-<div style="background-color: lightblue; padding: 10px;">
-    This is a block element (div). It starts on a new line.
-</div>
-
-<p>This is a paragraph block element.</p>
-</code>
-</pre>
-
-
-<hr>
-
-
-<h3>Inline Elements</h3>
-<p>
-    <strong>Definition:</strong> Inline elements do not start on a new line and take only the space required by their content.
-</p>
-
-<h4>Common Inline Elements:</h4>
-<ul>
-    <li>&lt;span&gt;</li>
-    <li>&lt;a&gt;</li>
-    <li>&lt;img&gt;</li>
-    <li>&lt;label&gt;</li>
-    <li>&lt;input&gt;</li>
-    <li>&lt;strong&gt;, &lt;em&gt;</li>
-</ul>
-
-<h4>Example:</h4>
-<pre>
-<code>
-<p>
-    This is a paragraph with an 
-    <span style="color: red;">inline span element</span> inside it.
-</p>
-
-<a href="#">This inline link does not break the line.</a>
-</code>
-</pre>
-
-
-<hr>
-
-<h3>Block vs Inline (Quick Summary)</h3>
-<ul>
-    <li><strong>Block:</strong> Starts a new line, takes full width.</li>
-    <li><strong>Inline:</strong> Stays in the same line, takes only required width.</li>
-</ul>
-<hr>
-<h2>HTML Containers, &lt;div&gt;, &lt;span&gt; and Difference</h2>
-
-<h3>1. What is a Container?</h3>
-<p>
-    <strong>Definition:</strong> A container is any HTML element used to hold or group other elements.  
-    It helps structure a webpage, organize layout, apply styling, and control sections.
-</p>
-
-<h4>Example of a Container:</h4>
-<pre><code>
-<div style="border:1px solid black; padding:10px;">
-    This is a container holding a heading and a paragraph.
-    <h3>Title Inside Container</h3>
-    <p>Paragraph inside container.</p>
-</div>
-</code></pre>
-
-
-<hr>
-
-
-<h3>2. What is &lt;div&gt;?</h3>
-<p>
-    <strong>Definition:</strong> The &lt;div&gt; (Division) tag is a <strong>block-level container</strong> 
-    used to group large sections of content. It always starts on a new line.
-</p>
-
-<h4>Example of &lt;div&gt;:</h4>
-<pre><code>
-<div style="background-color: lightyellow; padding: 10px;">
-    This is a div block. It takes full width.
-</div>
-</code></pre>
-
-
-<hr>
-
-
-<h3>3. What is &lt;span&gt;?</h3>
-<p>
-    <strong>Definition:</strong> The &lt;span&gt; tag is an <strong>inline container</strong> used for 
-    styling or grouping small parts of text inside a line.
-</p>
-
-<h4>Example of &lt;span&gt;:</h4>
-<pre><code>
-<p>
-    This is a sentence with a 
-    <span style="color: red;">highlighted word</span> using span.
-</p>
-</code></pre>
-
-
-<hr>
-
-
-<h3>4. Difference Between &lt;div&gt; and &lt;span&gt;</h3>
-
-<h4>Summary:</h4>
-<ul>
-    <li><strong>&lt;div&gt; = Block Element</strong> (Starts new line, full width)</li>
-    <li><strong>&lt;span&gt; = Inline Element</strong> (Stays in same line, only content width)</li>
-    <li><strong>&lt;div&gt; is for large sections</strong>, layouts, containers</li>
-    <li><strong>&lt;span&gt; is for small text styling</strong> or inline formatting</li>
-</ul>
-
-<h4>Example Showing div vs span:</h4>
-<pre><code>
-<div style="background-color: lightblue; margin-bottom: 10px;">
-    This is a DIV block. It starts on a new line and stretches across the page.
-</div>
-
-<p>
-    This is a line with 
-    <span style="background-color: yellow;">SPAN inside it</span> 
-    which does not break the line.
-</p>
-</code></pre>
-<hr>
-<h2>HTML Landmark Tags</h2>
-<p>
-    Landmark tags help define the main structure of a webpage, improve accessibility,
-    and make navigation easier for screen readers.
-</p>
-
-<h3>1. &lt;header&gt;</h3>
-<p>
-    <strong>Definition:</strong> Represents the top section of a webpage or a section.
-    It usually contains the logo, title, or navigation.
-</p>
-<pre><code>
-<header>
-    <h1>Website Title</h1>
-</header>
-</code></pre>
-
-
-<h3>2. &lt;nav&gt;</h3>
-<p>
-    <strong>Definition:</strong> Represents the navigation area that contains links
-    to other pages or sections.
-</p>
-<pre><code>
-<nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-</nav>
-</code></pre>
-
-
-<h3>3. &lt;main&gt;</h3>
-<p>
-    <strong>Definition:</strong> Contains the main content of the webpage.
-    There should be only one &lt;main&gt; tag per page.
-</p>
-<pre><code>
-<main>
-    <p>This is the main content area.</p>
-</main>
-</code></pre>
-
-
-<h3>4. &lt;section&gt;</h3>
-<p>
-    <strong>Definition:</strong> Represents a thematic grouping of content, like chapters,
-    topics, or parts of a page.
-</p>
-<pre><code>
-<section>
-    <h2>About Us</h2>
-    <p>Information about the company.</p>
-</section>
-</code></pre>
-
-
-<h3>5. &lt;article&gt;</h3>
-<p>
-    <strong>Definition:</strong> Represents independent content that can stand alone,
-    such as blog posts, news articles, or forum posts.
-</p>
-<pre><code>
-<article>
-    <h2>Blog Post</h2>
-    <p>This is an article that can be shared independently.</p>
-</article>
-</code></pre>
-
-
-<h3>6. &lt;aside&gt;</h3>
-<p>
-    <strong>Definition:</strong> Represents related content placed to the side,
-    such as ads, sidebars, or extra notes.
-</p>
-<pre><code>
-<aside>
-    <p>Sidebar information or ads go here.</p>
-</aside>
-</code></pre>
-
-
-<h3>7. &lt;footer&gt;</h3>
-<p>
-    <strong>Definition:</strong> Represents the bottom section of a webpage or section.
-    It usually includes copyright, contact info, or links.
-</p>
-<pre><code>
-<footer>
-    <p>&copy; 2025 All Rights Reserved</p>
-</footer>
-</code></pre>
-
-<hr><hr>
-<footer>
-    <a href="./HTML2.html">HTML Basic Concepts Page2</a>
-    <br>
-    <a href="./HTML_Forms.html">HTML Forms</a>
-    <br>
-    <a href="./HTML_Table.html">HTML Table</a>
-</footer>
-</body> <!-- End of visible body section -->
-</html> <!-- End of HTML document -->
+            <ol>
+                <li>HTML Basics</li>
+                <li>CSS Styling</li>
+                <li>JavaScript Concepts
+                    <ol>
+                        <li>Variables</li>
+                        <li>Functions</li>
+                        <li>Loops</li>
+                    </ol>
+                </li>
+                <li>React Framework</li>
+            </ol>
+
+            <hr>
+
+            <!-- UNORDERED LIST -->
+            <h3>2. Unordered List (&lt;ul&gt;)</h3>
+            <p><strong>Explanation:</strong> Unordered lists use bullet points instead of numbers.</p>
+            <ul>
+                <li>Frontend Technologies</li>
+                <li>Backend Technologies</li>
+                <li>Databases
+                    <ul>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </li>
+                <li>DevOps Tools</li>
+            </ul>
+
+            <hr>
+
+            <!-- DESCRIPTION LIST -->
+            <h3>3. Description List (&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;)</h3>
+            <p><strong>Explanation:</strong> Used for definitions or glossary items.</p>
+            <dl>
+                <dt><strong>HTML</strong></dt>
+                <dd>A markup language used to structure webpages.</dd>
+
+                <dt><strong>CSS</strong></dt>
+                <dd>Used for styling webpages with layouts and colors.</dd>
+
+                <dt><strong>JavaScript</strong></dt>
+                <dd>A scripting language for interactivity.</dd>
+            </dl>
+        </section>
+
+        <hr>
+
+        <!-- 4️⃣ IMAGES -->
+        <section>
+            <h2>Image Tag (&lt;img&gt;)</h2>
+            <p><strong>Explanation:</strong> The <code>&lt;img&gt;</code> tag displays images in webpages.</p>
+
+            <ul>
+                <li><strong>src</strong> → Source of the image</li>
+                <li><strong>alt</strong> → Alternate text (for accessibility)</li>
+                <li><strong>height</strong> &amp; <strong>width</strong> → Image size</li>
+            </ul>
+
+            <img src="./html logo.png" alt="HTML Logo" height="100px" width="100px">
+
+            <h3>SVG Example</h3>
+            <svg width="120" height="120">
+                <circle cx="60" cy="60" r="50" fill="orange" stroke="black" stroke-width="3"></circle>
+            </svg>
+        </section>
+
+        <hr>
+
+        <!-- 5️⃣ BLOCK VS INLINE -->
+        <section>
+            <h2>Block vs Inline Elements</h2>
+            <p><strong>Block Elements:</strong> Start on a new line and take full width.</p>
+            <p><strong>Inline Elements:</strong> Stay in the same line and only occupy required width.</p>
+
+            <div class="example-box">
+                This is a <strong>block-level element</strong> (div). It starts on a new line.
+            </div>
+
+            <p>This is an inline example with a <span class="highlight">span element</span> inside text.</p>
+        </section>
+
+        <hr>
+
+        <!-- 6️⃣ LANDMARK TAGS -->
+        <section>
+            <h2>HTML Landmark Tags</h2>
+            <p>Landmark tags define page structure and improve accessibility.</p>
+
+            <ul>
+                <li><strong>&lt;header&gt;</strong> – Top section (logo/navigation)</li>
+                <li><strong>&lt;nav&gt;</strong> – Contains site links</li>
+                <li><strong>&lt;main&gt;</strong> – Main content area</li>
+                <li><strong>&lt;section&gt;</strong> – Thematic grouping of content</li>
+                <li><strong>&lt;article&gt;</strong> – Independent piece (blog, news)</li>
+                <li><strong>&lt;aside&gt;</strong> – Related side info</li>
+                <li><strong>&lt;footer&gt;</strong> – Bottom section (copyright)</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <hr><hr>
+
+    <!-- ================= FOOTER ================= -->
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>&copy; 2025 All Rights Reserved | HTML Tutorial by Mamidi Lakshman Mohan Manikanta</p>
+        <nav class="footer-links">
+            <a href="./HTML2.html">Next: Attributes & Text Formatting</a> |
+            <a href="./HTML_Forms.html">HTML Forms</a> |
+            <a href="./HTML_Table.html">HTML Tables & Layouts</a>
+        </nav>
+    </footer>
+
+
+</body>
+<!-- End of visible body section -->
+
+</html>
+<!-- End of HTML document -->

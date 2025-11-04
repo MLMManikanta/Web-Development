@@ -1,337 +1,271 @@
 <!DOCTYPE html>
+<!-- Document Type Declaration: Identifies this document as HTML5 -->
+
 <html lang="en">
+<!-- Root element that wraps the entire page; lang="en" specifies English language -->
+
 <head>
+    <!-- Head section: Contains metadata and external resource links -->
+
     <meta charset="UTF-8">
+    <!-- Character Encoding: UTF-8 ensures all characters are displayed correctly -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures the webpage is responsive on all devices -->
+    <meta name="description" content="Learn HTML step by step — covering tags, attributes, tables, layouts, and forms with examples and explanations.">
+
     <title>HTML Forms</title>
+    <!-- Page Title: Displayed on the browser tab -->
+
+    <link rel="icon" href="./html logo.png">
+    <!-- Favicon: Small icon shown beside the page title in the browser tab -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- External CSS: Maintains design consistency across all HTML pages -->
 </head>
+
 <body>
-    <h1>HTML Form Structure</h1>
-    <p><strong>Forms</strong> act a container for various form elements that allow users to input different types of data</p>
-    <p><strong> Form submission: </strong>Form need to know where to and how to send data</p>
-    <h3>Form Tag (&lt;form&gt;)</h3>
-    <code>&lt;form action="/submit" method="post"&gt; &lt;/form&gt; </code>
-    <p><strong>Explanation:</strong><br>
-    The <code>&lt;form&gt;</code> tag is used to collect user input and send it to a server.  
-    It can contain fields like text boxes, radio buttons, checkboxes, dropdowns, and buttons.</p>
-    <ul>
-        <li><strong>action</strong> → URL where form data will be sent</li>
-        <li><strong>method</strong> → HTTP method (GET or POST)</li>
-        <li><strong>input</strong> → Used for various types of user input</li>
-        <li><strong>label</strong> → Describes the input field</li>
-        <li><strong>button</strong> → Used to submit/reset the form</li>
-    </ul>
-    <h2>Form Inputs</h2>
-    <h3>Form Input Types</h3>
+    <!-- Page Body: Contains visible elements -->
 
-    <h4>1. Text Input</h4>
-    <p>Used to enter normal single-line text such as name, city, or username.</p>
-    <code>&lt;input type="text" placeholder="Enter your name"&gt;</code>
+    <header>
+        <h1>HTML Form Structure</h1>
+        <p><strong>Forms</strong> act as containers for form elements that allow users to input various types of data.</p>
+        <p><strong>Form Submission:</strong> Forms need to know <b>where</b> and <b>how</b> to send the data.</p>
+    </header>
 
-    <h4>2. Password Input</h4>
-    <p>Masks the entered characters (●●●●) to keep the password private.</p>
-    <code>&lt;input type="password" placeholder="Enter password"&gt;</code>
+    <main>
+        <!-- ================= FORM TAG ================= -->
+        <section>
+            <h3>Form Tag (&lt;form&gt;)</h3>
+            <code>&lt;form action="/submit" method="post"&gt;&lt;/form&gt;</code>
+            <p><strong>Explanation:</strong><br>
+                The <code>&lt;form&gt;</code> tag is used to collect user input and send it to a server.  
+                It can contain text fields, radio buttons, checkboxes, dropdowns, and buttons.
+            </p>
 
-    <h4>3. Email Input</h4>
-    <p>Accepts only valid email formats and shows email-specific keyboard on mobile.</p>
-    <code>&lt;input type="email" placeholder="Enter your email"&gt;</code>
+            <ul>
+                <li><strong>action</strong> → URL where form data will be sent</li>
+                <li><strong>method</strong> → HTTP method (GET or POST)</li>
+                <li><strong>input</strong> → Used for user input fields</li>
+                <li><strong>label</strong> → Describes the input field</li>
+                <li><strong>button</strong> → Used to submit or reset forms</li>
+            </ul>
+        </section>
 
-    <h4>4. Date Input</h4>
-    <p>Allows users to pick a date using a calendar UI.</p>
-    <code>&lt;input type="date"&gt;</code>
+        <!-- ================= INPUT TYPES ================= -->
+        <section>
+            <h2>Form Inputs</h2>
+            <h3>Form Input Types</h3>
 
-    <h4>5. Telephone Input</h4>
-    <p>Used to enter phone numbers; shows numeric keypad on mobile.</p>
-    <code>&lt;input type="tel" placeholder="Enter phone number"&gt;</code>
+            <h4>1. Text Input</h4>
+            <p>Used for entering normal single-line text (e.g., name, city, username).</p>
+            <code>&lt;input type="text" placeholder="Enter your name"&gt;</code>
 
-    <h4>6. Number Input</h4>
-    <p>Accepts only numeric values; shows up/down arrows to change value.</p>
-    <code>&lt;input type="number" min="1" max="100"&gt;</code>
+            <h4>2. Password Input</h4>
+            <p>Masks entered characters (●●●●) to keep them private.</p>
+            <code>&lt;input type="password" placeholder="Enter password"&gt;</code>
 
-    <h4>7. Checkbox</h4>
-    <p>Used to select multiple options from a list.</p>
-    <code>&lt;input type="checkbox" name="hobby" value="cricket"&gt; Cricket</code>
+            <h4>3. Email Input</h4>
+            <p>Accepts only valid email formats.</p>
+            <code>&lt;input type="email" placeholder="Enter your email"&gt;</code>
 
-    <h4>8. Radio Button</h4>
-    <p>Used to select only one option from a group.</p>
-    <code>
-    &lt;input type="radio" name="gender" value="male"&gt; Male<br>
-    &lt;input type="radio" name="gender" value="female"&gt; Female
-     
-    <h3>Important Input Attributes (Short Notes)</h3>
+            <h4>4. Date Input</h4>
+            <p>Lets users pick a date using a calendar.</p>
+            <code>&lt;input type="date"&gt;</code>
 
-    <h4>1. placeholder</h4>
-    <p>Shows a light grey hint inside the input box until the user types.</p>
-    <code>&lt;input type="text" placeholder="Enter your name"&gt;</code>
+            <h4>5. Telephone Input</h4>
+            <p>Used to enter phone numbers.</p>
+            <code>&lt;input type="tel" placeholder="Enter phone number"&gt;</code>
 
-    <h4>2. required</h4>
-    <p>Makes the field mandatory. Form cannot be submitted until filled.</p>
-    <code>&lt;input type="email" required&gt;</code>
+            <h4>6. Number Input</h4>
+            <p>Accepts only numeric values.</p>
+            <code>&lt;input type="number" min="1" max="100"&gt;</code>
 
-    <h4>3. disabled</h4>
-    <p>Makes the input inactive. User cannot click or edit it. Not submitted to server.</p>
-    <code>&lt;input type="text" disabled&gt;</code>
+            <h4>7. Checkbox</h4>
+            <p>Select multiple options from a list.</p>
+            <code>&lt;input type="checkbox" name="hobby" value="cricket"&gt; Cricket</code>
 
-    <h4>4. readonly</h4>
-    <p>Input is visible but cannot be edited. Value is still submitted.</p>
-    <code>&lt;input type="text" value="India" readonly&gt;</code>
+            <h4>8. Radio Button</h4>
+            <p>Select only one option from a group.</p>
+            <code>
+&lt;input type="radio" name="gender" value="male"&gt; Male<br>
+&lt;input type="radio" name="gender" value="female"&gt; Female
+            </code>
+        </section>
 
-    <h4>5. value</h4>
-    <p>Sets a default or prefilled value inside the field.</p>
-    <code>&lt;input type="text" value="Lakshman"&gt;</code>
+        <!-- ================= INPUT ATTRIBUTES ================= -->
+        <section>
+            <h3>Important Input Attributes (Short Notes)</h3>
 
-    <h4>6. name</h4>
-    <p>Key used to send data to the server. Required for form submission.</p>
-    <code>&lt;input type="email" name="userEmail"&gt;</code>
+            <h4>1. placeholder</h4>
+            <p>Displays a hint inside the input field until the user types.</p>
+            <code>&lt;input type="text" placeholder="Enter your name"&gt;</code>
 
-    <h4>7. id</h4>
-    <p>Gives unique identity to connect with label or JavaScript.</p>
-    <code>&lt;input type="password" id="pwd"&gt;</code>
+            <h4>2. required</h4>
+            <p>Makes the field mandatory.</p>
+            <code>&lt;input type="email" required&gt;</code>
 
-    <h4>8. min / max</h4>
-    <p>Sets minimum and maximum limits for numbers or dates.</p>
-    <code>&lt;input type="number" min="1" max="10"&gt;</code>
+            <h4>3. disabled</h4>
+            <p>Makes the input inactive and unclickable.</p>
+            <code>&lt;input type="text" disabled&gt;</code>
 
-    <h4>9. maxlength</h4>
-    <p>Limits how many characters the user can type.</p>
-    <code>&lt;input type="text" maxlength="10"&gt;</code>
+            <h4>4. readonly</h4>
+            <p>Field is visible but cannot be edited (still submitted).</p>
+            <code>&lt;input type="text" value="India" readonly&gt;</code>
 
-    <h4>10. pattern</h4>
-    <p>Validates input using Regex rules.</p>
-    <code>&lt;input type="tel" pattern="[0-9]{10}"&gt;</code>
+            <h4>5. value</h4>
+            <p>Sets a default or pre-filled value.</p>
+            <code>&lt;input type="text" value="Lakshman"&gt;</code>
 
-    <h4>11. step</h4>
-    <p>Defines step size for numbers or range sliders.</p>
-    <code>&lt;input type="number" step="5"&gt;</code>
+            <h4>6. name</h4>
+            <p>Specifies the key name for form submission.</p>
+            <code>&lt;input type="email" name="userEmail"&gt;</code>
 
-    <h4>12. autocomplete</h4>
-    <p>Enables or disables browser suggestions for saved data.</p>
-    <code>&lt;input type="text" autocomplete="off"&gt;</code>
+            <h4>7. id</h4>
+            <p>Gives a unique identity (for label or JavaScript).</p>
+            <code>&lt;input type="password" id="pwd"&gt;</code>
 
-    <h4>13. autofocus</h4>
-    <p>Automatically focuses the input when the page loads.</p>
-    <code>&lt;input type="text" autofocus&gt;</code>
-    <hr>
-    <h3>Textarea Element</h3>
+            <h4>8. min / max</h4>
+            <p>Defines limits for number or date inputs.</p>
+            <code>&lt;input type="number" min="1" max="10"&gt;</code>
 
-    <h4>What is &lt;textarea&gt;?</h4>
-    <p>The textarea element is used to enter multi-line text such as comments, messages, feedback, and descriptions.</p>
+            <h4>9. maxlength</h4>
+            <p>Limits the number of characters allowed.</p>
+            <code>&lt;input type="text" maxlength="10"&gt;</code>
 
-    <h4>Basic Example</h4>
-    <code>
-    &lt;textarea&gt;&lt;/textarea&gt;
-    </code>
+            <h4>10. pattern</h4>
+            <p>Validates input using regex patterns.</p>
+            <code>&lt;input type="tel" pattern="[0-9]{10}"&gt;</code>
 
-    <h4>Common Attributes</h4>
+            <h4>11. step</h4>
+            <p>Sets the increment value for numeric inputs.</p>
+            <code>&lt;input type="number" step="5"&gt;</code>
 
-    <h4>1. placeholder</h4>
-    <p>Shows a hint inside the textarea before the user types.</p>
-    <code>
-    &lt;textarea placeholder="Enter your message"&gt;&lt;/textarea&gt;
-    </code>
+            <h4>12. autocomplete</h4>
+            <p>Enables or disables browser-saved suggestions.</p>
+            <code>&lt;input type="text" autocomplete="off"&gt;</code>
 
-    <h4>2. rows</h4>
-    <p>Controls the height of the textarea (number of visible text lines).</p>
-    <code>
-    &lt;textarea rows="5"&gt;&lt;/textarea&gt;
-    </code>
+            <h4>13. autofocus</h4>
+            <p>Automatically focuses the input on page load.</p>
+            <code>&lt;input type="text" autofocus&gt;</code>
+        </section>
 
-    <h4>3. cols</h4>
-    <p>Controls the width of the textarea (number of visible characters per line).</p>
-    <code>
-    &lt;textarea cols="40"&gt;&lt;/textarea&gt;
-    </code>
+        <!-- ================= TEXTAREA ================= -->
+        <section>
+            <h3>Textarea Element</h3>
+            <p>The <code>&lt;textarea&gt;</code> tag is used for multi-line text input (e.g., comments, messages, feedback).</p>
 
-    <h4>4. maxlength</h4>
-    <p>Sets the maximum number of characters allowed.</p>
-    <code>
-    &lt;textarea maxlength="200"&gt;&lt;/textarea&gt;
-    </code>
+            <h4>Example:</h4>
+            <code>&lt;textarea placeholder="Enter your message"&gt;&lt;/textarea&gt;</code>
+        </section>
 
-    <h4>5. readonly</h4>
-    <p>Displays content but does not allow editing. Value is still submitted.</p>
-    <code>
-    &lt;textarea readonly&gt;This can't be edited.&lt;/textarea&gt;
-    </code>
+        <!-- ================= DROPDOWN ================= -->
+        <section>
+            <h3>Dropdown / Select Input</h3>
+            <p>The <code>&lt;select&gt;</code> tag creates a dropdown for selecting one option.</p>
 
-    <h4>6. disabled</h4>
-    <p>Disables the textarea completely. Not submitted to the server.</p>
-    <code>
-    &lt;textarea disabled&gt;Disabled textarea&lt;/textarea&gt;
-    </code>
+            <h4>Example:</h4>
+            <code>
+&lt;select name="language"&gt;<br>
+&nbsp;&nbsp;&lt;option value=""&gt;-- Select Language --&lt;/option&gt;<br>
+&nbsp;&nbsp;&lt;option value="html"&gt;HTML&lt;/option&gt;<br>
+&nbsp;&nbsp;&lt;option value="css"&gt;CSS&lt;/option&gt;<br>
+&nbsp;&nbsp;&lt;option value="js"&gt;JavaScript&lt;/option&gt;<br>
+&nbsp;&nbsp;&lt;option value="python"&gt;Python&lt;/option&gt;<br>
+&lt;/select&gt;
+            </code>
+        </section>
 
-    <h4>7. required</h4>
-    <p>Makes the textarea mandatory before submitting a form.</p>
-    <code>
-    &lt;textarea required&gt;&lt;/textarea&gt;
-    </code>
+        <!-- ================= BUTTONS ================= -->
+        <section>
+            <h3>About the &lt;button&gt; Tag</h3>
+            <p>The <code>&lt;button&gt;</code> element creates clickable buttons.</p>
 
-    <h4>8. name</h4>
-    <p>Used to identify textarea data during form submission.</p>
-    <code>
-    &lt;textarea name="userMessage"&gt;&lt;/textarea&gt;
-    </code>
+            <ul>
+                <li><b>button</b> → Normal button (no form submission)</li>
+                <li><b>submit</b> → Submits the form</li>
+                <li><b>reset</b> → Clears all form fields</li>
+            </ul>
 
-    <h4>9. autofocus</h4>
-    <p>Automatically focuses the textarea on page load.</p>
-    <code>
-    &lt;textarea autofocus&gt;&lt;/textarea&gt;
-    </code>
-    <hr>
-    <h3>Dropdown / Select Input</h3>
+            <h4>Example Buttons:</h4>
+            <button type="button">Click Me</button>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </section>
 
-    <h4>What is a Dropdown?</h4>
-    <p>
-    A dropdown (using the <code>&lt;select&gt;</code> tag) allows the user to choose 
-    ONE option from a list of predefined choices.
-    </p>
+        <!-- ================= COMPLETE FORM EXAMPLE ================= -->
+        <section>
+            <h2>Complete Form Example</h2>
 
-    <h4>Example: Pick a Language</h4>
-    <p>This dropdown lets the user select their preferred programming language.</p>
+            <form action="" method="get">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required><br><br>
 
-    <code>
-    &lt;label for="lang"&gt;Choose a Language:&lt;/label&gt; <br>
-    &lt;select id="lang" name="language"&gt;<br>
-    &nbsp;&nbsp;&lt;option value=""&gt;-- Select Language --&lt;/option&gt;<br>
-    &nbsp;&nbsp;&lt;option value="html"&gt;HTML&lt;/option&gt;<br>
-    &nbsp;&nbsp;&lt;option value="css"&gt;CSS&lt;/option&gt;<br>
-    &nbsp;&nbsp;&lt;option value="js"&gt;JavaScript&lt;/option&gt;<br>
-    &nbsp;&nbsp;&lt;option value="python"&gt;Python&lt;/option&gt;<br>
-    &nbsp;&nbsp;&lt;option value="java"&gt;Java&lt;/option&gt;<br>
-    &lt;/select&gt;
-    </code>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br><br>
 
-    <h4>Dropdown Notes</h4>
-    <ul>
-        <li><code>&lt;select&gt;</code> → Creates the dropdown</li>
-        <li><code>&lt;option&gt;</code> → Each choice inside the dropdown</li>
-        <li><code>value=""</code> → Data sent to server when the option is selected</li>
-        <li>First option can be used as a placeholder</li>
-    </ul>
-    <hr>
-    
-    <!--  BUTTON TAG - SHORT NOTES -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
 
-    <h3>About the &lt;button&gt; Tag</h3>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob"><br><br>
 
-    <p>The <code>&lt;button&gt;</code> tag is used to create clickable buttons in forms or web pages.</p>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><br><br>
 
-    <h4>Types of Buttons</h4>
-    <ul>
-    <li><b>button</b> – normal clickable button (does not submit form)</li>
-    <li><b>submit</b> – submits the form</li>
-    <li><b>reset</b> – resets all form fields to default</li>
-    </ul>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age"><br><br>
 
-    <h4>Basic Examples</h4>
+                <label>
+                    <input type="checkbox" id="agree" name="agree"> I agree to the terms
+                </label><br><br>
 
-    <!-- Default Button -->
-    <label>Normal Button:</label>
-    <button type="button">Click Me</button>
-    <br><br>
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label><br><br>
 
-    <!-- Submit Button -->
-    <label>Submit Button:</label>
-    <button type="submit">Submit</button>
-    <br><br>
+                <label for="file">Upload File:</label>
+                <input type="file" id="file" name="file"><br><br>
 
-    <!-- Reset Button -->
-    <label>Reset Button:</label>
-    <button type="reset">Reset</button>
-    <br><br>
+                <label for="imgBtn">Image Submit Button:</label><br>
+                <input type="image" id="imgBtn" src="./html logo.png" width="25px" alt="Submit"><br><br>
 
-    <h4>Useful Attributes</h4>
-    <ul>
-    <li><b>type</b> — "button", "submit", or "reset"</li>
-    <li><b>disabled</b> — makes the button unclickable</li>
-    <li><b>name</b> — used to send value in a form</li>
-    <li><b>value</b> — value sent when form is submitted</li>
-    <li><b>id</b> — used for JavaScript or CSS</li>
-    </ul>
+                <label for="favColor">Pick Color:</label>
+                <input type="color" id="favColor" name="favColor"><br><br>
 
-    <h4>Example With Attributes</h4>
-    <button type="submit" name="registerBtn" value="register" id="btn1" disabled>
-    Register Now
-    </button>
-    <!-- Hyperlink Description -->
-    <p><strong>Hyperlink:</strong> A hyperlink is used to navigate to another webpage or location when clicked.</p>
+                <input type="hidden" name="userId" value="202117b3662">
 
-    <!-- Button Description -->
-    <p><strong>Button:</strong> A button performs an action such as submitting a form or triggering a function.</p>
+                <label for="volume">Volume Range:</label>
+                <input type="range" id="volume" name="volume" min="0" max="100"><br><br>
 
+                <label for="about">Introduce yourself:</label><br>
+                <textarea name="about" id="about" cols="30" rows="10"></textarea><br><br>
+
+                <label for="language">Choose a Language:</label>
+                <select name="lang" id="language">
+                    <option value="">-- Select Language --</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                </select><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
 
     <hr><hr>
-        
-    <form action="" method="get">
 
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" placeholder="Enter the username" required ><br><br>
-
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password"><br><br>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email"><br><br>
-
-    <label for="dob">Date of Birth:</label>
-    <input type="date" id="dob" name="dob"><br><br>
-
-    <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone" required ><br><br>
-
-    <label for="age">Age:</label>
-    <input type="number" id="age" name="age"><br><br>
-
-    <label>
-        <input type="checkbox" id="agree" name="agree">
-        I agree to the terms
-    </label><br><br>
-
-    <label>
-        <input type="radio" name="gender" value="male">
-        Male
-    </label>
-    <label>
-        <input type="radio" name="gender" value="female">
-        Female
-    </label><br><br>
-
-    <label for="file">Upload File:</label>
-    <input type="file" id="file" name="file"><br><br>
-
-    <label for="imgBtn">Image Submit Button:</label><br>
-    <input type="image" id="imgBtn" src="./html logo.png" width="25px" alt="Submit"><br><br>
-
-    <label for="favColor">Pick Color:</label>
-    <input type="color" id="favColor" name="favColor"><br><br>
-
-    <input type="hidden" name="userId" value="202117b3662">
-
-    <label for="volume">Volume Range:</label>
-    <input type="range" id="volume" name="volume" min="0" max="100">
-    <br> <br><br>
-   <label for="about">Introduce about yourself</label><br>
-    <textarea class="textarea" name="about" id="about" cols="30" rows="10"></textarea>
-    <br><br>
-    <label for="language">Choose a Language:</label>
-    <select name="lang" id="language">
-        <option value="">-- Select Language --</option>
-        <option value="html">HTML</option>
-        <option value="css">CSS</option>
-        <option value="js">JavaScript</option>
-        <option value="python">Python</option>
-        <option value="java">Java</option>
-    </select>
-    <br><br>
-    <input type="submit" value="Submit">
-</form>
-<hr><hr>
-<footer>
-    <a href="./HTML2.html">HTML Basic Concepts Page2</a>
-    <br>
-    <a href="./HTML.html">HTML Basic Concepts Page1 </a>
-        <br>
-    <a href="./HTML_Table.html">HTML Table</a>
-</footer>
+    <!-- ================= FOOTER ================= -->
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>&copy; 2025 All Rights Reserved | HTML Tutorial by Mamidi Lakshman Mohan Manikanta</p>
+        <nav class="footer-links">
+            <a href="./HTML.html">← HTML Basics</a> |
+            <a href="./HTML2.html">Attributes & Text Formatting</a> |
+            <a href="./HTML_Table.html">Tables & Layouts</a>
+        </nav>
+    </footer>
 </body>
 </html>

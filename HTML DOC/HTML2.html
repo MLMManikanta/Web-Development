@@ -1,219 +1,231 @@
 <!DOCTYPE html>
+<!-- Document Type Declaration: Tells the browser this is an HTML5 document -->
+
 <html lang="en">
+<!-- Root element; wraps the entire webpage. lang="en" means the page is in English. -->
+
 <head>
+    <!-- Contains page metadata and resources (not directly shown on the webpage) -->
+
     <meta charset="UTF-8">
+    <!-- Character Encoding: UTF-8 supports all characters (letters, numbers, symbols, etc.) -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>HTML Doc Page 2</title> <!-- Page Title,Sets the title that appears on the browser tab.-->
-   <link rel="icon" href="./html logo.png"> <!-- Favicon Link, Sets a small icon that appears beside the page title in the browser tab. -->
+    <!-- Makes the page responsive on mobile and desktop devices -->
+    <meta name="description" content="Learn HTML step by step — covering tags, attributes, tables, layouts, and forms with examples and explanations.">
+
+    <title>HTML Doc Page 2</title>
+    <!-- Page Title: Appears on the browser tab -->
+
+    <link rel="icon" href="./html logo.png">
+    <!-- Favicon: Small icon displayed in the browser tab beside the page title -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- External CSS: Keeps consistent styling with Page 1 -->
 </head>
+
 <body>
-        <h1>Other Information </h1>
-<h2>Most Used Attributes</h2>
-<ul>
-    <li>
-        <strong>id</strong> attribute – used to uniquely identify an element.<br>
-        Example: <code>&lt;h2 id="heading1"&gt;Welcome&lt;/h2&gt;</code>
-    </li>
+    <!-- Visible content of the webpage begins here -->
 
-    <li>
-        <strong>class</strong> attribute – used to group elements for styling or scripting.<br>
-        Example: <code>&lt;p class="info-text"&gt;This is a paragraph.&lt;/p&gt;</code>
-    </li>
+    <header>
+        <h1>Other Information</h1>
+    </header>
 
-    <li>
-        <strong>style</strong> attribute – used to apply inline CSS to an element.<br>
-        Example: <code>&lt;h3 style="color: blue;"&gt;Styled Heading&lt;/h3&gt;</code>
-    </li>
+    <!-- ================= ATTRIBUTES SECTION ================= -->
+    <section>
+        <h2>Most Used Attributes</h2>
+        <ul>
+            <li><strong>id</strong> attribute – uniquely identifies an element.<br>
+                Example: <code>&lt;h2 id="heading1"&gt;Welcome&lt;/h2&gt;</code>
+            </li>
 
-    <li>
-        <strong>title</strong> attribute – used to show extra information when hovered.<br>
-        Example: <code>&lt;span title="Hello!"&gt;Hover over me&lt;/span&gt;</code>
-    </li>
-</ul>
-<hr>
- <h2>HTML Special Symbols (Most Commonly Used)</h2>
+            <li><strong>class</strong> attribute – groups elements for styling or scripting.<br>
+                Example: <code>&lt;p class="info-text"&gt;This is a paragraph.&lt;/p&gt;</code>
+            </li>
 
-<h3>1. Mathematical Comparison Symbols</h3>
-<p>
-    Less Than: &lt; (HTML: <code>&amp;lt;</code>) <br>
-    Greater Than: &gt; (HTML: <code>&amp;gt;</code>) <br>
-    Less Than or Equal: &le; → ≤ (HTML: <code>&amp;le;</code>) <br>
-    Greater Than or Equal: &ge; → ≥ (HTML: <code>&amp;ge;</code>) <br>
-    Not Equal: &ne; → ≠ (HTML: <code>&amp;ne;</code>) <br>
-    Approximately Equal: &asymp; → ≈ (HTML: <code>&amp;asymp;</code>) <br>
-    Equivalent: &equiv; → ≡ (HTML: <code>&amp;equiv;</code>) <br>
-    Plus-Minus: &plusmn; → ± (HTML: <code>&amp;plusmn;</code>) <br>
-    Multiplication Sign: &times; → × (HTML: <code>&amp;times;</code>) <br>
-    Division Sign: &divide; → ÷ (HTML: <code>&amp;divide;</code>)
-</p>
+            <li><strong>style</strong> attribute – applies inline CSS to an element.<br>
+                Example: <code>&lt;h3 style="color: blue;"&gt;Styled Heading&lt;/h3&gt;</code>
+            </li>
 
-<h3>2. Mathematical Operators</h3>
-<p>
-    Infinity: &infin; → ∞ (HTML: <code>&amp;infin;</code>) <br>
-    Square Root: &radic; → √ (HTML: <code>&amp;radic;</code>) <br>
-    Cube Root: ∛ (HTML: use UTF-8 → <code>∛</code>) <br>
-    Integral: &int; → ∫ (HTML: <code>&amp;int;</code>) <br>
-    Double Integral: &Int; → ∬ (HTML: <code>&amp;Int;</code>) <br>
-    Summation: &sum; → ∑ (HTML: <code>&amp;sum;</code>) <br>
-    Product: &prod; → ∏ (HTML: <code>&amp;prod;</code>) <br>
-    Partial Derivative: &part; → ∂ (HTML: <code>&amp;part;</code>) <br>
-    Angle: &ang; → ∠ (HTML: <code>&amp;ang;</code>) <br>
-    Degree: &deg; → ° (HTML: <code>&amp;deg;</code>)
-</p>
-
-<h3>3. Scientific Symbols</h3>
-<p>
-    Micro: &micro; → µ (HTML: <code>&amp;micro;</code>) <br>
-    Ohm (Omega): &Omega; → Ω (HTML: <code>&amp;Omega;</code>) <br>
-    Alpha: &alpha; → α (HTML: <code>&amp;alpha;</code>) <br>
-    Beta: &beta; → β (HTML: <code>&amp;beta;</code>) <br>
-    Gamma (lowercase): &gamma; → γ (HTML: <code>&amp;gamma;</code>) <br>
-    Gamma (uppercase): &Gamma; → Γ (HTML: <code>&amp;Gamma;</code>) <br>
-    Delta (uppercase): &Delta; → Δ (HTML: <code>&amp;Delta;</code>) <br>
-    Delta (lowercase): &delta; → δ (HTML: <code>&amp;delta;</code>) <br>
-    Pi: &pi; → π (HTML: <code>&amp;pi;</code>) <br>
-    Sigma: &sigma; → σ (HTML: <code>&amp;sigma;</code>) <br>
-    Mu: &mu; → μ (HTML: <code>&amp;mu;</code>)
-</p>
-
-<h3>4. Arrows</h3>
-<p>
-    Left Arrow: &larr; → ← (HTML: <code>&amp;larr;</code>) <br>
-    Right Arrow: &rarr; → → (HTML: <code>&amp;rarr;</code>) <br>
-    Up Arrow: &uarr; → ↑ (HTML: <code>&amp;uarr;</code>) <br>
-    Down Arrow: &darr; → ↓ (HTML: <code>&amp;darr;</code>) <br>
-    Left-Right Arrow: &harr; → ↔ (HTML: <code>&amp;harr;</code>) <br>
-    Double Right Arrow: &rArr; → ⇒ (HTML: <code>&amp;rArr;</code>) <br>
-    Double Left Arrow: &lArr; → ⇐ (HTML: <code>&amp;lArr;</code>) <br>
-    Double Both Arrow: &hArr; → ⇔ (HTML: <code>&amp;hArr;</code>)
-</p>
-
-<h3>5. Currency Symbols</h3>
-<p>
-    Indian Rupee: &#8377; → ₹ (HTML: <code>&amp;#8377;</code>) <br>
-    Dollar: &dollar; → $ (HTML: <code>&amp;dollar;</code>) <br>
-    Euro: &euro; → € (HTML: <code>&amp;euro;</code>) <br>
-    Pound: &pound; → £ (HTML: <code>&amp;pound;</code>) <br>
-    Yen: &yen; → ¥ (HTML: <code>&amp;yen;</code>)
-</p>
-
-<h3>6. Punctuation & Special Characters</h3>
-<p>
-    Ampersand: &amp; → & (HTML: <code>&amp;amp;</code>) <br>
-    Copyright: &copy; → © (HTML: <code>&amp;copy;</code>) <br>
-    Trademark: &trade; → ™ (HTML: <code>&amp;trade;</code>) <br>
-    Registered: &reg; → ® (HTML: <code>&amp;reg;</code>) <br>
-    Bullet: &bull; → • (HTML: <code>&amp;bull;</code>) <br>
-    Ellipsis: &hellip; → … (HTML: <code>&amp;hellip;</code>)
-</p>
-
-<h3>7. Shapes & Misc</h3>
-<p>
-    Heart: &hearts; → ♥ (HTML: <code>&amp;hearts;</code>) <br>
-    Diamond: &diams; → ♦ (HTML: <code>&amp;diams;</code>) <br>
-    Square: &#9633; → □ (HTML: <code>&amp;#9633;</code>) <br>
-    Circle: &#9675; → ○ (HTML: <code>&amp;#9675;</code>) <br>
-    Checkmark: &#10003; → ✓ (HTML: <code>&amp;#10003;</code>) <br>
-    Cross mark: &#10007; → ✗ (HTML: <code>&amp;#10007;</code>)
-</p>
-<hr>
- <h2>Scientific & Formatting HTML Tags</h2>
-
-    <!-- Superscript -->
-    <h3>1. Superscript (&lt;sup&gt;)</h3>
-    <p>
-        <strong>Definition:</strong> Superscript is used to display small text above the normal line.<br>
-        <strong>Example:</strong> X<sup>2</sup> + Y<sup>3</sup> = 25
-    </p>
-
-    <!-- Subscript -->
-    <h3>2. Subscript (&lt;sub&gt;)</h3>
-    <p>
-        <strong>Definition:</strong> Subscript is used for text written below the normal line (common in chemistry).<br>
-        <strong>Example:</strong> H<sub>2</sub>O + CO<sub>2</sub> = Carbonated Water
-    </p>
-
-    <!-- Figure + Figcaption -->
-    <h3>3. Figure & Figcaption (&lt;figure&gt; &lt;figcaption&gt;)</h3>
-    <p>
-        <strong>Definition:</strong> The <code>&lt;figure&gt;</code> tag groups visual content like images, diagrams
-        with a caption using <code>&lt;figcaption&gt;</code>.
-    </p>
-    <figure>
-        <img src="./html logo.png" alt="HTML Logo" width="120">
-        <figcaption>This is an example of a figure with caption.</figcaption>
-    </figure>
+            <li><strong>title</strong> attribute – shows extra info when hovered.<br>
+                Example: <code>&lt;span title="Hello!"&gt;Hover over me&lt;/span&gt;</code>
+            </li>
+        </ul>
+    </section>
 
     <hr>
 
-    <h2>More Text Formatting Tags in HTML</h2>
+    <!-- ================= SPECIAL SYMBOLS SECTION ================= -->
+    <section>
+        <h2>HTML Special Symbols (Most Commonly Used)</h2>
 
-    <h3>4. Bold Text</h3>
-    <p>
-        <strong>Definition:</strong> Makes text bold.<br>
-        <strong>Example:</strong> <b>This is bold text</b>
-    </p>
+        <h3>1. Mathematical Comparison Symbols</h3>
+        <p>
+            Less Than: &lt; (<code>&amp;lt;</code>)<br>
+            Greater Than: &gt; (<code>&amp;gt;</code>)<br>
+            Less Than or Equal: &le; → ≤ (<code>&amp;le;</code>)<br>
+            Greater Than or Equal: &ge; → ≥ (<code>&amp;ge;</code>)<br>
+            Not Equal: &ne; → ≠ (<code>&amp;ne;</code>)<br>
+            Approximately Equal: &asymp; → ≈ (<code>&amp;asymp;</code>)<br>
+            Equivalent: &equiv; → ≡ (<code>&amp;equiv;</code>)<br>
+            Plus-Minus: &plusmn; → ± (<code>&amp;plusmn;</code>)<br>
+            Multiplication: &times; → × (<code>&amp;times;</code>)<br>
+            Division: &divide; → ÷ (<code>&amp;divide;</code>)
+        </p>
 
-    <h3>5. Italic Text</h3>
-    <p>
-        <strong>Definition:</strong> Makes text italic.<br>
-        <strong>Example:</strong> <i>This is italic text</i>
-    </p>
+        <h3>2. Mathematical Operators</h3>
+        <p>
+            Infinity: &infin; → ∞ (<code>&amp;infin;</code>)<br>
+            Square Root: &radic; → √ (<code>&amp;radic;</code>)<br>
+            Cube Root: ∛ (UTF-8 symbol)<br>
+            Integral: &int; → ∫ (<code>&amp;int;</code>)<br>
+            Double Integral: &Int; → ∬ (<code>&amp;Int;</code>)<br>
+            Summation: &sum; → ∑ (<code>&amp;sum;</code>)<br>
+            Product: &prod; → ∏ (<code>&amp;prod;</code>)<br>
+            Partial Derivative: &part; → ∂ (<code>&amp;part;</code>)<br>
+            Angle: &ang; → ∠ (<code>&amp;ang;</code>)<br>
+            Degree: &deg; → ° (<code>&amp;deg;</code>)
+        </p>
 
-    <h3>6. Underline</h3>
-    <p>
-        <strong>Definition:</strong> Underlines the text.<br>
-        <strong>Example:</strong> <u>This is underlined text</u>
-    </p>
+        <h3>3. Scientific Symbols</h3>
+        <p>
+            Micro: &micro; → µ (<code>&amp;micro;</code>)<br>
+            Ohm (Omega): &Omega; → Ω (<code>&amp;Omega;</code>)<br>
+            Alpha: &alpha; → α (<code>&amp;alpha;</code>)<br>
+            Beta: &beta; → β (<code>&amp;beta;</code>)<br>
+            Gamma (lc): &gamma; → γ (<code>&amp;gamma;</code>)<br>
+            Gamma (UC): &Gamma; → Γ (<code>&amp;Gamma;</code>)<br>
+            Delta (UC): &Delta; → Δ (<code>&amp;Delta;</code>)<br>
+            Delta (lc): &delta; → δ (<code>&amp;delta;</code>)<br>
+            Pi: &pi; → π (<code>&amp;pi;</code>)<br>
+            Sigma: &sigma; → σ (<code>&amp;sigma;</code>)<br>
+            Mu: &mu; → μ (<code>&amp;mu;</code>)
+        </p>
 
-    <h3>7. Mark (Highlight)</h3>
-    <p>
-        <strong>Definition:</strong> Highlights text with yellow background.<br>
-        <strong>Example:</strong> <mark>This is highlighted</mark>
-    </p>
+        <h3>4. Arrows</h3>
+        <p>
+            Left Arrow: &larr; ← (<code>&amp;larr;</code>)<br>
+            Right Arrow: &rarr; → (<code>&amp;rarr;</code>)<br>
+            Up Arrow: &uarr; ↑ (<code>&amp;uarr;</code>)<br>
+            Down Arrow: &darr; ↓ (<code>&amp;darr;</code>)<br>
+            Left-Right Arrow: &harr; ↔ (<code>&amp;harr;</code>)<br>
+            Double Right: &rArr; ⇒ (<code>&amp;rArr;</code>)<br>
+            Double Left: &lArr; ⇐ (<code>&amp;lArr;</code>)<br>
+            Double Both: &hArr; ⇔ (<code>&amp;hArr;</code>)
+        </p>
 
-    <h3>8. Small Text</h3>
-    <p>
-        <strong>Definition:</strong> Displays small-sized text.<br>
-        <strong>Example:</strong> <small>This is small text</small>
-    </p>
+        <h3>5. Currency Symbols</h3>
+        <p>
+            Indian Rupee: &#8377; ₹ (<code>&amp;#8377;</code>)<br>
+            Dollar: &dollar; $ (<code>&amp;dollar;</code>)<br>
+            Euro: &euro; € (<code>&amp;euro;</code>)<br>
+            Pound: &pound; £ (<code>&amp;pound;</code>)<br>
+            Yen: &yen; ¥ (<code>&amp;yen;</code>)
+        </p>
 
-    <h3>9. Deleted Text (&lt;del&gt;)</h3>
-    <p>
-        <strong>Definition:</strong> Shows text that is deleted (strikethrough).<br>
-        <strong>Example:</strong> <del>Old Price ₹150</del>
-    </p>
+        <h3>6. Punctuation &amp; Special Characters</h3>
+        <p>
+            Ampersand: &amp; &amp; (<code>&amp;amp;</code>)<br>
+            Copyright: &copy; © (<code>&amp;copy;</code>)<br>
+            Trademark: &trade; ™ (<code>&amp;trade;</code>)<br>
+            Registered: &reg; ® (<code>&amp;reg;</code>)<br>
+            Bullet: &bull; • (<code>&amp;bull;</code>)<br>
+            Ellipsis: &hellip; … (<code>&amp;hellip;</code>)
+        </p>
 
-    <h3>10. Inserted Text (&lt;ins&gt;)</h3>
-    <p>
-        <strong>Definition:</strong> Shows newly added text (underlined).<br>
-        <strong>Example:</strong> <ins>New Price ₹120</ins>
-    </p>
+        <h3>7. Shapes &amp; Misc</h3>
+        <p>
+            Heart: &hearts; ♥ (<code>&amp;hearts;</code>)<br>
+            Diamond: &diams; ♦ (<code>&amp;diams;</code>)<br>
+            Square: &#9633; □ (<code>&amp;#9633;</code>)<br>
+            Circle: &#9675; ○ (<code>&amp;#9675;</code>)<br>
+            Checkmark: &#10003; ✓ (<code>&amp;#10003;</code>)<br>
+            Cross Mark: &#10007; ✗ (<code>&amp;#10007;</code>)
+        </p>
+    </section>
 
-    <h3>11. Code Tag</h3>
-    <p>
-        <strong>Definition:</strong> Used to display code snippets.<br>
-        <strong>Example:</strong> 
-        <code>console.log("Hello World");</code>
-    </p>
+    <hr>
 
-    <h3>12. Preformatted Text (&lt;pre&gt;)</h3>
-    <p>
-        <strong>Definition:</strong> Displays text exactly as typed (keeps spaces & new lines).<br>
-        <strong>Example:</strong>
-    </p>
-    <pre>
+    <!-- ================= SCIENTIFIC & FORMATTING TAGS ================= -->
+    <section>
+        <h2>Scientific &amp; Formatting HTML Tags</h2>
+
+        <!-- Superscript -->
+        <h3>1. Superscript (&lt;sup&gt;)</h3>
+        <p>
+            <strong>Definition:</strong> Displays text slightly above the normal line.<br>
+            <strong>Example:</strong> X<sup>2</sup> + Y<sup>3</sup> = 25
+        </p>
+
+        <!-- Subscript -->
+        <h3>2. Subscript (&lt;sub&gt;)</h3>
+        <p>
+            <strong>Definition:</strong> Displays text below the normal line (used in chemistry).<br>
+            <strong>Example:</strong> H<sub>2</sub>O + CO<sub>2</sub> = Carbonated Water
+        </p>
+
+        <!-- Figure & Figcaption -->
+        <h3>3. Figure &amp; Figcaption</h3>
+        <p>
+            <strong>Definition:</strong> The <code>&lt;figure&gt;</code> element groups media with an optional caption
+            using <code>&lt;figcaption&gt;</code>.
+        </p>
+
+        <figure>
+            <img src="./html logo.png" alt="HTML Logo" width="120">
+            <figcaption>This is an example of a figure with caption.</figcaption>
+        </figure>
+    </section>
+
+    <hr>
+
+    <!-- ================= TEXT FORMATTING TAGS ================= -->
+    <section>
+        <h2>More Text Formatting Tags in HTML</h2>
+
+        <h3>4. Bold Text (&lt;b&gt;)</h3>
+        <p><b>This is bold text</b></p>
+
+        <h3>5. Italic Text (&lt;i&gt;)</h3>
+        <p><i>This is italic text</i></p>
+
+        <h3>6. Underline (&lt;u&gt;)</h3>
+        <p><u>This is underlined text</u></p>
+
+        <h3>7. Mark (Highlight)</h3>
+        <p><mark>This is highlighted</mark></p>
+
+        <h3>8. Small Text (&lt;small&gt;)</h3>
+        <p><small>This is small text</small></p>
+
+        <h3>9. Deleted Text (&lt;del&gt;)</h3>
+        <p><del>Old Price ₹150</del></p>
+
+        <h3>10. Inserted Text (&lt;ins&gt;)</h3>
+        <p><ins>New Price ₹120</ins></p>
+
+        <h3>11. Code Tag (&lt;code&gt;)</h3>
+        <p><code>console.log("Hello World");</code></p>
+
+        <h3>12. Preformatted Text (&lt;pre&gt;)</h3>
+        <pre>
 Line 1
     Line 2 (indented)
         Line 3 (more indented)
-    </pre>
-<hr><hr>
-<footer>
-    <a href="./HTML2.html">HTML Basic Concepts Page2</a>
-    <br>
-    <a href="./HTML_Forms.html">HTML Forms</a>
-    <br>
-    <a href="./HTML.html">HTML Basic Concepts Page1</a>
-</footer>
+        </pre>
+    </section>
+
+    <hr><hr>
+
+    <!-- ================= FOOTER ================= -->
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>&copy; 2025 All Rights Reserved | HTML Tutorial by Mamidi Lakshman Mohan Manikanta</p>
+        <nav class="footer-links">
+            <a href="./HTML.html">← Back: HTML Basics</a> |
+            <a href="./HTML_Table.html">Next: Tables & Layouts →</a> |
+            <a href="./HTML_Forms.html">HTML Forms</a>
+        </nav>
+    </footer>
 </body>
 </html>

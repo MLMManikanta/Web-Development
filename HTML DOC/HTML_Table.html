@@ -1,106 +1,154 @@
 <!DOCTYPE html>
+<!-- Document Type Declaration: Defines this file as an HTML5 document -->
+
 <html lang="en">
+<!-- Root element that wraps the entire page; lang="en" means English language -->
+
 <head>
+    <!-- Contains metadata and resources (not directly visible on the page) -->
+
     <meta charset="UTF-8">
+    <!-- Character Encoding: UTF-8 allows all languages and special characters -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures the page looks good on mobile and desktop (responsive design) -->
+    <meta name="description" content="Learn HTML step by step — covering tags, attributes, tables, layouts, and forms with examples and explanations.">
+
     <title>HTML Tables & Layouts</title>
-    <link rel="icon" href="./html logo.png"> 
+    <!-- Page Title: Appears in the browser tab -->
+
+    <link rel="icon" href="./html logo.png">
+    <!-- Favicon: Small logo that appears beside the title in the browser tab -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- External CSS: Keeps visual consistency across all tutorial pages -->
 </head>
+
 <body>
+    <!-- Contains all visible page content -->
 
-    <!-- WHAT IS A TABLE -->
-    <h2>What is a Table?</h2>
-    <p>
-        An HTML table is used to display data in rows and columns. 
-        The table structure is defined using <code>&lt;table&gt;</code>, 
-        which contains table rows (<code>&lt;tr&gt;</code>) and table cells 
-        (<code>&lt;td&gt;</code> or <code>&lt;th&gt;</code>).
-    </p>
+    <header>
+        <h1>HTML Tables & Layouts</h1>
+    </header>
 
-    <!-- TABLE ELEMENTS -->
-    <h2>Table Elements</h2>
-    <ul>
-        <li><b>&lt;table&gt;</b> → Defines the table container</li>
-        <li><b>&lt;thead&gt;</b> → Header section</li>
-        <li><b>&lt;tbody&gt;</b> → Body/content section</li>
-        <li><b>&lt;tfoot&gt;</b> → Footer section</li>
-        <li><b>&lt;tr&gt;</b> → Table row</li>
-        <li><b>&lt;th&gt;</b> → Table header cell (bold & centered by default)</li>
-        <li><b>&lt;td&gt;</b> → Table data cell</li>
-    </ul>
+    <main>
 
-    <!-- TABLE EXAMPLE -->
-    <h2>Basic Table Structure</h2>
+        <!-- ================= WHAT IS A TABLE ================= -->
+        <section>
+            <h2>What is a Table?</h2>
+            <p>
+                An HTML table is used to display data in <b>rows and columns</b>. 
+                The table is created using <code>&lt;table&gt;</code>, which contains 
+                <code>&lt;tr&gt;</code> (table rows) and 
+                <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> (table cells).
+            </p>
+        </section>
 
-    <table border="1" width="60%" cellpadding="8">
-        <thead>
-            <tr>
-                <th>Header 1</th>
-                <th>Header 2</th>
-                <th>Header 3</th>
-                <th>Header 4</th>
-                <th>Header 5</th>
-            </tr>
-        </thead>
+        <!-- ================= TABLE ELEMENTS ================= -->
+        <section>
+            <h2>Table Elements</h2>
+            <ul>
+                <li><b>&lt;table&gt;</b> → Defines the table container</li>
+                <li><b>&lt;thead&gt;</b> → Header section of the table</li>
+                <li><b>&lt;tbody&gt;</b> → Main content section</li>
+                <li><b>&lt;tfoot&gt;</b> → Footer section</li>
+                <li><b>&lt;tr&gt;</b> → Table row</li>
+                <li><b>&lt;th&gt;</b> → Table header cell (bold & centered by default)</li>
+                <li><b>&lt;td&gt;</b> → Table data cell</li>
+            </ul>
+        </section>
 
-        <tbody>
-            <tr>
-                <td>Row 1 Col 1</td>
-                <td>Row 1 Col 2</td>
-                <td>Row 1 Col 3</td>
-                <td>Row 1 Col 4</td>
-                <td>Row 1 Col 5</td>
-            </tr>
-            <tr>
-                <td>Row 2 Col 1</td>
-                <td>Row 2 Col 2</td>
-                <td>Row 2 Col 3</td>
-                <td>Row 2 Col 4</td>
-                <td>Row 2 Col 5</td>
-            </tr>
-        </tbody>
+        <!-- ================= BASIC TABLE EXAMPLE ================= -->
+        <section>
+            <h2>Basic Table Structure</h2>
+            <p><strong>Example of a simple table using thead, tbody, and tfoot:</strong></p>
 
-        <tfoot>
-            <tr>
-                <td colspan="5">Table Footer</td>
-            </tr>
-        </tfoot>
-    </table>
+            <table border="1" width="60%" cellpadding="8">
+                <thead>
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                        <th>Header 3</th>
+                        <th>Header 4</th>
+                        <th>Header 5</th>
+                    </tr>
+                </thead>
 
-    <!-- COLSPAN & ROWSPAN -->
-    <h2>Colspan & Rowspan Example</h2>
+                <tbody>
+                    <tr>
+                        <td>Row 1 Col 1</td>
+                        <td>Row 1 Col 2</td>
+                        <td>Row 1 Col 3</td>
+                        <td>Row 1 Col 4</td>
+                        <td>Row 1 Col 5</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2 Col 1</td>
+                        <td>Row 2 Col 2</td>
+                        <td>Row 2 Col 3</td>
+                        <td>Row 2 Col 4</td>
+                        <td>Row 2 Col 5</td>
+                    </tr>
+                </tbody>
 
-    <table border="1" width="60%" cellpadding="8">
-        <tr>
-            <th colspan="3">Colspan (Merging Columns)</th>
-        </tr>
-        <tr>
-            <td rowspan="2">Rowspan (Merging Rows)</td>
-            <td>Cell A</td>
-            <td>Cell B</td>
-        </tr>
-        <tr>
-            <td>Cell C</td>
-            <td>Cell D</td>
-        </tr>
-    </table>
+                <tfoot>
+                    <tr>
+                        <td colspan="5">Table Footer</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
 
-    <!-- EVOLUTION OF LAYOUTS -->
-    <h2>Evolution of Layouts in Web Design</h2>
-    <ol>
-        <li><b>Table-based Layouts (1990s)</b> – Used tables to design whole webpages. Heavy and not responsive.</li>
-        <li><b>Float-based Layouts (2000s)</b> – Used CSS float property; better but still limited.</li>
-        <li><b>Flexbox Layout (2015+)</b> – One-dimensional layout; easy alignment & spacing.</li>
-        <li><b>CSS Grid Layout (2017+)</b> – Two-dimensional layout; best for complex designs.</li>
-        <li><b>Modern Responsive Layouts</b> – Flexbox + Grid + Media Queries.</li>
-    </ol>
-<hr><hr>
-<footer>
-    <a href="./HTML2.html">HTML Basic Concepts Page2</a>
-    <br>
-    <a href="./HTML_Forms.html">HTML Forms</a>
-    <br>
-    <a href="./HTML.html">HTML Basic Concepts Page1 </a>
-</footer>
+        <!-- ================= COLSPAN & ROWSPAN ================= -->
+        <section>
+            <h2>Colspan & Rowspan Example</h2>
+            <p>
+                <strong>Colspan</strong> merges multiple columns into one cell, 
+                while <strong>Rowspan</strong> merges multiple rows vertically.
+            </p>
+
+            <table border="1" width="60%" cellpadding="8">
+                <tr>
+                    <th colspan="3">Colspan (Merging Columns)</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Rowspan (Merging Rows)</td>
+                    <td>Cell A</td>
+                    <td>Cell B</td>
+                </tr>
+                <tr>
+                    <td>Cell C</td>
+                    <td>Cell D</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- ================= EVOLUTION OF LAYOUTS ================= -->
+        <section>
+            <h2>Evolution of Layouts in Web Design</h2>
+            <ol>
+                <li><b>Table-based Layouts (1990s)</b> – Used tables to design whole webpages. Heavy and not responsive.</li>
+                <li><b>Float-based Layouts (2000s)</b> – Used CSS float property; better but still limited.</li>
+                <li><b>Flexbox Layout (2015+)</b> – One-dimensional layout; easy alignment & spacing.</li>
+                <li><b>CSS Grid Layout (2017+)</b> – Two-dimensional layout; best for complex designs.</li>
+                <li><b>Modern Responsive Layouts</b> – Combination of Flexbox, Grid & Media Queries.</li>
+            </ol>
+        </section>
+
+    </main>
+
+    <hr><hr>
+
+    <!-- ================= FOOTER ================= -->
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>&copy; 2025 All Rights Reserved | HTML Tutorial by Mamidi Lakshman Mohan Manikanta</p>
+        <nav class="footer-links">
+            <a href="./HTML.html">← HTML Basics</a> |
+            <a href="./HTML2.html">Attributes & Text Formatting</a> |
+            <a href="./HTML_Forms.html">Next: Forms & Inputs →</a>
+        </nav>
+    </footer>
+
 </body>
 </html>
