@@ -187,20 +187,6 @@ p {
 
 <hr>
 
-<!-- CSS Reset Explanation -->
-<!-- CSS RESET AND BOX MODEL EXPLANATION -->
-<h2>CSS Reset and Box Model</h2>
-
-<div class="reset-section">
-    <p><b>CSS Reset:</b></p>
-    <code>* { margin: 0; padding: 0; box-sizing: border-box; }</code>
-    <p>
-        This removes default spacing and ensures consistent box sizing across all browsers.  
-        It makes layout calculations easier and more predictable.
-    </p>
-
-    <hr>
-
     <h3>Margin and Padding Shorthand Formats</h3>
     <p>
         Both <b>margin</b> and <b>padding</b> can accept one, two, three, or four values:
@@ -413,6 +399,108 @@ p {
     </li>
 
 </ol>
+<hr>
+
+<!-- 7. UNIVERSAL SELECTOR AND BOX-SIZING -->
+<section class="css-section">
+    <h2>7. Universal Selector and Box-Sizing Property</h2>
+    <p>
+        The <code>*</code> symbol is called the <b>Universal Selector</b>.  
+        It selects <b>every element</b> on the webpage and applies the defined CSS properties to all of them.
+    </p>
+    <p>
+        This removes default spacing and ensures consistent box sizing across all browsers.  
+        It makes layout calculations easier and more predictable.
+    </p>
+
+    <hr>
+    <div class="example-card">
+        <pre><code>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        </code></pre>
+
+        <p><b>Explanation:</b></p>
+        <ul>
+            <li><code>margin: 0;</code> → Removes the outer spacing around all elements.</li>
+            <li><code>padding: 0;</code> → Removes the inner spacing inside all elements.</li>
+            <li><code>box-sizing: border-box;</code> → Includes padding and border within the total width and height of an element.</li>
+        </ul>
+
+        <p> This is used as a <b>CSS Reset</b> to make layouts consistent across browsers.</p>
+    </div>
+</section>
+
+<hr>
+
+<!-- 8. CSS UNITS AND SIZES -->
+<section class="css-section">
+    <h2>8. CSS Units and Sizes</h2>
+
+    <p>
+        CSS uses units to control the <b>size</b> of elements such as width, height, font, margin, and padding.
+        Units are divided into two main types: <b>Absolute Units</b> and <b>Relative Units</b>.
+    </p>
+
+    <h3>A. Absolute Units</h3>
+    <table>
+        <tr><th>Unit</th><th>Meaning</th><th>Usage</th></tr>
+        <tr><td>px</td><td>Pixels</td><td>Most common for web design</td></tr>
+        <tr><td>pt</td><td>Points (1/72 inch)</td><td>Used in print styles</td></tr>
+        <tr><td>cm</td><td>Centimeters</td><td>Rarely used</td></tr>
+        <tr><td>mm</td><td>Millimeters</td><td>Rarely used</td></tr>
+        <tr><td>in</td><td>Inches</td><td>Rarely used</td></tr>
+    </table>
+
+    <h3>B. Relative Units</h3>
+    <table>
+        <tr><th>Unit</th><th>Relative To</th><th>Description</th></tr>
+        <tr><td>%</td><td>Parent Element</td><td>Percentage of parent’s size</td></tr>
+        <tr><td>em</td><td>Parent’s Font Size</td><td>1em = current element’s font size</td></tr>
+        <tr><td>rem</td><td>Root (HTML) Font Size</td><td>1rem = &lt;html&gt; font size</td></tr>
+        <tr><td>vw</td><td>Viewport Width</td><td>1vw = 1% of browser width</td></tr>
+        <tr><td>vh</td><td>Viewport Height</td><td>1vh = 1% of browser height</td></tr>
+        <tr><td>vmin / vmax</td><td>Viewport min/max side</td><td>Used for responsive layouts</td></tr>
+    </table>
+
+    <h3>Example:</h3>
+    <pre><code>
+html {
+    font-size: 16px;
+}
+
+div {
+    font-size: 2em;   /* 2 × parent’s font size = 32px */
+}
+
+p {
+    font-size: 1.5rem; /* 1.5 × root font size = 24px */
+}
+
+.container {
+    width: 80%;
+    height: 50vh;
+}
+    </code></pre>
+
+    <h3>Visual Example:</h3>
+    <div class="responsive-box">
+        This box uses <code>%</code>, <code>vh</code>, and <code>rem</code> units.<br>
+        It’s fully responsive and adjusts automatically with the screen size!
+    </div>
+
+    <h3>Best Practices:</h3>
+    <ul>
+        <li>Use <b>relative units</b> (<code>em</code>, <code>rem</code>, <code>%</code>, <code>vw</code>, <code>vh</code>) for responsive design.</li>
+        <li>Use <code>px</code> only for small, fixed elements like borders or icons.</li>
+        <li>Set a base font size in <code>&lt;html&gt;</code> and use <code>rem</code> for scalable text.</li>
+        <li>Combine <code>vh</code> and <code>vw</code> for flexible layouts.</li>
+    </ul>
+</section>
+
 <hr>
 
 

@@ -142,7 +142,7 @@ h1 {
     font-size: 2rem;
     color: #007acc;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: center;
 }
 
 h2 {
@@ -550,3 +550,44 @@ li {
     font-family: "Consolas", "Courier New", monospace;
 }
 
+/* 🌈 Responsive Units Demo Box */
+.responsive-box {
+    background-color: #9c88ff;
+    color: white;
+    width: 50%;
+    height: 30vh;
+    padding: 2em;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-top: 15px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.responsive-box:hover {
+    transform: translateY(-3px);
+    background-color: #8c7ae6;
+}
+
+/* Table styling for units section */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+th, td {
+    border: 1px solid #d1d5db;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #007acc;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9fafb;
+}
