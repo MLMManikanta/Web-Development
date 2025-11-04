@@ -13,14 +13,14 @@ body {
 
 /* ---------- Layout ---------- */
 header { margin-bottom: 24px; }
-header h1 { font-size: 2rem; color: #0f172a; margin-bottom: 8px; }
+header h1 { font-size: 2rem; color: #0f172a; margin-bottom: 8px; text-align: center; }
 header p  { color: #334155; }
 
 nav { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px; margin: 18px 0 28px; }
-nav h2 { font-size: 1.1rem; color: #0f172a; margin-bottom: 8px; }
+nav h2 { font-size: 1.6rem; color: #0f172a; margin-bottom: 8px; }
 nav ol { margin-left: 20px; }
 nav a { text-decoration: none; color: #2563eb; }
-nav a:hover { text-decoration: underline; }
+nav a:hover, nav a:focus-visible { text-decoration: underline; }
 
 main section { margin-bottom: 34px; }
 section h2 {
