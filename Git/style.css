@@ -44,7 +44,6 @@ summary {
   cursor: pointer;
   font-weight: 600;
   color: #1e293b;
-  list-style: none;
 }
 
 summary::-webkit-details-marker { display: none; }
