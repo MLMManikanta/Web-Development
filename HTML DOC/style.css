@@ -1,3 +1,6 @@
+/* ===================================
+   GLOBAL RESET & BASE STYLES
+   =================================== */
 * {
     margin: 0;
     padding: 0;
@@ -9,21 +12,25 @@ body {
     line-height: 1.6;
     color: #222;
     background-color: #fafafa;
-    padding: 20px 10%;
+    padding: 30px 10%;
 }
 
-/* Headings */
+/* ===================================
+   HEADINGS
+   =================================== */
 h1 {
-    color: #ff4500;
     text-align: center;
+    color: #ff4500;
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 h2 {
     color: #0073e6;
     border-bottom: 2px solid #0073e6;
-    padding-bottom: 5px;
+    padding-bottom: 4px;
     margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 h3 {
@@ -31,67 +38,157 @@ h3 {
     margin-top: 20px;
 }
 
-/* Text */
-p, ul, ol, dl {
-    margin-top: 10px;
-    margin-bottom: 10px;
+h4 {
+    color: #555;
+    font-weight: 600;
+    margin-top: 15px;
 }
 
-ul, ol, dl {
-    margin-left: 40px;
+/* ===================================
+   TEXT & PARAGRAPHS
+   =================================== */
+p {
+    margin: 8px 0;
 }
 
-code, pre {
+strong, b {
+    color: #000;
+}
+
+mark {
+    background-color: #fff59d;
+    padding: 0 4px;
+    border-radius: 3px;
+}
+
+small {
+    color: #666;
+}
+
+/* ===================================
+   CODE & PRE
+   =================================== */
+code {
     background-color: #f4f4f4;
-    padding: 5px 8px;
-    border-radius: 5px;
+    padding: 3px 6px;
+    border-radius: 4px;
     font-family: "Courier New", monospace;
 }
 
 pre {
+    background-color: #f8f8f8;
+    border-left: 4px solid #0073e6;
+    padding: 10px 15px;
+    border-radius: 6px;
     overflow-x: auto;
     margin: 10px 0;
-    padding: 10px;
+    font-family: "Courier New", monospace;
 }
 
-/* Examples and Highlights */
-.example-box {
-    background-color: #d6ecff;
-    padding: 10px;
-    border-left: 4px solid #0073e6;
-    margin: 10px 0;
+pre code {
+    background: none;
+    padding: 0;
 }
 
-.highlight {
-    background-color: yellow;
+/* ===================================
+   LISTS
+   =================================== */
+ul, ol, dl {
+    margin: 10px 0 15px 40px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+dt {
     font-weight: bold;
+    color: #0073e6;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    border-top: 2px solid #ddd;
-    margin-top: 50px;
+dd {
+    margin-left: 20px;
+    margin-bottom: 8px;
 }
 
-footer a {
+/* ===================================
+   LINKS & NAVIGATION
+   =================================== */
+a {
     color: #0073e6;
     text-decoration: none;
-    margin: 0 8px;
+    font-weight: 500;
 }
 
-footer a:hover {
+a:hover {
     text-decoration: underline;
+    color: #005bb5;
 }
 
-/* Table Styling */
+nav {
+    text-align: center;
+    margin: 15px 0 20px 0;
+}
+
+nav a {
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #0073e6;
+    color: white;
+}
+
+/* ===================================
+   HORIZONTAL RULES
+   =================================== */
+hr {
+    border: 0;
+    border-top: 2px solid #ddd;
+    margin: 25px 0;
+}
+
+/* ===================================
+   IMAGE & MEDIA
+   =================================== */
+img {
+    display: block;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+figure {
+    text-align: center;
+    margin: 15px 0;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+svg {
+    display: block;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* ===================================
+   TABLES
+   =================================== */
 table {
     border-collapse: collapse;
-    margin: 20px 0;
     width: 80%;
+    margin: 20px auto;
     background-color: #fff;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
 }
 
 th, td {
@@ -110,7 +207,9 @@ tfoot td {
     font-style: italic;
 }
 
-/* Form & Input Styling */
+/* ===================================
+   FORMS
+   =================================== */
 form {
     background: #fff;
     padding: 20px;
@@ -150,8 +249,85 @@ button, input[type="submit"], input[type="reset"] {
     cursor: pointer;
     border-radius: 5px;
     padding: 10px 20px;
+    transition: background 0.3s ease;
 }
 
 button:hover, input[type="submit"]:hover {
     background-color: #005bb5;
+}
+
+/* ===================================
+   EXAMPLES & BOXES
+   =================================== */
+.example-box {
+    background-color: #e8f4ff;
+    padding: 10px;
+    border-left: 4px solid #0073e6;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+footer {
+    text-align: center;
+    border-top: 2px solid #ccc;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.95rem;
+    color: #444;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+/* ===================================
+   INLINE VS BLOCK EXAMPLES
+   =================================== */
+div[style], span[style] {
+    font-family: inherit;
+    border-radius: 5px;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 5%;
+    }
+
+    pre {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    img, table, form {
+        width: 100%;
+    }
+
+    footer {
+        font-size: 0.85rem;
+    }
 }
