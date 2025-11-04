@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Git Doc</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Git &amp; Git Commands — Detailed Reference</h1>
+  </header>
+
+  <nav aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#install-setup">Install &amp; First-Time Setup</a></li>
+      <li><a href="#concepts">Core Concepts</a></li>
+      <li><a href="#start-repo">Start or Clone a Repository</a></li>
+      <li><a href="#daily-workflow">Daily Workflow (status → add → commit)</a></li>
+      <li><a href="#inspect-history">Inspecting Changes &amp; History</a></li>
+      <li><a href="#branching">Branching</a></li>
+      <li><a href="#merge-rebase">Merge &amp; Rebase</a></li>
+      <li><a href="#remotes">Working with Remotes</a></li>
+      <li><a href="#tags">Tags &amp; Releases</a></li>
+      <li><a href="#ignore">Ignoring Files</a></li>
+      <li><a href="#stash">Stashing</a></li>
+      <li><a href="#undo">Undo &amp; Repair</a></li>
+      <li><a href="#cherry-bisect">Cherry-Pick &amp; Bisect</a></li>
+      <li><a href="#worktrees-sparse">Worktrees &amp; Sparse Checkout</a></li>
+      <li><a href="#submodules">Submodules</a></li>
+      <li><a href="#lfs">Git LFS (Large Files)</a></li>
+      <li><a href="#search-logs">Search &amp; Useful Logs</a></li>
+      <li><a href="#config-aliases">Config &amp; Aliases</a></li>
+      <li><a href="#troubleshooting">Troubleshooting Tips</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section id="install-setup">
+      <h2>1) Install &amp; First-Time Setup</h2>
+
+      <details open>
+        <summary><code>git --version</code></summary>
+        <p>Verifies that Git is installed and prints the installed version.</p>
+        <pre><code>git --version</code></pre>
+      </details>
+
+      <details>
+        <summary><code>git config --global user.name / user.email</code></summary>
+        <p>Sets your identity for all repositories on this machine (stored in <code>~/.gitconfig</code>).</p>
+        <pre><code>git config --global user.name "Your Name"
+git config --global user.email "you@example.com"</code></pre>
+      </details>
+
+      <details>
+        <summary><code>git config --global init.defaultBranch main</code></summary>
+        <p>Controls which branch name new repos start with. Many teams use <code>main</code>.</p>
+        <pre><code>git config --global init.defaultBranch main</code></pre>
+      </details>
+
+      <details>
+        <summary><code>git config --list --global</code></summary>
+        <p>Shows all globally configured Git settings so you can confirm your setup.</p>
+        <pre><code>git config --list --global</code></pre>
+      </details>
+    </section>
+
+    <section id="concepts">
+      <h2>2) Core Concepts</h2>
+      <ul>
+        <li><strong>Working Tree:</strong> your files on disk right now.</li>
+        <li><strong>Index/Staging Area:</strong> what will go into the next commit.</li>
+        <li><strong>Commit:</strong> a snapshot of staged changes.</li>
+        <li><strong>Branch:</strong> a movable pointer to a commit.</li>
+        <li><strong>HEAD:</strong> your current branch/commit.</li>
+        <li><strong>Remote:</strong> a server copy (e.g., GitHub) referenced by a name like <code>origin</code>.</li>
+        <li><strong>Tag:</strong> a named pointer (used for releases).</li>
+      </ul>
+    </section>
+
+    <section id="start-repo">
+      <h2>3) Start or Clone a Repository</h2>
+
+      <details open>
+        <summary><code>git init</code> — create a new repository</summary>
+        <p>Initializes a new Git repository in the current directory by creating a <code>.git</code> folder.</p>
+        <pre><code>mkdir myproject &amp;&amp; cd myproject
+git init</code></pre>
+      </details>
+
+      <details>
+        <summary><code>git clone &lt;url&gt;</code> — copy an existing repository</summary>
+        <p>Downloads a repo and its history to a new folder.</p>
+        <pre><code>git clone https://example.com/user/repo.git
+cd repo</code></pre>
+      </details>
+    </section>
+
+    <section id="daily-workflow">
+      <h2>4) Daily Workflow</h2>
+
+      <details open>
+        <summary><code>git status</code></summary>
+        <p>Shows staged, unstaged, and untracked changes to help you decide what to add/commit.</p>
+        <pre><code>git status</code></pre>
+      </details>
+
+      <details>
+        <summary><code>git add</code></summary>
+        <p>Moves changes into the staging area. Use paths for precision or <code>.</code> to add everything.</p>
+        <pre><code>git add path/to/file
+git add .</code></pre>
+      </details>
+
+      <details>
+        <summary><code>git commit -m "message"</code> / <code>git commit --amend</code></summary>
+        <p><code>commit</code> saves the staged snapshot. <code>--amend</code> edits the last commit (message or content).</p>
+        <pre><code>git commit -m "feat: explain daily workflow"
+git commit --amend</code></pre>
+      </details>
+    </section>
+
+    <section id="inspect-history">
+      <h2>5) Inspecting Changes &amp; History</h2>
+
+      <details open>
+        <summary><code>git diff</code> / <code>git diff --staged</code></summary>
+        <p>Shows line-by-line differences in your working tree vs. index, or staged vs. last commit.</p>
+        <pre><code>git diff
+git diff --staged</code></pre>
+      </details>
+
+      <details>
+        <summary><code>git log</code> (common views)</summary>
+        <p>Browse commit history. Options can simplify or visualize the graph.</p>
+        <pre><code>git log --oneline --graph --decorate --all
+git show HEAD         # show the last commit details</code></pre>
+      </details>
+
+      <details>
+        <summary><code>git blame &lt;file&gt;</code> / <code>git log --follow -- &lt;file&gt;</code></summary>
+        <p><code>blame</code> shows who last changed each line; <code>--follow</code> tracks a file across renames.</p>
+        <pre><code>git blame src/app.js
+git log --follow -- src/app.js</code></pre>
+      </details>
+    </section>
+
+    <section id="branching">
+      <h2>6) Branching</h2>
+
+      <details open>
+        <summary><code>git branch</code> / <code>git switch</code></summary>
+        <p>Create, list, or move between branches. <code>switch -c</code> creates and checks out in one step.</p>
+        <pre><code>git branch
+git switch -c feature/login
+git switch main</code></pre>
+      </details>
+    </section>
+
+    <section id="merge-rebase">
+      <h2>7) Merge &amp; Rebase</h2>
+
+      <details open>
+        <summary><code>git merge &lt;branch&gt;</code></summary>
+        <p>Combines another branch into the current branch by creating a merge commit (unless fast-forward).</p>
+        <pre><code>git switch main
+git merge feature/login</code></pre>
+      </details>
+
+      <details>
+        <summary><code>git rebase &lt;base&gt;</code></summary>
+        <p>Replays your current branch’s commits on top of a new base for linear history. Avoid rebasing shared history.</p>
+        <pre><code>git switch feature/login
+git rebase origin/main
+# fix conflicts → git add &lt;files&gt; → git rebase --continue</code></pre>
+      </details>
+    </section>
+
+    <section id="remotes">
+      <h2>8) Working with Remotes</h2>
+
+      <details open>
+        <summary><code>git remote -v</code> / <code>git remote add origin &lt;url&gt;</code></summary>
+        <p>Shows configured remotes or adds a new one named <code>origin</code>.</p>
+        <pre><code>git remote -v
+git remote add origin https://example.com/user/repo.git</code></pre>
+      </details>
+
+      <details>
+        <summary><code>git fetch</code> / <code>git pull</code> / <code>git push</code></summary>
+        <p><code>fetch</code> updates remote tracking branches. <code>pull</code> = fetch + merge (or rebase). <code>push</code> uploads commits.</p>
+        <pre><code>git fetch origin
+git pull
+git push -u origin main</code></pre>
+      </details>
+
+      <details>
+        <summary>Upstream tracking</summary>
+        <p>Connect a local branch with a remote one so <code>git push</code> and <code>git pull</code> know where to go.</p>
+        <pre><code>git branch --set-upstream-to=origin/main main</code></pre>
+      </details>
+    </section>
+
+    <section id="tags">
+      <h2>9) Tags &amp; Releases</h2>
+
+      <details open>
+        <summary><code>git tag</code> (lightweight vs annotated)</summary>
+        <p>Tags mark specific commits—often for releases. Annotated tags store a message and metadata.</p>
+        <pre><code>git tag v1.0.0
+git tag -a v1.0.0 -m "First release"
+git push --tags</code></pre>
+      </details>
+    </section>
+
+    <section id="ignore">
+      <h2>10) Ignoring Files</h2>
+
+      <details open>
+        <summary><code>.gitignore</code></summary>
+        <p>Prevents matching files from being tracked (but doesn’t remove already-tracked files).</p>
+        <pre><code># .gitignore examples
+node_modules/
+dist/
+.env
+.DS_Store
+*.log</code></pre>
+      </details>
+
+      <details>
+        <summary>Stop tracking files now ignored</summary>
+        <p>Remove from index, keep in working tree, and commit the change.</p>
+        <pre><code>git rm -r --cached .
+git add .
+git commit -m "Stop tracking ignored files"</code></pre>
+      </details>
+    </section>
+
+    <section id="stash">
+      <h2>11) Stashing</h2>
+
+      <details open>
+        <summary><code>git stash</code></summary>
+        <p>Temporarily shelves local changes without committing so you can switch branches or pull cleanly.</p>
+        <pre><code>git stash push -m "WIP: login form"
+git stash list
+git stash show -p stash@{0}
+git stash apply stash@{0}
+git stash pop</code></pre>
+      </details>
+    </section>
+
+    <section id="undo">
+      <h2>12) Undo &amp; Repair</h2>
+
+      <details open>
+        <summary><code>git restore</code> (working tree / index)</summary>
+        <p>Discard local changes to files or unstage changes you added by mistake.</p>
+        <pre><code>git restore path/to/file          # discard working tree changes
+git restore --staged path/to/file # unstage</code></pre>
+      </details>
+
+      <details>
+        <summary><code>git revert &lt;commit&gt;</code></summary>
+        <p>Safely undoes a commit by creating a new commit that reverses it—good for shared branches.</p>
+        <pre><code>git revert 1a2b3c4d</code></pre>
+      </details>
+
+      <details>
+        <summary><code>git reset</code> (soft/mixed/hard)</summary>
+        <p>Moves the current branch pointer. <strong>Soft</strong> keeps changes staged; <strong>mixed</strong> keeps them unstaged; <strong>hard</strong> discards them (dangerous).</p>
+        <pre><code>git reset --soft HEAD~1
+git reset HEAD~1          # mixed (default)
+git reset --hard HEAD~1   # destructive</code></pre>
+      </details>
+
+      <details>
+        <summary><code>git reflog</code></summary>
+        <p>Shows where HEAD has been. Use it to find “lost” commits after a reset or rebase.</p>
+        <pre><code>git reflog</code></pre>
+      </details>
+    </section>
+
+    <section id="cherry-bisect">
+      <h2>13) Cherry-Pick &amp; Bisect</h2>
+
+      <details open>
+        <summary><code>git cherry-pick &lt;commit&gt;</code></summary>
+        <p>Applies specific commits from elsewhere onto your current branch—ideal for hotfixes.</p>
+        <pre><code>git switch hotfix
+git cherry-pick 1a2b3c4d</code></pre>
+      </details>
+
+      <details>
+        <summary><code>git bisect</code></summary>
+        <p>Binary searches history to find the first bad commit that introduced a bug.</p>
+        <pre><code>git bisect start
+git bisect bad
+git bisect good v1.0.0
+# Run tests, mark as good/bad repeatedly, then:
+git bisect reset</code></pre>
+      </details>
+    </section>
+
+    <section id="worktrees-sparse">
+      <h2>14) Worktrees &amp; Sparse Checkout</h2>
+
+      <details open>
+        <summary><code>git worktree</code></summary>
+        <p>Work on multiple branches simultaneously in separate folders without re-cloning.</p>
+        <pre><code>git worktree add ../repo-feature feature/login
+git worktree list
+git worktree remove ../repo-feature</code></pre>
+      </details>
+
+      <details>
+        <summary><code>git sparse-checkout</code></summary>
+        <p>Checkout only parts of very large repositories to save time and disk space.</p>
+        <pre><code>git clone --no-checkout https://example.com/huge.git
+cd huge
+git sparse-checkout init --cone
+git sparse-checkout set path/to/subdir
+git checkout main</code></pre>
+      </details>
+    </section>
+
+    <section id="submodules">
+      <h2>15) Submodules</h2>
+
+      <details open>
+        <summary><code>git submodule</code></summary>
+        <p>Embed another Git repo as a dependency at a specific commit; great for vendored libraries.</p>
+        <pre><code>git submodule add https://example.com/lib/engine.git external/engine
+git submodule update --init --recursive</code></pre>
+      </details>
+    </section>
+
+    <section id="lfs">
+      <h2>16) Git LFS (Large Files)</h2>
+
+      <details open>
+        <summary><code>git lfs</code></summary>
+        <p>Stores large or frequently changing binary files outside normal Git objects to keep repos small.</p>
+        <pre><code>git lfs install
+git lfs track "*.psd"
+git add .gitattributes
+git commit -m "Track PSD files with LFS"</code></pre>
+      </details>
+    </section>
+
+    <section id="search-logs">
+      <h2>17) Search &amp; Useful Logs</h2>
+
+      <details open>
+        <summary><code>git grep "pattern"</code></summary>
+        <p>Searches tracked files’ content across the repo—fast and version-aware.</p>
+        <pre><code>git grep "TODO:"</code></pre>
+      </details>
+
+      <details>
+        <summary>Diffs between refs</summary>
+        <p>Compare commits, branches, or tags to see what changed.</p>
+        <pre><code>git diff v1.0.0..v1.1.0</code></pre>
+      </details>
+    </section>
+
+    <section id="config-aliases">
+      <h2>18) Config &amp; Aliases</h2>
+
+      <details open>
+        <summary>Helpful aliases</summary>
+        <p>Shortcuts to speed up common tasks. They live in your global config.</p>
+        <pre><code>git config --global alias.st "status -sb"
+git config --global alias.lg "log --oneline --graph --decorate --all"
+git config --global alias.last "show -p --stat HEAD"</code></pre>
+      </details>
+
+      <details>
+        <summary>Credential helpers</summary>
+        <p>Save or manage credentials for seamless pushes/pulls.</p>
+        <pre><code># macOS:
+git config --global credential.helper osxkeychain
+# Windows:
+git config --global credential.helper manager
+# Linux (1 hour cache):
+git config --global credential.helper "cache --timeout=3600"</code></pre>
+      </details>
+    </section>
+
+    <section id="troubleshooting">
+      <h2>19) Troubleshooting Tips</h2>
+      <ul>
+        <li><strong>Detached HEAD:</strong> create a branch to keep work — <code>git switch -c rescue-work</code></li>
+        <li><strong>Non-fast-forward push:</strong> pull (merge/rebase), resolve, then push.</li>
+        <li><strong>Secrets committed:</strong> rotate keys, remove from history (e.g., <code>git filter-repo</code>), and force-push carefully.</li>
+        <li><strong>Large binaries:</strong> use Git LFS.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <hr/>
+      <p>© Your Name — Git quick reference. Safe defaults, concise explanations, and practical examples.</p>
+    </footer>
+  </main>
+</body>
+</html>
