@@ -1,0 +1,264 @@
+/* 🌐 GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* 🌈 BODY STYLING */
+body {
+    background-color: #f9fafc;
+    color: #222;
+    line-height: 1.6;
+    padding: 25px;
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #007acc;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #005a8d;
+    margin-top: 25px;
+    border-left: 5px solid #007acc;
+    padding-left: 10px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: #ddd;
+    margin: 25px 0;
+}
+
+/* 🎨 EXAMPLES SECTION */
+.externalCSS {
+    color: #008000;
+    font-size: 18px;
+}
+
+/* Example styling for internal, inline, and external CSS demos */
+.selector-demo,
+.internal-css-example,
+.externalCSS {
+    background-color: #eef;
+    border-left: 5px solid #007acc;
+    padding: 12px;
+    border-radius: 6px;
+    margin: 15px 0;
+}
+
+/* ✨ CODE STYLING */
+code {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #c7254e;
+}
+
+/* 🧱 PROPERTIES DEMO BOX */
+.properties-demo {
+    width: 260px;
+    height: 120px;
+    background-color: #dbeafe;
+    padding: 15px;
+    border: 2px solid #007acc;
+    border-radius: 12px;
+    margin: 15px 0;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Font-size examples */
+.font-small { font-size: 12px; }
+.font-medium { font-size: 18px; }
+.font-large { font-size: 26px; }
+
+/* Text color examples */
+.text-red { color: #d32f2f; }
+.text-blue { color: #1976d2; }
+.text-green { color: #388e3c; }
+
+/* Background color examples */
+.bg-yellow, .bg-lightblue, .bg-lightgray {
+    padding: 6px 10px;
+    border-radius: 6px;
+    display: inline-block;
+}
+.bg-yellow { background-color: #fff59d; }
+.bg-lightblue { background-color: #bbdefb; }
+.bg-lightgray { background-color: #e0e0e0; }
+
+/* Width & Height Boxes */
+.box-small, .box-medium {
+    display: inline-block;
+    text-align: center;
+    border-radius: 8px;
+    margin: 8px;
+}
+.box-small {
+    width: 60px;
+    height: 60px;
+    background-color: #f48fb1;
+    line-height: 60px;
+}
+.box-medium {
+    width: 120px;
+    height: 120px;
+    background-color: #a5d6a7;
+    line-height: 120px;
+}
+
+/* Padding demo */
+.padding-box {
+    background-color: #f8bbd0;
+    padding: 20px;
+    width: 180px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Margin demo */
+.margin-box {
+    background-color: #fff9c4;
+    margin: 20px;
+    width: 180px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Border demo */
+.border-box {
+    border: 3px solid #1976d2;
+    width: 180px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Border radius demo */
+.rounded-box {
+    background-color: #ce93d8;
+    padding: 15px;
+    width: 180px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* Font weight demo */
+.fw-normal { font-weight: normal; }
+.fw-bold { font-weight: bold; }
+
+/* Text alignment demo */
+.align-left, .align-center, .align-right {
+    background: #f3f4f6;
+    padding: 6px;
+    width: 220px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+
+/* =============================
+   🌟 COMMON CSS PROPERTIES SECTION
+   ============================= */
+.common-css-list {
+    margin: 15px 0 25px 35px;
+    padding: 0;
+    list-style-position: inside;
+    counter-reset: css-counter;
+}
+
+.common-css-list li {
+    margin-bottom: 18px;
+    background: #f5f7fa;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.common-css-list li:hover {
+    background: #e8f1fb;
+    border-color: #007acc;
+    transform: translateY(-2px);
+}
+
+.common-css-list b {
+    color: #005a8d;
+    font-weight: 600;
+}
+
+.common-css-list span,
+.common-css-list div {
+    display: inline-block;
+    margin: 5px 10px 5px 0;
+}
+
+/* =============================
+   ✍ TEXT PROPERTIES SECTION
+   ============================= */
+
+/* Font Sizes */
+.small { font-size: 12px; }
+.medium { font-size: 20px; }
+.large { font-size: 32px; }
+
+/* Text Transform */
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+
+/* Font Weight */
+.light { font-weight: 300; }
+.normal { font-weight: 400; }
+.bold { font-weight: 700; }
+
+/* Font Style */
+.italic { font-style: italic; }
+.oblique { font-style: oblique; }
+
+/* Spacing */
+.letter-space { letter-spacing: 3px; }
+.word-space { word-spacing: 12px; }
+
+/* Text Decoration */
+.underline { text-decoration: underline; }
+.line-through { text-decoration: line-through; }
+.overline { text-decoration: overline; }
+
+/* Text Alignment */
+.left, .center, .right {
+    display: block;
+    margin: 4px 0;
+}
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+
+/* Line Height */
+.line-height-small { line-height: 16px; }
+.line-height-large { line-height: 36px; }
+
+/* 💡 LIST STYLING */
+ul {
+    margin: 10px 0 20px 30px;
+}
+li {
+    margin: 4px 0;
+}
+
+

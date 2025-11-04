@@ -4,10 +4,218 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Doc</title>
+ <link rel="icon" href="./css.png">
+    <!-- External CSS File -->
     <link rel="stylesheet" href="./css.css">
-    <link rel="icon" href="./css.png">
+    <!-- Internal CSS Example -->
+    <style>
+        .internal-css-example {
+            color: darkblue;
+            font-size: 18px;
+            background-color: #eef;
+            padding: 10px;
+            border-radius: 8px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h1>CSS (Cascading Style Sheets)</h1>
+
+    <p>
+        CSS is a styling language used to design and control the layout of HTML webpages.
+        It allows you to change colors, fonts, spacing, backgrounds, borders, and overall page appearance.
+    </p>
+
+    <hr>
+
+    <!-- 1. INLINE CSS -->
+    <h2>1. Inline CSS</h2>
+    <p style="color: orangered; font-size: 18px;">
+        Inline CSS is written directly inside an HTML tag using the <b>style</b> attribute. <br><br>
+        Example (this paragraph uses inline CSS): <br>
+        <code>
+            &lt;p style="color: red; font-size: 18px;"&gt;This is Inline CSS&lt;/p&gt;
+        </code>
+    </p>
+
+    <hr>
+
+    <!-- 2. INTERNAL CSS -->
+    <h2>2. Internal CSS</h2>
+    <p class="internal-css-example">
+        Internal CSS is written inside the <b>&lt;style&gt;</b> tag in the &lt;head&gt; section. <br><br>
+        Example (this paragraph is styled with internal CSS): <br>
+        <code>
+            &lt;style&gt;<br>
+            &nbsp;&nbsp;.internal-css-example { color: darkblue; background-color: #eef; }<br>
+            &lt;/style&gt;
+        </code>
+    </p>
+
+    <hr>
+
+    <!-- 3. EXTERNAL CSS -->
+    <h2>3. External CSS</h2>
+    <p class="externalCSS">
+        External CSS is written in a separate file (like <b>css.css</b>) and linked using <br>
+        the <b>&lt;link rel="stylesheet" href="css.css"&gt;</b> tag. <br><br>
+
+        Example CSS file content: <br>
+        <code>
+            h1 { color: green; } <br>
+            p { font-size: 18px; }
+        </code>
+    </p>
+<hr>
+<!--  4. CSS SELECTOR -->
+    <h2 >4. What is a CSS Selector?</h2>
+    <p class="selector-demo">
+        A <b>CSS Selector</b> is a keyword or pattern used to select the HTML elements you want to style. <br><br>
+
+        Example: <br>
+        <code>
+            p { color: purple; font-weight: bold; }
+        </code>
+        <br><br>
+        In this example, <b>p</b> is the selector that targets all &lt;p&gt; tags.
+    </p>
+    <hr>
+    <code>margin: 0px;</code> → Removes all outer spacing (margin) around elements. <br>
+    <code>padding: 0px;</code> → Removes all inner spacing (padding) inside elements. <br>
+    <code>box-sizing: border-box;</code> → Ensures that an element’s total width and height include its <b>padding and border</b>, making layout calculations easier and more predictable.  
+    <br><br> This combination is often used at the top of every stylesheet as a <b>CSS Reset</b> to ensure consistent rendering across all browsers.
+
+
+    <!--  5. COMMON CSS PROPERTIES -->
+<h2>5. Common CSS Properties Explained</h2>
+
+<div class="properties-demo">
+    This box uses common CSS properties.
+</div>
+<br>
+
+<h3>Common CSS Properties with Examples</h3>
+<br>
+
+<ol>
+    <li><b>font-size – Controls how big the text appears</b><br>
+        <span class="font-small">Small Font</span> |
+        <span class="font-medium">Medium Font</span> |
+        <span class="font-large">Large Font</span>
+    </li>
+
+    <li><b>color – Changes the text color</b><br>
+        <span class="text-red">Red Color</span> |
+        <span class="text-blue">Blue Color</span> |
+        <span class="text-green">Green Color</span>
+    </li>
+
+    <li><b>background-color – Sets the background behind an element</b><br>
+        <span class="bg-yellow">Yellow Background</span> |
+        <span class="bg-lightblue">Light Blue Background</span> |
+        <span class="bg-lightgray">Light Gray Background</span>
+    </li>
+
+    <li><b>width & height – Controls the size of the box</b><br>
+        <div class="box-small">Small Box</div>
+        <div class="box-medium">Medium Box</div>
+    </li>
+
+    <li><b>padding – Inner spacing inside a box</b><br>
+        <div class="padding-box">Box with Padding</div>
+    </li>
+
+    <li><b>margin – Outer spacing outside an element</b><br>
+        <div class="margin-box">Box with Margin</div>
+    </li>
+
+    <li><b>border – Adds a border around an element</b><br>
+        <div class="border-box">Box with Border</div>
+    </li>
+
+    <li><b>border-radius – Rounds the corners</b><br>
+        <div class="rounded-box">Rounded Corners</div>
+    </li>
+
+    <li><b>font-weight – Makes text bold or normal</b><br>
+        <span class="fw-normal">Normal Text</span> |
+        <span class="fw-bold">Bold Text</span>
+    </li>
+
+    <li><b>text-align – Aligns text inside an element</b><br>
+        <div class="align-left">Left Aligned</div>
+        <div class="align-center">Center Aligned</div>
+        <div class="align-right">Right Aligned</div>
+    </li>
+</ol>
+<hr>
+
+
+
+<!-- TEXT PROPERTIES EXPLANATION -->
+<h2>6. CSS Text Properties</h2>
+
+    <h3>1. Font Size – (Controls how big or small the text appears)</h3>
+    <ul>
+        <li><b class="small">Small Font Size</b></li>
+        <li><b class="medium">Medium Font Size</b></li>
+        <li><b class="large">Large Font Size</b></li>
+    </ul>
+
+    <h3>2. Text Transform – (Changes the capitalization of text)</h3>
+    <ul>
+        <li><b class="uppercase">uppercase text</b></li>
+        <li><b class="lowercase">LOWERCASE TEXT</b></li>
+        <li><b class="capitalize">capitalize this sentence</b></li>
+    </ul>
+
+    <h3>3. Font Weight – (Controls how thick or bold the text looks)</h3>
+    <ul>
+        <li><b class="light">Light Weight</b></li>
+        <li><b class="normal">Normal Weight</b></li>
+        <li><b class="bold">Bold Weight</b></li>
+    </ul>
+
+    <h3>4. Font Style – (Applies italic or oblique slant to text)</h3>
+    <ul>
+        <li><b class="italic">Italic Style</b></li>
+        <li><b class="oblique">Oblique Style</b></li>
+    </ul>
+
+    <h3>5. Spacing – (Adds space between letters or words)</h3>
+    <ul>
+        <li><b class="letter-space">Letter Spacing Example</b></li>
+        <li><b class="word-space">Word Spacing Example</b></li>
+    </ul>
+
+    <h3>6. Text Decoration – (Adds underline, overline, or strikethrough)</h3>
+    <ul>
+        <li><b class="underline">Underline Example</b></li>
+        <li><b class="line-through">Line Through Example</b></li>
+        <li><b class="overline">Overline Example</b></li>
+    </ul>
+
+    <h3>7. Text Alignment – (Controls the horizontal positioning of text)</h3>
+    <ul>
+        <li><b class="left">This text is left aligned</b></li>
+        <li><b class="center">This text is center aligned</b></li>
+        <li><b class="right">This text is right aligned</b></li>
+    </ul>
+
+    <h3>8. Line Height – (Controls the vertical space between lines of text)</h3>
+    <ul>
+        <li><b class="line-height-small">
+            This is an example of text<br>
+            with small line height.
+        </b></li>
+
+        <li><b class="line-height-large">
+            This is an example of text<br>
+            with large line height.
+        </b></li>
+    </ul>
+
+
 </body>
 </html>
