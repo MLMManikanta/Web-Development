@@ -20,7 +20,7 @@ The goal of this repository is to:
 
 | Area | Technologies |
 |------|---------------|
-| **Frontend** | HTML5, CSS3, JavaScript (ES6+), React, Tailwind CSS |
+| **Frontend** | HTML5, CSS3, JavaScript, React, Tailwind CSS |
 | **Backend** | Node.js, Express.js |
 | **Database** | MongoDB, MySQL |
 | **Tools** | Git, VS Code |
@@ -60,24 +60,24 @@ Web-Development/
 ## 💡 Learning Roadmap
 
 ### 🎨 Frontend
-- [x] HTML5 – Structure, semantic tags, accessibility  
-- [ ] CSS3 – Flexbox, Grid, and animations  
-- [ ] JavaScript (ES6+) – DOM manipulation, APIs, and logic building  
-- [ ] React.js – Components, props, and state management  
-- [ ] Tailwind CSS – Utility-first responsive design  
+- [x] HTML5 
+- [ ] CSS3 
+- [ ] JavaScript
+- [ ] Tailwind CSS   
+- [ ] React.js
 
 ### ⚙️ Backend
-- [ ] Node.js – Core modules, event loop, and file system  
-- [ ] Express.js – Routing, middleware, and API development  
+- [ ] Node.js  
+- [ ] Express.js   
 
 ### 🗄️ Database
 - [ ] MongoDB – CRUD operations, collections, and Mongoose  
 - [ ] MySQL – Tables, joins, and SQL query optimization  
 
 ### 🧰 Tools & Workflow
-- [x] Git – Version control and branching  
-- [x] GitHub – Repository hosting and collaboration  
-- [ ] VS Code – Extensions, snippets, and debugging  
+- [x] Git 
+- [x] GitHub
+- [ ] VS Code 
 
 ---
 
@@ -116,7 +116,7 @@ If you’d like to collaborate:
 ## 🧑‍💻 Author
 
 **👋 Mamidi Lakshman Mohan Manikanta**  
-💼 Passionate about Frontend & Full-Stack Web Development  
+💼 Passionate about developing interactive and scalable websites and apps that solve real-world problems.
 📍 Based in India  
 🔗 [GitHub Profile](https://github.com/MLMManikanta)
 
