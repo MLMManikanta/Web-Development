@@ -208,6 +208,20 @@ code {
     margin: 5px 10px 5px 0;
 }
 
+/* 🌟 Code Boxes Beside Definitions */
+.common-css-list code {
+    display: block;
+    background: #f0f4f8;
+    border-left: 4px solid #007acc;
+    color: #c7254e;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 8px;
+    font-family: "Consolas", "Courier New", monospace;
+}
+
+
 /* =============================
    ✍ TEXT PROPERTIES SECTION
    ============================= */
@@ -261,4 +275,48 @@ li {
     margin: 4px 0;
 }
 
+/* ✍ TEXT PROPERTIES SECTION WITH CODE */
+.text-css-list {
+    margin: 15px 0 25px 35px;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.text-css-list li {
+    margin-bottom: 18px;
+    background: #f5f7fa;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.text-css-list li:hover {
+    background: #e8f1fb;
+    border-color: #007acc;
+    transform: translateY(-2px);
+}
+
+.text-css-list b {
+    color: #005a8d;
+    font-weight: 600;
+}
+
+.text-css-list span {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.text-css-list code {
+    display: block;
+    background: #f0f4f8;
+    border-left: 4px solid #007acc;
+    color: #c7254e;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 8px;
+    font-family: "Consolas", "Courier New", monospace;
+}
 
