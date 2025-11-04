@@ -303,6 +303,68 @@ div[style], span[style] {
     border-radius: 5px;
 }
 
+/* ---------- Details & Summary with Icon ---------- */
+details {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin: 12px 0 18px;
+  transition: all 0.3s ease;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 1.05rem;
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+}
+
+details summary::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.9rem;
+  color: #2563eb;
+  transition: transform 0.2s ease;
+}
+
+details[open] summary::before {
+  content: "▼";
+  color: #1e3a8a;
+}
+
+/* ---------- Dialog Styling  ---------- */
+dialog {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  font-size: 1rem;
+  color: #1f2937;
+
+  /* Let dialog behave like normal content  */
+  position: static;
+  inset: unset;
+  transform: none;
+
+  /* Center horizontally within normal flow */
+  display: block;
+  margin: 40px auto;
+  max-width: 400px;
+}
+
+dialog::backdrop {
+  background-color: transparent; /* remove the dimmed background */
+}
+
+
 /* ===================================
    RESPONSIVE DESIGN
    =================================== */

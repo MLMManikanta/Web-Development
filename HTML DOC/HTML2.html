@@ -215,6 +215,55 @@ Line 1
         </pre>
     </section>
 
+    <!-- ================= DETAILS AND SUMMARY ================= -->
+<h2>&lt;details&gt; and &lt;summary&gt; Tags</h2>
+
+<p><strong>Explanation:</strong></p>
+<ul>
+  <li><code>&lt;details&gt;</code> creates a collapsible (expand/collapse) section.</li>
+  <li><code>&lt;summary&gt;</code> defines the heading that users click to toggle the section.</li>
+  <li>Commonly used for FAQs, documentation, or hidden explanations.</li>
+  <li>When opened, the browser automatically adds an <code>open</code> attribute.</li>
+</ul>
+
+<p><strong>Example Code:</strong></p>
+<pre><code>&lt;details&gt;
+  &lt;summary&gt;Click to view more information&lt;/summary&gt;
+  &lt;p&gt;This section contains additional details that can be shown or hidden.&lt;/p&gt;
+&lt;/details&gt;
+</code></pre>
+
+<p><strong>Rendered Output:</strong></p>
+<details>
+  <summary>Click to view more information</summary>
+  <p>This section contains additional details that can be shown or hidden.</p>
+</details>
+
+<hr>
+
+<!-- ================= DIALOG TAG ================= -->
+<h2>&lt;dialog&gt; Tag</h2>
+
+<p><strong>Explanation:</strong></p>
+<ul>
+  <li><code>&lt;dialog&gt;</code> defines a popup window or dialog box.</li>
+  <li>It can contain text, images, or forms inside it.</li>
+  <li>Adding the <code>open</code> attribute makes it visible by default.</li>
+  <li>It can also be controlled dynamically using JavaScript (<code>show()</code> / <code>close()</code>).</li>
+</ul>
+
+<p><strong>Example Code:</strong></p>
+<pre><code>&lt;dialog open&gt;
+  &lt;p&gt;This is an open dialog window centered on the page.&lt;/p&gt;
+&lt;/dialog&gt;
+</code></pre>
+
+<p><strong>Rendered Output:</strong></p>
+<dialog open>
+  <p>This is an open dialog window centered on the page.</p>
+</dialog>
+
+
     <hr><hr>
 
     <!-- ================= FOOTER ================= -->
