@@ -61,8 +61,8 @@ Web-Development/
 
 ### 🎨 Frontend
 - [x] HTML5 – Structure, semantic tags, accessibility  
-- [x] CSS3 – Flexbox, Grid, and animations  
-- [x] JavaScript (ES6+) – DOM manipulation, APIs, and logic building  
+- [ ] CSS3 – Flexbox, Grid, and animations  
+- [ ] JavaScript (ES6+) – DOM manipulation, APIs, and logic building  
 - [ ] React.js – Components, props, and state management  
 - [ ] Tailwind CSS – Utility-first responsive design  
 
