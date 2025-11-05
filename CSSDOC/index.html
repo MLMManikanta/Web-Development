@@ -1121,6 +1121,802 @@ div {
 </section>
 <hr>
 
+<!-- 14. CSS TYPOGRAPHY -->
+<section class="css-section">
+    <h2>14. CSS Typography and Its Sub-Properties</h2>
+
+    <p>
+        <b>Typography</b> in CSS controls how text looks on a webpage — including its font, size, style, spacing, alignment, and decoration.  
+        It directly affects readability, aesthetics, and user experience.
+    </p>
+
+    <hr>
+
+    <!-- 1. FONT-FAMILY -->
+    <h3>1. font-family</h3>
+    <p>
+        Defines which typeface is used for text. You can specify multiple fallback fonts.  
+        Always include at least one generic family (<code>serif</code>, <code>sans-serif</code>, <code>monospace</code>).
+    </p>
+
+    <div class="typo-demo" style="font-family: 'Times New Roman', serif;">Serif Font Example</div>
+    <div class="typo-demo" style="font-family: Arial, sans-serif;">Sans-serif Font Example</div>
+    <div class="typo-demo" style="font-family: 'Courier New', monospace;">Monospace Font Example</div>
+
+    <pre><code>
+p {
+    font-family: 'Arial', sans-serif;
+}
+    </code></pre>
+
+    <!-- 2. FONT-SIZE -->
+    <h3>2. font-size</h3>
+    <p>Controls how big or small text appears. It accepts values in <code>px</code>, <code>em</code>, <code>rem</code>, <code>%</code>, and more.</p>
+
+    <div class="typo-demo small-text">Small Font (14px)</div>
+    <div class="typo-demo medium-text">Medium Font (18px)</div>
+    <div class="typo-demo large-text">Large Font (28px)</div>
+
+    <pre><code>
+p {
+    font-size: 18px;
+}
+    </code></pre>
+
+    <!-- 3. FONT-WEIGHT -->
+    <h3>3. font-weight</h3>
+    <p>Defines how thick or bold the text is.</p>
+
+    <div class="typo-demo" style="font-weight: 300;">Light (300)</div>
+    <div class="typo-demo" style="font-weight: 500;">Normal (500)</div>
+    <div class="typo-demo" style="font-weight: 700;">Bold (700)</div>
+
+    <pre><code>
+p {
+    font-weight: bold;
+}
+    </code></pre>
+
+    <!-- 4. FONT-STYLE -->
+    <h3>4. font-style</h3>
+    <p>Controls whether text appears in normal, italic, or oblique form.</p>
+
+    <div class="typo-demo" style="font-style: normal;">Normal Text</div>
+    <div class="typo-demo" style="font-style: italic;">Italic Text</div>
+    <div class="typo-demo" style="font-style: oblique;">Oblique Text</div>
+
+    <pre><code>
+p {
+    font-style: italic;
+}
+    </code></pre>
+
+    <!-- 5. FONT-VARIANT -->
+    <h3>5. font-variant</h3>
+    <p>Used to display text in small caps or normal format.</p>
+
+    <div class="typo-demo" style="font-variant: small-caps;">Small Caps Example</div>
+    <pre><code>
+p {
+    font-variant: small-caps;
+}
+    </code></pre>
+
+    <!-- 6. FONT -->
+    <h3>6. font (shorthand)</h3>
+    <p>
+        Combines <code>font-style</code>, <code>font-variant</code>, <code>font-weight</code>, <code>font-size</code>, and <code>font-family</code> into one line.
+    </p>
+
+    <div class="typo-demo" style="font: italic small-caps bold 18px 'Georgia', serif;">
+        Italic Small-Caps Bold Georgia Font
+    </div>
+
+    <pre><code>
+p {
+    font: italic small-caps bold 18px 'Georgia', serif;
+}
+    </code></pre>
+
+    <!-- 7. LINE-HEIGHT -->
+    <h3>7. line-height</h3>
+    <p>
+        Defines the vertical spacing between lines of text.  
+        Increasing <code>line-height</code> improves readability for paragraphs.
+    </p>
+
+    <div class="typo-demo line-height-demo">
+        This text<br>has more<br>line height.
+    </div>
+
+    <pre><code>
+p {
+    line-height: 1.6;
+}
+    </code></pre>
+
+    <!-- 8. LETTER-SPACING -->
+    <h3>8. letter-spacing</h3>
+    <p>Controls the space between individual characters.</p>
+
+    <div class="typo-demo" style="letter-spacing: 4px;">W I D E   S P A C I N G</div>
+
+    <pre><code>
+p {
+    letter-spacing: 4px;
+}
+    </code></pre>
+
+    <!-- 9. WORD-SPACING -->
+    <h3>9. word-spacing</h3>
+    <p>Controls the space between words.</p>
+
+    <div class="typo-demo" style="word-spacing: 16px;">This is spaced text example</div>
+
+    <pre><code>
+p {
+    word-spacing: 16px;
+}
+    </code></pre>
+
+    <!-- 10. TEXT-TRANSFORM -->
+    <h3>10. text-transform</h3>
+    <p>Changes the capitalization of text.</p>
+
+    <div class="typo-demo" style="text-transform: uppercase;">uppercase</div>
+    <div class="typo-demo" style="text-transform: lowercase;">LOWERCASE</div>
+    <div class="typo-demo" style="text-transform: capitalize;">capitalize each word</div>
+
+    <pre><code>
+p {
+    text-transform: capitalize;
+}
+    </code></pre>
+
+    <!-- 11. TEXT-DECORATION -->
+    <h3>11. text-decoration</h3>
+    <p>Adds decoration such as underlines or strikethroughs.</p>
+
+    <div class="typo-demo" style="text-decoration: underline;">Underline</div>
+    <div class="typo-demo" style="text-decoration: overline;">Overline</div>
+    <div class="typo-demo" style="text-decoration: line-through;">Line Through</div>
+
+    <pre><code>
+p {
+    text-decoration: underline;
+}
+    </code></pre>
+
+    <!-- 12. TEXT-ALIGN -->
+    <h3>12. text-align</h3>
+    <p>Aligns text horizontally inside an element.</p>
+
+    <div class="align-demo" style="text-align: left;">Left aligned</div>
+    <div class="align-demo" style="text-align: center;">Center aligned</div>
+    <div class="align-demo" style="text-align: right;">Right aligned</div>
+
+    <pre><code>
+p {
+    text-align: center;
+}
+    </code></pre>
+
+    <!-- 13. TEXT-SHADOW -->
+    <h3>13. text-shadow</h3>
+    <p>Applies shadow effects to text. You can specify horizontal and vertical offsets, blur radius, and color.</p>
+
+    <div class="typo-demo shadow-demo">Text Shadow Example</div>
+
+    <pre><code>
+p {
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+    </code></pre>
+
+    <!-- 14. WHITE-SPACE -->
+    <h3>14. white-space</h3>
+    <p>Specifies how whitespace inside an element is handled.</p>
+
+    <ul>
+        <li><code>normal</code> – collapses spaces and wraps text</li>
+        <li><code>nowrap</code> – prevents text from wrapping</li>
+        <li><code>pre</code> – preserves spaces and line breaks</li>
+        <li><code>pre-line</code> – preserves line breaks but collapses spaces</li>
+    </ul>
+
+    <div class="typo-demo white-space-demo">
+        This     text     has     multiple     spaces.
+    </div>
+
+    <pre><code>
+p {
+    white-space: nowrap;
+}
+    </code></pre>
+<!-- ✨ ADDITIONAL TYPOGRAPHY PROPERTIES -->
+<h3>15. text-indent</h3>
+<p>
+    The <b>text-indent</b> property controls how far the first line of text is indented from the left edge of the block container.
+</p>
+<div class="typo-demo text-indent-demo">
+    This paragraph demonstrates text indentation.  
+    The first line starts with an indent, while the rest of the text aligns normally to the left margin.
+</div>
+<pre><code>
+p {
+    text-indent: 50px;
+}
+</code></pre>
+
+<h3>16. text-overflow</h3>
+<p>
+    The <b>text-overflow</b> property determines what happens when text overflows the containing element.  
+    Common values are <code>clip</code> (cut off) and <code>ellipsis</code> (adds ...).
+</p>
+<div class="typo-demo text-overflow-demo">This is a very long line of text that will overflow the box boundaries.</div>
+<pre><code>
+p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+</code></pre>
+
+<h3>17. overflow-wrap (word-wrap)</h3>
+<p>
+    The <b>overflow-wrap</b> (formerly <code>word-wrap</code>) property allows long words to break onto the next line 
+    instead of overflowing their container.
+</p>
+<div class="typo-demo overflow-wrap-demo">
+    ThisIsAnExtremelyLongWordThatWouldNormallyOverflowButNowItWillWrapToTheNextLineThanksToOverflowWrap.
+</div>
+<pre><code>
+p {
+    overflow-wrap: break-word;
+}
+</code></pre>
+
+<h3>18. word-break</h3>
+<p>
+    The <b>word-break</b> property specifies how line breaks occur within words.
+</p>
+<ul>
+    <li><code>normal</code> – uses default line-breaking rules</li>
+    <li><code>break-all</code> – breaks words at arbitrary points if needed</li>
+    <li><code>keep-all</code> – prevents breaking within words (useful for East Asian text)</li>
+</ul>
+<div class="typo-demo word-break-demo">
+    ThisIsAnotherSuperLongWordWithoutSpacesToShowWordBreakPropertyInAction.
+</div>
+<pre><code>
+p {
+    word-break: break-all;
+}
+</code></pre>
+
+<h3>19. direction</h3>
+<p>
+    The <b>direction</b> property specifies the text direction:  
+    <code>ltr</code> (left-to-right) or <code>rtl</code> (right-to-left).  
+    It’s mainly used for languages like Arabic or Hebrew.
+</p>
+<div class="typo-demo direction-ltr">This text flows left to right (default).</div>
+<div class="typo-demo direction-rtl">هذا النص من اليمين إلى اليسار.</div>
+<pre><code>
+p {
+    direction: rtl;
+}
+</code></pre>
+
+<h3>20. writing-mode</h3>
+<p>
+    The <b>writing-mode</b> property changes text flow direction — horizontally or vertically.  
+    Common values are:
+</p>
+<ul>
+    <li><code>horizontal-tb</code> – default (text flows horizontally, top to bottom)</li>
+    <li><code>vertical-rl</code> – text flows vertically, top to bottom, right to left</li>
+    <li><code>vertical-lr</code> – text flows vertically, top to bottom, left to right</li>
+</ul>
+<div class="typo-demo writing-mode-horizontal">Horizontal Text</div>
+<div class="typo-demo writing-mode-vertical">Vertical Text</div>
+<pre><code>
+p {
+    writing-mode: vertical-rl;
+}
+</code></pre>
+
+<hr>
+
+
+</section>
+<hr>
+
+<!-- 15. STYLING LINKS IN CSS -->
+<section class="css-section">
+    <h2>15. Styling Links with CSS</h2>
+
+    <p>
+        Links (<code>&lt;a&gt;</code> elements) are interactive components that connect web pages.  
+        CSS allows you to customize their appearance in different states — such as when a link is unvisited, visited, hovered, or active.
+    </p>
+
+    <hr>
+
+    <h3>1. Default Link States</h3>
+    <p>There are five main pseudo-classes used to style links:</p>
+    <ul>
+        <li><code>:link</code> – Unvisited link (default state)</li>
+        <li><code>:visited</code> – Link that has already been visited</li>
+        <li><code>:hover</code> – When the mouse pointer is over the link</li>
+        <li><code>:active</code> – When the link is being clicked</li>
+        <li><code>:focus</code> – When the link is focused (keyboard navigation)</li>
+    </ul>
+
+    <div class="link-demo-container">
+        <a href="./Home.html" target="_blank" class="styled-link">Visit practice Website</a>
+        <a href="../index.html" target="_blank" class="styled-link">Visit Home Page</a>
+    </div>
+
+    <pre><code>
+a:link {
+    color: blue;
+}
+a:visited {
+    color: purple;
+}
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+a:active {
+    color: orange;
+}
+a:focus {
+    outline: 2px solid #007acc;
+}
+    </code></pre>
+
+    <h3>2. Link State Order (LVHFA Rule)</h3>
+    <p>
+        When styling links, the order of pseudo-classes matters.  
+        Always follow the <b>LVHFA</b> sequence:
+    </p>
+    <pre><code>
+a:link → a:visited → a:hover → a:focus → a:active
+    </code></pre>
+    <p>
+        If you don’t follow this order, some states may not display correctly.
+    </p>
+
+    <h3>3. Removing Default Link Styles</h3>
+    <p>
+        Browsers apply default blue color and underline to links.  
+        You can remove them and apply custom styles.
+    </p>
+
+    <div class="link-demo-container">
+        <a href="#" class="clean-link">Custom Clean Link</a>
+    </div>
+
+    <pre><code>
+a {
+    text-decoration: none;
+    color: #007acc;
+}
+a:hover {
+    text-decoration: underline;
+}
+    </code></pre>
+
+    <h3>4. Using Transition Effects</h3>
+    <p>
+        Smooth transitions make link hover effects look elegant.
+    </p>
+
+    <div class="link-demo-container">
+        <a href="#" class="transition-link">Hover Over Me</a>
+    </div>
+
+    <pre><code>
+a {
+    color: #007acc;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+a:hover {
+    color: #ff512f;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+    </code></pre>
+
+    <h3>5. :focus and :focus-visible</h3>
+    <p>
+        The <code>:focus</code> pseudo-class applies when an element is focused using keyboard navigation (like <kbd>Tab</kbd>).  
+        <code>:focus-visible</code> shows focus only when it makes sense (e.g., for keyboard users).
+    </p>
+
+    <div class="link-demo-container">
+        <a href="#" class="focus-link">Focus Link Example</a>
+    </div>
+
+    <pre><code>
+a:focus {
+    outline: 3px solid #007acc;
+}
+a:focus-visible {
+    outline: 3px dashed #ff512f;
+}
+    </code></pre>
+
+    <h3>6. :target (Special Case)</h3>
+    <p>
+        The <code>:target</code> pseudo-class is applied when an element’s ID is targeted by a URL fragment (e.g., <code>#section1</code>).  
+        It’s often used for in-page navigation highlights.
+    </p>
+
+    <div class="target-demo">
+        <p><a href="#demo-section" class="target-link">Jump to Target Section</a></p>
+        <div id="demo-section" class="target-box">
+            You reached the target section!
+        </div>
+    </div>
+
+    <pre><code>
+#demo-section:target {
+    background-color: #ffeb3b;
+    border: 2px solid #007acc;
+}
+    </code></pre>
+
+    <h3>7. Button-like Link Styling</h3>
+    <p>
+        Links can also be styled like buttons for navigation or CTAs.
+    </p>
+
+    <div class="link-demo-container">
+        <a href="#" class="button-link">Click Me</a>
+    </div>
+
+    <pre><code>
+a.button-link {
+    background-color: #007acc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+a.button-link:hover {
+    background-color: #005a8d;
+}
+    </code></pre>
+    <!-- 🔆 OPACITY PROPERTY -->
+<h3>8. opacity (for Hover and Focus Effects)</h3>
+<p>
+    The <b>opacity</b> property defines the transparency level of an element.  
+    A value of <code>1</code> means fully opaque, while <code>0</code> means fully transparent.  
+    You can use it to create smooth fade effects for links on hover or focus.
+</p>
+
+<ul>
+    <li><code>opacity: 1;</code> → Fully visible</li>
+    <li><code>opacity: 0.5;</code> → 50% transparent</li>
+    <li><code>opacity: 0;</code> → Invisible (hidden visually but still occupies space)</li>
+</ul>
+
+<div class="link-demo-container">
+    <a href="#" class="opacity-link">Hover to Fade</a>
+    <a href="#" class="opacity-link dimmed">Dimmed Link</a>
+</div>
+
+<pre><code>
+a {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+a:hover {
+    opacity: 0.6;
+}
+</code></pre>
+
+<p><b>Tip:</b> Use opacity with hover transitions to create smooth fading effects without changing color or underline.</p>
+
+</section>
+<hr>
+
+<!-- 16. CSS LIST STYLING -->
+<section class="css-section">
+    <h2>17. CSS List Styling</h2>
+
+    <p>
+        CSS provides several properties to control the appearance of list items in ordered (<code>&lt;ol&gt;</code>) and unordered (<code>&lt;ul&gt;</code>) lists.  
+        You can customize the marker type (bullets or numbers), position, use custom images, and even combine them using shorthand syntax.
+    </p>
+
+    <hr>
+
+    <!-- 1. list-style-type -->
+    <h3>1. list-style-type</h3>
+    <p>
+        The <b>list-style-type</b> property defines the appearance of the list item marker (bullet or number).  
+        You can use this property with both ordered (<code>&lt;ol&gt;</code>) and unordered (<code>&lt;ul&gt;</code>) lists.
+    </p>
+
+    <h4>Common Values:</h4>
+    <ul>
+        <li><b>disc</b> – default filled circle for unordered lists</li>
+        <li><b>circle</b> – hollow circle marker</li>
+        <li><b>square</b> – filled square marker</li>
+        <li><b>decimal</b> – numbers (1, 2, 3...) for ordered lists</li>
+        <li><b>lower-roman</b> – Roman numerals (i, ii, iii...)</li>
+        <li><b>upper-roman</b> – Roman numerals (I, II, III...)</li>
+        <li><b>lower-alpha</b> – lowercase letters (a, b, c...)</li>
+        <li><b>upper-alpha</b> – uppercase letters (A, B, C...)</li>
+        <li><b>none</b> – removes bullet/number</li>
+    </ul>
+
+    <div class="list-demo">
+        <ul class="list-type-disc">
+            <li>Disc Type (Default)</li>
+            <li>Circle Type</li>
+            <li>Square Type</li>
+        </ul>
+
+        <ol class="list-type-decimal">
+            <li>Decimal (1, 2, 3)</li>
+            <li>Lower Roman (i, ii, iii)</li>
+            <li>Upper Alpha (A, B, C)</li>
+        </ol>
+    </div>
+
+    <pre><code>
+ul {
+    list-style-type: square;
+}
+ol {
+    list-style-type: upper-roman;
+}
+    </code></pre>
+
+    <hr>
+
+    <!-- 2. list-style-position -->
+    <h3>2. list-style-position</h3>
+    <p>
+        The <b>list-style-position</b> property specifies whether the marker appears inside or outside the list item box.
+    </p>
+
+    <ul>
+        <li><code>outside</code> – default; marker is outside the content box</li>
+        <li><code>inside</code> – marker is part of the text and indents with it</li>
+    </ul>
+
+    <div class="list-demo">
+        <ul class="list-position-outside">
+            <li>Marker outside (default)</li>
+            <li>Second item outside</li>
+        </ul>
+
+        <ul class="list-position-inside">
+            <li>Marker inside content box</li>
+            <li>Second item inside</li>
+        </ul>
+    </div>
+
+    <pre><code>
+ul {
+    list-style-position: inside;
+}
+    </code></pre>
+
+    <hr>
+
+    <!-- 3. list-style-image -->
+    <h3>3. list-style-image</h3>
+    <p>
+        The <b>list-style-image</b> property replaces the default bullet or number with a custom image.
+    </p>
+
+    <div class="list-demo">
+        <ul class="list-image-demo">
+            <li>Custom image marker 1</li>
+            <li>Custom image marker 2</li>
+        </ul>
+    </div>
+
+    <pre><code>
+ul {
+    list-style-image: url('./Images/list-style.png');
+}
+    </code></pre>
+
+    <p><b>Tip:</b> Use small, transparent icons (like SVG or 16×16 PNGs) for best alignment.</p>
+
+    <hr>
+
+    <!-- 4. list-style (shorthand) -->
+    <h3>4. list-style (shorthand)</h3>
+    <p>
+        You can combine <code>list-style-type</code>, <code>list-style-position</code>, and <code>list-style-image</code> in a single shorthand property.
+    </p>
+
+    <pre><code>
+ul {
+    list-style: square inside url('bullet.png');
+}
+    </code></pre>
+
+    <p>
+        The shorthand order is:  
+        <code>list-style: [type] [position] [image];</code>
+    </p>
+
+    <hr>
+
+    <!-- 5. marker (advanced property) -->
+    <h3>5. ::marker (pseudo-element)</h3>
+    <p>
+        The <b>::marker</b> pseudo-element allows direct styling of the list item marker itself — color, size, and even emojis!
+    </p>
+
+    <ul class="marker-demo">
+        <li>Default marker</li>
+        <li>Custom colored marker</li>
+        <li>Emoji marker 😎</li>
+    </ul>
+
+    <pre><code>
+li::marker {
+    color: #ff512f;
+    font-size: 20px;
+    content: "👉 ";
+}
+    </code></pre>
+
+    <p><b>Note:</b> <code>::marker</code> works in modern browsers and is perfect for custom bullets or icons.</p>
+
+<h3>6.List Features (Reversed, Start, Value, Nested, and Navigation Lists)</h3>
+<p>
+    In addition to visual styling, ordered lists (<code>&lt;ol&gt;</code>) support several HTML attributes for numbering control:  
+    <b>reversed</b>, <b>start</b>, and <b>value</b>. You can also nest lists or remove bullets entirely for navigation menus.
+</p>
+
+<hr>
+
+<!-- 1. reversed -->
+<h4>1. reversed Attribute</h4>
+<p>
+    The <b>reversed</b> attribute displays list items in descending order automatically.
+</p>
+<div class="list-demo">
+    <ol reversed class="reversed-list">
+        <li>Final Step</li>
+        <li>Second Step</li>
+        <li>First Step</li>
+    </ol>
+</div>
+<pre><code>
+&lt;ol reversed&gt;
+  &lt;li&gt;Final Step&lt;/li&gt;
+  &lt;li&gt;Second Step&lt;/li&gt;
+  &lt;li&gt;First Step&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+<hr>
+
+<!-- 2. start -->
+<h4>2. start Attribute</h4>
+<p>
+    The <b>start</b> attribute changes the starting number of an ordered list.
+</p>
+<div class="list-demo">
+    <ol start="5" class="start-list">
+        <li>Step Five</li>
+        <li>Step Six</li>
+        <li>Step Seven</li>
+    </ol>
+</div>
+<pre><code>
+&lt;ol start="5"&gt;
+  &lt;li&gt;Step Five&lt;/li&gt;
+  &lt;li&gt;Step Six&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+<hr>
+
+<!-- 3. value -->
+<h4>3. value Attribute (Custom Number per List Item)</h4>
+<p>
+    The <b>value</b> attribute allows you to set a specific numbering value for individual list items.
+</p>
+<div class="list-demo">
+    <ol class="value-list">
+        <li value="10">Tenth Item</li>
+        <li value="20">Twentieth Item</li>
+        <li>Next (Automatically 21)</li>
+    </ol>
+</div>
+<pre><code>
+&lt;ol&gt;
+  &lt;li value="10"&gt;Tenth Item&lt;/li&gt;
+  &lt;li value="20"&gt;Twentieth Item&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+<hr>
+
+<!-- 4. Nested Lists -->
+<h4>4. Nested Lists</h4>
+<p>
+    Lists can be nested to create hierarchies.  
+    Each level can use a different <code>list-style-type</code>.
+</p>
+<div class="list-demo nested-list-demo">
+    <ol>
+        <li>Frontend
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </li>
+        <li>Backend
+            <ul>
+                <li>Python</li>
+                <li>Node.js</li>
+            </ul>
+        </li>
+    </ol>
+</div>
+<pre><code>
+&lt;ol&gt;
+  &lt;li&gt;Frontend
+    &lt;ul&gt;
+      &lt;li&gt;HTML&lt;/li&gt;
+      &lt;li&gt;CSS&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+<hr>
+
+<!-- 5. Removing Bullets for Navigation -->
+<h4>5. Removing Bullets (For Menus and Navigation)</h4>
+<p>
+    Use <code>list-style: none;</code> to remove bullets and display list items inline for navigation bars.
+</p>
+<ul class="nav-list">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+<pre><code>
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+ul li a {
+  text-decoration: none;
+  color: #007acc;
+  font-weight: bold;
+}
+ul li a:hover {
+  color: #ff512f;
+}
+</code></pre>
+
+</section>
+<hr>
+
+
 
 </body>
 </html>
