@@ -12,7 +12,7 @@
     color: #333;
 }
 
-body {
+main {
     background-color: #ffffff;
     color: #333;
     line-height: 1.6;
@@ -1176,4 +1176,81 @@ a.styled-link:focus {
 }
 .nav-list a:hover {
     color: #ff512f;
+}
+
+/* Solid Blue Footer Section */
+.site-footer {
+    background-color: #007acc;   /* Full blue color */
+    color: #ffffff;              /* White text */
+    padding: 50px 20px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    width: 100%;
+}
+
+/* Layout container */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+/* Columns */
+.footer-column {
+    flex: 1 1 250px;
+    min-width: 220px;
+}
+
+/* Headings */
+.footer-column h3 {
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+    padding-bottom: 6px;
+}
+
+/* Paragraph text */
+.footer-column p {
+    color: #f1f1f1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Links list */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+/* Links */
+.footer-column ul li a,
+.footer-column a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-column ul li a:hover,
+.footer-column a:hover {
+    color: #ffeb3b; /* yellow highlight */
+    text-shadow: 0 1px 6px rgba(255, 255, 255, 0.4);
+}
+
+/* Bottom section */
+.footer-bottom {
+    text-align: center;
+    margin-top: 35px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 15px;
+    font-size: 0.9rem;
+    color: #ffffff;
 }
