@@ -500,9 +500,473 @@ p {
         <li>Combine <code>vh</code> and <code>vw</code> for flexible layouts.</li>
     </ul>
 </section>
+<hr>
+<!-- 9. COLORS IN CSS -->
+<section class="css-section">
+    <h2>9. Colors in CSS</h2>
+
+    <p>
+        Colors play a vital role in the design and appearance of a webpage.  
+        CSS allows you to set colors for text, backgrounds, borders, and other visual elements using multiple formats.
+    </p>
+
+    <h3>Ways to Define Colors in CSS</h3>
+
+    <ol class="color-types-list">
+        <li>
+            <b>1. Named Colors</b><br>
+            CSS supports <b>140 standard color names</b> such as <code>red</code>, <code>blue</code>, <code>green</code>, <code>tomato</code>, <code>gold</code>, etc.
+            <br><br>
+            <div class="color-box" style="background-color: tomato;">Tomato</div>
+            <div class="color-box" style="background-color: skyblue;">Sky Blue</div>
+            <div class="color-box" style="background-color: limegreen;">Lime Green</div>
+            <br>
+            <code>p { color: tomato; }</code>
+        </li>
+
+        <li>
+            <b>2. HEX Values</b><br>
+            A <b>hexadecimal color</b> uses a combination of six characters representing red, green, and blue components.
+            <br><br>
+            Example: <code>#RRGGBB</code><br>
+            <code>#FF0000</code> → Red<br>
+            <code>#00FF00</code> → Green<br>
+            <code>#0000FF</code> → Blue
+            <br><br>
+            <div class="color-box" style="background-color: #FF6347;">#FF6347 (Tomato)</div>
+            <div class="color-box" style="background-color: #1E90FF;">#1E90FF (Dodger Blue)</div>
+            <div class="color-box" style="background-color: #FFD700;">#FFD700 (Gold)</div>
+            <br>
+            <code>div { background-color: #FFD700; }</code>
+        </li>
+
+        <li>
+            <b>3. RGB Colors</b><br>
+            Uses the <b>rgb()</b> function to define colors by specifying red, green, and blue values (0–255).
+            <br><br>
+            Example: <code>rgb(255, 0, 0)</code> → Red
+            <br><br>
+            <div class="color-box" style="background-color: rgb(255, 0, 0);">RGB(255, 0, 0)</div>
+            <div class="color-box" style="background-color: rgb(0, 128, 0);">RGB(0, 128, 0)</div>
+            <div class="color-box" style="background-color: rgb(30, 144, 255);">RGB(30, 144, 255)</div>
+            <br>
+            <code>p { color: rgb(0, 128, 0); }</code>
+        </li>
+
+        <li>
+            <b>4. RGBA Colors</b><br>
+            Similar to RGB but includes an <b>alpha channel</b> for transparency.  
+            Alpha values range from <code>0</code> (fully transparent) to <code>1</code> (fully opaque).
+            <br><br>
+            <div class="color-box" style="background-color: rgba(255, 99, 71, 1);">RGBA(255, 99, 71, 1)</div>
+            <div class="color-box" style="background-color: rgba(255, 99, 71, 0.5);">RGBA(255, 99, 71, 0.5)</div>
+            <div class="color-box" style="background-color: rgba(255, 99, 71, 0.2);">RGBA(255, 99, 71, 0.2)</div>
+            <br>
+            <code>div { background-color: rgba(255, 99, 71, 0.5); }</code>
+        </li>
+
+        <li>
+            <b>5. HSL Colors</b><br>
+            The <b>hsl()</b> function defines color using hue, saturation, and lightness.
+            <br><br>
+            <code>hsl(0, 100%, 50%)</code> → Red<br>
+            <code>hsl(120, 100%, 25%)</code> → Dark Green<br>
+            <code>hsl(240, 100%, 50%)</code> → Blue
+            <br><br>
+            <div class="color-box" style="background-color: hsl(0, 100%, 50%);">HSL(0, 100%, 50%)</div>
+            <div class="color-box" style="background-color: hsl(120, 100%, 25%);">HSL(120, 100%, 25%)</div>
+            <div class="color-box" style="background-color: hsl(240, 100%, 50%);">HSL(240, 100%, 50%)</div>
+            <br>
+            <code>div { background-color: hsl(240, 100%, 50%); }</code>
+        </li>
+
+        <li>
+            <b>6. HSLA Colors</b><br>
+            The <b>hsla()</b> function adds an alpha (transparency) channel to HSL colors.
+            <br><br>
+            <div class="color-box" style="background-color: hsla(200, 100%, 50%, 1);">HSLA(200, 100%, 50%, 1)</div>
+            <div class="color-box" style="background-color: hsla(200, 100%, 50%, 0.5);">HSLA(200, 100%, 50%, 0.5)</div>
+            <div class="color-box" style="background-color: hsla(200, 100%, 50%, 0.2);">HSLA(200, 100%, 50%, 0.2)</div>
+            <br>
+            <code>div { background-color: hsla(200, 100%, 50%, 0.5); }</code>
+        </li>
+    </ol>
+
+    <hr>
+
+    <h3>Useful Tips:</h3>
+    <ul>
+        <li>Use <b>RGBA</b> or <b>HSLA</b> for semi-transparent backgrounds and overlays.</li>
+        <li><b>Named colors</b> are easiest to use, but <b>HEX</b> and <b>RGB</b> give more precision.</li>
+        <li>Use online color pickers (like <a href="https://color.adobe.com" target="_blank">Adobe Color</a>) to choose palettes.</li>
+        <li>Use consistent color schemes for accessibility and readability.</li>
+    </ul>
+
+</section>
 
 <hr>
 
+<!-- 10. GRADIENTS AND ADVANCED COLOR TECHNIQUES -->
+<section class="css-section">
+    <h2>10. Gradients and Advanced Color Techniques</h2>
+
+    <p>
+        CSS Gradients are special background effects that smoothly transition between multiple colors — 
+        without using any image files. They make designs visually appealing and are fully customizable.
+    </p>
+
+    <h3>A. Linear Gradient</h3>
+    <p>
+        A <b>linear-gradient()</b> creates a color transition along a straight line (horizontal, vertical, or diagonal).
+    </p>
+    <pre><code>
+background: linear-gradient(direction, color1, color2, ...);
+    </code></pre>
+
+    <div class="gradient-demo linear-demo-1">Top to Bottom Gradient</div>
+    <div class="gradient-demo linear-demo-2">Left to Right Gradient</div>
+    <div class="gradient-demo linear-demo-3">Diagonal Gradient</div>
+
+    <ul>
+        <li><code>to bottom</code> – top → bottom</li>
+        <li><code>to right</code> – left → right</li>
+        <li><code>45deg</code> – diagonal angle</li>
+    </ul>
+
+    <h3>B. Radial Gradient</h3>
+    <p>
+        A <b>radial-gradient()</b> radiates colors outward from a central point, creating a circular or elliptical pattern.
+    </p>
+    <pre><code>
+background: radial-gradient(shape size at position, color1, color2, ...);
+    </code></pre>
+
+    <div class="gradient-demo radial-demo-1">Circular Gradient</div>
+    <div class="gradient-demo radial-demo-2">Elliptical Gradient</div>
+
+    <ul>
+        <li><code>circle</code> – circular gradient</li>
+        <li><code>ellipse</code> – elliptical gradient</li>
+        <li><code>at center / at top / at left</code> – position control</li>
+    </ul>
+
+    <h3>C. Conic Gradient</h3>
+    <p>
+        A <b>conic-gradient()</b> creates a gradient around a center point — great for color wheels, charts, and effects.
+    </p>
+    <pre><code>
+background: conic-gradient(from angle, color1, color2, ...);
+    </code></pre>
+
+    <div class="gradient-demo conic-demo">Conic Gradient Example</div>
+
+    <h3>D. Repeating Gradients</h3>
+    <p>
+        You can repeat gradient patterns using <code>repeating-linear-gradient()</code> or <code>repeating-radial-gradient()</code>.
+    </p>
+    <pre><code>
+background: repeating-linear-gradient(45deg, red, yellow 10%, green 20%);
+    </code></pre>
+
+    <div class="gradient-demo repeating-linear">Repeating Linear Gradient</div>
+    <div class="gradient-demo repeating-radial">Repeating Radial Gradient</div>
+
+    <h3>E. Transparent and Overlay Effects</h3>
+    <p>
+        Combine gradients with <b>rgba()</b> transparency to create overlay effects for images or backgrounds.
+    </p>
+    <pre><code>
+background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url('image.jpg');
+    </code></pre>
+
+    <div class="overlay-demo">
+        <p>Overlay Gradient Example</p>
+    </div>
+
+    <h3>F. Color Contrast and Accessibility</h3>
+    <p>
+        Always ensure sufficient <b>contrast</b> between text and background colors for readability and accessibility.
+    </p>
+
+    <ul>
+        <li>Use light text on dark backgrounds or vice versa.</li>
+        <li>Check color contrast using tools like 
+            <a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker</a>.
+        </li>
+        <li>WCAG requires a minimum contrast ratio of <b>4.5:1</b> for normal text and <b>3:1</b> for large text.</li>
+    </ul>
+
+    <div class="contrast-demo dark-bg">White Text on Dark Background (High Contrast)</div>
+    <div class="contrast-demo light-bg">Black Text on Light Background (High Contrast)</div>
+
+</section>
+
+<hr>
+
+<!-- 11. CSS BACKGROUND PROPERTIES -->
+<section class="css-section">
+    <h2>11. CSS Background Properties</h2>
+
+    <p>
+        CSS background properties are used to define the background of an element.  
+        They control the color, image, size, repeat behavior, attachment, and position of the background.  
+        You can use them individually or combine them in a single shorthand property.
+    </p>
+
+    <h3>1. background-color</h3>
+    <p>
+        Defines the solid background color of an element.
+    </p>
+    <div class="bg-demo bg-color-demo">This box has a light blue background color.</div>
+    <pre><code>
+div {
+    background-color: lightblue;
+}
+    </code></pre>
+
+    <h3>2. background-image (url)</h3>
+    <p>
+        Adds an image as the background of an element.  
+        The <code>url()</code> function specifies the path of the image.
+    </p>
+    <div class="bg-demo bg-img-demo">This box uses a background image.</div>
+    <pre><code>
+div {
+    background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
+}
+    </code></pre>
+
+    <h3>3. background-repeat</h3>
+    <p>
+        Defines whether the background image should repeat (tile) or not.
+    </p>
+    <ul>
+        <li><code>repeat</code> – repeats both horizontally and vertically (default)</li>
+        <li><code>no-repeat</code> – shows only one image</li>
+        <li><code>repeat-x</code> – repeats horizontally</li>
+        <li><code>repeat-y</code> – repeats vertically</li>
+    </ul>
+    <div class="bg-demo bg-repeat-demo">No-repeat background</div>
+    <pre><code>
+div {
+    background-image: url('pattern.png');
+    background-repeat: no-repeat;
+}
+    </code></pre>
+
+    <h3>4. background-position</h3>
+    <p>
+        Specifies the starting position of a background image.  
+        You can use keywords like <code>top</code>, <code>center</code>, <code>bottom</code>, <code>left</code>, <code>right</code>, or numeric values.
+    </p>
+    <div class="bg-demo bg-position-demo">Positioned at top right</div>
+    <pre><code>
+div {
+    background-position: top right;
+}
+    </code></pre>
+
+    <h3>5. background-size</h3>
+    <p>
+        Controls how the background image fits inside the container.
+    </p>
+    <ul>
+        <li><code>auto</code> – keeps original size</li>
+        <li><code>cover</code> – fills the box, cropping image if needed</li>
+        <li><code>contain</code> – scales image to fit within box</li>
+        <li><code>px / %</code> – custom width/height</li>
+    </ul>
+    <div class="bg-demo bg-size-demo">Background-size: cover</div>
+    <pre><code>
+div {
+    background-image: url('image.jpg');
+    background-size: cover;
+}
+    </code></pre>
+
+    <h3>6. background-attachment</h3>
+    <p>
+        Determines whether the background image scrolls with the page or stays fixed in place.
+    </p>
+    <ul>
+        <li><code>scroll</code> – moves with page (default)</li>
+        <li><code>fixed</code> – stays fixed when scrolling</li>
+        <li><code>local</code> – scrolls within the element content</li>
+    </ul>
+    <div class="bg-demo bg-attachment-demo">Scroll the page to see effect</div>
+    <pre><code>
+div {
+    background-attachment: fixed;
+}
+    </code></pre>
+
+    <h3>7. background-clip</h3>
+    <p>
+        Defines how far the background extends inside the element.
+    </p>
+    <ul>
+        <li><code>border-box</code> – background extends to border (default)</li>
+        <li><code>padding-box</code> – clips background inside padding area</li>
+        <li><code>content-box</code> – clips background inside content area only</li>
+    </ul>
+    <div class="bg-demo bg-clip-demo">background-clip: content-box</div>
+    <pre><code>
+div {
+    background-clip: content-box;
+}
+    </code></pre>
+
+    <h3>8. background-origin</h3>
+    <p>
+        Specifies the positioning area for the background image (border, padding, or content area).
+    </p>
+    <div class="bg-demo bg-origin-demo">background-origin: padding-box</div>
+    <pre><code>
+div {
+    background-origin: padding-box;
+}
+    </code></pre>
+
+    <h3>9. background-blend-mode</h3>
+    <p>
+        Defines how the background image blends with background color (similar to Photoshop layers).
+    </p>
+    <ul>
+        <li><code>multiply</code> – darkens overlapping colors</li>
+        <li><code>screen</code> – lightens overlapping colors</li>
+        <li><code>overlay</code> – combination of multiply and screen</li>
+        <li><code>difference</code>, <code>lighten</code>, <code>darken</code> – various blend effects</li>
+    </ul>
+    <div class="bg-demo bg-blend-demo">Blend Mode: Overlay</div>
+    <pre><code>
+div {
+    background-color: #ff512f;
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+    background-blend-mode: overlay;
+}
+    </code></pre>
+
+    <h3>10. background (shorthand)</h3>
+    <p>
+        You can combine all the background properties into one shorthand declaration.
+    </p>
+    <pre><code>
+background: #ff512f url('image.jpg') no-repeat center/cover fixed;
+    </code></pre>
+    <div class="bg-demo bg-shorthand-demo">Shorthand Background Example</div>
+</section>
+
+<hr>
+
+<!-- 12. CSS OVERFLOW PROPERTY -->
+<section class="css-section">
+    <h2>12. CSS Overflow Property</h2>
+
+    <p>
+        The <b>overflow</b> property controls how content that exceeds an element’s box is handled.  
+        It defines whether extra content should be visible, hidden, clipped, or scrollable.
+    </p>
+
+    <h3>Syntax:</h3>
+    <pre><code>
+overflow: visible | hidden | scroll | auto;
+    </code></pre>
+
+    <h3>1. overflow: visible (default)</h3>
+    <p>
+        Content is not clipped and may overflow outside the element’s box.
+    </p>
+    <div class="overflow-demo visible-demo">
+        This box has <b>overflow: visible</b>.<br>
+        The text goes beyond the border but is still shown outside the box.
+    </div>
+    <pre><code>
+div {
+    width: 250px;
+    height: 100px;
+    overflow: visible;
+}
+    </code></pre>
+
+    <h3>2. overflow: hidden</h3>
+    <p>
+        Hides any content that goes beyond the element’s box boundaries.
+    </p>
+    <div class="overflow-demo hidden-demo">
+        This box has <b>overflow: hidden</b>.<br>
+        Extra text is clipped and not visible beyond the border.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel nisl ac magna fermentum feugiat.
+    </div>
+    <pre><code>
+div {
+    width: 250px;
+    height: 100px;
+    overflow: hidden;
+}
+    </code></pre>
+
+    <h3>3. overflow: scroll</h3>
+    <p>
+        Always adds scrollbars (horizontal or vertical), even if not needed.
+    </p>
+    <div class="overflow-demo scroll-demo">
+        This box has <b>overflow: scroll</b>.<br>
+        Scrollbars appear even if content fits.<br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec elit a lorem vulputate condimentum.
+    </div>
+    <pre><code>
+div {
+    width: 250px;
+    height: 100px;
+    overflow: scroll;
+}
+    </code></pre>
+
+    <h3>4. overflow: auto</h3>
+    <p>
+        Adds scrollbars only when content overflows (recommended for responsive layouts).
+    </p>
+    <div class="overflow-demo auto-demo">
+        This box has <b>overflow: auto</b>.<br>
+        Scrollbars appear only when needed.<br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Donec eget nulla ut lorem fermentum gravida.
+    </div>
+    <pre><code>
+div {
+    width: 250px;
+    height: 100px;
+    overflow: auto;
+}
+    </code></pre>
+
+    <h3>5. overflow-x and overflow-y</h3>
+    <p>
+        You can control overflow behavior separately for horizontal (<code>overflow-x</code>)  
+        and vertical (<code>overflow-y</code>) directions.
+    </p>
+    <div class="overflow-demo xy-demo">
+        This box uses <b>overflow-x: scroll</b> and <b>overflow-y: hidden</b>.<br><br>
+        Try scrolling horizontally ➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️
+    </div>
+    <pre><code>
+div {
+    width: 250px;
+    height: 80px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+    </code></pre>
+
+    <h3>Common Use Cases:</h3>
+    <ul>
+        <li>Creating scrollable containers for long text or tables</li>
+        <li>Hiding overflowing content for banners or cards</li>
+        <li>Handling responsive layouts with auto scrollbars</li>
+    </ul>
+
+</section>
+
+<hr>
 
 
 </body>

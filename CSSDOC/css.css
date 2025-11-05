@@ -12,9 +12,19 @@
     color: #333;
 }
 
-/* Section Container */
+body {
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 40px;        
+    max-width: 1200px;     
+    margin: 0 auto;         
+}
+
 .css-section {
     margin: 25px 0;
+    margin: 40px auto;
+    padding: 0 10px;
 }
 
 /* Example Card Styling */
@@ -590,4 +600,239 @@ th {
 
 tr:nth-child(even) {
     background-color: #f9fafb;
+}
+
+.color-box {
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 6px;
+    margin: 5px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+/* Gradient and color section styles */
+.gradient-demo {
+    width: 250px;
+    height: 80px;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    margin: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Linear gradients */
+.linear-demo-1 {
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+}
+.linear-demo-2 {
+    background: linear-gradient(to right, #43cea2, #185a9d);
+}
+.linear-demo-3 {
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+}
+
+/* Radial gradients */
+.radial-demo-1 {
+    background: radial-gradient(circle, #00c6ff, #0072ff);
+}
+.radial-demo-2 {
+    background: radial-gradient(ellipse at center, #ffafbd, #ffc3a0);
+}
+
+/* Conic gradient */
+.conic-demo {
+    background: conic-gradient(from 0deg, red, yellow, green, blue, red);
+}
+
+/* Repeating gradients */
+.repeating-linear {
+    background: repeating-linear-gradient(45deg, #ff9a9e, #fad0c4 10%, #fbc2eb 20%);
+}
+.repeating-radial {
+    background: repeating-radial-gradient(circle, #a1c4fd, #c2e9fb 10%, #a1c4fd 20%);
+}
+
+/* Overlay demo */
+.overlay-demo {
+    width: 400px;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background: 
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.1)), 
+        url('./css.png');
+    background-size: contain;        
+    background-repeat: no-repeat;    
+    background-position: center;     
+    /* background-color: #000;    */       
+    text-align: center;
+    line-height: 150px;
+    margin: 15px 0;
+    font-weight: bold;
+    overflow: hidden;                
+}
+
+
+
+/* Contrast demo */
+.contrast-demo {
+    width: auto;
+    height: 60px;
+    margin: 10px 0;
+    border-radius: 6px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 60px;
+    font-weight: bold;
+}
+.dark-bg {
+    background-color: #222;
+    color: #fff;
+}
+.light-bg {
+    background-color: #f4f4f4;
+    color: #111;
+}
+
+/* 🌈 Background Property Demos */
+.bg-demo {
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    color: white;
+    text-align: center;
+    line-height: 150px;
+    margin: 10px 0 25px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* 1. background-color */
+.bg-color-demo {
+    background-color: #00bcd4;
+}
+
+/* 2. background-image */
+.bg-img-demo {
+    background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=60');
+    background-size: cover;
+    background-position: center;
+}
+
+/* 3. background-repeat */
+.bg-repeat-demo {
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+    background-repeat: no-repeat;
+    background-color: #2196f3;
+}
+
+/* 4. background-position */
+.bg-position-demo {
+    background-image: url('https://images.unsplash.com/photo-1517817748499-68fbc9c1b36c?auto=format&fit=crop&w=800&q=60');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 150px;
+    background-color: #0288d1;
+}
+
+/* 5. background-size */
+.bg-size-demo {
+    background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=800&q=60');
+    background-size: cover;
+    background-position: center;
+}
+
+/* 6. background-attachment */
+.bg-attachment-demo {
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* 7. background-clip */
+.bg-clip-demo {
+    background-color: #43cea2;
+    border: 10px solid #007acc;
+    padding: 20px;
+    background-clip: content-box;
+}
+
+/* 8. background-origin */
+.bg-origin-demo {
+    background-image: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=60');
+    background-origin: padding-box;
+    background-size: cover;
+    background-position: center;
+}
+
+/* 9. background-blend-mode */
+.bg-blend-demo {
+    background-color: #ff512f;
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=60');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+/* 10. background shorthand */
+.bg-shorthand-demo {
+    background: #673ab7 url('https://images.unsplash.com/photo-1499084732479-de2c02d45fc4?auto=format&fit=crop&w=800&q=60') no-repeat center/cover fixed;
+}
+
+/* 🧭 Overflow Section Demo Boxes */
+.overflow-demo {
+    width: 280px;
+    height: 100px;
+    border: 2px solid #007acc;
+    border-radius: 8px;
+    background-color: #f5f7fa;
+    margin: 15px 0 25px;
+    padding: 10px;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.4;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 1. Visible (default) */
+.visible-demo {
+    overflow: visible;
+}
+
+/* 2. Hidden */
+.hidden-demo {
+    overflow: hidden;
+    background-color: #e8f1fb;
+}
+
+/* 3. Scroll */
+.scroll-demo {
+    overflow: scroll;
+    background-color: #e0f7fa;
+}
+
+/* 4. Auto */
+.auto-demo {
+    overflow: auto;
+    background-color: #fff3e0;
+}
+
+/* 5. X and Y overflow */
+.xy-demo {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background-color: #ede7f6;
 }
