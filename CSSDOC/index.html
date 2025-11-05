@@ -671,17 +671,69 @@ background: repeating-linear-gradient(45deg, red, yellow 10%, green 20%);
     <div class="gradient-demo repeating-linear">Repeating Linear Gradient</div>
     <div class="gradient-demo repeating-radial">Repeating Radial Gradient</div>
 
-    <h3>E. Transparent and Overlay Effects</h3>
+
+<h3>E. Transparent and Overlay Effects</h3>
+<p>
+    Combine gradients with <b>rgba()</b> transparency to create stylish overlay effects
+    for images and backgrounds. These effects enhance visual appeal and improve
+    text readability on complex backgrounds.
+</p>
+
+
+<div class="css-section">
+    <h4>E.1 Transparent Gradient Using RGBA</h4>
     <p>
-        Combine gradients with <b>rgba()</b> transparency to create overlay effects for images or backgrounds.
+        The <b>rgba()</b> color function defines colors using <b>Red</b>, <b>Green</b>, <b>Blue</b>, and
+        <b>Alpha</b> (opacity) values. The alpha value ranges from 0 (fully transparent)
+        to 1 (fully opaque). When combined with <b>linear-gradient()</b>, it allows
+        you to create smooth, partially transparent color transitions.
     </p>
+
+    <div class="term-list">
+        <ul>
+            <li><b>rgba()</b> → Defines color with transparency. Example: <code>rgba(0,0,0,0.5)</code>.</li>
+            <li><b>Alpha Channel</b> → The fourth value controlling opacity.</li>
+            <li><b>linear-gradient()</b> → Creates a transition between two or more colors in a straight line.</li>
+        </ul>
+    </div>
+
     <pre><code>
-background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url('image.jpg');
+background: linear-gradient(rgba(255,0,0,0.5), rgba(0,0,255,0.3));
     </code></pre>
 
-    <div class="overlay-demo">
+    <div class="example-card rgba-demo">
+        <p>Transparent Gradient Example (RGBA)</p>
+    </div>
+</div>
+
+
+<div class="css-section">
+    <h4>E.2 Overlay Gradient on Image</h4>
+    <p>
+        A gradient overlay combines a <b>semi-transparent gradient</b> with an image
+        background. This is useful for text overlays or banners to ensure content
+        remains readable without sacrificing design aesthetics.
+    </p>
+
+    <div class="term-list">
+        <ul>
+            <li><b>Overlay</b> → A layer applied over another, often using partial transparency.</li>
+            <li><b>background-size: cover;</b> → Ensures the image covers the entire element.</li>
+            <li><b>background-position: center;</b> → Centers the image within the element.</li>
+        </ul>
+    </div>
+
+    <pre><code>
+background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url('image.jpg');
+background-size: cover;
+background-position: center;
+    </code></pre>
+
+    <div class="example-card overlay-demo">
         <p>Overlay Gradient Example</p>
     </div>
+</div>
+
 
     <h3>F. Color Contrast and Accessibility</h3>
     <p>
