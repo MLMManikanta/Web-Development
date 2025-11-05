@@ -1,0 +1,246 @@
+<!-- 
+GitHub Tutorial Page
+Author: Mamidi Lakshman Mohan Manikanta
+This document explains GitHub concepts, commands, and practical examples.
+It follows the same format and style as the HTML tutorial series.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Tutorial</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>GitHub – Complete Guide</h1>
+    <p>
+      GitHub is a web-based platform for version control and collaboration.
+      It allows developers to store, track, and manage code using Git.
+    </p>
+  </header>
+
+  <main>
+    <!-- ================= INTRODUCTION ================= -->
+    <h2>What is GitHub?</h2>
+    <ul>
+      <li><strong>GitHub</strong> is a hosting platform built on <strong>Git</strong>.</li>
+      <li>It allows multiple developers to work on the same project efficiently.</li>
+      <li>GitHub provides tools for code review, collaboration, and issue tracking.</li>
+      <li>You can use it for open-source or private repositories.</li>
+    </ul>
+
+    <hr>
+
+    <!-- ================= SIGNUP AND REPO CREATION ================= -->
+    <h2>1. Creating a GitHub Account</h2>
+    <ul>
+      <li>Visit <a href="https://github.com" target="_blank">https://github.com</a></li>
+      <li>Sign up with your email and password.</li>
+      <li>Verify your email address.</li>
+    </ul>
+
+    <h3>Create a New Repository</h3>
+    <ul>
+      <li>Click the <strong>“+”</strong> icon → <strong>New repository</strong></li>
+      <li>Enter repository name (e.g., <code>my-first-repo</code>)</li>
+      <li>Add an optional description.</li>
+      <li>Choose <strong>Public</strong> or <strong>Private</strong>.</li>
+      <li>Check “Initialize this repository with a README” (optional).</li>
+      <li>Click <strong>Create repository</strong>.</li>
+    </ul>
+
+    <p><strong>Rendered Output Example:</strong></p>
+    <pre><code>Repository: my-first-repo
+Description: Learning GitHub Basics
+Visibility: Public
+</code></pre>
+
+    <hr>
+
+    <!-- ================= GIT & GITHUB CONNECTION ================= -->
+    <h2>2. Connecting Git with GitHub</h2>
+
+    <p><strong>Step 1: Configure Git (one time only)</strong></p>
+    <pre><code>git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+</code></pre>
+
+    <p><strong>Step 2: Create a Local Folder</strong></p>
+    <pre><code>mkdir my-first-repo
+cd my-first-repo
+git init
+</code></pre>
+
+    <p><strong>Step 3: Link Local Repo to GitHub</strong></p>
+    <pre><code>git remote add origin https://github.com/username/my-first-repo.git
+</code></pre>
+
+    <p><strong>Step 4: Add and Commit Files</strong></p>
+    <pre><code>echo "Hello GitHub!" > README.md
+git add README.md
+git commit -m "Initial commit"
+</code></pre>
+
+    <p><strong>Step 5: Push to GitHub</strong></p>
+    <pre><code>git push -u origin main
+</code></pre>
+
+    <hr>
+
+    <!-- ================= CLONING A REPO ================= -->
+    <h2>3. Cloning a Repository</h2>
+    <p>
+      Cloning means creating a local copy of a GitHub repository on your computer.
+    </p>
+    <pre><code>git clone https://github.com/username/project-name.git
+cd project-name
+</code></pre>
+
+    <p><strong>Rendered Output Example:</strong></p>
+    <pre><code>Cloning into 'project-name'...
+remote: Enumerating objects: 10, done.
+Receiving objects: 100% (10/10), done.
+</code></pre>
+
+    <hr>
+
+    <!-- ================= BRANCHES ================= -->
+    <h2>4. Branching in GitHub</h2>
+    <ul>
+      <li><strong>Branch:</strong> A version of your project where you can make changes safely.</li>
+      <li><strong>main</strong> is the default branch.</li>
+      <li>Use branches to develop new features without breaking the main code.</li>
+    </ul>
+
+    <pre><code>git branch feature-login
+git switch feature-login
+# make changes
+git add .
+git commit -m "Add login feature"
+git push -u origin feature-login
+</code></pre>
+
+    <p><strong>Rendered Output Example:</strong></p>
+    <pre><code>Branch created: feature-login
+Switched to branch 'feature-login'
+</code></pre>
+
+    <hr>
+
+    <!-- ================= PULL REQUESTS ================= -->
+    <h2>5. Pull Requests (PR)</h2>
+    <ul>
+      <li>Pull requests let you propose changes from one branch to another.</li>
+      <li>They enable team review, discussion, and approval before merging.</li>
+    </ul>
+
+    <p><strong>Steps:</strong></p>
+    <ol>
+      <li>Push your branch to GitHub.</li>
+      <li>Go to the repository → “Pull requests” → “New pull request”.</li>
+      <li>Select the branch to merge into <code>main</code>.</li>
+      <li>Review and click <strong>Create pull request</strong>.</li>
+    </ol>
+
+    <p><strong>Example Description:</strong></p>
+    <pre><code>Title: Added login feature
+Description: Implemented user login with validation
+Reviewer: @project-lead
+</code></pre>
+
+    <hr>
+
+    <!-- ================= ISSUES AND DISCUSSIONS ================= -->
+    <h2>6. Issues and Discussions</h2>
+    <ul>
+      <li><strong>Issues:</strong> Used to track bugs, tasks, or feature requests.</li>
+      <li><strong>Discussions:</strong> Used for brainstorming or asking questions.</li>
+    </ul>
+
+    <p><strong>Example Issue:</strong></p>
+    <pre><code>Title: Bug in login validation
+Description: Empty username field not showing error message.
+Labels: bug, frontend
+</code></pre>
+
+    <hr>
+
+    <!-- ================= FORKING ================= -->
+    <h2>7. Forking a Repository</h2>
+    <ul>
+      <li><strong>Fork:</strong> Creates your own copy of someone else’s repository.</li>
+      <li>Useful for contributing to open-source projects.</li>
+    </ul>
+
+    <p><strong>Example:</strong></p>
+    <pre><code># Fork a repo via GitHub UI, then clone your fork:
+git clone https://github.com/yourusername/forked-repo.git
+</code></pre>
+
+    <hr>
+
+    <!-- ================= CONTRIBUTION ================= -->
+    <h2>8. Contributing to a Repository</h2>
+    <ul>
+      <li>Fork the repository.</li>
+      <li>Clone it to your computer.</li>
+      <li>Create a new branch for your feature.</li>
+      <li>Make changes and push them.</li>
+      <li>Submit a Pull Request to the original repository.</li>
+    </ul>
+
+    <p><strong>Example Command Flow:</strong></p>
+    <pre><code>git clone https://github.com/yourusername/project.git
+cd project
+git switch -c feature-update
+# make changes
+git add .
+git commit -m "Improved documentation"
+git push -u origin feature-update
+</code></pre>
+
+    <hr>
+
+    <!-- ================= README & LICENSE ================= -->
+    <h2>9. README and LICENSE</h2>
+    <ul>
+      <li><strong>README.md</strong> — Explains project purpose, setup steps, and usage.</li>
+      <li><strong>LICENSE</strong> — States how others can use your code (e.g., MIT License).</li>
+    </ul>
+
+    <p><strong>Example README.md content:</strong></p>
+    <pre><code># My Project
+A simple GitHub demo repository.
+
+## Features
+- Git basics
+- Branch management
+- Collaboration workflow
+
+## License
+MIT License
+</code></pre>
+
+    <hr>
+
+    <!-- ================= SUMMARY ================= -->
+    <h2>10. Summary</h2>
+    <ul>
+      <li>GitHub = Collaboration + Git + Cloud hosting.</li>
+      <li>Create → Clone → Commit → Push → Pull Request → Merge.</li>
+      <li>Use Issues and Discussions for communication.</li>
+      <li>Keep documentation updated (README, LICENSE).</li>
+    </ul>
+
+    <hr><hr>
+
+    <footer>
+      <p>&copy; 2025 All Rights Reserved | GitHub Tutorial by Mamidi Lakshman Mohan Manikanta</p>
+    </footer>
+  </main>
+</body>
+</html>
