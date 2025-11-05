@@ -44,7 +44,6 @@
         <pre><code>&lt;p style="color: orangered; font-size: 18px;"&gt;This is Inline CSS&lt;/p&gt;</code></pre>
     </div>
 </section>
-
 <hr>
 
 <!-- 2. INTERNAL CSS -->
@@ -70,7 +69,6 @@
         </code></pre>
     </div>
 </section>
-
 <hr>
 
 <!-- 3. EXTERNAL CSS -->
@@ -96,11 +94,11 @@ p {
         </code></pre>
     </div>
 </section>
-
 <hr>
 
 
 <!--  4. CSS SELECTORS -->
+  <section class="css-section">
 <h2>4. What is a CSS Selector?</h2>
 
 <p class="selector-demo">
@@ -184,10 +182,22 @@ p {
         </div>
     </div>
 </div>
-
+</section>
 <hr>
 
-    <h3>Margin and Padding Shorthand Formats</h3>
+   <!-- 5. MARGIN, PADDING, AND OUTLINE PROPERTIES -->
+<section class="css-section">
+    <h2>5. CSS Margin, Padding, and Outline Properties</h2>
+
+    <p>
+        The <b>margin</b>, <b>padding</b>, and <b>outline</b> properties define the space around elements and their outer visual styling.  
+        While margin and padding control spacing, outlines are decorative lines drawn outside the border.
+    </p>
+
+    <hr>
+
+    <!-- 🧱 MARGIN AND PADDING -->
+    <h3>1. Margin and Padding Shorthand Formats</h3>
     <p>
         Both <b>margin</b> and <b>padding</b> can accept one, two, three, or four values:
     </p>
@@ -215,14 +225,107 @@ p {
     <div class="margin-demo">
         <div class="inner-box">Box with <b>margin</b> and <b>padding</b></div>
     </div>
-</div>
 
+    <hr>
+
+    <!-- 🖋️ OUTLINE PROPERTY -->
+    <h3>2. Outline Property</h3>
+    <p>
+        The <b>outline</b> property draws a line outside an element’s border — often used for highlighting or accessibility focus styles.  
+        Unlike borders, outlines do not affect the element’s size or box layout.
+    </p>
+
+    <h4>Key Differences Between Border and Outline</h4>
+    <ul>
+        <li>Outline lies <b>outside</b> the border, not inside the box.</li>
+        <li>Outline does <b>not take space</b> (it’s drawn over the box).</li>
+        <li>Outline can’t be applied to specific sides (top, right, bottom, left).</li>
+    </ul>
+
+    <h4>2.1 outline-style</h4>
+    <p>Defines the line pattern of the outline. Common values include:</p>
+    <ul>
+        <li><code>solid</code> – a single solid line</li>
+        <li><code>dashed</code> – short dashes</li>
+        <li><code>dotted</code> – small round dots</li>
+        <li><code>double</code> – two parallel lines</li>
+        <li><code>groove</code>, <code>ridge</code>, <code>inset</code>, <code>outset</code> – 3D effects based on light/dark shading</li>
+    </ul>
+
+    <div class="outline-demo solid-demo">outline-style: solid;</div>
+    <div class="outline-demo dashed-demo">outline-style: dashed;</div>
+    <div class="outline-demo dotted-demo">outline-style: dotted;</div>
+    <div class="outline-demo double-demo">outline-style: double;</div>
+    <div class="outline-demo groove-demo">outline-style: groove;</div>
+    <div class="outline-demo ridge-demo">outline-style: ridge;</div>
+    <div class="outline-demo inset-demo">outline-style: inset;</div>
+    <div class="outline-demo outset-demo">outline-style: outset;</div>
+
+    <pre><code>
+div {
+    outline-style: dashed;
+}
+    </code></pre>
+
+    <h4>2.2 outline-color</h4>
+    <p>Specifies the color of the outline. You can use color names, HEX, RGB, RGBA, or HSL values.</p>
+    <div class="outline-demo color-demo">outline-color: #ff512f;</div>
+    <pre><code>
+div {
+    outline-style: solid;
+    outline-color: #ff512f;
+}
+    </code></pre>
+
+    <h4>2.3 outline-width</h4>
+    <p>Sets the thickness of the outline. You can use keywords or pixel values:</p>
+    <ul>
+        <li><code>thin</code></li>
+        <li><code>medium</code></li>
+        <li><code>thick</code></li>
+        <li><code>px</code> or <code>em</code> for custom sizes</li>
+    </ul>
+
+    <div class="outline-demo thin-demo">outline-width: thin;</div>
+    <div class="outline-demo thick-demo">outline-width: 6px;</div>
+    <pre><code>
+div {
+    outline-width: 6px;
+}
+    </code></pre>
+
+    <h4>2.4 outline-offset</h4>
+    <p>
+        The <b>outline-offset</b> property adds space between an element’s border and its outline, 
+        creating a visible gap for better focus or hover effects.
+    </p>
+    <div class="outline-demo offset-demo">outline-offset: 8px;</div>
+    <pre><code>
+div {
+    outline: 3px solid #007acc;
+    outline-offset: 8px;
+}
+    </code></pre>
+
+    <h4>2.5 outline (shorthand)</h4>
+    <p>You can combine all outline properties into one shorthand declaration:</p>
+    <div class="outline-demo shorthand-demo">outline: 4px dashed #ff512f;</div>
+    <pre><code>
+outline: 4px dashed #ff512f;
+    </code></pre>
+
+    <h4>Common Use Cases</h4>
+    <ul>
+        <li>Highlighting form fields or buttons on focus</li>
+        <li>Accessibility indicators for keyboard navigation (<code>:focus</code>)</li>
+        <li>Emphasizing important UI elements without changing layout</li>
+    </ul>
+</section>
 <hr>
 
-
-
-    <!--  5. COMMON CSS PROPERTIES -->
-<h2>5. Common CSS Properties Explained</h2>
+    <!--  6. COMMON CSS PROPERTIES -->
+<section class="css-section">
+<h2>6. Common CSS Properties Explained</h2>
 
 <p>
     Below are the most commonly used CSS properties with examples and their corresponding code:
@@ -311,13 +414,13 @@ p {
     </li>
 
 </ol>
+</section>
 <hr>
 
 
-
-<!-- TEXT PROPERTIES EXPLANATION -->
     <!-- TEXT PROPERTIES EXPLANATION -->
-<h2>6. CSS Text Properties</h2>
+<section class="css-section">
+<h2>7. CSS Text Properties</h2>
 
 <p>
     Text properties help you control how text looks on a webpage — including size, case, weight, spacing, decoration, and alignment.
@@ -399,11 +502,13 @@ p {
     </li>
 
 </ol>
+</section>
 <hr>
 
-<!-- 7. UNIVERSAL SELECTOR AND BOX-SIZING -->
+
+<!-- 8. UNIVERSAL SELECTOR AND BOX-SIZING -->
 <section class="css-section">
-    <h2>7. Universal Selector and Box-Sizing Property</h2>
+    <h2>8. Universal Selector and Box-Sizing Property</h2>
     <p>
         The <code>*</code> symbol is called the <b>Universal Selector</b>.  
         It selects <b>every element</b> on the webpage and applies the defined CSS properties to all of them.
@@ -433,12 +538,11 @@ p {
         <p> This is used as a <b>CSS Reset</b> to make layouts consistent across browsers.</p>
     </div>
 </section>
-
 <hr>
 
-<!-- 8. CSS UNITS AND SIZES -->
+<!-- 9. CSS UNITS AND SIZES -->
 <section class="css-section">
-    <h2>8. CSS Units and Sizes</h2>
+    <h2>9. CSS Units and Sizes</h2>
 
     <p>
         CSS uses units to control the <b>size</b> of elements such as width, height, font, margin, and padding.
@@ -501,9 +605,10 @@ p {
     </ul>
 </section>
 <hr>
-<!-- 9. COLORS IN CSS -->
+
+<!-- 10. COLORS IN CSS -->
 <section class="css-section">
-    <h2>9. Colors in CSS</h2>
+    <h2>10. Colors in CSS</h2>
 
     <p>
         Colors play a vital role in the design and appearance of a webpage.  
@@ -603,12 +708,11 @@ p {
     </ul>
 
 </section>
-
 <hr>
 
-<!-- 10. GRADIENTS AND ADVANCED COLOR TECHNIQUES -->
+<!-- 11. GRADIENTS AND ADVANCED COLOR TECHNIQUES -->
 <section class="css-section">
-    <h2>10. Gradients and Advanced Color Techniques</h2>
+    <h2>11. Gradients and Advanced Color Techniques</h2>
 
     <p>
         CSS Gradients are special background effects that smoothly transition between multiple colors — 
@@ -752,12 +856,11 @@ background-position: center;
     <div class="contrast-demo light-bg">Black Text on Light Background (High Contrast)</div>
 
 </section>
-
 <hr>
 
-<!-- 11. CSS BACKGROUND PROPERTIES -->
+<!-- 12. CSS BACKGROUND PROPERTIES -->
 <section class="css-section">
-    <h2>11. CSS Background Properties</h2>
+    <h2>12. CSS Background Properties</h2>
 
     <p>
         CSS background properties are used to define the background of an element.  
@@ -907,12 +1010,11 @@ background: #ff512f url('image.jpg') no-repeat center/cover fixed;
     </code></pre>
     <div class="bg-demo bg-shorthand-demo">Shorthand Background Example</div>
 </section>
-
 <hr>
 
-<!-- 12. CSS OVERFLOW PROPERTY -->
+<!-- 13. CSS OVERFLOW PROPERTY -->
 <section class="css-section">
-    <h2>12. CSS Overflow Property</h2>
+    <h2>13. CSS Overflow Property</h2>
 
     <p>
         The <b>overflow</b> property controls how content that exceeds an element’s box is handled.  
@@ -1017,7 +1119,6 @@ div {
     </ul>
 
 </section>
-
 <hr>
 
 
