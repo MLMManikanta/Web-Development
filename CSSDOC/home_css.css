@@ -3,3 +3,43 @@
     padding: 0px;
      box-sizing: border-box;
 }
+
+div {
+    border: 5px black solid;
+    width: auto;
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 100px;
+    text-align: center;
+    color: white;
+}
+
+.div1 {
+    background: linear-gradient(to right,yellow , orange ,red ,green , lightgreen , purple , blue );
+    
+    
+}
+
+.div2 {
+    background: radial-gradient(at top,yellow, orange,red,green, lightgreen, purple, blue );
+}
+
+.div3 {
+    background: conic-gradient(red, blue, yellow, green);
+}
+
+.div4 {
+    background: repeating-linear-gradient(45deg,yellow 1%, orange 2%,red 3%,green 4%, lightgreen 5%, purple 6%, blue 7% );
+}
+
+.div5 {
+    background: url('./css.png'), linear-gradient(#d3d3d3, #f8f6f6);
+    background-repeat: repeat;
+    background-position: center;
+     background-size: contain; 
+    background-attachment: scroll;
+}
+
+
+
