@@ -4,8 +4,273 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Layouts</title>
+     <link rel="icon" href="./css.png">
+    <link rel="stylesheet" href="./css_layouts.css">
 </head>
+
 <body>
+
+    <main>
+        <h1>CSS Layout</h1>
+        <p class="intro">
+            CSS Layout controls how elements are arranged on a webpage — including their display behavior, alignment, and positioning.  
+            The foundation of any web design starts with understanding the <b>display</b> property.
+        </p>
+
+        <hr>
+
+        <!--  DISPLAY PROPERTY -->
+        <section class="css-section">
+            <h2>1. The <code>display</code> Property</h2>
+            <p>
+                The <b>display</b> property defines how an element behaves in the document flow.  
+                It determines whether an element acts as a <b>block</b>, <b>inline</b>, or <b>inline-block</b> element — or if it’s hidden completely.
+            </p>
+
+            <hr>
+
+            <h3>1 Block Elements</h3>
+            <p>
+                Block-level elements always start on a new line and stretch to fill the entire width.  
+                Common examples include <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, and <code>&lt;section&gt;</code>.
+            </p>
+
+            <div class="display-demo">
+                <div class="block-demo">Block 1</div>
+                <div class="block-demo">Block 2</div>
+            </div>
+
+            <pre><code>
+                div {
+                    display: block;
+                }
+            </code></pre>
+
+            <hr>
+
+            <h3>2 Inline Elements</h3>
+            <p>
+                Inline elements only take up as much width as their content needs.  
+                They sit next to each other on the same line — like <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, and <code>&lt;strong&gt;</code>.
+            </p>
+
+            <div class="display-demo">
+                <span class="inline-demo">Inline 1</span>
+                <span class="inline-demo">Inline 2</span>
+            </div>
+
+            <pre><code>
+            span {
+                display: inline;
+            }
+            </code></pre>
+
+            <hr>
+            <h3>3 Inline-Block Elements</h3>
+            <p>
+                The <b>inline-block</b> display allows elements to behave like inline elements,  
+                but still respect width and height like block elements.
+            </p>
+
+            <div class="display-demo">
+                <div class="inline-block-demo">Box 1</div>
+                <div class="inline-block-demo">Box 2</div>
+            </div>
+
+            <pre><code>
+            div {
+                display: inline-block;
+                width: 120px;
+                height: 80px;
+            }
+            </code></pre>
+
+            <hr>
+            <h3>4 None</h3>
+            <p>
+                When <b>display: none;</b> is applied, the element is completely removed from the page layout.
+            </p>
+
+            <button class="toggle-btn" onclick="toggleBox()">Toggle Hidden Box</button>
+            <div id="hiddenBox" class="hidden-box">You can hide or show me!</div>
+
+            <pre><code>
+            div {
+                display: none; /* completely hides element */
+            }
+            </code></pre>
+        </section>
+        <hr>
+        <h3>5 display: flow-root</h3>
+<p>
+    The <code>flow-root</code> value creates a new <b>Block Formatting Context (BFC)</b>.  
+    It helps contain floated elements inside their parent automatically,  
+    preventing layout collapse without using the old <code>clearfix</code> method.
+</p>
+
+<div class="display-demo flow-root-demo">
+    <div class="float-box">Floating Box</div>
+    <p>This container uses <b>display: flow-root</b> to wrap floated children correctly.</p>
+</div>
+
+<pre><code>
+.container {
+    display: flow-root;
+}
+.float-box {
+    float: left;
+    width: 120px;
+    height: 80px;
+    background: #60a5fa;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+</code></pre>
+
+<hr>
+
+<h3>6 display: table</h3>
+<p>
+    Using <b>display: table</b> makes elements behave like an HTML table,  
+    with children acting as <code>table-row</code> and <code>table-cell</code>.  
+    This allows table-like layouts without using actual table tags.
+</p>
+
+<div class="display-demo table-demo">
+    <div class="table-container">
+        <div class="table-row">
+            <div class="table-cell">A1</div>
+            <div class="table-cell">B1</div>
+            <div class="table-cell">C1</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">A2</div>
+            <div class="table-cell">B2</div>
+            <div class="table-cell">C2</div>
+        </div>
+    </div>
+</div>
+
+<pre><code>
+.table-container { display: table; border-collapse: collapse; }
+.table-row { display: table-row; }
+.table-cell {
+    display: table-cell;
+    border: 1px solid #007acc;
+    padding: 8px 12px;
+}
+</code></pre>
+
+<hr>
+
+<h3>7 display: list-item</h3>
+<p>
+    The <code>list-item</code> value gives any element a list marker (like a bullet or number).  
+    It’s usually used with <code>&lt;li&gt;</code> tags but works on other tags too.
+</p>
+
+<div class="display-demo">
+    <div class="list-item-demo">Custom Item 1</div>
+    <div class="list-item-demo">Custom Item 2</div>
+</div>
+
+<pre><code>
+.list-item-demo {
+    display: list-item;
+    list-style: square inside;
+}
+</code></pre>
+
+<hr>
+
+<h3>8 display: contents</h3>
+<p>
+    The <code>contents</code> value makes the element itself disappear,  
+    but keeps its child elements visible as if they were direct children of the parent.
+</p>
+
+<div class="display-demo contents-demo">
+    <div class="parent-box">
+        <div class="wrapper" style="display: contents;">
+            <span class="child-box">Child 1</span>
+            <span class="child-box">Child 2</span>
+        </div>
+    </div>
+</div>
+
+<pre><code>
+.wrapper {
+    display: contents;
+}
+</code></pre>
+
+<hr>
+
+<h3>9 display: run-in</h3>
+<p>
+    The <code>run-in</code> display makes an element behave as <b>inline</b> or <b>block</b>  
+    depending on the context. It’s a rare and poorly supported layout mode.
+</p>
+
+<div class="display-demo runin-demo">
+    <h5 class="runin-heading">Run-in Heading</h5>
+    <p>This paragraph follows a run-in heading.</p>
+</div>
+
+<pre><code>
+.runin-heading {
+    display: run-in;
+}
+</code></pre>
+
+<hr>
+
+<h3>10 display: ruby</h3>
+<p>
+    The <code>ruby</code> display type is used in East Asian typography  
+    for adding pronunciation or annotation above/below characters.
+</p>
+
+<div class="display-demo ruby-demo">
+    <ruby>
+        明日 <rt>Ashita</rt>
+    </ruby>
+</div>
+
+<pre><code>
+ruby {
+    display: ruby;
+}
+rt {
+    display: ruby-text;
+}
+</code></pre>
+
     
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Explore More</h3>
+                <ul>
+                    <li><a href="./css_basics.html">CSS Basics</a></li>
+                    <li><a href="./css_effects.html">CSS Effects</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:mlmmmanikanta@outlook.com">mlmmmanikanta@outlook.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Web Development — CSS Layout Guide</p>
+        </div>
+    </footer>
+    <script src="./CSS_Script.js"></script>
 </body>
 </html>

@@ -1,0 +1,353 @@
+/* 🌐 GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ================================
+   🏷️ HEADINGS AND TEXT
+================================ */
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #007acc;
+    margin: 30px 0 20px;
+}
+
+h2 {
+    color: #005a8d;
+    margin-bottom: 15px;
+    border-left: 5px solid #007acc;
+    padding-left: 10px;
+}
+
+h3 {
+    color: #007acc;
+    margin: 18px 0 10px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #e2e8f0;
+    margin: 30px 0;
+}
+
+/* ================================
+   📘 INTRODUCTION
+================================ */
+main {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.intro {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+}
+
+.css-section {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fafbfc;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================
+   💻 CODE BLOCKS
+================================ */
+pre {
+    background-color: #f0f4f8;
+    border-left: 5px solid #007acc;
+    color: #c7254e;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-family: "Consolas", monospace;
+    font-size: 14px;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+pre code {
+    color: #c7254e;
+    font-weight: 500;
+}
+
+code {
+    background-color: #f8fafc;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #b91c1c;
+    font-family: "Consolas", monospace;
+}
+
+/* ================================
+   📦 DISPLAY DEMO SECTIONS
+================================ */
+.display-demo {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    text-align: center;
+}
+
+/* Block example */
+.block-demo {
+    display: block;
+    background-color: #60a5fa;
+    color: white;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Inline example */
+.inline-demo {
+    display: inline;
+    background-color: #4ade80;
+    color: #000;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 4px;
+}
+
+/* Inline-block example */
+.inline-block-demo {
+    display: inline-block;
+    width: 120px;
+    height: 70px;
+    background-color: #fbbf24;
+    color: #000;
+    text-align: center;
+    line-height: 70px;
+    border-radius: 6px;
+    margin: 5px;
+}
+
+/* Hidden box demo */
+.hidden-box {
+    display: block;
+    background-color: #ef4444;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    transition: opacity 0.3s ease;
+}
+
+/* Toggle button */
+.toggle-btn {
+    background-color: #007acc;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 8px;
+}
+
+.toggle-btn:hover {
+    background-color: #005a8d;
+    transform: scale(1.05);
+}
+
+/* ================================
+   🌈 EXTENDED DISPLAY TYPES
+================================ */
+
+/* flow-root */
+.flow-root-demo {
+    display: flow-root;
+    border: 1px solid #007acc;
+    padding: 12px;
+    border-radius: 8px;
+    background: #f0f4f8;
+}
+.float-box {
+    float: left;
+    width: 120px;
+    height: 80px;
+    background: #60a5fa;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+/* table */
+.table-container {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+.table-row {
+    display: table-row;
+}
+.table-cell {
+    display: table-cell;
+    border: 1px solid #007acc;
+    padding: 8px 12px;
+    background: #e8f1fb;
+}
+
+/* list-item */
+.list-item-demo {
+    display: list-item;
+    list-style: square inside;
+    padding-left: 10px;
+    margin-left: 15px;
+    background: #f0f4f8;
+    margin-bottom: 6px;
+    border-radius: 4px;
+}
+
+/* contents */
+.parent-box {
+    background-color: #dbeafe;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+}
+.child-box {
+    background-color: #60a5fa;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin: 5px;
+    display: inline-block;
+}
+
+/* run-in */
+.runin-demo h5 {
+    display: run-in;
+    color: #007acc;
+    margin-bottom: 0;
+}
+.runin-demo p {
+    display: block;
+    margin-top: 0;
+}
+
+/* ruby */
+.ruby-demo ruby {
+    font-size: 1.5rem;
+    color: #333;
+}
+.ruby-demo rt {
+    font-size: 0.8rem;
+    color: #007acc;
+}
+
+/* ================================
+   🔗 NEXT SECTION NAVIGATION
+================================ */
+.next-section {
+    text-align: center;
+    padding: 20px;
+    background: #e8f1fb;
+    border-top: 2px solid #007acc;
+    margin-top: 40px;
+}
+
+.next-section a {
+    color: #007acc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.next-section a:hover {
+    color: #ff512f;
+}
+
+/* ================================
+   🌐 FOOTER
+================================ */
+.site-footer {
+    background-color: #007acc;
+    color: #ffffff;
+    padding: 50px 20px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1 1 250px;
+    min-width: 220px;
+}
+
+.footer-column h3 {
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+    padding-bottom: 6px;
+}
+
+.footer-column p {
+    color: #f1f1f1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a,
+.footer-column a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-column ul li a:hover,
+.footer-column a:hover {
+    color: #ffeb3b;
+    text-shadow: 0 1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 35px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 15px;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
