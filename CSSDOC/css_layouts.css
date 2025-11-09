@@ -954,54 +954,511 @@ li {
   margin-bottom: 6px;
 }
 
+/* ===============================
+   🌊 4. FLOAT & CLEAR STYLES
+   (Matches Flexbox/Grid Design)
+================================ */
 
-
-
-/* ============ GAP DEMOS ============ */
-
-/* simple grid just to visualize gap; Grid topic comes later */
-.gap-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-.gap-grid-rc {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 16px;
-  column-gap: 8px;
-}
-
-/* shared item style */
-.gap-item {
-  background: #e8f1fb;
-  border: 1px solid #cfe0f5;
-  border-radius: 8px;
-  height: 56px;
-  display: grid;
-  place-items: center;
-  font-weight: 600;
-  color: #005a8d;
-}
-
-/* flex + gap demo */
-.gap-flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.chip {
-  background: #f0f4f8;
+/* Shared layout */
+.display-demo[class*="float"] {
+  background: #f9fafb;
   border: 1px solid #d1d5db;
-  border-radius: 999px;
-  padding: 6px 12px;
-  font-size: 14px;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0 25px;
+  overflow: auto;
+  line-height: 1.6;
   color: #333;
 }
 
+/* Floated images */
+.float-left,
+.float-right,
+.float-none {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
 
+/* Float directions */
+.float-left {
+  float: left;
+  margin-right: 15px;
+}
+
+.float-right {
+  float: right;
+  margin-left: 15px;
+}
+
+.float-none {
+  float: none;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Float boxes for clear examples */
+.float-box {
+  width: 120px;
+  height: 70px;
+  color: #fff;
+  text-align: center;
+  line-height: 70px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin: 5px;
+}
+
+.left-box {
+  float: left;
+  background-color: #60a5fa;
+}
+
+.right-box {
+  float: right;
+  background-color: #f59e0b;
+}
+
+/* Clear text paragraphs */
+.clear-left,
+.clear-right,
+.clear-both {
+  background: #eef6ff;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 10px;
+  border-left: 4px solid #007acc;
+  font-weight: 500;
+}
+
+.clear-left { clear: left; }
+.clear-right { clear: right; }
+.clear-both { clear: both; }
+
+/* Mini boxes for clearfix demo */
+.float-mini {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 600;
+  margin: 5px;
+}
+
+.left-mini {
+  float: left;
+  background: #3b82f6;
+}
+
+.right-mini {
+  float: right;
+  background: #22c55e;
+}
+
+/* Clearfix container */
+.clearfix-parent {
+  background: #f0f4f8;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Clearfix fix */
+.clearfix-parent::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Text inside clearfix */
+.clearfix-parent p {
+  margin-top: 80px;
+  background: #e8f1fb;
+  padding: 8px;
+  border-radius: 6px;
+  border-left: 4px solid #007acc;
+}
+
+/* Hover interactions */
+.display-demo[class*="float"] img:hover,
+.float-box:hover,
+.float-mini:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* Headings in float section */
+#float h3,
+#float h4,
+#float h5 {
+  color: #005a8d;
+  margin-top: 15px;
+}
+
+#float ul {
+  margin: 10px 0 15px 30px;
+}
+
+#float li {
+  margin-bottom: 5px;
+}
+
+/* ===============================
+   🌐 CSS MULTI-COLUMN LAYOUT
+   Matches Flexbox & Grid Design
+================================= */
+
+/* Generic box style for all column demos */
+.display-demo[class*="column-"] {
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px 0 25px;
+  line-height: 1.7;
+  color: #333;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.display-demo[class*="column-"]:hover {
+  background: #eef6ff;
+  transition: background 0.3s ease;
+}
+
+.display-demo p {
+  font-size: 0.96rem;
+  color: #333;
+}
+
+/* Headings inside demos */
+.display-demo h4 {
+  margin-bottom: 10px;
+  color: #005a8d;
+}
+
+/* ===============================
+   5.1 column-count
+================================= */
+.column-count-demo {
+  column-count: 3;
+  column-gap: 25px;
+}
+.column-count-demo p {
+  text-align: justify;
+}
+
+/* ===============================
+   5.2 column-width
+================================= */
+.column-width-demo {
+  column-width: 200px;
+  column-gap: 20px;
+}
+.column-width-demo p {
+  text-align: justify;
+}
+
+/* ===============================
+   5.3 column-gap
+================================= */
+.column-gap-demo {
+  column-count: 3;
+  column-gap: 50px;
+}
+.column-gap-demo p {
+  text-align: justify;
+}
+
+/* ===============================
+   5.4 column-rule
+================================= */
+.column-rule-demo {
+  column-count: 3;
+  column-gap: 25px;
+  column-rule: 3px solid #007acc;
+}
+.column-rule-demo p {
+  text-align: justify;
+}
+
+/* ===============================
+   5.5 column-span
+================================= */
+.column-span-demo {
+  column-count: 3;
+  column-gap: 25px;
+}
+.span-heading {
+  column-span: all;
+  color: #005a8d;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.column-span-demo p {
+  text-align: justify;
+}
+
+/* ===============================
+   5.6 column-fill
+================================= */
+.column-fill-demo {
+  column-count: 3;
+  column-fill: auto;
+  column-gap: 20px;
+}
+.column-fill-demo p {
+  text-align: justify;
+}
+
+/* ===============================
+   CODE STYLING FOR COLUMN SECTION
+================================= */
+.css-section pre {
+  background-color: #f0f4f8;
+  border-left: 5px solid #007acc;
+  color: #c7254e;
+  padding: 10px;
+  border-radius: 6px;
+  font-family: "Consolas", monospace;
+  font-size: 14px;
+  overflow-x: auto;
+  margin-top: 12px;
+}
+
+.css-section code {
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #c7254e;
+  font-family: "Consolas", monospace;
+}
+
+/* ===============================
+   TYPOGRAPHY CONSISTENCY
+================================= */
+.css-section h2 {
+  color: #005a8d;
+  border-left: 5px solid #007acc;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+.css-section h3 {
+  color: #007acc;
+  margin-top: 25px;
+}
+
+.css-section h4, .css-section h5 {
+  color: #005a8d;
+  margin-top: 15px;
+}
+
+.css-section ul {
+  margin: 10px 0 15px 25px;
+}
+
+.css-section li {
+  margin-bottom: 6px;
+  color: #333;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #e2e8f0;
+  margin: 25px 0;
+}
+
+/* ===============================
+   🎯 GAP PROPERTY (SECTION 6)
+   Matches Flexbox/Grid Style
+================================ */
+
+/* Base styling for all gap demos */
+.display-demo[class*="gap"],
+.display-demo[class*="row-gap"],
+.display-demo[class*="column-gap"] {
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 15px 0 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.display-demo[class*="gap"] div,
+.display-demo[class*="row-gap"] div,
+.display-demo[class*="column-gap"] div {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+  padding: 10px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.display-demo[class*="gap"] div:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* 6.1 gap (Flex Example) */
+.gap-all-demo {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.gap-all-demo div {
+  background: #60a5fa;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.gap-all-demo div:hover {
+  transform: translateY(-3px);
+}
+
+/* 6.2 row-gap (Grid Example) */
+.row-gap-demo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 25px;
+  justify-items: center;
+}
+.row-gap-demo div {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #2563eb;
+  border-radius: 8px;
+}
+
+/* 6.3 column-gap (Grid Example) */
+.column-gap-demo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+  justify-items: center;
+}
+.column-gap-demo div {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #1d4ed8;
+  border-radius: 8px;
+}
+
+/* 6.4 Combined row-gap and column-gap */
+.rowcol-gap-demo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 20px;
+  column-gap: 30px;
+  justify-items: center;
+}
+.rowcol-gap-demo div {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #3b82f6;
+  border-radius: 8px;
+}
+
+/* 6.5 Flex vs Grid Comparison */
+.gap-flex-vs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  align-items: start;
+}
+
+/* Flex container in comparison demo */
+.flex-gap-box {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px;
+  background: #e0f2fe;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+}
+.flex-gap-box div {
+  background: #2563eb;
+  color: #fff;
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 40px;
+}
+
+/* Grid container in comparison demo */
+.grid-gap-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 10px;
+  background: #f0f9ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+}
+.grid-gap-box div {
+  background: #3b82f6;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* 6.6 gap shorthand */
+.gap-shorthand {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px 25px; /* row-gap column-gap */
+  justify-items: center;
+}
+.gap-shorthand div {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #2563eb;
+  border-radius: 8px;
+}
+
+/* Headings & Paragraphs (section typography consistency) */
+#gap h3, #gap h4, #gap h5 {
+  color: #005a8d;
+  margin-top: 15px;
+}
+#gap p {
+  color: #333;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+#gap ul {
+  margin-left: 25px;
+  line-height: 1.7;
+}
+#gap li {
+  margin-bottom: 6px;
+}
 
 
 /* ================================

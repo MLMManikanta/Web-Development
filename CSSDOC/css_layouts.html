@@ -986,7 +986,545 @@ grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 <pre><code>
 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 </code></pre>
+</section>
 
+<!-- =============================== -->
+<!-- 4. FLOAT & CLEAR -->
+<!-- =============================== -->
+<section id="float" class="css-section">
+  <h2>4. Float and Clear</h2>
+  <p>
+    The <b>float</b> property positions elements to the left or right of their container,
+    allowing inline content (like text or other boxes) to wrap around them.
+    Originally used for text wrapping around images, it's now less common due to Flexbox and Grid.
+  </p>
+
+  <hr>
+
+  <!-- 4.1 float: left / right / none -->
+  <!-- =============================== -->
+<!-- 4. FLOAT & CLEAR -->
+<!-- =============================== -->
+<section id="float" class="css-section">
+  <h2>4. Float and Clear</h2>
+  <p>
+    The <b>float</b> property lets elements "float" to the left or right side of their container,
+    allowing other content like text or inline elements to wrap around them.  
+    The <b>clear</b> property then controls how other elements behave around floated items.
+  </p>
+
+  <hr>
+
+  <!-- 4.1 FLOAT -->
+  <h3>4.1 The float Property</h3>
+  <p>
+    The <b>float</b> property removes elements from the normal document flow and positions them
+    to the left or right of their container. Commonly used for images or side boxes.
+  </p>
+
+  <ul>
+    <li><b>float: left</b> – aligns element to the left and allows text to wrap on the right.</li>
+    <li><b>float: right</b> – aligns element to the right and allows text to wrap on the left.</li>
+    <li><b>float: none</b> – disables floating (default behavior).</li>
+  </ul>
+
+  <h4>Example 1 – float: left</h4>
+  <div class="display-demo float-left-demo">
+    <img src="https://images.unsplash.com/photo-1605460375648-278bcbd579a6?auto=format&fit=crop&w=150&q=60" alt="Float Left" class="float-left">
+    <p>
+      This image is floated to the <b>left</b> of the text.  
+      The paragraph wraps naturally around it, thanks to <code>float: left;</code>.
+    </p>
+  </div>
+
+  <pre><code>
+img {
+  float: left;
+  margin-right: 12px;
+}
+  </code></pre>
+
+  <h4>Example 2 – float: right</h4>
+  <div class="display-demo float-right-demo">
+    <img src="./Images/float.jpg" alt="Float Right" class="float-right">
+    <p>
+      Here, the image is floated to the <b>right</b>.  
+      The text wraps on the opposite side, maintaining a natural flow.
+    </p>
+  </div>
+
+  <pre><code>
+img {
+  float: right;
+  margin-left: 12px;
+}
+  </code></pre>
+
+  <h4>Example 3 – float: none</h4>
+  <div class="display-demo float-none-demo">
+    <img src="./Images/float.jpg" alt="Float None" class="float-none">
+    <p>
+      This image uses <code>float: none;</code>, meaning it stays in the normal document flow
+      without text wrapping around it.
+    </p>
+  </div>
+
+  <pre><code>
+img {
+  float: none;
+  display: block;
+  margin: 0 auto;
+}
+  </code></pre>
+
+  <hr>
+
+  <!-- 4.2 CLEAR -->
+  <h3>4.2 The clear Property</h3>
+  <p>
+    The <b>clear</b> property prevents elements from wrapping around floated siblings.  
+    It tells the browser “start below floated elements” on the specified side.
+  </p>
+
+  <ul>
+    <li><b>clear: left</b> – moves element below any left-floated items.</li>
+    <li><b>clear: right</b> – moves element below any right-floated items.</li>
+    <li><b>clear: both</b> – moves element below all floated items (most common).</li>
+  </ul>
+
+  <h4>Example 1 – clear: left</h4>
+  <div class="display-demo clear-left-demo">
+    <div class="float-box left-box">Float Left</div>
+    <p class="clear-left">This text clears the left float.</p>
+  </div>
+
+  <pre><code>
+.clear-left {
+  clear: left;
+}
+  </code></pre>
+
+  <h4>Example 2 – clear: right</h4>
+  <div class="display-demo clear-right-demo">
+    <div class="float-box right-box">Float Right</div>
+    <p class="clear-right">This paragraph clears the right float.</p>
+  </div>
+
+  <pre><code>
+.clear-right {
+  clear: right;
+}
+  </code></pre>
+
+  <h4>Example 3 – clear: both</h4>
+  <div class="display-demo clear-both-demo">
+    <div class="float-box left-box">Float Left</div>
+    <div class="float-box right-box">Float Right</div>
+    <p class="clear-both">This text clears both floated boxes.</p>
+  </div>
+
+  <pre><code>
+.clear-both {
+  clear: both;
+}
+  </code></pre>
+
+  <hr>
+
+  <!-- 4.3 CLEARFIX -->
+  <h3>4.3 Clearfix (Automatic Float Containment)</h3>
+  <p>
+    When child elements are floated, their parent might collapse because floats are taken out of
+    normal document flow.  
+    The <b>clearfix</b> method forces the parent to wrap around floated elements.
+  </p>
+
+  <h4>Example – clearfix hack</h4>
+  <div class="display-demo clearfix-parent">
+    <div class="float-mini left-mini">A</div>
+    <div class="float-mini right-mini">B</div>
+    <p>Parent wraps around floated children because of the clearfix rule.</p>
+  </div>
+
+  <pre><code>
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  </code></pre>
+</section>
+
+<hr>
+
+<!-- =============================== -->
+<!-- 5. CSS MULTI-COLUMN LAYOUT -->
+<!-- =============================== -->
+<section id="columns" class="css-section">
+  <h2>5. CSS Multi-Column Layout</h2>
+
+  <p>
+    The <b>CSS Multi-Column Layout</b> module allows text or elements to be displayed in
+    multiple columns — similar to a newspaper or magazine.  
+    It improves readability and creates visually balanced layouts for long text content.
+  </p>
+
+  <hr>
+
+  <!-- 5.1 column-count -->
+  <h3>5.1 column-count</h3>
+  <p>
+    The <b>column-count</b> property specifies how many columns an element’s content
+    should be split into.  
+    The browser will automatically balance the content between columns.
+  </p>
+
+  <h4>Example:</h4>
+  <div class="display-demo column-count-demo">
+    <p>
+      CSS columns make text more readable by splitting it into several columns.
+      The <code>column-count: 3;</code> property divides this text into three columns
+      automatically. Resize your browser window to see how the text reflows.
+    </p>
+  </div>
+
+  <pre><code>
+.column-count-demo {
+  column-count: 3;
+  column-gap: 25px;
+}
+  </code></pre>
+
+  <hr>
+
+  <!-- 5.2 column-width -->
+  <h3>5.2 column-width</h3>
+  <p>
+    The <b>column-width</b> property defines the ideal width for each column.
+    The browser will create as many columns as fit within the container width.
+  </p>
+
+  <h4>Example:</h4>
+  <div class="display-demo column-width-demo">
+    <p>
+      Using <code>column-width: 200px;</code> tells the browser to automatically calculate
+      how many 200px-wide columns can fit. If the container shrinks, fewer columns are displayed.
+    </p>
+  </div>
+
+  <pre><code>
+.column-width-demo {
+  column-width: 200px;
+  column-gap: 20px;
+}
+  </code></pre>
+
+  <hr>
+
+  <!-- 5.3 column-gap -->
+  <h3>5.3 column-gap</h3>
+  <p>
+    The <b>column-gap</b> property controls the amount of space between each column.
+    It works like the <code>gap</code> property in Flexbox and Grid layouts.
+  </p>
+
+  <h4>Example:</h4>
+  <div class="display-demo column-gap-demo">
+    <p>
+      Increasing <code>column-gap: 50px;</code> widens the space between columns,
+      improving readability or adding visual breathing room.
+    </p>
+  </div>
+
+  <pre><code>
+.column-gap-demo {
+  column-count: 3;
+  column-gap: 50px;
+}
+  </code></pre>
+
+  <hr>
+
+  <!-- 5.4 column-rule -->
+  <h3>5.4 column-rule</h3>
+  <p>
+    The <b>column-rule</b> property adds a vertical line (like a border) between columns.  
+    It’s a shorthand for <code>column-rule-width</code>, <code>column-rule-style</code>,
+    and <code>column-rule-color</code>.
+  </p>
+
+  <h4>Example:</h4>
+  <div class="display-demo column-rule-demo">
+    <p>
+      The <code>column-rule: 3px solid #007acc;</code> property draws a blue line between
+      the columns, making it easier to distinguish them visually.
+    </p>
+  </div>
+
+  <pre><code>
+.column-rule-demo {
+  column-count: 3;
+  column-gap: 25px;
+  column-rule: 3px solid #007acc;
+}
+  </code></pre>
+
+  <hr>
+
+  <!-- 5.5 column-span -->
+  <h3>5.5 column-span</h3>
+  <p>
+    The <b>column-span</b> property allows an element — like a heading or image —
+    to stretch across all columns.  
+    It’s often used for titles or separators in multi-column layouts.
+  </p>
+
+  <h4>Example:</h4>
+  <div class="display-demo column-span-demo">
+    <h4 class="span-heading">This heading spans across all columns</h4>
+    <p>
+      By applying <code>column-span: all;</code> to the heading, it stretches across
+      the entire width above the columns, while the text below is divided evenly
+      into multiple columns.
+    </p>
+  </div>
+
+  <pre><code>
+.span-heading {
+  column-span: all;
+  font-weight: bold;
+  color: #005a8d;
+}
+  </code></pre>
+
+  <hr>
+
+  <!-- 5.6 column-fill -->
+  <h3>5.6 column-fill</h3>
+  <p>
+    The <b>column-fill</b> property controls how content fills available columns.
+  </p>
+
+  <ul>
+    <li><b>balance</b> – balances content evenly (default).</li>
+    <li><b>auto</b> – fills columns sequentially until full.</li>
+  </ul>
+
+  <h4>Example:</h4>
+  <div class="display-demo column-fill-demo">
+    <p>
+      With <code>column-fill: auto;</code>, the first column fills completely before
+      the next begins. The default (<b>balance</b>) distributes text evenly.
+    </p>
+  </div>
+
+  <pre><code>
+.column-fill-demo {
+  column-count: 3;
+  column-fill: auto;
+}
+  </code></pre>
+</section>
+<hr>
+
+<!-- =============================== -->
+<!-- 6. GAP PROPERTY (DETAILED) -->
+<!-- =============================== -->
+<section id="gap" class="css-section">
+  <h2>6. The <code>gap</code> Property</h2>
+
+  <p>
+    The <b>gap</b> property controls the spacing between items inside layout containers like
+    <code>flex</code>, <code>grid</code>, or <code>multi-column</code> elements.
+    It eliminates the need for adding individual margins and ensures clean, consistent spacing.
+  </p>
+
+  <p>
+    There are three main properties:
+    <ul>
+      <li><b>gap</b> — shorthand for both row and column gaps.</li>
+      <li><b>row-gap</b> — defines vertical spacing between rows.</li>
+      <li><b>column-gap</b> — defines horizontal spacing between columns.</li>
+    </ul>
+  </p>
+
+  <hr>
+
+  <!-- 6.1 gap -->
+  <h3>6.1 gap</h3>
+  <p>
+    The <code>gap</code> property defines uniform spacing between both rows and columns.
+    It can be used with <b>flex</b>, <b>grid</b>, or <b>multi-column</b> layouts.
+  </p>
+
+  <h4>Example (Flexbox):</h4>
+  <div class="display-demo gap-all-demo">
+    <div>1</div><div>2</div><div>3</div><div>4</div>
+  </div>
+
+  <pre><code>
+.container {
+  display: flex;
+  gap: 20px; /* equal space between items */
+}
+  </code></pre>
+
+  <p>
+    In this example, each box has an equal gap of <b>20px</b> between them.  
+    Unlike margins, <code>gap</code> doesn’t add space outside the container.
+  </p>
+
+  <hr>
+
+  <!-- 6.2 row-gap -->
+  <h3>6.2 row-gap</h3>
+  <p>
+    The <code>row-gap</code> property controls the vertical spacing between rows in a grid or flex container.  
+    It only affects the space between rows, not columns.
+  </p>
+
+  <h4>Example (Grid):</h4>
+  <div class="display-demo row-gap-demo">
+    <div>1</div><div>2</div><div>3</div><div>4</div>
+    <div>5</div><div>6</div><div>7</div><div>8</div>
+  </div>
+
+  <pre><code>
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 25px; /* adds space vertically between rows */
+}
+  </code></pre>
+
+  <p>
+    The vertical distance between each row increases to <b>25px</b>, while columns remain tightly packed.
+  </p>
+
+  <hr>
+
+  <!-- 6.3 column-gap -->
+  <h3>6.3 column-gap</h3>
+  <p>
+    The <code>column-gap</code> property controls horizontal spacing between columns in grid or flex layouts.
+  </p>
+
+  <h4>Example (Grid):</h4>
+  <div class="display-demo column-gap-demo">
+    <div>1</div><div>2</div><div>3</div><div>4</div>
+    <div>5</div><div>6</div><div>7</div><div>8</div>
+  </div>
+
+  <pre><code>
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px; /* adds horizontal spacing between columns */
+}
+  </code></pre>
+
+  <p>
+    Each column is separated by a <b>30px</b> horizontal gap, making layouts more breathable.
+  </p>
+
+  <hr>
+
+  <!-- 6.4 Combining row-gap and column-gap -->
+  <h3>6.4 Combining row-gap and column-gap</h3>
+  <p>
+    You can use both <code>row-gap</code> and <code>column-gap</code> together
+    to control vertical and horizontal spacing independently.
+  </p>
+
+  <h4>Example (Grid):</h4>
+  <div class="display-demo rowcol-gap-demo">
+    <div>1</div><div>2</div><div>3</div><div>4</div>
+    <div>5</div><div>6</div><div>7</div><div>8</div>
+  </div>
+
+  <pre><code>
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 20px;
+  column-gap: 30px;
+}
+  </code></pre>
+
+  <p>
+    This layout has <b>20px</b> spacing between rows and <b>30px</b> spacing between columns.
+    It gives precise control over layout spacing.
+  </p>
+
+  <hr>
+
+  <!-- 6.5 gap with flex and grid comparison -->
+  <h3>6.5 Using gap in Flex vs Grid</h3>
+  <p>
+    The <code>gap</code> property works slightly differently for flex and grid:
+  </p>
+  <ul>
+    <li>In <b>Grid</b>, it applies to both rows and columns by default.</li>
+    <li>In <b>Flex</b>, it applies only along the main axis (horizontal or vertical, depending on flex-direction).</li>
+  </ul>
+
+  <h4>Example:</h4>
+  <div class="display-demo gap-flex-vs-grid">
+    <div class="flex-gap-box">
+      <div>F1</div><div>F2</div><div>F3</div>
+    </div>
+    <div class="grid-gap-box">
+      <div>G1</div><div>G2</div><div>G3</div><div>G4</div>
+    </div>
+  </div>
+
+  <pre><code>
+.flex-gap-box {
+  display: flex;
+  gap: 20px; /* affects items along flex-direction */
+}
+
+.grid-gap-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* affects both rows and columns */
+}
+  </code></pre>
+
+  <p>
+    Notice how the Flexbox example only spaces items horizontally,
+    while the Grid example spaces them both horizontally and vertically.
+  </p>
+
+  <hr>
+
+  <!-- 6.6 gap shorthand (row column) -->
+  <h3>6.6 gap shorthand (row column)</h3>
+  <p>
+    The <code>gap</code> property can accept one or two values:
+  </p>
+
+  <ul>
+    <li><b>1 value:</b> applies to both row and column gaps equally.</li>
+    <li><b>2 values:</b> first value = row gap, second value = column gap.</li>
+  </ul>
+
+  <h4>Example:</h4>
+  <div class="display-demo gap-shorthand">
+    <div>1</div><div>2</div><div>3</div><div>4</div>
+  </div>
+
+  <pre><code>
+.container {
+  display: grid;
+  gap: 10px 25px; /* 10px row-gap, 25px column-gap */
+}
+  </code></pre>
+
+  <p>
+    This example shows <b>10px</b> vertical and <b>25px</b> horizontal gaps using a shorthand format.
+  </p>
+</section>
 
     </main>
 
