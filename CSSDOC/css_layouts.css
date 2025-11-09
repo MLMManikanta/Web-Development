@@ -1647,6 +1647,104 @@ hr {
   margin-bottom: 15px;
 }
 
+/* ===============================
+   🌍 CSS MEDIA QUERIES DEMOS
+================================= */
+
+/* Section base styling */
+.media-demo {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.media-box {
+  width: 120px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  background: #007acc;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Color Changes */
+@media (max-width: 1024px) {
+  .media-box { background: #3b82f6; }
+}
+@media (max-width: 768px) {
+  .media-demo { flex-direction: column; }
+  .media-box { background: #22c55e; width: 80%; }
+}
+@media (max-width: 480px) {
+  .media-box { background: #f59e0b; }
+}
+
+/* Breakpoints Table */
+.breakpoints-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  font-size: 0.95rem;
+}
+.breakpoints-table th {
+  background: #007acc;
+  color: white;
+  padding: 8px;
+}
+.breakpoints-table td {
+  border: 1px solid #d1d5db;
+  padding: 8px;
+}
+
+/* Orientation Demo */
+.orientation-demo {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f4f8;
+  color: #222;
+  border-radius: 8px;
+  transition: background 0.5s ease;
+}
+@media (orientation: landscape) {
+  .orientation-demo {
+    background: linear-gradient(90deg, #007acc, #00b4d8);
+    color: white;
+  }
+}
+
+/* Font Demo */
+.font-demo {
+  background: #f0f9ff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+.font-demo p {
+  font-size: 22px;
+  font-weight: 500;
+  transition: font-size 0.3s ease;
+}
+
+/* Font size breakpoints */
+@media (max-width: 600px) {
+  .font-demo p { font-size: 14px; }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .font-demo p { font-size: 18px; }
+}
+@media (min-width: 1025px) {
+  .font-demo p { font-size: 22px; }
+}
 
 
 /* ================================
