@@ -280,6 +280,451 @@ code {
     color: #ff512f;
 }
 
+/* ===============================
+   FLEXBOX FULL DEMOS
+================================ */
+
+/* Generic style for all flex examples */
+.display-demo.flex-basic div,
+.display-demo.flex-dir-row div,
+.display-demo.flex-dir-column div,
+.flex-justify div,
+.flex-align div,
+.flex-align-content div,
+.flex-gap div,
+.flex-grow-demo div,
+.flex-order-demo div,
+.flex-align-self div {
+  background: #60a5fa;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* flex basic */
+.flex-basic {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* flex-direction */
+.flex-dir-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.flex-dir-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* flex-wrap */
+.flex-wrap-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* justify-content examples */
+.flex-justify-section h4 { margin-top: 15px; }
+.flex-justify {
+  display: flex;
+  gap: 8px;
+}
+.flex-justify.fs { justify-content: flex-start; }
+.flex-justify.c  { justify-content: center; }
+.flex-justify.fe { justify-content: flex-end; }
+.flex-justify.sb { justify-content: space-between; }
+.flex-justify.sa { justify-content: space-around; }
+.flex-justify.se { justify-content: space-evenly; }
+
+/* align-items */
+.flex-align {
+  display: flex;
+  height: 120px;
+  gap: 10px;
+}
+.flex-align.ai-start   { align-items: flex-start; }
+.flex-align.ai-center  { align-items: center; }
+.flex-align.ai-end     { align-items: flex-end; }
+.flex-align.ai-stretch { align-items: stretch; }
+.flex-align.ai-base    { align-items: baseline; }
+.flex-align div { width: 60px; background: #3b82f6; }
+
+/* align-content */
+.flex-align-content {
+  display: flex;
+  flex-wrap: wrap;
+  height: 160px;
+  align-content: space-around;
+  gap: 8px;
+}
+.flex-align-content div {
+  background: #22c55e;
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+}
+
+/* gap (in flex) */
+.flex-gap {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.flex-gap div {
+  background: #2563eb;
+  width: 60px;
+  height: 60px;
+}
+
+/* flex-grow */
+.flex-grow-demo {
+  display: flex;
+  gap: 10px;
+}
+.fg1 { flex-grow: 1; background: #60a5fa; }
+.fg2 { flex-grow: 2; background: #3b82f6; }
+.fg3 { flex-grow: 3; background: #1d4ed8; }
+
+/* order */
+.flex-order-demo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.flex-order-demo div { width: 60px; }
+.order3 { order: 3; background: #f97316; }
+.order1 { order: 1; background: #2563eb; }
+
+/* align-self */
+.flex-align-self {
+  display: flex;
+  align-items: flex-start;
+  height: 120px;
+  gap: 10px;
+}
+.flex-align-self div {
+  background: #3b82f6;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+}
+.self-center {
+  align-self: center;
+  background: #f59e0b;
+}
+
+/* ============ FLOAT & CLEAR DEMOS ============ */
+.float-wrap {
+  /* containment so text doesn’t spill oddly if images are larger */
+  overflow: auto; /* (we already showed flow-root & clearfix in content) */
+}
+
+.float-img-left,
+.float-img-right {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.float-img-left  { float: left;  margin: 0 12px 8px 0; }
+.float-img-right { float: right; margin: 0 0 8px 12px; }
+
+.float-box-left,
+.float-box-right {
+  width: 140px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  color: #fff;
+  border-radius: 8px;
+  margin: 6px;
+}
+
+.float-box-left  { float: left;  background: #60a5fa; }
+.float-box-right { float: right; background: #f59e0b; }
+
+.cleared-both { clear: both; margin-top: 10px; }
+
+/* clearfix utility (used in the example container) */
+.clearfix-demo { position: relative; }
+.clearfix-demo::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.mini-float-left,
+.mini-float-right {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  margin: 6px;
+}
+
+.mini-float-left  { float: left;  background: #22c55e; }
+.mini-float-right { float: right; background: #ef4444; }
+
+/* General box styling for all flex examples */
+.display-demo div {
+  background: #3b82f6;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+.display-demo {
+  border: 1px solid #d1d5db;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f9fafb;
+  margin: 10px 0 25px;
+}
+
+/* =====================================
+   2.5 JUSTIFY-CONTENT SUBTOPICS
+===================================== */
+.flex-justify-start {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.flex-justify-center {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.flex-justify-end {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.flex-justify-between {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.flex-justify-around {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.flex-justify-evenly {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+/* =====================================
+   2.6 ALIGN-ITEMS SUBTOPICS
+===================================== */
+.flex-align-start,
+.flex-align-center,
+.flex-align-end,
+.flex-align-stretch,
+.flex-align-baseline {
+  display: flex;
+  height: 120px;
+  gap: 10px;
+  background: #eef6ff;
+  border-radius: 8px;
+  padding: 8px;
+}
+.flex-align-start { align-items: flex-start; }
+.flex-align-center { align-items: center; }
+.flex-align-end { align-items: flex-end; }
+.flex-align-stretch { align-items: stretch; }
+.flex-align-baseline { align-items: baseline; }
+.flex-align-start div,
+.flex-align-center div,
+.flex-align-end div,
+.flex-align-stretch div,
+.flex-align-baseline div {
+  width: 60px;
+  background: #2563eb;
+}
+
+/* =====================================
+   2.7 ALIGN-CONTENT SUBTOPICS
+===================================== */
+.flex-aligncontent-start,
+.flex-aligncontent-center,
+.flex-aligncontent-end,
+.flex-aligncontent-between,
+.flex-aligncontent-around,
+.flex-aligncontent-stretch {
+  display: flex;
+  flex-wrap: wrap;
+  height: 180px;
+  gap: 10px;
+  background: #f1f5f9;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px;
+}
+.flex-aligncontent-start { align-content: flex-start; }
+.flex-aligncontent-center { align-content: center; }
+.flex-aligncontent-end { align-content: flex-end; }
+.flex-aligncontent-between { align-content: space-between; }
+.flex-aligncontent-around { align-content: space-around; }
+.flex-aligncontent-stretch { align-content: stretch; }
+.flex-aligncontent-start div,
+.flex-aligncontent-center div,
+.flex-aligncontent-end div,
+.flex-aligncontent-between div,
+.flex-aligncontent-around div,
+.flex-aligncontent-stretch div {
+  width: 60px;
+  height: 40px;
+  background: #3b82f6;
+  line-height: 40px;
+  border-radius: 6px;
+}
+
+/* =====================================
+   2.8 GAP / ROW-GAP / COLUMN-GAP
+===================================== */
+.flex-gap-all {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.flex-row-gap {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 0;
+}
+.flex-col-gap {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 0;
+}
+.flex-gap-all div,
+.flex-row-gap div,
+.flex-col-gap div {
+  background: #1d4ed8;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 8px;
+}
+
+/* =====================================
+   2.9 FLEX-GROW DEMO (already exists)
+===================================== */
+.flex-grow-example {
+  display: flex;
+  gap: 10px;
+}
+.flex-grow-example div {
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+}
+.grow1 { flex-grow: 1; background: #60a5fa; }
+.grow2 { flex-grow: 2; background: #3b82f6; }
+.grow3 { flex-grow: 3; background: #1d4ed8; }
+
+/* =====================================
+   2.10 ORDER DEMO (already exists)
+===================================== */
+.flex-order-example {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.flex-order-example div {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: #2563eb;
+  border-radius: 8px;
+}
+.flex-order-example .order3 {
+  order: 3;
+  background: #f97316;
+}
+.flex-order-example .order1 {
+  order: 1;
+  background: #22c55e;
+}
+
+/* =====================================
+   2.11 ALIGN-SELF SUBTOPICS
+===================================== */
+.flex-alignself-start,
+.flex-alignself-center,
+.flex-alignself-end,
+.flex-alignself-stretch,
+.flex-alignself-baseline {
+  display: flex;
+  align-items: flex-start;
+  height: 140px;
+  gap: 10px;
+  background: #eef6ff;
+  border-radius: 8px;
+  padding: 8px;
+}
+.flex-alignself-start div,
+.flex-alignself-center div,
+.flex-alignself-end div,
+.flex-alignself-stretch div,
+.flex-alignself-baseline div {
+  background: #3b82f6;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 6px;
+}
+.self-start { align-self: flex-start; background: #f87171; }
+.self-center { align-self: center; background: #f59e0b; }
+.self-end { align-self: flex-end; background: #22c55e; }
+.self-stretch { align-self: stretch; background: #3b82f6; height: auto; line-height: normal; }
+.self-baseline { align-self: baseline; background: #9333ea; }
+
+/* =====================================
+   COMMON FLEX DEMO UTILITIES
+===================================== */
+.flex-demo-block {
+  margin-top: 15px;
+  background: #f8fafc;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+.flex-demo-block h5 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #005a8d;
+}
+.flex-demo-block p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+
+
+
+
+
 /* ================================
    🌐 FOOTER
 ================================ */
