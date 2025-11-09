@@ -1460,6 +1460,194 @@ hr {
   margin-bottom: 6px;
 }
 
+/* ===============================
+   🎯 POSITIONING DEMOS (ENHANCED VISUAL)
+================================= */
+
+.display-demo[class*="parent"] {
+  background: #f8fafc;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0 25px;
+  position: relative;
+  overflow: hidden;
+  min-height: 150px;
+}
+
+/* Static */
+.static-parent {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.static-box {
+  background: #60a5fa;
+  color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  width: 80px;
+  text-align: center;
+}
+
+/* Relative */
+.relative-parent {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.relative-box {
+  width: 100px;
+  height: 80px;
+  line-height: 80px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.relative-box.moved {
+  position: relative;
+  top: 25px;
+  left: 40px;
+  background: #f59e0b;
+}
+
+/* Absolute */
+.absolute-parent {
+  position: relative;
+  height: 180px;
+  background: #e0f2fe;
+  border-radius: 10px;
+  padding: 15px;
+}
+.abs-child {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: #3b82f6;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Fixed */
+.fixed-parent {
+  position: relative;
+  height: 300px;
+  overflow-y: scroll;
+  background: #e8f1fb;
+  border-radius: 8px;
+}
+.fixed-child {
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  background: #007acc;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.fixed-parent .long-content {
+  padding: 10px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Fixed & Sticky Styling*/
+.fixed-parent {
+  position: relative;
+  height: 350px;
+  overflow-y: scroll;
+  background: #f0f9ff;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.fixed-note {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  background: linear-gradient(135deg, #007acc, #005a8d);
+  color: white;
+  padding: 14px 18px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+  font-size: 0.95rem;
+  max-width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.fixed-note:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+}
+
+.fixed-parent .long-content {
+  padding: 10px;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* --- STICKY --- */
+.sticky-parent {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(90deg, #007acc, #00b4d8);
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+}
+
+.sticky-content {
+  padding: 15px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.sticky-content p {
+  margin-bottom: 10px;
+}
+
+/* Optional: add a smooth scroll feel */
+.sticky-parent::-webkit-scrollbar {
+  width: 6px;
+}
+.sticky-parent::-webkit-scrollbar-thumb {
+  background: #007acc;
+  border-radius: 4px;
+}
+
+
+/* General styling */
+#positioning h3, #positioning h4 {
+  color: #005a8d;
+  margin-top: 18px;
+}
+#positioning p, #positioning li {
+  color: #333;
+  line-height: 1.6;
+}
+#positioning ul {
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+
 
 /* ================================
    🌐 FOOTER

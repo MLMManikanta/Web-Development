@@ -1526,6 +1526,222 @@ img {
   </p>
 </section>
 
+<!-- =============================== -->
+<!-- 7. CSS POSITIONING (DETAILED + VISUAL) -->
+<!-- =============================== -->
+<section id="positioning" class="css-section">
+  <h2>7. CSS Positioning</h2>
+
+  <p>
+    CSS <b>positioning</b> defines how elements are placed within the web page layout.  
+    Using it properly allows you to move, fix, or overlap elements as needed.  
+    Let’s explore each type of positioning with examples and visual containers.
+  </p>
+
+  <hr>
+
+  <!-- 7.1 Static Positioning -->
+  <h3>7.1 Static Positioning</h3>
+  <p>
+    <b>Static</b> is the default positioning for all elements.  
+    Elements are displayed in the order they appear in the HTML —  
+    no top, left, or other offsets are applied.
+  </p>
+
+  <div class="display-demo static-parent">
+    <div class="static-box">Static 1</div>
+    <div class="static-box">Static 2</div>
+    <div class="static-box">Static 3</div>
+  </div>
+
+  <pre><code>
+div {
+  position: static; /* default */
+}
+  </code></pre>
+
+  <p>
+    All boxes stay in their natural flow, one after another.
+  </p>
+
+  <hr>
+
+  <!-- 7.2 Relative Positioning -->
+  <h3>7.2 Relative Positioning</h3>
+  <p>
+    The <b>relative</b> value positions elements relative to their normal position.  
+    The element still occupies its original space, but you can move it slightly using
+    <code>top</code>, <code>left</code>, <code>right</code>, or <code>bottom</code>.
+  </p>
+
+  <div class="display-demo relative-parent">
+    <div class="relative-box">Normal Box</div>
+    <div class="relative-box moved">Moved (top: 25px; left: 40px)</div>
+    <div class="relative-box">Another Box</div>
+  </div>
+
+  <pre><code>
+.relative-box {
+  position: relative;
+}
+.moved {
+  top: 25px;
+  left: 40px;
+}
+  </code></pre>
+
+  <p>
+    Notice that even though the second box is moved, the others don’t adjust their positions —  
+    it still keeps its original space.
+  </p>
+
+  <hr>
+
+  <!-- 7.3 Absolute Positioning -->
+  <h3>7.3 Absolute Positioning</h3>
+  <p>
+    <b>Absolute</b> positioning removes the element from normal flow and places it
+    relative to the nearest ancestor that has <code>position: relative;</code>.
+  </p>
+
+  <div class="display-demo absolute-parent">
+    <p><b>Parent Container (position: relative)</b></p>
+    <div class="abs-child">Absolutely Positioned</div>
+  </div>
+
+  <pre><code>
+.absolute-parent {
+  position: relative;
+}
+.abs-child {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+  </code></pre>
+
+  <h4>7.3.1 Use Cases</h4>
+  <ul>
+    <li>Placing icons, badges, or overlays.</li>
+    <li>Creating popups, modals, or dropdown menus.</li>
+  </ul>
+
+  <h4>7.3.2 Pitfalls</h4>
+  <ul>
+    <li>Can escape container bounds if the parent is not positioned.</li>
+    <li>Overusing may break responsive layouts.</li>
+  </ul>
+
+  <hr>
+
+  <!-- 7.4 Fixed Positioning -->
+  <!-- 7.4 Fixed Positioning -->
+<h3>7.4 Fixed Positioning</h3>
+<p>
+  The <b>fixed</b> position attaches an element to the browser window (viewport).  
+  It remains visible even when scrolling the page.  
+  Fixed positioning is perfect for “Back to Top” buttons, floating menus, or call-to-action elements.
+</p>
+
+<div class="display-demo fixed-parent">
+  <div class="fixed-note">
+    📌 Fixed Note: I stay visible even when you scroll!
+  </div>
+  <div class="long-content">
+    <p>Scroll this container and notice the blue note box stays in place.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac mattis lorem. 
+      Vestibulum vel porttitor neque. Sed dapibus justo ut leo sollicitudin, non laoreet justo dictum.</p>
+    <p>Aliquam erat volutpat. Curabitur commodo nunc vitae tempor rhoncus. 
+      Integer in justo risus. In posuere purus ut arcu rhoncus pretium.</p>
+    <p>Vivamus non justo nec enim rhoncus posuere. Morbi quis neque non sem ullamcorper aliquam.</p>
+    <p>Phasellus convallis massa eu urna efficitur, nec luctus urna feugiat.</p>
+    <p>Etiam dignissim diam vitae risus vestibulum, vel facilisis nunc facilisis.</p>
+    <p>Donec ac bibendum nisl. Maecenas tempus, risus nec blandit congue, metus lacus vehicula elit, ut egestas turpis arcu vel ipsum.</p>
+  </div>
+</div>
+
+<pre><code>
+.fixed-note {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+}
+</code></pre>
+
+<p>
+  This blue box remains fixed to the bottom-right corner of the screen — even if you scroll the page.
+</p>
+
+<hr>
+
+<!-- 7.5 Sticky Positioning -->
+<h3>7.5 Sticky Positioning</h3>
+<p>
+  The <b>sticky</b> position behaves like <code>relative</code> until a scroll threshold is reached,  
+  then it behaves like <code>fixed</code>.  
+  It’s often used for sticky headers, table headers, or floating menus within containers.
+</p>
+
+<div class="display-demo sticky-parent">
+  <div class="sticky-header">
+    🌟 Sticky Header — I stick to the top while scrolling inside this box!
+  </div>
+  <div class="sticky-content">
+    <p>Scroll inside this area — the header will stay at the top once it reaches there.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet justo nec ligula vulputate.</p>
+    <p>Vestibulum at metus vel risus eleifend placerat. Suspendisse potenti. Donec non libero a eros porttitor fermentum.</p>
+    <p>Aliquam erat volutpat. Donec luctus volutpat sapien.</p>
+    <p>Fusce suscipit urna vel est convallis sodales. Donec at orci et turpis suscipit dignissim.</p>
+    <p>Praesent fermentum sapien et nibh volutpat feugiat.</p>
+    <p>In vel ipsum ac orci congue volutpat vitae nec nulla.</p>
+  </div>
+</div>
+
+<pre><code>
+.sticky-header {
+  position: sticky;
+  top: 0;
+}
+</code></pre>
+
+<p>
+  The sticky header stays visible within its container once you scroll past its starting position.
+</p>
+
+
+  <!-- 7.5 Sticky Positioning -->
+  <h3>7.5 Sticky Positioning</h3>
+  <p>
+    <b>Sticky</b> positioning lets elements act as <code>relative</code> until you scroll past them —  
+    then they become <code>fixed</code> at a specified offset.
+  </p>
+
+  <div class="display-demo sticky-parent">
+    <div class="sticky-header">Sticky Header — Scroll Me!</div>
+    <div class="sticky-content">
+      <p>Scroll down this container. The header will stick once it reaches the top edge.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet justo nec ligula vulputate, non vehicula augue sagittis.</p>
+      <p>Vestibulum at metus vel risus eleifend placerat. Suspendisse potenti.</p>
+      <p>Donec non libero a eros porttitor fermentum.</p>
+      <p>Aliquam erat volutpat. Donec luctus volutpat sapien.</p>
+      <p>Fusce suscipit urna vel est convallis sodales. Donec at orci et turpis suscipit dignissim.</p>
+      <p>Praesent fermentum sapien et nibh volutpat feugiat.</p>
+    </div>
+  </div>
+
+  <pre><code>
+.sticky-header {
+  position: sticky;
+  top: 0;
+}
+  </code></pre>
+
+  <p>
+    Sticky elements work within their parent’s scroll area, not the entire viewport.
+  </p>
+</section>
+
+
     </main>
 
     <!-- Footer -->
