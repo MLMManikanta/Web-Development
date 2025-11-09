@@ -630,7 +630,364 @@ rt {
   <div>A</div><div class="self-baseline" style="font-size:28px;">B</div><div>C</div>
 </div>
 </section>
-    
+
+<!-- 3. CSS GRID LAYOUT -->
+<section id="grid" class="css-section">
+  <h2>3. CSS Grid Layout</h2>
+
+  <p>
+    The <b>CSS Grid Layout</b> is a two-dimensional layout system that allows web designers
+    to arrange elements into rows and columns easily.  
+    Unlike Flexbox, which works in a single direction (row or column), Grid gives full control
+    over both rows and columns simultaneously — perfect for page or section layouts.
+  </p>
+
+  <hr>
+
+  <!-- 3.1 display:grid -->
+  <h3>3.1 display: grid</h3>
+  <p>
+    To create a grid container, use <code>display: grid;</code> on a parent element.  
+    All direct children automatically become grid items.
+  </p>
+
+  <div class="display-demo grid-basic">
+    <div>1</div><div>2</div><div>3</div><div>4</div>
+  </div>
+
+  <pre><code>
+.container {
+  display: grid; /* enables grid layout */
+}
+  </code></pre>
+
+  <p><b>Example:</b> The boxes above are now part of a grid container.</p>
+
+  <hr>
+
+  <!-- 3.2 grid-template-columns -->
+  <h3>3.2 grid-template-columns</h3>
+  <p>
+    Defines how many <b>columns</b> the grid should have and their widths.
+  </p>
+
+  <ul>
+    <li><b>px / % / fr</b> – Fixed, percentage, or flexible fractions.</li>
+    <li><b>repeat()</b> – Shorthand for repeating patterns.</li>
+    <li><b>auto-fit / auto-fill</b> – Automatically fits items based on space.</li>
+  </ul>
+
+  <h4>Examples:</h4>
+  <h5>3.2.1 Fixed and Flexible Columns</h5>
+  <div class="display-demo grid-cols-fixed">
+    <div>1</div><div>2</div><div>3</div>
+  </div>
+
+  <h5>3.2.2 repeat() Function</h5>
+  <div class="display-demo grid-cols-repeat">
+    <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
+  </div>
+
+  <h5>3.2.3 auto-fit and auto-fill</h5>
+  <div class="display-demo grid-cols-auto">
+    <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+  </div>
+
+  <pre><code>
+grid-template-columns: 100px 200px 1fr;
+grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  </code></pre>
+
+  <hr>
+
+  <!-- 3.3 grid-template-rows -->
+  <h3>3.3 grid-template-rows</h3>
+  <p>
+    Defines the height of each <b>row</b> in the grid.
+  </p>
+
+  <div class="display-demo grid-rows-basic">
+    <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+  </div>
+
+  <pre><code>
+grid-template-rows: 100px 150px auto;
+  </code></pre>
+
+  <hr>
+
+  <!-- 3.4 grid-gap / row-gap / column-gap -->
+  <h3>3.4 grid-gap / row-gap / column-gap</h3>
+  <p>
+    Controls spacing between grid cells — similar to <code>gap</code> in Flexbox.
+  </p>
+
+  <div class="display-demo grid-gap-example">
+    <div>1</div><div>2</div><div>3</div><div>4</div>
+  </div>
+
+  <pre><code>
+grid-gap: 10px;       /* shorthand for row + column */
+row-gap: 15px;        /* vertical spacing */
+column-gap: 20px;     /* horizontal spacing */
+  </code></pre>
+
+  <hr>
+
+  <!-- 3.5 grid-template-areas -->
+  <h3>3.5 grid-template-areas</h3>
+  <p>
+    Defines <b>named regions</b> of a grid using text patterns — helpful for full-page layouts.
+  </p>
+
+  <div class="display-demo grid-areas">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="main">Main</div>
+    <div class="footer">Footer</div>
+  </div>
+
+  <pre><code>
+grid-template-areas:
+  "header header"
+  "sidebar main"
+  "footer footer";
+  </code></pre>
+
+  <ul>
+    <li>Assign areas with <code>grid-area: name;</code> on children.</li>
+  </ul>
+
+  <hr>
+
+<!-- 3.6 justify-content -->
+<h3>3.6 justify-content</h3>
+<p>
+  Aligns the <b>entire grid horizontally</b> inside its container.  
+  Useful when the grid doesn’t occupy the full width.
+</p>
+
+<h4>Examples:</h4>
+
+<h5>3.6.1 start</h5>
+<div class="display-demo grid-justify-start"><div>1</div><div>2</div><div>3</div></div>
+
+<h5>3.6.2 center</h5>
+<div class="display-demo grid-justify-center"><div>1</div><div>2</div><div>3</div></div>
+
+<h5>3.6.3 space-between</h5>
+<div class="display-demo grid-justify-between"><div>1</div><div>2</div><div>3</div></div>
+
+<pre><code>
+justify-content: start | center | end | space-between | space-around | space-evenly;
+/* Aligns entire grid along horizontal axis */
+</code></pre>
+<hr>
+
+<!-- 3.7 align-content -->
+<h3>3.7 align-content</h3>
+<p>
+  Aligns the <b>grid tracks vertically</b> when the grid’s height is greater than the total track size.
+  Works only when there is extra space in the container.
+</p>
+
+<h4>Examples:</h4>
+
+<h5>3.7.1 start</h5>
+<div class="display-demo grid-align-start"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
+
+<h5>3.7.2 center</h5>
+<div class="display-demo grid-align-center"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
+
+<h5>3.7.3 end</h5>
+<div class="display-demo grid-align-end"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
+
+<h5>3.7.4 space-between</h5>
+<div class="display-demo grid-align-between"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
+
+<h5>3.7.5 space-around</h5>
+<div class="display-demo grid-align-around"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
+
+<h5>3.7.6 space-evenly</h5>
+<div class="display-demo grid-align-evenly"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
+
+<pre><code>
+align-content: start | center | end | space-between | space-around | space-evenly | stretch;
+</code></pre>
+
+  <hr>
+
+  <!-- 3.8 justify-items -->
+<h3>3.8 justify-items</h3>
+<p>
+  Controls horizontal alignment of <b>items within each grid cell</b>.
+</p>
+
+<h4>Examples:</h4>
+
+<h5>3.8.1 start</h5>
+<div class="display-demo grid-justifyitems-start"><div>1</div><div>2</div><div>3</div></div>
+
+<h5>3.8.2 center</h5>
+<div class="display-demo grid-justifyitems-center"><div>1</div><div>2</div><div>3</div></div>
+
+<h5>3.8.3 end</h5>
+<div class="display-demo grid-justifyitems-end"><div>1</div><div>2</div><div>3</div></div>
+
+<h5>3.8.4 stretch</h5>
+<div class="display-demo grid-justifyitems-stretch"><div>1</div><div>2</div><div>3</div></div>
+
+<pre><code>
+justify-items: start | center | end | stretch;
+</code></pre>
+
+
+  <hr>
+
+  <!-- 3.9 align-items -->
+<h3>3.9 align-items</h3>
+<p>
+  Controls vertical alignment of <b>items inside each cell</b>.
+</p>
+
+<h4>Examples:</h4>
+
+<h5>3.9.1 start</h5>
+<div class="display-demo grid-alignitems-start"><div>1</div><div>2</div><div>3</div></div>
+
+<h5>3.9.2 center</h5>
+<div class="display-demo grid-alignitems-center"><div>1</div><div>2</div><div>3</div></div>
+
+<h5>3.9.3 end</h5>
+<div class="display-demo grid-alignitems-end"><div>1</div><div>2</div><div>3</div></div>
+
+<h5>3.9.4 stretch</h5>
+<div class="display-demo grid-alignitems-stretch"><div>1</div><div>2</div><div>3</div></div>
+
+<pre><code>
+align-items: start | center | end | stretch;
+</code></pre>
+
+  <hr>
+
+  <!-- 3.10 justify-self & align-self -->
+<h3>3.10 justify-self & align-self</h3>
+<p>
+  Used to align a <b>single grid item</b> inside its cell — horizontally and vertically.
+</p>
+
+<h4>Examples:</h4>
+
+<div class="display-demo grid-self-demo">
+  <div class="self-start">Start</div>
+  <div class="self-center">Center</div>
+  <div class="self-end">End</div>
+  <div class="self-stretch">Stretch</div>
+</div>
+
+<pre><code>
+justify-self: start | center | end | stretch;
+align-self: start | center | end | stretch;
+</code></pre>
+  <hr>
+
+<!-- 3.11 grid-auto-flow -->
+<h3>3.11 grid-auto-flow</h3>
+<p>
+  Controls how items are automatically placed in a grid when positions aren’t explicitly defined.
+</p>
+
+<h4>Examples:</h4>
+
+<h5>3.11.1 row (default)</h5>
+<div class="display-demo grid-autoflow-row"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div></div>
+
+<h5>3.11.2 column</h5>
+<div class="display-demo grid-autoflow-column"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div></div>
+
+<h5>3.11.3 dense</h5>
+<div class="display-demo grid-autoflow-dense"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div></div>
+
+<pre><code>
+grid-auto-flow: row | column | dense | row dense | column dense;
+</code></pre>
+  <hr>
+
+  <!-- 3.12 minmax(), auto, and fractional units -->
+<h3>3.12 minmax(), auto, and fr Units</h3>
+<p>
+  Grid sizing functions make layouts flexible and responsive.
+</p>
+
+<ul>
+  <li><b>fr</b> – divides space into equal fractions.</li>
+  <li><b>auto</b> – adapts to content size.</li>
+  <li><b>minmax()</b> – defines a range of minimum and maximum values.</li>
+</ul>
+
+<h4>Examples:</h4>
+
+<h5>3.12.1 fr Units</h5>
+<div class="display-demo grid-fr-demo"><div>1</div><div>2</div><div>3</div></div>
+
+<h5>3.12.2 auto Columns</h5>
+<div class="display-demo grid-auto-demo"><div>Short</div><div>Medium Content</div><div>Very Long Text Content</div></div>
+
+<h5>3.12.3 minmax()</h5>
+<div class="display-demo grid-minmax-demo"><div>1</div><div>2</div><div>3</div><div>4</div></div>
+
+<pre><code>
+grid-template-columns: 1fr 2fr 1fr;
+grid-template-columns: auto auto auto;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+</code></pre>
+
+
+  <!-- 3.13 Nested Grids -->
+<h3>3.13 Nested Grids</h3>
+<p>
+  A grid item can itself be a grid container — allowing complex layouts within layouts.
+</p>
+
+<div class="display-demo grid-nested">
+  <div class="outer">
+    <div class="inner">A</div>
+    <div class="inner">B</div>
+    <div class="inner">C</div>
+  </div>
+  <div class="outer">
+    <div class="inner">D</div>
+    <div class="inner">E</div>
+    <div class="inner">F</div>
+  </div>
+</div>
+
+<pre><code>
+.outer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+</code></pre>
+
+
+  <!-- 3.14 Responsive Grid Example -->
+<h3>3.14 Responsive Grid Example</h3>
+<p>
+  Responsive grids adapt automatically to screen size using <code>auto-fit</code> and <code>minmax()</code>.
+</p>
+
+<div class="display-demo grid-responsive">
+  <div>1</div><div>2</div><div>3</div><div>4</div>
+  <div>5</div><div>6</div><div>7</div><div>8</div>
+</div>
+
+<pre><code>
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+</code></pre>
+
+
     </main>
 
     <!-- Footer -->

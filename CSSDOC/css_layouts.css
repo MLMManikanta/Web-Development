@@ -720,7 +720,286 @@ code {
   color: #333;
 }
 
+/* ===============================
+   🎯 CSS GRID LAYOUT (3.0)
+   Matches Flexbox Aesthetic
+================================= */
 
+/* General Grid Demo Container */
+.display-demo[class*="grid-"] {
+  display: grid;
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px;
+  gap: 10px;
+  margin: 12px 0 25px;
+}
+
+.display-demo[class*="grid-"] div {
+  background: #3b82f6;
+  color: #fff;
+  border-radius: 6px;
+  text-align: center;
+  padding: 12px;
+  font-weight: 500;
+}
+
+/* 3.1 Basic Grid */
+.grid-basic {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* 3.2 grid-template-columns examples */
+.grid-cols-fixed {
+  grid-template-columns: 100px 200px 1fr;
+}
+.grid-cols-repeat {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-cols-auto {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+/* 3.3 grid-template-rows */
+.grid-rows-basic {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 60px 100px auto;
+}
+
+/* 3.4 grid-gap */
+.grid-gap-example {
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 15px;
+  column-gap: 20px;
+}
+
+/* 3.5 grid-template-areas */
+.grid-areas {
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 60px 150px 50px;
+  gap: 10px;
+}
+.grid-areas .header { grid-area: header; background: #2563eb; }
+.grid-areas .sidebar { grid-area: sidebar; background: #22c55e; }
+.grid-areas .main { grid-area: main; background: #f59e0b; }
+.grid-areas .footer { grid-area: footer; background: #9333ea; }
+
+/* ===============================
+   3.6 justify-content (entire grid alignment)
+================================= */
+.grid-justify-start { justify-content: start; grid-template-columns: repeat(3, 60px); }
+.grid-justify-center { justify-content: center; grid-template-columns: repeat(3, 60px); }
+.grid-justify-end { justify-content: end; grid-template-columns: repeat(3, 60px); }
+.grid-justify-between { justify-content: space-between; grid-template-columns: repeat(3, 60px); }
+.grid-justify-around { justify-content: space-around; grid-template-columns: repeat(3, 60px); }
+.grid-justify-evenly { justify-content: space-evenly; grid-template-columns: repeat(3, 60px); }
+
+/* ===============================
+   3.7 align-content (vertical grid alignment)
+================================= */
+[class*="grid-align-"] {
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(2, 50px);
+  height: 200px;
+}
+.grid-align-start { align-content: start; }
+.grid-align-center { align-content: center; }
+.grid-align-end { align-content: end; }
+.grid-align-between { align-content: space-between; }
+.grid-align-around { align-content: space-around; }
+.grid-align-evenly { align-content: space-evenly; }
+
+/* ===============================
+   3.8 justify-items (horizontal cell alignment)
+================================= */
+.grid-justifyitems-start {
+  justify-items: start;
+  grid-template-columns: repeat(3, 100px);
+}
+.grid-justifyitems-center {
+  justify-items: center;
+  grid-template-columns: repeat(3, 100px);
+}
+.grid-justifyitems-end {
+  justify-items: end;
+  grid-template-columns: repeat(3, 100px);
+}
+.grid-justifyitems-stretch {
+  justify-items: stretch;
+  grid-template-columns: repeat(3, 100px);
+}
+
+/* ===============================
+   3.9 align-items (vertical cell alignment)
+================================= */
+.grid-alignitems-start,
+.grid-alignitems-center,
+.grid-alignitems-end,
+.grid-alignitems-stretch {
+  grid-template-columns: repeat(3, 100px);
+  height: 120px;
+}
+.grid-alignitems-start { align-items: start; }
+.grid-alignitems-center { align-items: center; }
+.grid-alignitems-end { align-items: end; }
+.grid-alignitems-stretch { align-items: stretch; }
+
+/* ===============================
+   3.10 justify-self & align-self
+================================= */
+.grid-self-demo {
+  grid-template-columns: repeat(4, 80px);
+  height: 150px;
+}
+.self-start { justify-self: start; align-self: start; background: #f87171; }
+.self-center { justify-self: center; align-self: center; background: #f59e0b; }
+.self-end { justify-self: end; align-self: end; background: #22c55e; }
+.self-stretch { justify-self: stretch; align-self: stretch; background: #3b82f6; }
+
+/* ===============================
+   3.11 grid-auto-flow
+================================= */
+.grid-autoflow-row {
+  grid-template-columns: repeat(3, 60px);
+  grid-auto-flow: row;
+}
+.grid-autoflow-column {
+  grid-template-rows: repeat(3, 60px);
+  grid-auto-flow: column;
+}
+.grid-autoflow-dense {
+  grid-template-columns: repeat(3, 60px);
+  grid-auto-flow: dense;
+}
+
+/* ===============================
+   3.12 minmax(), auto, fr Units
+================================= */
+.grid-fr-demo {
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.grid-auto-demo {
+  grid-template-columns: auto auto auto;
+}
+.grid-minmax-demo {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+/* ===============================
+   3.13 Nested Grids
+================================= */
+.grid-nested {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.outer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  background: #dbeafe;
+  padding: 8px;
+  border-radius: 8px;
+}
+.inner {
+  background: #3b82f6;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* ===============================
+   3.14 Responsive Grid Example
+================================= */
+.grid-responsive {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.grid-responsive div {
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  padding: 12px;
+}
+
+/* ===============================
+   GRID DEMO HOVER EFFECTS
+================================= */
+.display-demo[class*="grid-"] div:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* ===============================
+   CONSISTENT TYPOGRAPHY STYLES
+================================= */
+h3, h4, h5 {
+  color: #005a8d;
+  margin-top: 15px;
+}
+p, ul, li {
+  color: #333;
+  line-height: 1.6;
+}
+ul {
+  margin: 10px 0 15px 25px;
+}
+li {
+  margin-bottom: 6px;
+}
+
+
+
+
+/* ============ GAP DEMOS ============ */
+
+/* simple grid just to visualize gap; Grid topic comes later */
+.gap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.gap-grid-rc {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 16px;
+  column-gap: 8px;
+}
+
+/* shared item style */
+.gap-item {
+  background: #e8f1fb;
+  border: 1px solid #cfe0f5;
+  border-radius: 8px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  color: #005a8d;
+}
+
+/* flex + gap demo */
+.gap-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.chip {
+  background: #f0f4f8;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #333;
+}
 
 
 
