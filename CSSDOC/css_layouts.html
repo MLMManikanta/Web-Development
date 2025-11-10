@@ -1524,6 +1524,231 @@ img {
   <p>
     This example shows <b>10px</b> vertical and <b>25px</b> horizontal gaps using a shorthand format.
   </p>
+
+    <hr>
+
+  <!-- 6.7 break property -->
+  <h3>6.7 The <code>break</code> Property</h3>
+  <p>
+    The <b>break</b> properties are used in paged, columned, or grid layouts to control how and where content breaks
+    — for example, between columns, pages, or regions. These are especially helpful in <b>multi-column</b> layouts and <b>print</b> styles.
+  </p>
+
+  <p>
+    Commonly used break-related properties include:
+    <ul>
+      <li><b>break-before</b> — forces a break before an element.</li>
+      <li><b>break-after</b> — forces a break after an element.</li>
+      <li><b>break-inside</b> — prevents or allows a break inside an element.</li>
+    </ul>
+  </p>
+
+  <hr>
+
+  <!-- 6.7.1 break-before -->
+  <h4>6.7.1 break-before</h4>
+  <p>
+    The <code>break-before</code> property forces a new column, page, or region before an element.
+  </p>
+
+  <h4>Example (Multi-column layout):</h4>
+  <div class="display-demo break-before-demo">
+    <div class="box">Section 1</div>
+    <div class="box break-before">Section 2 (starts in a new column)</div>
+  </div>
+
+  <pre><code>
+.container {
+  column-count: 2;
+  column-gap: 30px;
+}
+
+.break-before {
+  break-before: column; /* forces new column before this element */
+}
+  </code></pre>
+
+  <p>
+    In this example, <code>break-before: column;</code> moves “Section 2” to a new column, ensuring it starts on a fresh line or column.
+  </p>
+
+  <hr>
+
+  <!-- 6.7.2 break-after -->
+  <h4>6.7.2 break-after</h4>
+  <p>
+    The <code>break-after</code> property forces a break immediately after an element, pushing the next one to a new page, column, or region.
+  </p>
+
+  <h4>Example (Multi-column layout):</h4>
+  <div class="display-demo break-after-demo">
+    <div class="box break-after">Section 1 (forces break after)</div>
+    <div class="box">Section 2 (moves to next column)</div>
+  </div>
+
+  <pre><code>
+.break-after {
+  break-after: column; /* next element starts in a new column */
+}
+  </code></pre>
+
+  <p>
+    Here, <code>break-after: column;</code> ensures that “Section 2” begins in the next column or region.
+  </p>
+
+  <hr>
+
+  <!-- 6.7.3 break-inside -->
+  <h4>6.7.3 break-inside</h4>
+  <p>
+    The <code>break-inside</code> property prevents elements from being split across columns, pages, or regions.
+  </p>
+
+  <h4>Example (Multi-column layout):</h4>
+  <div class="display-demo break-inside-demo">
+    <div class="box break-inside">
+      This content will stay together and not be split across columns, even if it’s tall.
+    </div>
+  </div>
+
+  <pre><code>
+.break-inside {
+  break-inside: avoid; /* prevents element from splitting across columns */
+}
+  </code></pre>
+
+  <p>
+    The <code>break-inside: avoid;</code> property ensures that large blocks of content remain intact,
+    which is useful for images, cards, or paragraphs that should not be split.
+  </p>
+
+    <hr>
+
+  <!-- 6.8 white-space property -->
+  <h3>6.8 The <code>white-space</code> Property</h3>
+  <p>
+    The <b>white-space</b> property controls how spaces, tabs, and line breaks are handled inside an element.
+    It determines whether text should wrap, collapse spaces, or preserve line breaks exactly as written.
+  </p>
+
+  <ul>
+    <li><b>normal</b> — default; collapses whitespace and wraps text when needed.</li>
+    <li><b>nowrap</b> — text never wraps; continues on one line.</li>
+    <li><b>pre</b> — preserves whitespace and line breaks (like in &lt;pre&gt;).</li>
+    <li><b>pre-wrap</b> — preserves whitespace and wraps when necessary.</li>
+    <li><b>pre-line</b> — collapses spaces but preserves line breaks.</li>
+  </ul>
+
+  <hr>
+
+  <!-- 6.8.1 white-space: normal -->
+  <h4>6.8.1 white-space: normal</h4>
+  <h4>Example:</h4>
+  <div class="display-demo ws-normal-demo">
+    This text will wrap normally when it reaches the container’s edge.
+    Extra spaces      and line breaks
+    are ignored.
+  </div>
+
+  <pre><code>
+.ws-normal-demo {
+  white-space: normal;
+}
+  </code></pre>
+
+  <p>
+    <code>white-space: normal;</code> collapses extra spaces and wraps text automatically to fit the container width.
+  </p>
+
+  <hr>
+
+  <!-- 6.8.2 white-space: nowrap -->
+  <h4>6.8.2 white-space: nowrap</h4>
+  <h4>Example:</h4>
+  <div class="display-demo ws-nowrap-demo">
+    This text will not wrap even if the container is narrow. It will continue on a single line and may overflow.
+  </div>
+
+  <pre><code>
+.ws-nowrap-demo {
+  white-space: nowrap;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+  </code></pre>
+
+  <p>
+    <code>white-space: nowrap;</code> keeps text on one line.  
+    Use it with <code>overflow: hidden;</code> and <code>text-overflow: ellipsis;</code> to handle long text gracefully.
+  </p>
+
+  <hr>
+
+  <!-- 6.8.3 white-space: pre -->
+  <h4>6.8.3 white-space: pre</h4>
+  <h4>Example:</h4>
+  <div class="display-demo ws-pre-demo">
+    This    text
+    will keep
+    all   spaces and line breaks
+    exactly as typed.
+  </div>
+
+  <pre><code>
+.ws-pre-demo {
+  white-space: pre;
+}
+  </code></pre>
+
+  <p>
+    <code>white-space: pre;</code> preserves all spaces and line breaks exactly as in the source text.
+  </p>
+
+  <hr>
+
+  <!-- 6.8.4 white-space: pre-wrap -->
+  <h4>6.8.4 white-space: pre-wrap</h4>
+  <h4>Example:</h4>
+  <div class="display-demo ws-prewrap-demo">
+    This   text will preserve   spaces and line breaks,
+    but also wrap when necessary.
+  </div>
+
+  <pre><code>
+.ws-prewrap-demo {
+  white-space: pre-wrap;
+}
+  </code></pre>
+
+  <p>
+    <code>white-space: pre-wrap;</code> keeps spaces and line breaks while still wrapping text when it reaches the container edge.
+  </p>
+
+  <hr>
+
+  <!-- 6.8.5 white-space: pre-line -->
+  <h4>6.8.5 white-space: pre-line</h4>
+  <h4>Example:</h4>
+  <div class="display-demo ws-preline-demo">
+    This    text
+    will collapse     multiple spaces
+    but preserve
+    line breaks.
+  </div>
+
+  <pre><code>
+.ws-preline-demo {
+  white-space: pre-line;
+}
+  </code></pre>
+
+  <p>
+    <code>white-space: pre-line;</code> collapses spaces but respects manual line breaks.  
+    It’s often used for formatted text where line breaks matter, but extra spaces don’t.
+  </p>
+
+  
 </section>
 
 <!-- =============================== -->

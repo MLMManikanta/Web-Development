@@ -1220,6 +1220,189 @@ li {
   text-align: justify;
 }
 
+/* ======================================= */
+/* SHARED STYLES FOR ALL DEMO SECTIONS     */
+/* (gap + break property sections)         */
+/* ======================================= */
+
+/* Demo container box */
+.display-demo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  background-color: #f9fafb;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Each item box */
+.display-demo div,
+.display-demo .box {
+  background-color: #4C84FF;
+  color: #fff;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 70px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.display-demo div:hover,
+.display-demo .box:hover {
+  background-color: #1a5cff;
+  transform: scale(1.05);
+}
+
+/* ======================================= */
+/* GAP PROPERTY DEMOS                      */
+/* ======================================= */
+
+.gap-all-demo {
+  display: flex;
+  gap: 20px;
+}
+
+.row-gap-demo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 25px;
+}
+
+.column-gap-demo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+}
+
+.rowcol-gap-demo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 20px;
+  column-gap: 30px;
+}
+
+.gap-flex-vs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.flex-gap-box {
+  display: flex;
+  gap: 20px;
+}
+
+.grid-gap-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.gap-shorthand {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px 25px;
+}
+
+/* ======================================= */
+/* BREAK PROPERTY DEMOS                    */
+/* ======================================= */
+
+/* Multi-column setup for break property examples */
+.break-before-demo,
+.break-after-demo,
+.break-inside-demo {
+  column-count: 2;
+  column-gap: 30px;
+  background-color: #f9fafb;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Reuse same box design for visual consistency */
+.break-before-demo .box,
+.break-after-demo .box,
+.break-inside-demo .box {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  background-color: #4C84FF;
+}
+
+/* Specific break behavior */
+.break-before {
+  break-before: column;
+  background-color: #2196f3;
+}
+
+.break-after {
+  break-after: column;
+  background-color: #ff9800;
+}
+
+.break-inside {
+  break-inside: avoid;
+  background-color: #9c27b0;
+  height: 160px; /* to visualize the effect */
+}
+
+.break-before-demo .box,
+.break-after-demo .box {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.break-before-demo .box:hover,
+.break-after-demo .box:hover {
+  background-color: #1a5cff;
+  transform: scale(1.03);
+}
+
+/* =============================== */
+/* 6.8 WHITE-SPACE PROPERTY DEMOS */
+/* =============================== */
+
+.ws-normal-demo,
+.ws-nowrap-demo,
+.ws-pre-demo,
+.ws-prewrap-demo,
+.ws-preline-demo {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  width: 300px;
+  font-family: monospace;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Add subtle variation to each */
+.ws-nowrap-demo {
+  background-color: #fff3cd;
+}
+
+.ws-pre-demo {
+  background-color: #d1ecf1;
+}
+
+.ws-prewrap-demo {
+  background-color: #d4edda;
+}
+
+.ws-preline-demo {
+  background-color: #f8d7da;
+}
+
+
+
 /* ===============================
    CODE STYLING FOR COLUMN SECTION
 ================================= */
