@@ -79,6 +79,8 @@ li {
 p, li {
   /*   letter-spacing: 10px; */
     line-height: 29px;
+      text-shadow: 2px 2px 5px blue;
+      /* white-space: nowrap; */
 }
 
 
