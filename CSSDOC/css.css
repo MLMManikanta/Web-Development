@@ -726,7 +726,7 @@ tr:nth-child(even) {
 
 /* 2. background-image */
 .bg-img-demo {
-    background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=60');
+    background-image: url('./Images/background-image.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -740,7 +740,7 @@ tr:nth-child(even) {
 
 /* 4. background-position */
 .bg-position-demo {
-    background-image: url('https://images.unsplash.com/photo-1517817748499-68fbc9c1b36c?auto=format&fit=crop&w=800&q=60');
+    background-image: url('');
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 150px;
@@ -749,14 +749,14 @@ tr:nth-child(even) {
 
 /* 5. background-size */
 .bg-size-demo {
-    background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=800&q=60');
+    background-image: url('./Images/background-size.jpeg');
     background-size: cover;
     background-position: center;
 }
 
 /* 6. background-attachment */
 .bg-attachment-demo {
-    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60');
+    background-image: url('./Images/background-attachment.jpeg');
     background-attachment: fixed;
     background-size: cover;
 }
@@ -771,7 +771,7 @@ tr:nth-child(even) {
 
 /* 8. background-origin */
 .bg-origin-demo {
-    background-image: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=60');
+    background-image: url('./Images/background-origin.jpeg');
     background-origin: padding-box;
     background-size: cover;
     background-position: center;
@@ -780,7 +780,7 @@ tr:nth-child(even) {
 /* 9. background-blend-mode */
 .bg-blend-demo {
     background-color: #ff512f;
-    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=60');
+    background-image: url('./Images/background-blend-mode.jpeg');
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
@@ -788,7 +788,7 @@ tr:nth-child(even) {
 
 /* 10. background shorthand */
 .bg-shorthand-demo {
-    background: #673ab7 url('https://images.unsplash.com/photo-1499084732479-de2c02d45fc4?auto=format&fit=crop&w=800&q=60') no-repeat center/cover fixed;
+    background: #673ab7 url('') no-repeat center/cover fixed;
 }
 
 /*  Overflow Section Demo Boxes */
