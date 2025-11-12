@@ -4,7 +4,7 @@
      box-sizing: border-box;
 }
 
-/* div {
+  div {
     border: 5px black solid;
     width: auto;
     height: 200px;
@@ -13,6 +13,10 @@
     font-size: 100px;
     text-align: center;
     color: white;
+}
+
+.box {
+    padding: 0 0 100px 0;
 }
 
 .div1 {
@@ -30,7 +34,7 @@
 }
 
 .div4 {
-    background: repeating-linear-gradient(45deg,yellow 1%, orange 2%,red 3%,green 4%, lightgreen 5%, purple 6%, blue 7% );
+    background: repeating-linear-gradient(120deg,yellow 1%, orange 2%,red 3%,green 4%, lightgreen 5%, purple 6%, blue 7% );
 }
 
 .div5 {
@@ -39,10 +43,10 @@
     background-position: center;
      background-size: contain; 
     background-attachment: scroll;
-} */
+} 
 
 .circle {
-    margin: 100px;
+    margin: 200px 0 0 100px;
     padding: 100px;
     border: 5px blue solid;
     width: 100px;
@@ -50,16 +54,6 @@
     border-radius: 100%;
     background-color: blue;
     
-}
-
-
-li {
-    color: white;
-    display: inline-block;
-    list-style: none;
-    background-color: black;
-    width: auto;
-    overflow: auto;
 }
 
 .square {
@@ -71,3 +65,20 @@ li {
     background-color: blue;
     float: left;
 }
+
+li {
+    color: white;
+    display: inline-block;
+    list-style: none;
+    background-color: black;
+    width: auto;
+    overflow: auto;
+    letter-spacing: 3px;
+}
+
+p, li {
+  /*   letter-spacing: 10px; */
+    line-height: 29px;
+}
+
+
