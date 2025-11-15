@@ -320,35 +320,49 @@ rt {
   <hr>
 
   <!-- 2.3 flex-wrap -->
-  <h3>2.3 flex-wrap</h3>
-  <p>
-    Controls whether flex items are forced into a single line or can wrap onto multiple lines.
-  </p>
+<h3>2.3 flex-wrap</h3>
+<p>
+  Controls whether flex items are forced into a single line or can wrap onto multiple lines.
+</p>
 
-  <ul>
-    <li><b>nowrap</b> – All items stay in one line (default).</li>
-    <li><b>wrap</b> – Items wrap onto multiple lines (top → bottom).</li>
-    <li><b>wrap-reverse</b> – Items wrap from bottom → top.</li>
-  </ul>
+<ul>
+  <li><b>nowrap</b> – All items stay in one line (default).</li>
+  <li><b>wrap</b> – Items wrap onto multiple lines (top → bottom).</li>
+  <li><b>wrap-reverse</b> – Items wrap from bottom → top.</li>
+</ul>
 
-  <h4>Example:</h4>
-  <div class="display-demo flex-wrap-nowrap">
-    <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
-  </div>
-  <div class="display-demo flex-wrap-wrap">
-    <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
-  </div>
-  <div class="display-demo flex-wrap-wrap-rev">
-    <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
-  </div>
+<h4>Example:</h4>
 
-  <pre><code>
+<!-- nowrap -->
+<div class="display-demo flex-wrap1 flex-wrap-nowrap">
+  <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+</div>
+
+<pre><code>
 .container { flex-wrap: nowrap; }
-.container { flex-wrap: wrap; }
-.container { flex-wrap: wrap-reverse; }
-  </code></pre>
+</code></pre>
 
-  <hr>
+<!-- wrap -->
+<div class="display-demo flex-wrap1 flex-wrap-wrap">
+  <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+</div>
+
+<pre><code>
+.container { flex-wrap: wrap; }
+</code></pre>
+
+<!-- wrap-reverse -->
+<div class="display-demo flex-wrap1 flex-wrap-wrap-rev">
+  <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+</div>
+
+<pre><code>
+.container { flex-wrap: wrap-reverse; }
+</code></pre>
+
+<hr>
+
+
 
   <!-- 2.4 flex-flow -->
   <h3>2.4 flex-flow (shorthand)</h3>
