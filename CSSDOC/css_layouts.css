@@ -368,6 +368,47 @@ code {
   line-height: 40px;
 }
 
+/* =====================================
+   CLEAN FLEX-WRAP DEMO (NO CONFLICTS)
+===================================== */
+
+.flex-wrap-demo-box {
+  display: flex;
+  gap: 12px;
+  padding: 15px;
+  margin: 15px 0;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  border-radius: 8px;
+
+  /* ensures wrapping is visible without affecting other demos */
+  max-width: 260px;
+}
+
+.flex-wrap-demo-box div {
+  background: #4C84FF;
+  color: #fff;
+  padding: 12px;
+  min-width: 60px;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Wrap modes */
+.wrap-nowrap {
+  flex-wrap: nowrap;
+}
+
+.wrap-wrap {
+  flex-wrap: wrap;
+}
+
+.wrap-wraprev {
+  flex-wrap: wrap-reverse;
+}
+
+
 /* gap (in flex) */
 .flex-gap {
   display: flex;
