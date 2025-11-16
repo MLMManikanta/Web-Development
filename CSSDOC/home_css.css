@@ -141,3 +141,131 @@ img {
     height: 300px;
     background-color: green;
 }
+
+.grid{
+    font-size: 100px;
+    text-align: center; 
+}
+
+.grid a{
+ text-decoration: none;
+ font-style: italic;
+    color: black;
+}
+
+.grid-container {
+    width: auto;
+    height: 1000px;
+    background-color: #aca9a9;
+    font-size: 40px;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(3 , 1fr);
+    /* row-gap: 10px;
+    column-gap: 10px; */
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: space-between;
+    
+}
+
+.grid-item {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(4, 4, 129);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   
+}
+
+.grid-item10 {
+    grid-column: 2 /  3;
+    grid-row: 2/span 3;
+    position: relative;
+}
+
+.grid-item5 {
+     grid-row: 4/ 5;
+    grid-column: 1/2;
+}
+
+.square1 {
+    width: 10px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    
+}
+
+/* Main grid  */
+.grid-itema {
+    background-color: rgb(4, 4, 129);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+}
+
+.grid-page {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 200px);
+    grid-template-areas: 
+        "box11 box12 box12 box13"
+        "box11 box12 box12 box14"
+        "box11 box12 box12 box14"
+        "box11 box15 box16 box17";
+}
+
+/* Assign grid areas */
+.grid-item11 { grid-area: box11; }
+.grid-item12 { grid-area: box12; }
+.grid-item13 { grid-area: box13; }
+.grid-item14 { grid-area: box14; }
+.grid-item15 { grid-area: box15; }
+.grid-item16 { grid-area: box16; }
+.grid-item17 { grid-area: box17; }
+
+/* Nested grid container */
+.nested-container {
+    padding: 5px;
+    display: flex;
+}
+
+/* Nested grid layout (inside box12) */
+.nested-grid {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    height: 100%;
+    grid-template-areas: 
+        "box21 box22 box22 box23"
+        "box21 box22 box22 box24"
+        "box21 box22 box22 box24"
+        "box21 box25 box26 box27";
+}
+
+.grid-itemaa {
+    background-color: rgb(246, 246, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+.grid-item21 { grid-area: box21; }
+.grid-item22 { grid-area: box22; }
+.grid-item23 { grid-area: box23; }
+.grid-item24 { grid-area: box24; }
+.grid-item25 { grid-area: box25; }
+.grid-item26 { grid-area: box26; }
+.grid-item27 { grid-area: box27; }
