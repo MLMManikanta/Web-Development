@@ -250,13 +250,15 @@ rt {
 </code></pre>
 
 <!-- 2. FLEXBOX LAYOUT -->
+<!-- 2. CSS FLEXBOX LAYOUT (CLEAN MODERN VERSION) -->
 <section id="flex" class="css-section">
+
   <h2>2. CSS Flexbox Layout</h2>
 
   <p>
-    The <b>Flexible Box Layout (Flexbox)</b> is a modern CSS layout model for arranging items
-    in one direction — horizontally or vertically.  
-    It allows flexible alignment, spacing, and ordering of elements, making it easier to create responsive designs.
+    The <b>Flexible Box Layout (Flexbox)</b> provides an efficient way to align, distribute,
+    and space elements inside a container — even when their size is unknown or dynamic.
+    Use Flexbox for one-dimensional layouts (a single row or column) and to simplify alignment tasks.
   </p>
 
   <hr>
@@ -264,315 +266,305 @@ rt {
   <!-- 2.1 display:flex -->
   <h3>2.1 display: flex</h3>
   <p>
-    The <code>display: flex;</code> property turns a container into a Flexbox layout.
-    All direct children become flex items that can be positioned and aligned using flex properties.
+    Applying <code>display: flex</code> on a container creates a flex formatting context.
+    Its direct children become flex items which you can control with flex properties.
   </p>
 
-  <div class="display-demo flex-basic">
+  <div class="flex-demo-card flex-basic-modern">
     <div>1</div><div>2</div><div>3</div>
   </div>
 
   <pre><code>
-.container {
-  display: flex; /* enables Flexbox layout */
-}
+.container { display: flex; /* establishes a flex container */ }
   </code></pre>
-
-  <p><b>Example:</b> The boxes above align horizontally by default since Flexbox uses <code>flex-direction: row;</code> as default.</p>
 
   <hr>
 
   <!-- 2.2 flex-direction -->
   <h3>2.2 flex-direction</h3>
   <p>
-    The <code>flex-direction</code> property defines the main axis — determining whether items
-    are arranged horizontally (row) or vertically (column), and in which order.
+    <code>flex-direction</code> sets the main axis direction for placement and ordering of flex items.
+    It controls whether items flow horizontally (row) or vertically (column), and whether the order is reversed.
   </p>
 
   <ul>
-    <li><b>row</b> – Default; left → right</li>
-    <li><b>row-reverse</b> – right → left</li>
-    <li><b>column</b> – top → bottom</li>
-    <li><b>column-reverse</b> – bottom → top</li>
+    <li><b>row</b> – items placed left → right (default)</li>
+    <li><b>row-reverse</b> – items placed right → left</li>
+    <li><b>column</b> – items placed top → bottom</li>
+    <li><b>column-reverse</b> – items placed bottom → top</li>
   </ul>
 
-  <h4>Example:</h4>
-  <div class="display-demo flex-dir-row">
+  <h4>Examples:</h4>
+
+  <div class="flex-demo-card flex-row-modern" aria-label="flex-direction row example">
     <div>1</div><div>2</div><div>3</div>
   </div>
-  <div class="display-demo flex-dir-row-rev">
+  <p class="note">row — default horizontal flow.</p>
+
+  <div class="flex-demo-card flex-rowrev-modern" aria-label="flex-direction row-reverse example">
     <div>1</div><div>2</div><div>3</div>
   </div>
-  <div class="display-demo flex-dir-col">
+  <p class="note">row-reverse — reverses visual order while source order remains the same.</p>
+
+  <div class="flex-demo-card flex-col-modern" aria-label="flex-direction column example">
     <div>1</div><div>2</div><div>3</div>
   </div>
-  <div class="display-demo flex-dir-col-rev">
+  <p class="note">column — stack items vertically.</p>
+
+  <div class="flex-demo-card flex-colrev-modern" aria-label="flex-direction column-reverse example">
     <div>1</div><div>2</div><div>3</div>
   </div>
+  <p class="note">column-reverse — vertical flow with reversed order.</p>
 
   <pre><code>
-.container { flex-direction: row; }          /* left to right */
-.container { flex-direction: row-reverse; }  /* right to left */
-.container { flex-direction: column; }       /* top to bottom */
-.container { flex-direction: column-reverse; } /* bottom to top */
+.container { flex-direction: row | row-reverse | column | column-reverse; }
   </code></pre>
 
   <hr>
 
   <!-- 2.3 flex-wrap -->
-<h3>2.3 flex-wrap</h3>
-<p>
-  Controls whether flex items are forced into a single line or can wrap onto multiple lines.
-</p>
-
-<ul>
-  <li><b>nowrap</b> – All items stay in one line (default).</li>
-  <li><b>wrap</b> – Items wrap onto multiple lines (top → bottom).</li>
-  <li><b>wrap-reverse</b> – Items wrap from bottom → top.</li>
-</ul>
-
-<h4>Example:</h4>
-
-<!-- nowrap -->
-<div class="flex-wrap-demo-box wrap-nowrap">
-  <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
-</div>
-<pre><code>.container { flex-wrap: nowrap; }</code></pre>
-
-<!-- wrap -->
-<div class="flex-wrap-demo-box wrap-wrap">
-  <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
-</div>
-<pre><code>.container { flex-wrap: wrap; }</code></pre>
-
-<!-- wrap-reverse -->
-<div class="flex-wrap-demo-box wrap-wraprev">
-  <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
-</div>
-<pre><code>.container { flex-wrap: wrap-reverse; }</code></pre>
-
-<hr>
-
-  <!-- 2.4 flex-flow -->
-  <h3>2.4 flex-flow (shorthand)</h3>
+  <h3>2.3 flex-wrap</h3>
   <p>
-    The <code>flex-flow</code> property combines <code>flex-direction</code> and <code>flex-wrap</code> into one line.
+    By default flex items try to fit on one line. <code>flex-wrap</code> allows items to wrap
+    across multiple lines when there isn't enough space.
   </p>
 
+  <h4>Wrap modes:</h4>
+  <ul>
+    <li><b>nowrap</b> – all items remain on a single line (may overflow)</li>
+    <li><b>wrap</b> – items wrap to new lines as needed</li>
+    <li><b>wrap-reverse</b> – wraps to new lines in reverse block order</li>
+  </ul>
+
+  <!-- nowrap -->
+<div class="flexwrap-card flexwrap-nowrap">
+  <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+</div>
+  <p class="note">nowrap — items stay in one row; useful when you want a single-line layout.</p>
+
+ <!-- wrap -->
+<div class="flexwrap-card flexwrap-wrap">
+  <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+</div>
+  <p class="note">wrap — items break into new lines to avoid overflow.</p>
+
+  <!-- wrap-reverse -->
+<div class="flexwrap-card flexwrap-wraprev">
+  <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+</div>
+  <p class="note">wrap-reverse — lines are stacked in reverse order.</p>
+
   <pre><code>
-.container {
-  flex-flow: row wrap; /* flex-direction + flex-wrap */
-}
+.container { flex-wrap: nowrap | wrap | wrap-reverse; }
   </code></pre>
 
-  <h4>Example:</h4>
-  <div class="display-demo flex-flow-demo">
-    <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
-  </div>
+  <hr>
+
+  <!-- 2.4 flex-flow -->
+  <h3>2.4 flex-flow</h3>
+  <p>
+    <code>flex-flow</code> is a shorthand combining <code>flex-direction</code> and <code>flex-wrap</code>.
+    Example: <code>flex-flow: row wrap</code>.
+  </p>
+
+  <div class="flexflow-card flexflow-rowwrap">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+</div>
+
+
+  <pre><code>
+.container { flex-flow: row wrap; /* direction + wrap */ }
+  </code></pre>
 
   <hr>
 
   <!-- 2.5 justify-content -->
   <h3>2.5 justify-content</h3>
-<p>
-  The <b>justify-content</b> property aligns items along the <b>main axis</b>.  
-  It controls how free space is distributed between items horizontally (for rows) or vertically (for columns).
-</p>
+  <p>
+    Aligns and distributes free space along the main axis (horizontal for row, vertical for column).
+    Useful for spacing items within the container.
+  </p>
 
-<h4>Examples:</h4>
+  <h4>Common values (what they do):</h4>
 
-<!-- 2.5.1 flex-start -->
-<h5>2.5.1 flex-start</h5>
-<p>Items align at the start of the main axis.</p>
-<div class="display-demo flex-justify-start">
-  <div>1</div><div>2</div><div>3</div>
-</div>
+  <h5>flex-start</h5>
+  <p class="sub">Items packed toward the start of the main axis.</p>
+  <div class="flex-demo-card jc-start-modern">
+    <div>1</div><div>2</div><div>3</div>
+  </div>
 
-<!-- 2.5.2 center -->
-<h5>2.5.2 center</h5>
-<p>Items are centered along the main axis.</p>
-<div class="display-demo flex-justify-center">
-  <div>1</div><div>2</div><div>3</div>
-</div>
+  <h5>center</h5>
+  <p class="sub">Items centered along the main axis.</p>
+  <div class="flex-demo-card jc-center-modern">
+    <div>1</div><div>2</div><div>3</div>
+  </div>
 
-<!-- 2.5.3 flex-end -->
-<h5>2.5.3 flex-end</h5>
-<p>Items align to the end edge of the main axis.</p>
-<div class="display-demo flex-justify-end">
-  <div>1</div><div>2</div><div>3</div>
-</div>
+  <h5>flex-end</h5>
+  <p class="sub">Items packed toward the end of the main axis.</p>
+  <div class="flex-demo-card jc-end-modern">
+    <div>1</div><div>2</div><div>3</div>
+  </div>
 
-<!-- 2.5.4 space-between -->
-<h5>2.5.4 space-between</h5>
-<p>Equal space between items, none at the edges.</p>
-<div class="display-demo flex-justify-between">
-  <div>1</div><div>2</div><div>3</div>
-</div>
+  <h5>space-between</h5>
+  <p class="sub">Items spread out; first and last items flush with container edges.</p>
+  <div class="flex-demo-card jc-between-modern">
+    <div>1</div><div>2</div><div>3</div>
+  </div>
 
-<!-- 2.5.5 space-around -->
-<h5>2.5.5 space-around</h5>
-<p>Equal space around each item (half space at edges).</p>
-<div class="display-demo flex-justify-around">
-  <div>1</div><div>2</div><div>3</div>
-</div>
+  <h5>space-around</h5>
+  <p class="sub">Equal space around items (edges get half space).</p>
+  <div class="flex-demo-card jc-around-modern">
+    <div>1</div><div>2</div><div>3</div>
+  </div>
 
-<!-- 2.5.6 space-evenly -->
-<h5>2.5.6 space-evenly</h5>
-<p>Equal space on both sides of all items (modern approach).</p>
-<div class="display-demo flex-justify-evenly">
-  <div>1</div><div>2</div><div>3</div>
-</div>
+  <h5>space-evenly</h5>
+  <p class="sub">Equal space between and around items (edges match internal spacing).</p>
+  <div class="flex-demo-card jc-evenly-modern">
+    <div>1</div><div>2</div><div>3</div>
+  </div>
 
+  <hr>
 
   <!-- 2.6 align-items -->
- <h3>2.6 align-items</h3>
-<p>
-  The <b>align-items</b> property aligns items along the <b>cross axis</b> (perpendicular to main axis).  
-  It affects how items are vertically aligned when <code>flex-direction: row</code>.
-</p>
+  <h3>2.6 align-items</h3>
+  <p>
+    Aligns flex items along the cross axis (perpendicular to the main axis).
+    This controls how items are positioned vertically in a row layout.
+  </p>
 
-<h4>Examples:</h4>
+  <h4>Examples:</h4>
 
-<!-- 2.6.1 flex-start -->
-<h5>2.6.1 flex-start</h5>
-<p>Items align at the top/start of the cross axis.</p>
-<div class="display-demo flex-align-start">
-  <div>1</div><div style="height:80px;">2</div><div>3</div>
-</div>
+  <div class="flex-demo-card ai-start-modern">
+    <div>1</div><div style="height:80px;">2</div><div>3</div>
+  </div>
+  <p class="note">align-items: flex-start — top-aligned within the container.</p>
 
-<!-- 2.6.2 center -->
-<h5>2.6.2 center</h5>
-<p>Items are vertically centered within the container.</p>
-<div class="display-demo flex-align-center">
-  <div>1</div><div style="height:80px;">2</div><div>3</div>
-</div>
+  <div class="flex-demo-card ai-center-modern">
+    <div>1</div><div style="height:80px;">2</div><div>3</div>
+  </div>
+  <p class="note">align-items: center — vertically centered.</p>
 
-<!-- 2.6.3 flex-end -->
-<h5>2.6.3 flex-end</h5>
-<p>Items align at the bottom/end of the cross axis.</p>
-<div class="display-demo flex-align-end">
-  <div>1</div><div style="height:80px;">2</div><div>3</div>
-</div>
+  <div class="flex-demo-card ai-end-modern">
+    <div>1</div><div style="height:80px;">2</div><div>3</div>
+  </div>
+  <p class="note">align-items: flex-end — bottom-aligned within the container.</p>
 
-<!-- 2.6.4 stretch -->
-<h5>2.6.4 stretch (default)</h5>
-<p>Items stretch to fill the container height.</p>
-<div class="display-demo flex-align-stretch">
-  <div>1</div><div>2</div><div>3</div>
-</div>
+  <div class="flex-demo-card ai-stretch-modern">
+    <div>1</div><div>2</div><div>3</div>
+  </div>
+  <p class="note">align-items: stretch — items stretch to fill container cross-size.</p>
 
-<!-- 2.6.5 baseline -->
-<h5>2.6.5 baseline</h5>
-<p>Items align based on their text baselines.</p>
-<div class="display-demo flex-align-baseline">
-  <div>A</div><div style="font-size:28px;">B</div><div>C</div>
-</div>
-
+  <div class="flex-demo-card ai-baseline-modern">
+    <div>A</div><div style="font-size:28px;">B</div><div>C</div>
+  </div>
+  <p class="note">align-items: baseline — align based on text baseline.</p>
 
   <hr>
 
   <!-- 2.7 align-content -->
   <h3>2.7 align-content</h3>
 <p>
-  The <b>align-content</b> property controls spacing between <b>multiple flex lines</b> (when <code>flex-wrap: wrap</code> is used).  
+  When a flex container has multiple lines (because of wrapping), 
+  <code>align-content</code> controls how those lines are spaced in the cross axis. 
   It has no effect on single-line containers.
 </p>
 
-<h4>Examples:</h4>
+<h4>Line distribution examples:</h4>
 
-<!-- 2.7.1 flex-start -->
-<h5>2.7.1 flex-start</h5>
-<div class="display-demo flex-aligncontent-start">
-  <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+<!-- flex-start -->
+<div class="aligncontent-card ac-start">
+  <div>1</div><div>2</div><div>3</div>
+  <div>4</div><div>5</div><div>6</div>
 </div>
+<p class="note">align-content: flex-start — lines packed to the start.</p>
 
-<!-- 2.7.2 center -->
-<h5>2.7.2 center</h5>
-<div class="display-demo flex-aligncontent-center">
-  <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+<!-- center -->
+<div class="aligncontent-card ac-center">
+  <div>1</div><div>2</div><div>3</div>
+  <div>4</div><div>5</div><div>6</div>
 </div>
+<p class="note">align-content: center — lines centered inside the container.</p>
 
-<!-- 2.7.3 flex-end -->
-<h5>2.7.3 flex-end</h5>
-<div class="display-demo flex-aligncontent-end">
-  <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+<!-- flex-end -->
+<div class="aligncontent-card ac-end">
+  <div>1</div><div>2</div><div>3</div>
+  <div>4</div><div>5</div><div>6</div>
 </div>
+<p class="note">align-content: flex-end — lines packed to the end.</p>
 
-<!-- 2.7.4 space-between -->
-<h5>2.7.4 space-between</h5>
-<div class="display-demo flex-aligncontent-between">
-  <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+<!-- space-between -->
+<div class="aligncontent-card ac-between">
+  <div>1</div><div>2</div><div>3</div>
+  <div>4</div><div>5</div><div>6</div>
 </div>
+<p class="note">align-content: space-between — equal space between each line.</p>
 
-<!-- 2.7.5 space-around -->
-<h5>2.7.5 space-around</h5>
-<div class="display-demo flex-aligncontent-around">
-  <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+<!-- space-around -->
+<div class="aligncontent-card ac-around">
+  <div>1</div><div>2</div><div>3</div>
+  <div>4</div><div>5</div><div>6</div>
 </div>
+<p class="note">align-content: space-around — even space around each line.</p>
 
-<!-- 2.7.6 stretch -->
-<h5>2.7.6 stretch (default)</h5>
-<div class="display-demo flex-aligncontent-stretch">
-  <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+<!-- space-evenly -->
+<div class="aligncontent-card ac-evenly">
+  <div>1</div><div>2</div><div>3</div>
+  <div>4</div><div>5</div><div>6</div>
 </div>
+<p class="note">align-content: space-evenly — equal spacing between and around lines.</p>
 
-  <hr>
+<hr>
 
-  <!-- 2.8 gap / row-gap / column-gap -->
+  <!-- 2.8 gap -->
   <h3>2.8 gap / row-gap / column-gap</h3>
-<p>
-  The <b>gap</b> properties define the spacing between flex items without extra margin code.
-</p>
-
-<h4>Examples:</h4>
-
-<!-- 2.8.1 gap -->
-<h5>2.8.1 gap</h5>
-<p>Applies uniform spacing in both row and column directions.</p>
-<div class="display-demo flex-gap-all">
-  <div>1</div><div>2</div><div>3</div><div>4</div>
-</div>
-
-<!-- 2.8.2 row-gap -->
-<h5>2.8.2 row-gap</h5>
-<p>Controls vertical spacing between wrapped lines.</p>
-<div class="display-demo flex-row-gap">
-  <div>1</div><div>2</div><div>3</div><div>4</div>
-</div>
-
-<!-- 2.8.3 column-gap -->
-<h5>2.8.3 column-gap</h5>
-<p>Controls horizontal spacing between columns.</p>
-<div class="display-demo flex-col-gap">
-  <div>1</div><div>2</div><div>3</div><div>4</div>
-</div>
-
-
-  <hr>
-
-  <!-- 2.9 flex-grow, flex-shrink, flex-basis -->
-  <h3>2.9 flex-grow, flex-shrink & flex-basis</h3>
   <p>
-    These define how items grow, shrink, and what their initial size is.
+    <code>gap</code> (and its axis-specific variants) provide space between items without manual margin.
+    Works in both flex and grid contexts and simplifies spacing between items.
   </p>
 
-  <ul>
-    <li><b>flex-grow</b> – Item expands to fill space (e.g. 1, 2, 3).</li>
-    <li><b>flex-shrink</b> – Item shrinks if space is limited.</li>
-    <li><b>flex-basis</b> – Initial size before growing/shrinking.</li>
-  </ul>
+  <h4>Examples:</h4>
 
-  <h4>Example:</h4>
-  <div class="display-demo flex-grow-example">
-    <div class="grow1">Grow 1</div>
-    <div class="grow2">Grow 2</div>
-    <div class="grow3">Grow 3</div>
+  <h5>gap</h5>
+  <p class="sub">Uniform spacing in both row and column directions.</p>
+  <div class="flex-demo-card gap-modern">
+    <div>1</div><div>2</div><div>3</div><div>4</div>
   </div>
 
+  <h5>row-gap</h5>
+  <p class="sub">Controls vertical spacing between wrapped rows.</p>
+  <div class="flex-demo-card rowgap-modern">
+    <div>1</div><div>2</div><div>3</div><div>4</div>
+  </div>
+
+  <h5>column-gap</h5>
+  <p class="sub">Controls horizontal spacing between columns.</p>
+  <div class="flex-demo-card colgap-modern">
+    <div>1</div><div>2</div><div>3</div><div>4</div>
+  </div>
+
+  <hr>
+
+  <!-- 2.9 flex-grow -->
+  <h3>2.9 flex-grow, flex-shrink, flex-basis</h3>
+  <p>
+    These properties control how an item grows, shrinks, and what its initial size is.
+    Use the <code>flex</code> shorthand to set these three values together, e.g. <code>flex: 1 1 100px</code>.
+  </p>
+
+  <div class="flex-demo-card grow-card">
+    <div class="g1">Grow 1</div>
+    <div class="g2">Grow 2</div>
+    <div class="g3">Grow 3</div>
+  </div>
+  <p class="note">g1/g2/g3 show relative growth (1:2:3) when free space exists.</p>
+
   <pre><code>
-.item1 { flex: 1 1 100px; }
-.item2 { flex: 2 1 100px; }
-.item3 { flex: 3 1 100px; }
+/* flex: <grow> <shrink> <basis> */
+.item { flex: 1 1 100px; } /* grow, shrink, and base size */
   </code></pre>
 
   <hr>
@@ -580,58 +572,54 @@ rt {
   <!-- 2.10 order -->
   <h3>2.10 order</h3>
   <p>
-    Defines the visual order of flex items (not the source order in HTML).
+    The <code>order</code> property changes the visual order of flex items without modifying DOM source order.
+    Lower values appear first (default is 0).
   </p>
 
-  <h4>Example:</h4>
-  <div class="display-demo flex-order-example">
-    <div>1</div><div class="order3">2</div><div class="order1">3</div>
+  <div class="flex-demo-card order-card">
+    <div>1</div><div class="o3">2</div><div class="o1">3</div>
   </div>
-
-  <pre><code>
-.item { order: 2; } /* default = 0 */
-  </code></pre>
+  <p class="note">In this example .o1 (.order:1) will appear before .o3 (.order:3).</p>
 
   <hr>
 
   <!-- 2.11 align-self -->
   <h3>2.11 align-self</h3>
-<p>
-  The <b>align-self</b> property allows a specific flex item to override the container’s
-  <code>align-items</code> value.
-</p>
+  <p>
+    <code>align-self</code> lets an individual flex item override the container's <code>align-items</code> setting.
+    Useful when one item needs a different alignment from its siblings.
+  </p>
 
-<h4>Examples:</h4>
+  <div class="flex-demo-card self-card">
+    <div>1</div>
+    <div class="self-center">2</div>
+    <div>3</div>
+  </div>
+  <p class="note">align-self: center — this item centers independently.</p>
 
-<!-- 2.11.1 flex-start -->
-<h5>2.11.1 flex-start</h5>
-<div class="display-demo flex-alignself-start">
-  <div>1</div><div class="self-start">2</div><div>3</div>
-</div>
+  <div class="flex-demo-card self-card">
+    <div>1</div>
+    <div class="self-end">2</div>
+    <div>3</div>
+  </div>
+  <p class="note">align-self: flex-end — this item aligns to the end.</p>
 
-<!-- 2.11.2 center -->
-<h5>2.11.2 center</h5>
-<div class="display-demo flex-alignself-center">
-  <div>1</div><div class="self-center">2</div><div>3</div>
-</div>
+  <div class="flex-demo-card self-card">
+    <div>1</div>
+    <div class="self-start">2</div>
+    <div>3</div>
+  </div>
+  <p class="note">align-self: flex-start — aligns to the start.</p>
 
-<!-- 2.11.3 flex-end -->
-<h5>2.11.3 flex-end</h5>
-<div class="display-demo flex-alignself-end">
-  <div>1</div><div class="self-end">2</div><div>3</div>
-</div>
+  <hr>
 
-<!-- 2.11.4 stretch -->
-<h5>2.11.4 stretch</h5>
-<div class="display-demo flex-alignself-stretch">
-  <div>1</div><div class="self-stretch">2</div><div>3</div>
-</div>
+  <!-- short summary -->
+  <h4>Quick summary</h4>
+  <p class="sub">
+    Flexbox is ideal for single-axis layouts and alignment problems. Combine <code>display:flex</code>
+    with <code>justify-content</code>, <code>align-items</code>, and <code>gap</code> for concise and responsive layouts.
+  </p>
 
-<!-- 2.11.5 baseline -->
-<h5>2.11.5 baseline</h5>
-<div class="display-demo flex-alignself-baseline">
-  <div>A</div><div class="self-baseline" style="font-size:28px;">B</div><div>C</div>
-</div>
 </section>
 
 <!-- 3. CSS GRID LAYOUT -->
