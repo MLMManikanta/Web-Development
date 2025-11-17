@@ -1212,6 +1212,352 @@ multiple animations
 
 </section>
 
+<section id="backdrop-filter" class="css-section">
+    <h2>CSS Backdrop-Filter</h2>
+
+    <p>
+        The <b>backdrop-filter</b> property applies graphic effects such as blur, brightness,
+        and contrast to the area <b>behind</b> an element.  
+        It is commonly used in modern UI designs such as glassmorphism.
+    </p>
+
+    <hr>
+
+    <!-- NOTE BOX -->
+    <div class="bf-note">
+        Backdrop-filter works only when the element has
+        <b>transparent or semi-transparent background</b>.
+    </div>
+
+    <hr>
+
+    <!-- Background Layer (required for demo) -->
+    <div class="bf-background"></div>
+
+    <!-- ======================================================
+         1. Syntax
+    ====================================================== -->
+    <h3>1. backdrop-filter Syntax</h3>
+
+    <div class="bf-example-block">
+<pre><code>backdrop-filter: function(value);</code></pre>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         2. blur()
+    ====================================================== -->
+    <h3>2. blur() — Blurs the background behind the element</h3>
+
+    <h4>2.1 blur(10px)</h4>
+    <div class="bf-example-block">
+        <pre><code>backdrop-filter: blur(10px);</code></pre>
+
+        <div class="bf-demo-wrapper">
+            <div class="bf-demo bf-blur">blur()</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         3. brightness()
+    ====================================================== -->
+    <h3>3. brightness() — Adjust brightness behind the element</h3>
+
+    <h4>3.1 brightness(180%)</h4>
+    <div class="bf-example-block">
+        <pre><code>backdrop-filter: brightness(180%);</code></pre>
+
+        <div class="bf-demo-wrapper">
+            <div class="bf-demo bf-brightness">brightness()</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         4. contrast()
+    ====================================================== -->
+    <h3>4. contrast() — Increase/Decrease background contrast</h3>
+
+    <h4>4.1 contrast(250%)</h4>
+    <div class="bf-example-block">
+        <pre><code>backdrop-filter: contrast(250%);</code></pre>
+
+        <div class="bf-demo-wrapper">
+            <div class="bf-demo bf-contrast">contrast()</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         5. grayscale()
+    ====================================================== -->
+    <h3>5. grayscale() — Turn background into black & white</h3>
+
+    <h4>5.1 grayscale(100%)</h4>
+    <div class="bf-example-block">
+        <pre><code>backdrop-filter: grayscale(100%);</code></pre>
+
+        <div class="bf-demo-wrapper">
+            <div class="bf-demo bf-grayscale">grayscale()</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         6. saturate()
+    ====================================================== -->
+    <h3>6. saturate() — Increase color intensity behind element</h3>
+
+    <h4>6.1 saturate(250%)</h4>
+    <div class="bf-example-block">
+        <pre><code>backdrop-filter: saturate(250%);</code></pre>
+
+        <div class="bf-demo-wrapper">
+            <div class="bf-demo bf-saturate">saturate()</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         7. sepia()
+    ====================================================== -->
+    <h3>7. sepia() — Adds brown vintage tone behind element</h3>
+
+    <h4>7.1 sepia(100%)</h4>
+    <div class="bf-example-block">
+        <pre><code>backdrop-filter: sepia(100%);</code></pre>
+
+        <div class="bf-demo-wrapper">
+            <div class="bf-demo bf-sepia">sepia()</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         8. hue-rotate()
+    ====================================================== -->
+    <h3>8. hue-rotate() — Rotates background colors</h3>
+
+    <h4>8.1 hue-rotate(120deg)</h4>
+    <div class="bf-example-block">
+        <pre><code>backdrop-filter: hue-rotate(120deg);</code></pre>
+
+        <div class="bf-demo-wrapper">
+            <div class="bf-demo bf-hue">hue-rotate()</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         9. drop-shadow() 
+    ====================================================== -->
+    <h3>9. drop-shadow() — Shadow with transparency</h3>
+
+    <h4>9.1 drop-shadow(5px 5px 15px rgba(0,0,0,0.5))</h4>
+    <div class="bf-example-block">
+        <pre><code>backdrop-filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.5));</code></pre>
+
+        <div class="bf-demo-wrapper">
+            <div class="bf-demo bf-drop-shadow">drop-shadow()</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         10. Multiple Backdrop Filters
+    ====================================================== -->
+    <h3>10. Multiple Backdrop Filters</h3>
+
+    <h4>10.1 blur + brightness + saturate</h4>
+    <div class="bf-example-block">
+        <pre><code>backdrop-filter: blur(6px) brightness(150%) saturate(200%);</code></pre>
+
+        <div class="bf-demo-wrapper">
+            <div class="bf-demo bf-multiple">Multiple</div>
+        </div>
+    </div>
+
+</section>
+
+<section id="clip-path" class="css-section">
+    <h2>CSS Clip-Path</h2>
+
+    <p>
+        The <b>clip-path</b> property clips an element into custom shapes such as circles,
+        polygons, ellipses, triangles, diamonds, and more. It is commonly used for 
+        creative UI effects, image shapes, and masking.
+    </p>
+
+    <hr>
+
+    <!-- ===============================
+         1. Syntax
+    =============================== -->
+    <h3>1. clip-path Syntax</h3>
+
+    <div class="cp-example-block">
+<pre><code>clip-path: shape(values);</code></pre>
+    </div>
+
+    <hr>
+
+    <!-- ===============================
+         2. Basic Shapes
+    =============================== -->
+    <h3>2. Basic Shapes</h3>
+
+    <!-- Circle -->
+    <h4>2.1 circle()</h4>
+    <div class="cp-example-block">
+        <pre><code>clip-path: circle(50%);</code></pre>
+
+        <div class="cp-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="cp-demo cp-circle" alt="circle clip">
+        </div>
+    </div>
+
+    <!-- Ellipse -->
+    <h4>2.2 ellipse()</h4>
+    <div class="cp-example-block">
+        <pre><code>clip-path: ellipse(60% 40%);</code></pre>
+
+        <div class="cp-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="cp-demo cp-ellipse" alt="ellipse clip">
+        </div>
+    </div>
+
+    <!-- Inset -->
+    <h4>2.3 inset()</h4>
+    <div class="cp-example-block">
+        <pre><code>clip-path: inset(20px 30px);</code></pre>
+
+        <div class="cp-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="cp-demo cp-inset" alt="inset clip">
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ===============================
+         3. Polygon Shapes
+    =============================== -->
+    <h3>3. Polygon Shapes</h3>
+
+    <!-- Triangle -->
+    <h4>3.1 Triangle</h4>
+    <div class="cp-example-block">
+        <pre><code>clip-path: polygon(50% 0%, 0% 100%, 100% 100%);</code></pre>
+
+        <div class="cp-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="cp-demo cp-triangle" alt="triangle clip">
+        </div>
+    </div>
+
+    <!-- Diamond -->
+    <h4>3.2 Diamond</h4>
+    <div class="cp-example-block">
+        <pre><code>clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);</code></pre>
+
+        <div class="cp-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="cp-demo cp-diamond" alt="diamond clip">
+        </div>
+    </div>
+
+    <!-- Hexagon -->
+    <h4>3.3 Hexagon</h4>
+    <div class="cp-example-block">
+        <pre><code>clip-path: polygon(
+    25% 0%, 75% 0%,
+    100% 50%, 75% 100%,
+    25% 100%, 0% 50%
+);</code></pre>
+
+        <div class="cp-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="cp-demo cp-hexagon" alt="hexagon clip">
+        </div>
+    </div>
+
+    <!-- Star -->
+    <h4>3.4 Star</h4>
+    <div class="cp-example-block">
+        <pre><code>clip-path: polygon(
+    50% 0%, 61% 35%,
+    98% 35%, 68% 57%,
+    79% 91%, 50% 70%,
+    21% 91%, 32% 57%,
+    2% 35%, 39% 35%
+);</code></pre>
+
+        <div class="cp-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="cp-demo cp-star" alt="star clip">
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ===============================
+         4. Complex Irregular Shapes
+    =============================== -->
+    <h3>4. Complex Shapes</h3>
+
+    <!-- Blob shape -->
+    <h4>4.1 Blob Shape</h4>
+    <div class="cp-example-block">
+        <pre><code>clip-path: polygon(
+    60% 0%, 90% 20%, 
+    100% 60%, 75% 90%, 
+    35% 100%, 10% 80%, 
+    0% 40%, 25% 10%
+);</code></pre>
+
+        <div class="cp-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="cp-demo cp-blob" alt="blob clip">
+        </div>
+    </div>
+
+    <!-- Pentagon -->
+    <h4>4.2 Pentagon</h4>
+    <div class="cp-example-block">
+        <pre><code>clip-path: polygon(
+    50% 0%, 100% 38%,
+    82% 100%, 18% 100%,
+    0% 38%
+);</code></pre>
+
+        <div class="cp-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="cp-demo cp-pentagon" alt="pentagon clip">
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ===============================
+         5. Multiple Clip-paths
+    =============================== -->
+    <h3>5. Multiple Clip Paths (Shape Transformation)</h3>
+
+    <h4>5.1 Morphing on Hover</h4>
+    <div class="cp-example-block">
+        <pre><code>clip-path: circle(50%);
+clip-path (hover): polygon(...);</code></pre>
+
+        <div class="cp-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="cp-demo cp-morph" alt="morph clip">
+        </div>
+    </div>
+
+</section>
+
 
 
 </body>

@@ -916,3 +916,280 @@ pre code {
 .fl-multiple {
     filter: grayscale(100%) blur(3px) brightness(150%);
 }
+
+/* =====================================================
+   Background Layer (required for backdrop-filter)
+===================================================== */
+.bf-background {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    margin-bottom: 20px;
+
+    background: url("https://picsum.photos/900/400") center/cover no-repeat;
+    border-radius: 12px;
+}
+
+/* =====================================================
+   Note Styling
+===================================================== */
+.bf-note {
+    background: #fff7ed;
+    color: #b45309;
+    border-left: 5px solid #f59e0b;
+    padding: 12px 16px;
+    margin: 16px 0;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+/* =====================================================
+   Example Block
+===================================================== */
+.bf-example-block {
+    background: #f8fafcaa; /* semi-transparent */
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 18px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+
+    overflow: visible;
+    position: relative;
+}
+
+.bf-example-block:hover {
+    background: #f8fafcaa;
+    border-color: #cbd5e1;
+}
+
+/* =====================================================
+   Wrapper
+===================================================== */
+.bf-demo-wrapper {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* =====================================================
+   Backdrop Demo Element
+===================================================== */
+.bf-demo {
+    width: 200px;
+    height: 120px;
+
+    background: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    padding: 18px;
+
+    backdrop-filter: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    transition: 0.3s ease;
+
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
+/* Hover visual pop */
+.bf-demo:hover {
+    transform: scale(1.07);
+}
+
+/* =====================================================
+   Backdrop Filter Variants
+===================================================== */
+
+/* 2. blur() */
+.bf-blur {
+    backdrop-filter: blur(10px);
+}
+
+/* 3. brightness() */
+.bf-brightness {
+    backdrop-filter: brightness(180%);
+}
+
+/* 4. contrast() */
+.bf-contrast {
+    backdrop-filter: contrast(250%);
+}
+
+/* 5. grayscale() */
+.bf-grayscale {
+    backdrop-filter: grayscale(100%);
+}
+
+/* 6. saturate() */
+.bf-saturate {
+    backdrop-filter: saturate(250%);
+}
+
+/* 7. sepia() */
+.bf-sepia {
+    backdrop-filter: sepia(100%);
+}
+
+/* 8. hue-rotate() */
+.bf-hue {
+    backdrop-filter: hue-rotate(120deg);
+}
+
+/* 9. drop-shadow() */
+.bf-drop-shadow {
+    backdrop-filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.5));
+}
+
+/* 10. Multiple Filters */
+.bf-multiple {
+    backdrop-filter: blur(6px) brightness(150%) saturate(200%);
+}
+
+/* =================================================
+   CLIP-PATH SECTION BLOCKS
+================================================= */
+.cp-example-block {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 18px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    overflow: visible;
+    position: relative;
+}
+
+/* No hover styling on parent */
+.cp-example-block:hover {
+    background: #f8fafc;
+}
+
+/* Wrapper (prevents overlap) */
+.cp-demo-wrapper {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* =================================================
+   BASE DEMO IMAGE STYLE
+================================================= */
+.cp-demo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+
+    border-radius: 12px;
+    border: 3px solid #3b82f6;
+
+    transition: 0.4s ease;
+}
+
+/* Hover zoom (visual effect only) */
+.cp-demo:hover {
+    transform: scale(1.06);
+}
+
+/* =================================================
+   SHAPES — BASIC CLIP-PATHS
+================================================= */
+
+/* 2.1 circle */
+.cp-circle {
+    clip-path: circle(50%);
+}
+
+/* 2.2 ellipse */
+.cp-ellipse {
+    clip-path: ellipse(60% 40%);
+}
+
+/* 2.3 inset */
+.cp-inset {
+    clip-path: inset(20px 30px);
+}
+
+/* =================================================
+   3. POLYGON SHAPES
+================================================= */
+
+/* 3.1 Triangle */
+.cp-triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* 3.2 Diamond */
+.cp-diamond {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* 3.3 Hexagon */
+.cp-hexagon {
+    clip-path: polygon(
+        25% 0%, 75% 0%,
+        100% 50%, 75% 100%,
+        25% 100%, 0% 50%
+    );
+}
+
+/* 3.4 Star */
+.cp-star {
+    clip-path: polygon(
+        50% 0%, 61% 35%,
+        98% 35%, 68% 57%,
+        79% 91%, 50% 70%,
+        21% 91%, 32% 57%,
+        2% 35%, 39% 35%
+    );
+}
+
+/* =================================================
+   4. COMPLEX IRREGULAR SHAPES
+================================================= */
+
+/* 4.1 Blob */
+.cp-blob {
+    clip-path: polygon(
+        60% 0%, 90% 20%, 
+        100% 60%, 75% 90%, 
+        35% 100%, 10% 80%, 
+        0% 40%, 25% 10%
+    );
+}
+
+/* 4.2 Pentagon */
+.cp-pentagon {
+    clip-path: polygon(
+        50% 0%, 100% 38%,
+        82% 100%, 18% 100%,
+        0% 38%
+    );
+}
+
+/* =================================================
+   5. CLIP-PATH MORPHING EFFECT
+================================================= */
+
+/* Start shape (circle) */
+.cp-morph {
+    clip-path: circle(50%);
+    transition: clip-path 0.6s ease-in-out;
+}
+
+/* Hover shape (complex polygon) */
+.cp-morph:hover {
+    clip-path: polygon(
+        20% 0%, 80% 0%,
+        100% 50%, 80% 100%,
+        20% 100%, 0% 50%
+    );
+}
