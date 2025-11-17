@@ -274,3 +274,105 @@ img {
 .grid-item25 { grid-area: box25; }
 .grid-item26 { grid-area: box26; }
 .grid-item27 { grid-area: box27; }
+
+
+.media {
+    width: auto;
+    height: 1500px;
+    background-color: black;
+    color: white;
+    font-size: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+   
+}
+
+@media (max-width: 1500px) {
+    .media {
+    background-color: black;
+    display: flex;
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    }
+}
+
+@media (max-width: 1400px) {
+    .media {
+    background-color: rgb(255, 0, 0);
+    display: flex;
+    font-size: 90px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    }
+}
+
+@media (max-width: 1300px) {
+    .media {
+        background-color: rgb(255, 230, 0);
+        display: flex;
+        font-size: 80px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .media {
+        background-color: rgb(47, 255, 0);
+        display: flex;
+        font-size: 70px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+@media (max-width: 1000px) {
+    .media {
+        background-color: rgb(0, 21, 255);
+        display: flex;
+        font-size: 60px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+@media (max-width: 750px) {
+    .media {
+        background-color: rgb(255, 0, 238);
+        display: flex;
+        font-size: 50px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .media {
+        background-color: rgb(30, 255, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 300px) {
+    .media {
+        background-color: rgb(255, 0, 119);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        font-size: 40px;
+    }
+}
