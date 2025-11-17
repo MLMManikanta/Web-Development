@@ -1027,164 +1027,67 @@ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   <h2>4. Float and Clear</h2>
   <p>
     The <b>float</b> property positions elements to the left or right of their container,
-    allowing inline content (like text or other boxes) to wrap around them.
-    Originally used for text wrapping around images, it's now less common due to Flexbox and Grid.
-  </p>
-
-  <hr>
-
-  <!-- 4.1 float: left / right / none -->
-  <!-- =============================== -->
-<!-- 4. FLOAT & CLEAR -->
-<!-- =============================== -->
-<section id="float" class="css-section">
-  <h2>4. Float and Clear</h2>
-  <p>
-    The <b>float</b> property lets elements "float" to the left or right side of their container,
-    allowing other content like text or inline elements to wrap around them.  
-    The <b>clear</b> property then controls how other elements behave around floated items.
+    allowing text or inline elements to wrap around them.  
+    The <b>clear</b> property controls how elements behave around floated elements.
   </p>
 
   <hr>
 
   <!-- 4.1 FLOAT -->
   <h3>4.1 The float Property</h3>
-  <p>
-    The <b>float</b> property removes elements from the normal document flow and positions them
-    to the left or right of their container. Commonly used for images or side boxes.
-  </p>
-
-  <ul>
-    <li><b>float: left</b> – aligns element to the left and allows text to wrap on the right.</li>
-    <li><b>float: right</b> – aligns element to the right and allows text to wrap on the left.</li>
-    <li><b>float: none</b> – disables floating (default behavior).</li>
-  </ul>
 
   <h4>Example 1 – float: left</h4>
-  <div class="display-demo float-left-demo">
-    <img src="./Images/float.jpg" alt="Float Left" class="float-left">
-    <p>
-      This image is floated to the <b>left</b> of the text.  
-      The paragraph wraps naturally around it, thanks to <code>float: left;</code>.
-    </p>
+  <div class="flt-demo-left">
+    <img src="./Images/float.jpg" alt="Float Left" class="flt-left">
+    <p>This image is floated to the <b>left</b>, and text wraps around it.</p>
   </div>
-
-  <pre><code>
-img {
-  float: left;
-  margin-right: 12px;
-}
-  </code></pre>
 
   <h4>Example 2 – float: right</h4>
-  <div class="display-demo float-right-demo">
-    <img src="./Images/float.jpg" alt="Float Right" class="float-right">
-    <p>
-      Here, the image is floated to the <b>right</b>.  
-      The text wraps on the opposite side, maintaining a natural flow.
-    </p>
+  <div class="flt-demo-right">
+    <img src="./Images/float.jpg" alt="Float Right" class="flt-right">
+    <p>This image is floated to the <b>right</b>, and text wraps around it.</p>
   </div>
-
-  <pre><code>
-img {
-  float: right;
-  margin-left: 12px;
-}
-  </code></pre>
 
   <h4>Example 3 – float: none</h4>
-  <div class="display-demo float-none-demo">
-    <img src="./Images/float.jpg" alt="Float None" class="float-none">
-    <p>
-      This image uses <code>float: none;</code>, meaning it stays in the normal document flow
-      without text wrapping around it.
-    </p>
+  <div class="flt-demo-none">
+    <img src="./Images/float.jpg" alt="Float None" class="flt-none">
+    <p>This image uses <code>float: none;</code> and stays in normal flow.</p>
   </div>
-
-  <pre><code>
-img {
-  float: none;
-  display: block;
-  margin: 0 auto;
-}
-  </code></pre>
 
   <hr>
 
   <!-- 4.2 CLEAR -->
   <h3>4.2 The clear Property</h3>
-  <p>
-    The <b>clear</b> property prevents elements from wrapping around floated siblings.  
-    It tells the browser “start below floated elements” on the specified side.
-  </p>
-
-  <ul>
-    <li><b>clear: left</b> – moves element below any left-floated items.</li>
-    <li><b>clear: right</b> – moves element below any right-floated items.</li>
-    <li><b>clear: both</b> – moves element below all floated items (most common).</li>
-  </ul>
 
   <h4>Example 1 – clear: left</h4>
-  <div class="display-demo clear-left-demo">
-    <div class="float-box left-box">Float Left</div>
-    <p class="clear-left">This text clears the left float.</p>
+  <div class="clr-demo-left">
+    <div class="flt-box flt-left-box">Float Left</div>
+    <p class="clr-left">This text clears the left float.</p>
   </div>
-
-  <pre><code>
-.clear-left {
-  clear: left;
-}
-  </code></pre>
 
   <h4>Example 2 – clear: right</h4>
-  <div class="display-demo clear-right-demo">
-    <div class="float-box right-box">Float Right</div>
-    <p class="clear-right">This paragraph clears the right float.</p>
+  <div class="clr-demo-right">
+    <div class="flt-box flt-right-box">Float Right</div>
+    <p class="clr-right">This text clears the right float.</p>
   </div>
-
-  <pre><code>
-.clear-right {
-  clear: right;
-}
-  </code></pre>
 
   <h4>Example 3 – clear: both</h4>
-  <div class="display-demo clear-both-demo">
-    <div class="float-box left-box">Float Left</div>
-    <div class="float-box right-box">Float Right</div>
-    <p class="clear-both">This text clears both floated boxes.</p>
+  <div class="clr-demo-both">
+    <div class="flt-box flt-left-box">Float Left</div>
+    <div class="flt-box flt-right-box">Float Right</div>
+    <p class="clr-both">This text clears both floated boxes.</p>
   </div>
-
-  <pre><code>
-.clear-both {
-  clear: both;
-}
-  </code></pre>
 
   <hr>
 
   <!-- 4.3 CLEARFIX -->
-  <h3>4.3 Clearfix (Automatic Float Containment)</h3>
-  <p>
-    When child elements are floated, their parent might collapse because floats are taken out of
-    normal document flow.  
-    The <b>clearfix</b> method forces the parent to wrap around floated elements.
-  </p>
+  <h3>4.3 Clearfix</h3>
 
-  <h4>Example – clearfix hack</h4>
-  <div class="display-demo clearfix-parent">
-    <div class="float-mini left-mini">A</div>
-    <div class="float-mini right-mini">B</div>
-    <p>Parent wraps around floated children because of the clearfix rule.</p>
+  <div class="clrfx-parent">
+    <div class="flt-mini flt-mini-left">A</div>
+    <div class="flt-mini flt-mini-right">B</div>
+    <p>The clearfix ensures the parent wraps around floated children.</p>
   </div>
-
-  <pre><code>
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-  </code></pre>
 </section>
 
 <hr>

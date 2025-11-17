@@ -786,9 +786,10 @@ li {
    🌊 4. FLOAT & CLEAR STYLES
    (Matches Flexbox/Grid Design)
 ================================ */
-
-/* Shared layout */
-.display-demo[class*="float"] {
+/* Shared float demo layout */
+.flt-demo-left,
+.flt-demo-right,
+.flt-demo-none {
   background: #f9fafb;
   border: 1px solid #d1d5db;
   border-radius: 8px;
@@ -800,37 +801,28 @@ li {
 }
 
 /* Floated images */
-.float-left,
-.float-right,
-.float-none {
+.flt-left,
+.flt-right,
+.flt-none {
   width: 150px;
   height: 100px;
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid #ccc;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
 }
 
 /* Float directions */
-.float-left {
-  float: left;
-  margin-right: 15px;
-}
-
-.float-right {
-  float: right;
-  margin-left: 15px;
-}
-
-.float-none {
+.flt-left { float: left; margin-right: 15px; }
+.flt-right { float: right; margin-left: 15px; }
+.flt-none {
   float: none;
   display: block;
   margin: 0 auto;
 }
 
 /* Float boxes for clear examples */
-.float-box {
+.flt-box {
   width: 120px;
   height: 70px;
   color: #fff;
@@ -841,20 +833,13 @@ li {
   margin: 5px;
 }
 
-.left-box {
-  float: left;
-  background-color: #60a5fa;
-}
+.flt-left-box  { float: left; background-color: #60a5fa; }
+.flt-right-box { float: right; background-color: #f59e0b; }
 
-.right-box {
-  float: right;
-  background-color: #f59e0b;
-}
-
-/* Clear text paragraphs */
-.clear-left,
-.clear-right,
-.clear-both {
+/* Clear paragraphs */
+.clr-left,
+.clr-right,
+.clr-both {
   background: #eef6ff;
   border-radius: 6px;
   padding: 10px;
@@ -863,12 +848,12 @@ li {
   font-weight: 500;
 }
 
-.clear-left { clear: left; }
-.clear-right { clear: right; }
-.clear-both { clear: both; }
+.clr-left { clear: left; }
+.clr-right { clear: right; }
+.clr-both { clear: both; }
 
-/* Mini boxes for clearfix demo */
-.float-mini {
+/* Mini float boxes */
+.flt-mini {
   width: 60px;
   height: 60px;
   line-height: 60px;
@@ -879,18 +864,11 @@ li {
   margin: 5px;
 }
 
-.left-mini {
-  float: left;
-  background: #3b82f6;
-}
-
-.right-mini {
-  float: right;
-  background: #22c55e;
-}
+.flt-mini-left { float: left; background: #3b82f6; }
+.flt-mini-right { float: right; background: #22c55e; }
 
 /* Clearfix container */
-.clearfix-parent {
+.clrfx-parent {
   background: #f0f4f8;
   border: 1px solid #d1d5db;
   border-radius: 8px;
@@ -899,15 +877,14 @@ li {
   position: relative;
 }
 
-/* Clearfix fix */
-.clearfix-parent::after {
+.clrfx-parent::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Text inside clearfix */
-.clearfix-parent p {
+/* Text inside clearfix box */
+.clrfx-parent p {
   margin-top: 80px;
   background: #e8f1fb;
   padding: 8px;
@@ -916,27 +893,13 @@ li {
 }
 
 /* Hover interactions */
-.display-demo[class*="float"] img:hover,
-.float-box:hover,
-.float-mini:hover {
+.flt-demo-left img:hover,
+.flt-demo-right img:hover,
+.flt-demo-none img:hover,
+.flt-box:hover,
+.flt-mini:hover {
   transform: scale(1.05);
   transition: all 0.3s ease;
-}
-
-/* Headings in float section */
-#float h3,
-#float h4,
-#float h5 {
-  color: #005a8d;
-  margin-top: 15px;
-}
-
-#float ul {
-  margin: 10px 0 15px 30px;
-}
-
-#float li {
-  margin-bottom: 5px;
 }
 
 /* ===============================
