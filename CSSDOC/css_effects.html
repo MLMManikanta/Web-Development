@@ -270,6 +270,948 @@
 
 </section>
 
+<section id="box-shadow" class="css-section">
+    <h2>CSS Box-Shadow Property</h2>
+
+    <p>
+        The <b>box-shadow</b> property adds one or more drop shadows around an element.
+        It supports horizontal/vertical offsets, blur, spread, color, inset, and multiple shadows.
+    </p>
+
+    <hr>
+
+    <!-- 1. SYNTAX -->
+    <h3>1. box-shadow Syntax</h3>
+
+    <div class="bs-example-block">
+        <pre><code>box-shadow: offset-x offset-y blur-radius spread-radius color;</code></pre>
+    </div>
+
+    <hr>
+
+     <h2>Understanding box-shadow Parameters</h2>
+
+    <p>
+        The <b>box-shadow</b> property uses 5 main values.  
+        Each value changes the placement, size, and appearance of the shadow.
+    </p>
+
+    <!-- offset-x -->
+    <h4>1. offset-x — Horizontal Shadow Position</h4>
+    <div class="bs-example-block">
+        <p>
+            Moves the shadow left or right.  
+            Positive → Moves right | Negative → Moves left
+        </p>
+
+        <pre><code>box-shadow: 20px 0 10px rgba(0,0,0,0.3);
+/* 20px = offset-x */</code></pre>
+
+        <div class="bs-demo-wrapper">
+            <div class="bs-demo bs-shadow-offset-x">offset-x</div>
+        </div>
+    </div>
+
+    <!-- offset-y -->
+    <h4>2. offset-y — Vertical Shadow Position</h4>
+    <div class="bs-example-block">
+        <p>
+            Moves the shadow up or down.  
+            Positive → Down | Negative → Up
+        </p>
+
+        <pre><code>box-shadow: 0 20px 10px rgba(0,0,0,0.3);
+/* 20px = offset-y */</code></pre>
+
+        <div class="bs-demo-wrapper">
+            <div class="bs-demo bs-shadow-offset-y">offset-y</div>
+        </div>
+    </div>
+
+    <!-- blur-radius -->
+    <h4>3. blur-radius — Softness of Shadow</h4>
+    <div class="bs-example-block">
+        <p>
+            Controls how blurry the shadow looks.  
+            Higher value = softer shadow.  
+            Cannot be negative.
+        </p>
+
+        <pre><code>box-shadow: 0 0 20px rgba(0,0,0,0.4);
+/* 20px = blur-radius */</code></pre>
+
+        <div class="bs-demo-wrapper">
+            <div class="bs-demo bs-shadow-blur">blur-radius</div>
+        </div>
+    </div>
+
+    <!-- spread-radius -->
+    <h4>4. spread-radius — Expands or Shrinks Shadow Size</h4>
+    <div class="bs-example-block">
+        <p>
+            Controls how large the shadow grows.  
+            Positive → Shadow expands | Negative → Shadow shrinks
+        </p>
+
+        <pre><code>box-shadow: 0 0 10px 15px rgba(0,0,0,0.3);
+/* 15px = spread-radius */</code></pre>
+
+        <div class="bs-demo-wrapper">
+            <div class="bs-demo bs-shadow-spread">spread-radius</div>
+        </div>
+    </div>
+
+    <!-- color -->
+    <h4>5. color — Shadow Color</h4>
+    <div class="bs-example-block">
+        <p>
+            Determines the shadow’s color and transparency.  
+            Supports: color name, HEX, RGB, RGBA, HSL.
+        </p>
+
+        <pre><code>box-shadow: 0 0 15px rgba(59,130,246,0.7);
+/* rgba(59,130,246,0.7) = color */</code></pre>
+
+        <div class="bs-demo-wrapper">
+            <div class="bs-demo bs-shadow-color">color</div>
+        </div>
+    </div>
+
+
+    <!-- ======================================================
+         2. BASIC SHADOWS
+    ====================================================== -->
+    <h3>2. Basic Shadows</h3>
+
+    <!-- Simple shadow -->
+    <h4>2.1 Normal Shadow — Basic drop shadow</h4>
+    <div class="bs-example-block">
+        <pre><code>box-shadow: 4px 4px 10px rgba(0,0,0,0.3);</code></pre>
+
+        <div class="bs-demo-wrapper">
+            <div class="bs-demo bs-shadow-basic">Basic Shadow</div>
+        </div>
+    </div>
+
+    <!-- Soft shadow -->
+    <h4>2.2 Soft Shadow — Bigger blur for a softer look</h4>
+    <div class="bs-example-block">
+        <pre><code>box-shadow: 0 6px 18px rgba(0,0,0,0.25);</code></pre>
+
+        <div class="bs-demo-wrapper">
+            <div class="bs-demo bs-shadow-soft">Soft Shadow</div>
+        </div>
+    </div>
+
+    <!-- Sharp shadow -->
+    <h4>2.3 Sharp Shadow — Hard edges with low blur</h4>
+    <div class="bs-example-block">
+        <pre><code>box-shadow: 5px 5px 0 rgba(0,0,0,0.4);</code></pre>
+
+        <div class="bs-demo-wrapper">
+            <div class="bs-demo bs-shadow-sharp">Sharp Shadow</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         3. SPREAD SHADOWS
+    ====================================================== -->
+    <h3>3. Spread Shadows</h3>
+
+    <h4>3.1 Spread Shadow — Expands shadow size</h4>
+    <div class="bs-example-block">
+        <pre><code>box-shadow: 0 6px 10px 5px rgba(0,0,0,0.3);</code></pre>
+
+        <div class="bs-demo-wrapper">
+            <div class="bs-demo bs-shadow-spread">Spread Shadow</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         4. INSET SHADOW
+    ====================================================== -->
+    <h3>4. Inset Shadows</h3>
+
+    <h4>4.1 Inset Shadow — Shadow inside the element</h4>
+    <div class="bs-example-block">
+        <pre><code>box-shadow: inset 4px 4px 10px rgba(0,0,0,0.4);</code></pre>
+
+        <div class="bs-demo-wrapper">
+            <div class="bs-demo bs-shadow-inset">Inset Shadow</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         5. MULTIPLE SHADOWS
+    ====================================================== -->
+    <h3>5. Multiple Shadows</h3>
+
+    <h4>5.1 Stacked Shadows — Apply layered shadow effects</h4>
+    <div class="bs-example-block">
+        <pre><code>box-shadow:
+    0 0 5px rgba(0,0,0,0.3),
+    0 8px 20px rgba(0,0,0,0.15),
+    0 12px 35px rgba(0,0,0,0.1);</code></pre>
+
+        <div class="bs-demo-wrapper">
+            <div class="bs-demo bs-shadow-multiple">Multiple Shadows</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         6. COLORED SHADOWS
+    ====================================================== -->
+    <h3>6. Colored Shadows</h3>
+
+    <h4>6.1 Light Blue Shadow — Colorful UI cards</h4>
+    <div class="bs-example-block">
+        <pre><code>box-shadow: 0 8px 18px rgba(59,130,246,0.4);</code></pre>
+
+        <div class="bs-demo-wrapper">
+            <div class="bs-demo bs-shadow-blue">Blue Shadow</div>
+        </div>
+    </div>
+
+    <h4>6.2 Red Glow Shadow — Glow effect</h4>
+    <div class="bs-example-block">
+        <pre><code>box-shadow: 0 0 15px rgba(239,68,68,0.7);</code></pre>
+
+        <div class="bs-demo-wrapper">
+            <div class="bs-demo bs-shadow-glow">Glow Shadow</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         7. NEUMORPHISM STYLE SHADOW
+    ====================================================== -->
+    <h3>7. Neumorphism Effect</h3>
+
+    <h4>7.1 Soft UI — Dual shadows</h4>
+    <div class="bs-example-block">
+        <pre><code>box-shadow:
+    8px 8px 16px rgba(0,0,0,0.2),
+    -8px -8px 16px rgba(255,255,255,0.8);</code></pre>
+
+        <div class="bs-demo-wrapper">
+            <div class="bs-demo bs-shadow-neumorph">Neumorphism</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         8. INNER + OUTER COMBO
+    ====================================================== -->
+    <h3>8. Combined Inner & Outer Shadow</h3>
+
+    <div class="bs-example-block">
+        <pre><code>box-shadow:
+    inset 4px 4px 8px rgba(0,0,0,0.25),
+    0 8px 15px rgba(0,0,0,0.2);</code></pre>
+
+        <div class="bs-demo-wrapper">
+            <div class="bs-demo bs-shadow-combo">Inner + Outer</div>
+        </div>
+    </div>
+
+</section>
+
+<section id="transitions" class="css-section">
+    <h2>CSS Transitions</h2>
+
+    <p>
+        The <b>transition</b> property allows smooth animation between two states 
+        (for example, normal → hover). You can animate colors, sizes, positions, 
+        opacity, transforms, and more.
+    </p>
+
+    <hr>
+
+    <!-- SYNTAX -->
+    <h3>1. Transition Syntax</h3>
+
+    <div class="tr-example-block">
+        <pre><code>transition: property duration timing-function delay;</code></pre>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         2. transition-property
+    ====================================================== -->
+    <h3>2. transition-property — What to animate</h3>
+
+    <h4>2.1 Animate Width</h4>
+    <div class="tr-example-block">
+        <pre><code>transition-property: width;</code></pre>
+
+        <div class="tr-demo-wrapper">
+            <div class="tr-demo tr-transition-width">Hover me</div>
+        </div>
+    </div>
+
+    <h4>2.2 Animate Background Color</h4>
+    <div class="tr-example-block">
+        <pre><code>transition-property: background-color;</code></pre>
+
+        <div class="tr-demo-wrapper">
+            <div class="tr-demo tr-transition-bg">Hover me</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         3. transition-duration
+    ====================================================== -->
+   <section id="transitions" class="css-section">
+    <h2>CSS Transitions</h2>
+
+    <p>
+        The <b>transition</b> property animates changes smoothly when an element moves from one state to another.
+    </p>
+
+    <hr>
+
+    <!-- 1. SYNTAX -->
+    <h3>1. Transition Syntax</h3>
+
+    <div class="tr-example-block">
+        <pre><code>transition: property duration timing-function delay;</code></pre>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         2. transition-property
+    ====================================================== -->
+    <h3>2. transition-property — What to animate</h3>
+
+    <!-- Width transition -->
+    <h4>2.1 Animate Width</h4>
+    <div class="tr-example-block">
+        <pre><code>transition-property: width;</code></pre>
+
+        <div class="tr-demo-wrapper">
+            <div class="tr-demo tr-transition-width">Hover me</div>
+            <div class="tr-ball tr-ball-width"></div>
+        </div>
+    </div>
+
+    <!-- Background transition -->
+    <h4>2.2 Animate Background Color</h4>
+    <div class="tr-example-block">
+        <pre><code>transition-property: background-color;</code></pre>
+
+        <div class="tr-demo-wrapper">
+            <div class="tr-demo tr-transition-bg">Hover me</div>
+            <div class="tr-ball tr-ball-bg"></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         3. transition-duration
+    ====================================================== -->
+    <h3>3. transition-duration — How long it takes</h3>
+
+    <h4>3.1 Slow Transition (1s)</h4>
+    <div class="tr-example-block">
+        <pre><code>transition-duration: 1s;</code></pre>
+
+        <div class="tr-demo-wrapper">
+            <div class="tr-demo tr-transition-duration">Hover me</div>
+            <div class="tr-ball tr-ball-slow"></div>
+        </div>
+    </div>
+
+    <h4>3.2 Fast Transition (0.2s)</h4>
+    <div class="tr-example-block">
+        <pre><code>transition-duration: 0.2s;</code></pre>
+
+        <div class="tr-demo-wrapper">
+            <div class="tr-demo tr-transition-duration-fast">Hover me</div>
+            <div class="tr-ball tr-ball-fast"></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         4. transition-timing-function
+    ====================================================== -->
+    <h3>4. transition-timing-function — Speed Curve</h3>
+
+    <h4>4.1 ease</h4>
+    <div class="tr-example-block">
+        <pre><code>transition-timing-function: ease;</code></pre>
+
+        <div class="tr-demo-wrapper">
+            <div class="tr-demo tr-ease">Hover me</div>
+            <div class="tr-ball tr-ball-ease"></div>
+        </div>
+    </div>
+
+    <h4>4.2 linear</h4>
+    <div class="tr-example-block">
+        <pre><code>transition-timing-function: linear;</code></pre>
+
+        <div class="tr-demo-wrapper">
+            <div class="tr-demo tr-linear">Hover me</div>
+            <div class="tr-ball tr-ball-linear"></div>
+        </div>
+    </div>
+
+    <h4>4.3 ease-in</h4>
+    <div class="tr-example-block">
+        <pre><code>transition-timing-function: ease-in;</code></pre>
+
+        <div class="tr-demo-wrapper">
+            <div class="tr-demo tr-ease-in">Hover me</div>
+            <div class="tr-ball tr-ball-ease-in"></div>
+        </div>
+    </div>
+
+    <h4>4.4 ease-out</h4>
+    <div class="tr-example-block">
+        <pre><code>transition-timing-function: ease-out;</code></pre>
+
+        <div class="tr-demo-wrapper">
+            <div class="tr-demo tr-ease-out">Hover me</div>
+            <div class="tr-ball tr-ball-ease-out"></div>
+        </div>
+    </div>
+
+    <h4>4.5 ease-in-out</h4>
+    <div class="tr-example-block">
+        <pre><code>transition-timing-function: ease-in-out;</code></pre>
+
+        <div class="tr-demo-wrapper">
+            <div class="tr-demo tr-ease-in-out">Hover me</div>
+            <div class="tr-ball tr-ball-ease-in-out"></div>
+        </div>
+    </div>
+
+    <h4>4.6 cubic-bezier()</h4>
+    <div class="tr-example-block">
+        <pre><code>transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);</code></pre>
+
+        <div class="tr-demo-wrapper">
+            <div class="tr-demo tr-bezier">Hover me</div>
+            <div class="tr-ball tr-ball-bezier"></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         5. transition-delay
+    ====================================================== -->
+    <h3>5. transition-delay — Delay before animation starts</h3>
+
+    <h4>5.1 Delay of 1s</h4>
+    <div class="tr-example-block">
+        <pre><code>transition-delay: 1s;</code></pre>
+
+        <div class="tr-demo-wrapper">
+            <div class="tr-demo tr-delay">Hover me</div>
+            <div class="tr-ball tr-ball-delay"></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         6. Multiple Transitions
+    ====================================================== -->
+    <h3>6. Multiple Transitions</h3>
+
+    <h4>6.1 Animate width + background together</h4>
+    <div class="tr-example-block">
+        <pre><code>transition: width 1s ease, background-color 0.6s ease;</code></pre>
+
+        <div class="tr-demo-wrapper">
+            <div class="tr-demo tr-multiple">Hover me</div>
+            <div class="tr-ball tr-ball-multiple"></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         7. Shorthand
+    ====================================================== -->
+    <h3>7. Shorthand Transition</h3>
+
+    <h4>7.1 Full shorthand</h4>
+    <div class="tr-example-block">
+        <pre><code>transition: all 0.5s ease-in-out 0.2s;</code></pre>
+
+        <div class="tr-demo-wrapper">
+            <div class="tr-demo tr-shorthand">Hover me</div>
+            <div class="tr-ball tr-ball-shorthand"></div>
+        </div>
+    </div>
+
+</section>
+
+<section id="animations" class="css-section">
+    <h2>CSS Animations</h2>
+
+    <p>
+        The <b>animation</b> property allows elements to move, rotate, fade, grow,
+        or transform over time using <b>@keyframes</b>. Animations can loop,
+        reverse, pause, and control how styles apply before and after animation.
+    </p>
+
+    <hr>
+
+    <!-- ======================================================
+         1. Keyframes Syntax
+    ====================================================== -->
+    <h3>1. @keyframes — Defining animation frames</h3>
+
+    <div class="an-example-block">
+<pre><code>@keyframes example {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}</code></pre>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         2. animation-name
+    ====================================================== -->
+    <h3>2. animation-name — Which animation to run</h3>
+
+    <h4>2.1 Fade in</h4>
+    <div class="an-example-block">
+        <pre><code>animation-name: fadeIn;</code></pre>
+
+        <div class="an-demo-wrapper">
+            <div class="an-demo an-fadeIn">Fade In</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         3. animation-duration
+    ====================================================== -->
+    <h3>3. animation-duration — How long animation runs</h3>
+
+    <h4>3.1 2 second animation</h4>
+    <div class="an-example-block">
+        <pre><code>animation-duration: 2s;</code></pre>
+
+        <div class="an-demo-wrapper">
+            <div class="an-demo an-duration">2 Seconds</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         4. animation-timing-function
+    ====================================================== -->
+    <h3>4. animation-timing-function — Speed curve</h3>
+
+    <h4>4.1 ease</h4>
+    <div class="an-example-block">
+        <pre><code>animation-timing-function: ease;</code></pre>
+
+        <div class="an-demo-wrapper">
+            <div class="an-demo an-ease">ease</div>
+        </div>
+    </div>
+
+    <h4>4.2 linear</h4>
+    <div class="an-example-block">
+        <pre><code>animation-timing-function: linear;</code></pre>
+
+        <div class="an-demo-wrapper">
+            <div class="an-demo an-linear">linear</div>
+        </div>
+    </div>
+
+    <h4>4.3 ease-in</h4>
+    <div class="an-example-block">
+        <pre><code>animation-timing-function: ease-in;</code></pre>
+
+        <div class="an-demo-wrapper">
+            <div class="an-demo an-ease-in">ease-in</div>
+        </div>
+    </div>
+
+    <h4>4.4 ease-out</h4>
+    <div class="an-example-block">
+        <pre><code>animation-timing-function: ease-out;</code></pre>
+
+        <div class="an-demo-wrapper">
+            <div class="an-demo an-ease-out">ease-out</div>
+        </div>
+    </div>
+
+    <h4>4.5 cubic-bezier()</h4>
+    <div class="an-example-block">
+        <pre><code>animation-timing-function:
+    cubic-bezier(0.68,-0.55,0.27,1.55);</code></pre>
+
+        <div class="an-demo-wrapper">
+            <div class="an-demo an-bezier">cubic-bezier</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         5. animation-delay
+    ====================================================== -->
+    <h3>5. animation-delay — Wait before animation starts</h3>
+
+    <h4>5.1 Delay of 1 second</h4>
+    <div class="an-example-block">
+        <pre><code>animation-delay: 1s;</code></pre>
+
+        <div class="an-demo-wrapper">
+            <div class="an-demo an-delay">Delay</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         6. animation-iteration-count
+    ====================================================== -->
+    <h3>6. animation-iteration-count — Number of times animation repeats</h3>
+
+    <h4>6.1 Loop 3 times</h4>
+    <div class="an-example-block">
+        <pre><code>animation-iteration-count: 3;</code></pre>
+
+        <div class="an-demo-wrapper">
+            <div class="an-demo an-count">3 Loops</div>
+        </div>
+    </div>
+
+    <h4>6.2 Infinite Loop</h4>
+    <div class="an-example-block">
+        <pre><code>animation-iteration-count: infinite;</code></pre>
+
+        <div class="an-demo-wrapper">
+            <div class="an-demo an-infinite">Infinity Loop</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         7. animation-direction
+    ====================================================== -->
+    <h3>7. animation-direction — Direction animation runs</h3>
+
+    <ul>
+        <li>normal — forward</li>
+        <li>reverse — backward</li>
+        <li>alternate — forward then backward</li>
+        <li>alternate-reverse — backward then forward</li>
+    </ul>
+
+    <h4>7.1 alternate</h4>
+    <div class="an-example-block">
+        <pre><code>animation-direction: alternate;</code></pre>
+
+        <div class="an-demo-wrapper">
+            <div class="an-demo an-alternate">Alternate</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         8. animation-fill-mode
+    ====================================================== -->
+    <h3>8. animation-fill-mode — Apply styles before/after animation</h3>
+
+    <ul>
+        <li>none — no style retained</li>
+        <li>forwards — keep final style</li>
+        <li>backwards — apply starting style during delay</li>
+        <li>both — apply both</li>
+    </ul>
+
+    <h4>8.1 forwards</h4>
+    <div class="an-example-block">
+        <pre><code>animation-fill-mode: forwards;</code></pre>
+
+        <div class="an-demo-wrapper">
+            <div class="an-demo an-forwards">forwards</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         9. animation-play-state
+    ====================================================== -->
+    <h3>9. animation-play-state — Play/Pause animation</h3>
+
+    <h4>9.1 Paused on Hover</h4>
+    <div class="an-example-block">
+        <pre><code>animation-play-state: paused;</code></pre>
+
+        <div class="an-demo-wrapper">
+            <div class="an-demo an-play-pause">Hover to Pause</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         10. Multiple Animations
+    ====================================================== -->
+    <h3>10. Multiple Animations</h3>
+
+    <h4>10.1 Move + Fade</h4>
+    <div class="an-example-block">
+        <pre><code>animation:
+    slide 2s ease-in-out infinite,
+    fade 3s ease infinite;</code></pre>
+
+        <div class="an-demo-wrapper">
+            <div class="an-demo an-multiple">Move + Fade</div>
+        </div>
+    </div>
+
+    <section id="animation-complete" class="css-section">
+    <h2>Complete Animation Example (All Properties)</h2>
+
+    <p>
+        This single example demonstrates every animation property in one element:
+        <b>name, duration, timing-function, delay, iteration-count, direction, fill-mode,
+        play-state, and multiple animations.</b>
+    </p>
+
+    <div class="an-example-block">
+<pre><code>animation:
+    slideMove 3s ease-in-out 0.5s infinite alternate both,
+    fadeGlow 2s linear 0s infinite;
+
+/* Covers:
+animation-name
+animation-duration
+animation-timing-function
+animation-delay
+animation-iteration-count
+animation-direction
+animation-fill-mode
+animation-play-state
+multiple animations
+*/</code></pre>
+
+        <div class="an-demo-wrapper">
+            <div class="an-demo an-complete-animation">
+                Full Animation Demo
+            </div>
+        </div>
+    </div>
+
+    <p><b>Hover the box to pause animation (uses play-state)</b></p>
+</section>
+</section>
+
+  <section id="filters" class="css-section">
+    <h2>CSS Filters</h2>
+
+    <p>
+        The <b>filter</b> property applies graphical effects such as blur, brightness,
+        contrast, grayscale, hue-rotation, invert, saturate, sepia, and drop-shadow.
+        These are commonly used for images and UI elements.
+    </p>
+
+    <hr>
+
+    <!-- 1. SYNTAX -->
+    <h3>1. filter Syntax</h3>
+
+    <div class="fl-example-block">
+<pre><code>filter: function(value);</code></pre>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         2. blur()
+    ====================================================== -->
+    <h3>2. blur() — Applies a Gaussian blur</h3>
+
+    <h4>2.1 blur(5px)</h4>
+    <div class="fl-example-block">
+        <pre><code>filter: blur(5px);</code></pre>
+
+        <div class="fl-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="fl-demo fl-blur" alt="blur demo">
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         3. brightness()
+    ====================================================== -->
+    <h3>3. brightness() — Adjust brightness</h3>
+
+    <h4>3.1 brightness(150%)</h4>
+    <div class="fl-example-block">
+        <pre><code>filter: brightness(150%);</code></pre>
+
+        <div class="fl-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="fl-demo fl-brightness" alt="brightness demo">
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         4. contrast()
+    ====================================================== -->
+    <h3>4. contrast() — Adjust contrast level</h3>
+
+    <h4>4.1 contrast(200%)</h4>
+    <div class="fl-example-block">
+        <pre><code>filter: contrast(200%);</code></pre>
+
+        <div class="fl-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="fl-demo fl-contrast" alt="contrast demo">
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         5. grayscale()
+    ====================================================== -->
+    <h3>5. grayscale() — Convert to black & white</h3>
+
+    <h4>5.1 grayscale(100%)</h4>
+    <div class="fl-example-block">
+        <pre><code>filter: grayscale(100%);</code></pre>
+
+        <div class="fl-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="fl-demo fl-grayscale" alt="grayscale demo">
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         6. invert()
+    ====================================================== -->
+    <h3>6. invert() — Invert colors</h3>
+
+    <h4>6.1 invert(100%)</h4>
+    <div class="fl-example-block">
+        <pre><code>filter: invert(100%);</code></pre>
+
+        <div class="fl-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="fl-demo fl-invert" alt="invert demo">
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         7. saturate()
+    ====================================================== -->
+    <h3>7. saturate() — Control color intensity</h3>
+
+    <h4>7.1 saturate(250%)</h4>
+    <div class="fl-example-block">
+        <pre><code>filter: saturate(250%);</code></pre>
+
+        <div class="fl-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="fl-demo fl-saturate" alt="saturate demo">
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         8. sepia()
+    ====================================================== -->
+    <h3>8. sepia() — Vintage sepia tone</h3>
+
+    <h4>8.1 sepia(100%)</h4>
+    <div class="fl-example-block">
+        <pre><code>filter: sepia(100%);</code></pre>
+
+        <div class="fl-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="fl-demo fl-sepia" alt="sepia demo">
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         9. hue-rotate()
+    ====================================================== -->
+    <h3>9. hue-rotate() — Rotate hue color wheel</h3>
+
+    <h4>9.1 hue-rotate(120deg)</h4>
+    <div class="fl-example-block">
+        <pre><code>filter: hue-rotate(120deg);</code></pre>
+
+        <div class="fl-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="fl-demo fl-hue" alt="hue demo">
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         10. drop-shadow()
+    ====================================================== -->
+    <h3>10. drop-shadow() — Soft shadow outside edges</h3>
+
+    <h4>10.1 drop-shadow(8px 8px 10px rgba(0,0,0,0.5))</h4>
+    <div class="fl-example-block">
+        <pre><code>filter: drop-shadow(8px 8px 10px rgba(0,0,0,0.5));</code></pre>
+
+        <div class="fl-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="fl-demo fl-drop-shadow" alt="drop shadow demo">
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         11. Multiple Filters
+    ====================================================== -->
+    <h3>11. Multiple Filters</h3>
+
+    <h4>11.1 grayscale + blur + brightness</h4>
+    <div class="fl-example-block">
+        <pre><code>filter: grayscale(100%) blur(3px) brightness(150%);</code></pre>
+
+        <div class="fl-demo-wrapper">
+            <img src="./Images/Filter.jpg" class="fl-demo fl-multiple" alt="multiple filter demo">
+        </div>
+    </div>
+
+</section>
+
 
 
 </body>

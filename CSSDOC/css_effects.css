@@ -190,3 +190,729 @@ pre code {
   transform: rotateY(180deg);
   backface-visibility: hidden;
 }
+
+
+/* =============================
+   Box-Shadow Section Wrapper Styles
+============================= */
+
+/* Parent block */
+.bs-example-block {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 18px 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+
+    /* To allow shadow/box to overflow naturally */
+    overflow: visible;
+    position: relative;
+}
+
+/* Remove hover effect on parent */
+.bs-example-block:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+/* =============================
+   Box Demo Wrapper
+============================= */
+.bs-demo-wrapper {
+    width: 100%;
+    padding: 40px 0;   /* Ensures box-shadows have enough space */
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+/* =============================
+   Base Demo Box Style
+============================= */
+.bs-demo {
+    width: 200px;
+    height: 80px;
+
+    background: #e0edff;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #1e3a8a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.bs-demo:hover {
+    transform: scale(1.05);
+    background: #c7ddff;
+}
+
+/* =============================
+   Box-Shadow Variants
+============================= */
+
+/* 2.1 Normal Shadow */
+.bs-shadow-basic {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 2.2 Soft Shadow */
+.bs-shadow-soft {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* 2.3 Sharp Shadow */
+.bs-shadow-sharp {
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* 3.1 Spread Shadow */
+.bs-shadow-spread {
+    box-shadow: 0 6px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 4.1 Inset Shadow */
+.bs-shadow-inset {
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* 5.1 Multiple Shadows */
+.bs-shadow-multiple {
+    box-shadow:
+        0 0 5px rgba(0, 0, 0, 0.3),
+        0 8px 20px rgba(0, 0, 0, 0.15),
+        0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* 6.1 Blue Shadow */
+.bs-shadow-blue {
+    box-shadow: 0 8px 18px rgba(59, 130, 246, 0.4);
+}
+
+/* 6.2 Red Glow Shadow */
+.bs-shadow-glow {
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.7);
+}
+
+/* 7.1 Neumorphism Shadow */
+.bs-shadow-neumorph {
+    background: #e8f0ff;
+    box-shadow:
+        8px 8px 16px rgba(0, 0, 0, 0.2),
+       -8px -8px 16px rgba(255, 255, 255, 0.9);
+}
+
+/* 8. Combined Inner + Outer */
+.bs-shadow-combo {
+    box-shadow:
+        inset 4px 4px 8px rgba(0, 0, 0, 0.25),
+        0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* =============================
+   Transition Section Block
+============================= */
+.tr-example-block {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 18px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+
+    overflow: visible;
+    position: relative;
+}
+
+/* No hover effect on parent */
+.tr-example-block:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+/* =============================
+   Wrapper (prevents overlap)
+============================= */
+.tr-demo-wrapper {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+/* =============================
+   Base Demo Box
+============================= */
+.tr-demo {
+    width: 160px;
+    height: 80px;
+    background: #e0edff;
+    border-radius: 10px;
+    border: 2px solid #3b82f6;
+    font-weight: 600;
+    font-size: 15px;
+    color: #1e3a8a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.5s ease; /* base transition */
+}
+
+/* Hover visual effect */
+.tr-demo:hover {
+    transform: scale(1.05);
+    background: #c7ddff;
+}
+
+/* =============================
+   2. transition-property
+============================= */
+
+/* Animate width */
+.tr-transition-width {
+    transition-property: width;
+}
+.tr-transition-width:hover {
+    width: 260px;
+}
+
+/* Animate background */
+.tr-transition-bg {
+    transition-property: background-color;
+}
+.tr-transition-bg:hover {
+    background-color: #60a5fa;
+}
+
+/* =============================
+   3. transition-duration
+============================= */
+
+.tr-transition-duration {
+    transition-duration: 1s;
+}
+.tr-transition-duration:hover {
+    background-color: #93c5fd;
+    width: 240px;
+}
+
+.tr-transition-duration-fast {
+    transition-duration: 0.2s;
+}
+.tr-transition-duration-fast:hover {
+    background-color: #3b82f6;
+    width: 240px;
+}
+
+/* =============================
+   4. transition-timing-function
+============================= */
+
+.tr-ease {
+    transition-timing-function: ease;
+}
+.tr-ease:hover {
+    width: 260px;
+}
+
+.tr-linear {
+    transition-timing-function: linear;
+}
+.tr-linear:hover {
+    width: 260px;
+}
+
+.tr-ease-in {
+    transition-timing-function: ease-in;
+}
+.tr-ease-in:hover {
+    width: 260px;
+}
+
+.tr-ease-out {
+    transition-timing-function: ease-out;
+}
+.tr-ease-out:hover {
+    width: 260px;
+}
+
+.tr-ease-in-out {
+    transition-timing-function: ease-in-out;
+}
+.tr-ease-in-out:hover {
+    width: 260px;
+}
+
+.tr-bezier {
+    transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
+}
+.tr-bezier:hover {
+    width: 260px;
+}
+
+/* =============================
+   5. transition-delay
+============================= */
+
+.tr-delay {
+    transition-delay: 1s;
+}
+.tr-delay:hover {
+    width: 250px;
+    background: #60a5fa;
+}
+
+/* =============================
+   6. Multiple Transitions
+============================= */
+
+.tr-multiple {
+    transition: width 1s ease, background-color 0.6s ease;
+}
+.tr-multiple:hover {
+    width: 260px;
+    background-color: #3b82f6;
+}
+
+/* =============================
+   7. Shorthand Transition
+============================= */
+
+.tr-shorthand {
+    transition: all 0.5s ease-in-out 0.2s;
+}
+.tr-shorthand:hover {
+    width: 260px;
+    background: #2563eb;
+    color: white;
+}
+
+/* =====================================================
+   Rolling Ball Under Demo Boxes
+===================================================== */
+
+.tr-ball {
+    width: 20px;
+    height: 20px;
+    background: #3b82f6;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10px;       /* placed slightly below the box */
+    left: 0;
+    
+    /* Start position */
+    transform: translateX(0) rotate(0deg);
+
+    /* Smooth rolling on hover */
+    transition: transform 0.8s ease;
+}
+
+/* Make wrapper relative for correct ball positioning */
+.tr-demo-wrapper {
+    position: relative;
+}
+
+/* BALL MOVES WHEN THE BOX IS HOVERED */
+.tr-demo-wrapper:hover .tr-ball {
+    transform: translateX(140px) rotate(360deg);
+}
+
+/* =============================
+   Animation Section Block
+============================= */
+.an-example-block {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 18px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+
+    overflow: visible;
+    position: relative;
+}
+
+/* Remove hover styling from parent */
+.an-example-block:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+/* =============================
+   Wrapper (avoids overlap)
+============================= */
+.an-demo-wrapper {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+/* =============================
+   Base Animation Demo Box
+============================= */
+.an-demo {
+    width: 160px;
+    height: 80px;
+    background: #e0edff;
+    border-radius: 10px;
+    border: 2px solid #3b82f6;
+    font-weight: 600;
+    font-size: 15px;
+    color: #1e3a8a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Default animation properties */
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/* Hover visual cue only */
+.an-demo:hover {
+    transform: scale(1.05);
+    background: #c7ddff;
+}
+
+/* ======================================================
+   1. Keyframes — All animations used in this module
+====================================================== */
+
+/* fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* simple move sideways */
+@keyframes slide {
+    0%   { transform: translateX(0);   }
+    50%  { transform: translateX(60px); }
+    100% { transform: translateX(0);   }
+}
+
+/* fade animation */
+@keyframes fade {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* bounce easing demo */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-20px); }
+}
+
+/* delayed */
+@keyframes delayed {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* alternate direction */
+@keyframes altMove {
+    from { transform: translateX(0); }
+    to   { transform: translateX(80px); }
+}
+
+/* fill-mode forwards */
+@keyframes fillForward {
+    from { background: #93c5fd; }
+    to   { background: #2563eb; color: white; }
+}
+
+/* play/pause */
+@keyframes rotateBox {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* ======================================================
+   2. animation-name
+====================================================== */
+.an-fadeIn {
+    animation-name: fadeIn;
+}
+
+/* ======================================================
+   3. animation-duration
+====================================================== */
+.an-duration {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+.an-duration {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+.an-duration-fast {
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+
+/* ======================================================
+   4. animation-timing-function
+====================================================== */
+.an-ease {
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+.an-linear {
+    animation-name: bounce;
+    animation-timing-function: linear;
+}
+
+.an-ease-in {
+    animation-name: bounce;
+    animation-timing-function: ease-in;
+}
+
+.an-ease-out {
+    animation-name: bounce;
+    animation-timing-function: ease-out;
+}
+
+.an-ease-in-out {
+    animation-name: bounce;
+    animation-timing-function: ease-in-out;
+}
+
+.an-bezier {
+    animation-name: bounce;
+    animation-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
+}
+
+/* ======================================================
+   5. animation-delay
+====================================================== */
+.an-delay {
+    animation-name: delayed;
+    animation-delay: 1s;
+}
+
+/* ======================================================
+   6. animation-iteration-count
+====================================================== */
+.an-count {
+    animation-name: bounce;
+    animation-iteration-count: 3;
+}
+
+.an-infinite {
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+}
+
+/* ======================================================
+   7. animation-direction
+====================================================== */
+.an-alternate {
+    animation-name: altMove;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+/* ======================================================
+   8. animation-fill-mode
+====================================================== */
+.an-forwards {
+    animation-name: fillForward;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/* ======================================================
+   9. animation-play-state
+====================================================== */
+.an-play-pause {
+    animation-name: rotateBox;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+/* Pause on hover */
+.an-play-pause:hover {
+    animation-play-state: paused;
+}
+
+/* ======================================================
+   10. Multiple Animations
+====================================================== */
+.an-multiple {
+    animation:
+        slide 2s ease-in-out infinite,
+        fade 3s ease infinite;
+}
+
+/* Parent block */
+.an-example-block {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Wrapper */
+.an-demo-wrapper {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Demo box */
+.an-complete-animation {
+    width: 200px;
+    height: 80px;
+    background: #e0edff;
+    border-radius: 10px;
+    border: 2px solid #3b82f6;
+    color: #1e3a8a;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 👉 All animation properties combined */
+    animation:
+        slideMove 3s ease-in-out 0.5s infinite alternate both,
+        fadeGlow 2s linear 0s infinite;
+}
+
+/* Pause animation on hover */
+.an-complete-animation:hover {
+    animation-play-state: paused;
+}
+
+/* Keyframes for sliding movement */
+@keyframes slideMove {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(60px); }
+    100% { transform: translateX(0); }
+}
+
+/* Keyframes for glowing fade effect */
+@keyframes fadeGlow {
+    0%   { opacity: 1; box-shadow: 0 0 5px rgba(59,130,246,0.4); }
+    50%  { opacity: 0.4; box-shadow: 0 0 20px rgba(59,130,246,0.7); }
+    100% { opacity: 1; box-shadow: 0 0 5px rgba(59,130,246,0.4); }
+}
+
+/* =============================
+   Filter Section Block
+============================= */
+.fl-example-block {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 18px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+
+    overflow: visible;
+    position: relative;
+}
+
+/* No hover change on parent */
+.fl-example-block:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+/* =============================
+   Wrapper (avoids overlap)
+============================= */
+.fl-demo-wrapper {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+/* =============================
+   Image Demo Base Style
+============================= */
+.fl-demo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #3b82f6;
+
+    transition: 0.4s ease;
+}
+
+/* Hover effect (scale-up only) */
+.fl-demo:hover {
+    transform: scale(1.06);
+}
+
+/* =============================
+   FILTER TYPES
+============================= */
+
+/* 2. blur() */
+.fl-blur {
+    filter: blur(5px);
+}
+
+/* 3. brightness() */
+.fl-brightness {
+    filter: brightness(150%);
+}
+
+/* 4. contrast() */
+.fl-contrast {
+    filter: contrast(200%);
+}
+
+/* 5. grayscale() */
+.fl-grayscale {
+    filter: grayscale(100%);
+}
+
+/* 6. invert() */
+.fl-invert {
+    filter: invert(100%);
+}
+
+/* 7. saturate() */
+.fl-saturate {
+    filter: saturate(250%);
+}
+
+/* 8. sepia() */
+.fl-sepia {
+    filter: sepia(100%);
+}
+
+/* 9. hue-rotate() */
+.fl-hue {
+    filter: hue-rotate(120deg);
+}
+
+/* 10. drop-shadow() */
+.fl-drop-shadow {
+    filter: drop-shadow(8px 8px 10px rgba(0,0,0,0.5));
+}
+
+/* 11. Multiple Filters */
+.fl-multiple {
+    filter: grayscale(100%) blur(3px) brightness(150%);
+}
