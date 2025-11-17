@@ -525,6 +525,168 @@ pre code {
     transform: translateX(140px) rotate(360deg);
 }
 
+/* =====================================================
+   Box-Shadow Example Block
+===================================================== */
+.bs-example-block {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 18px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+
+    overflow: visible;
+    position: relative;
+}
+
+.bs-example-block:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+/* =====================================================
+   Wrapper (prevents overlap of demo box)
+===================================================== */
+.bs-demo-wrapper {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* =====================================================
+   Base Demo Box
+===================================================== */
+.bs-demo {
+    width: 200px;
+    height: 100px;
+
+    background: #e0edff;
+    border-radius: 10px;
+    border: 2px solid #3b82f6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e3a8a;
+
+    transition: transform 0.3s ease;
+}
+
+/* Small hover scale effect */
+.bs-demo:hover {
+    transform: scale(1.06);
+}
+
+/* =====================================================
+   1. BOX-SHADOW PARAMETERS
+===================================================== */
+
+/* offset-x */
+.bs-shadow-offset-x {
+    box-shadow: 20px 0 10px rgba(0,0,0,0.3);
+}
+
+/* offset-y */
+.bs-shadow-offset-y {
+    box-shadow: 0 20px 10px rgba(0,0,0,0.3);
+}
+
+/* blur-radius */
+.bs-shadow-blur {
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* spread-radius */
+.bs-shadow-spread {
+    box-shadow: 0 0 10px 15px rgba(0,0,0,0.3);
+}
+
+/* color shadow */
+.bs-shadow-color {
+    box-shadow: 0 0 15px rgba(59,130,246,0.7);
+}
+
+/* =====================================================
+   2. BASIC SHADOWS
+===================================================== */
+
+/* Normal shadow */
+.bs-shadow-basic {
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Soft shadow */
+.bs-shadow-soft {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Sharp shadow */
+.bs-shadow-sharp {
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.4);
+}
+
+/* =====================================================
+   3. SPREAD SHADOW
+===================================================== */
+.bs-shadow-spread {
+    box-shadow: 0 6px 10px 5px rgba(0,0,0,0.3);
+}
+
+/* =====================================================
+   4. INSET SHADOW
+===================================================== */
+.bs-shadow-inset {
+    box-shadow: inset 4px 4px 10px rgba(0,0,0,0.4);
+}
+
+/* =====================================================
+   5. MULTIPLE SHADOWS
+===================================================== */
+.bs-shadow-multiple {
+    box-shadow: 
+        0 0 5px rgba(0,0,0,0.3),
+        0 8px 20px rgba(0,0,0,0.15),
+        0 12px 35px rgba(0,0,0,0.1);
+}
+
+/* =====================================================
+   6. COLORED SHADOWS
+===================================================== */
+.bs-shadow-blue {
+    box-shadow: 0 8px 18px rgba(59,130,246,0.4);
+}
+
+.bs-shadow-glow {
+    box-shadow: 0 0 15px rgba(239,68,68,0.7);
+}
+
+/* =====================================================
+   7. NEUMORPHISM
+===================================================== */
+.bs-shadow-neumorph {
+    background: #e8ecf3;
+    border: none;
+
+    box-shadow:
+        8px 8px 16px rgba(0,0,0,0.2),
+       -8px -8px 16px rgba(255,255,255,0.8);
+}
+
+/* =====================================================
+   8. INNER + OUTER COMBO
+===================================================== */
+.bs-shadow-combo {
+    box-shadow:
+        inset 4px 4px 8px rgba(0,0,0,0.25),
+        0 8px 15px rgba(0,0,0,0.2);
+}
+
+
 /* =============================
    Animation Section Block
 ============================= */
