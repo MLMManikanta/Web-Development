@@ -755,86 +755,127 @@ grid-template-areas:
 <!-- 3.6 justify-content -->
 <h3>3.6 justify-content</h3>
 <p>
-  Aligns the <b>entire grid horizontally</b> inside its container.  
-  Useful when the grid doesn’t occupy the full width.
+  <b>justify-content</b> controls how the <b>entire grid</b> is positioned 
+  horizontally inside its container.  
+  It only works when the grid is <u>smaller than the container width</u>.
 </p>
 
 <h4>Examples:</h4>
 
 <h5>3.6.1 start</h5>
-<div class="display-demo grid-justify-start"><div>1</div><div>2</div><div>3</div></div>
+<div class="grid-demo justify-start">
+  <div>1</div><div>2</div><div>3</div>
+</div>
 
 <h5>3.6.2 center</h5>
-<div class="display-demo grid-justify-center"><div>1</div><div>2</div><div>3</div></div>
+<div class="grid-demo justify-center">
+  <div>1</div><div>2</div><div>3</div>
+</div>
 
 <h5>3.6.3 space-between</h5>
-<div class="display-demo grid-justify-between"><div>1</div><div>2</div><div>3</div></div>
+<div class="grid-demo justify-between">
+  <div>1</div><div>2</div><div>3</div>
+</div>
+
+<h5>3.6.4 space-around</h5>
+<div class="grid-demo justify-around">
+  <div>1</div><div>2</div><div>3</div>
+</div>
+
+<h5>3.6.5 space-evenly</h5>
+<div class="grid-demo justify-evenly">
+  <div>1</div><div>2</div><div>3</div>
+</div>
 
 <pre><code>
 justify-content: start | center | end | space-between | space-around | space-evenly;
-/* Aligns entire grid along horizontal axis */
+/* Aligns entire grid along the horizontal axis */
 </code></pre>
 <hr>
+
 
 <!-- 3.7 align-content -->
 <h3>3.7 align-content</h3>
 <p>
-  Aligns the <b>grid tracks vertically</b> when the grid’s height is greater than the total track size.
-  Works only when there is extra space in the container.
+  <b>align-content</b> controls how the <b>grid tracks are spaced vertically</b> 
+  when the grid’s total height is smaller than the container height.
 </p>
 
 <h4>Examples:</h4>
 
 <h5>3.7.1 start</h5>
-<div class="display-demo grid-align-start"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
+<div class="ac-box ac-start">
+  <div>1</div><div>2</div><div>3</div>
+  <div>4</div><div>5</div><div>6</div>
+</div>
 
 <h5>3.7.2 center</h5>
-<div class="display-demo grid-align-center"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
+<div class="ac-box ac-center">
+  <div>1</div><div>2</div><div>3</div>
+  <div>4</div><div>5</div><div>6</div>
+</div>
 
 <h5>3.7.3 end</h5>
-<div class="display-demo grid-align-end"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
+<div class="ac-box ac-end">
+  <div>1</div><div>2</div><div>3</div>
+  <div>4</div><div>5</div><div>6</div>
+</div>
 
 <h5>3.7.4 space-between</h5>
-<div class="display-demo grid-align-between"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
+<div class="ac-box ac-between">
+  <div>1</div><div>2</div><div>3</div>
+  <div>4</div><div>5</div><div>6</div>
+</div>
 
 <h5>3.7.5 space-around</h5>
-<div class="display-demo grid-align-around"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
+<div class="ac-box ac-around">
+  <div>1</div><div>2</div><div>3</div>
+  <div>4</div><div>5</div><div>6</div>
+</div>
 
 <h5>3.7.6 space-evenly</h5>
-<div class="display-demo grid-align-evenly"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
+<div class="ac-box ac-evenly">
+  <div>1</div><div>2</div><div>3</div>
+  <div>4</div><div>5</div><div>6</div>
+</div>
 
 <pre><code>
 align-content: start | center | end | space-between | space-around | space-evenly | stretch;
 </code></pre>
-
-  <hr>
+<hr>
 
   <!-- 3.8 justify-items -->
 <h3>3.8 justify-items</h3>
 <p>
-  Controls horizontal alignment of <b>items within each grid cell</b>.
+  Controls the horizontal alignment of <b>each grid item within its own cell</b>.
 </p>
 
 <h4>Examples:</h4>
 
 <h5>3.8.1 start</h5>
-<div class="display-demo grid-justifyitems-start"><div>1</div><div>2</div><div>3</div></div>
+<div class="ji-container ji-start">
+  <div>1</div><div>2</div><div>3</div>
+</div>
 
 <h5>3.8.2 center</h5>
-<div class="display-demo grid-justifyitems-center"><div>1</div><div>2</div><div>3</div></div>
+<div class="ji-container ji-center">
+  <div>1</div><div>2</div><div>3</div>
+</div>
 
 <h5>3.8.3 end</h5>
-<div class="display-demo grid-justifyitems-end"><div>1</div><div>2</div><div>3</div></div>
+<div class="ji-container ji-end">
+  <div>1</div><div>2</div><div>3</div>
+</div>
 
 <h5>3.8.4 stretch</h5>
-<div class="display-demo grid-justifyitems-stretch"><div>1</div><div>2</div><div>3</div></div>
+<div class="ji-container ji-stretch">
+  <div>1</div><div>2</div><div>3</div>
+</div>
 
 <pre><code>
 justify-items: start | center | end | stretch;
 </code></pre>
-
-
-  <hr>
+<hr>
 
   <!-- 3.9 align-items -->
 <h3>3.9 align-items</h3>

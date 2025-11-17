@@ -570,47 +570,97 @@ code {
 /* ===============================
    3.6 justify-content (entire grid alignment)
 ================================= */
-.grid-justify-start { justify-content: start; grid-template-columns: repeat(3, 60px); }
-.grid-justify-center { justify-content: center; grid-template-columns: repeat(3, 60px); }
-.grid-justify-end { justify-content: end; grid-template-columns: repeat(3, 60px); }
-.grid-justify-between { justify-content: space-between; grid-template-columns: repeat(3, 60px); }
-.grid-justify-around { justify-content: space-around; grid-template-columns: repeat(3, 60px); }
-.grid-justify-evenly { justify-content: space-evenly; grid-template-columns: repeat(3, 60px); }
-
-/* ===============================
-   3.7 align-content (vertical grid alignment)
-================================= */
-[class*="grid-align-"] {
-  grid-template-columns: repeat(3, 60px);
-  grid-template-rows: repeat(2, 50px);
-  height: 200px;
+.grid-demo {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 60px);
+    background: #f0f0f077;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
-.grid-align-start { align-content: start; }
-.grid-align-center { align-content: center; }
-.grid-align-end { align-content: end; }
-.grid-align-between { align-content: space-between; }
-.grid-align-around { align-content: space-around; }
-.grid-align-evenly { align-content: space-evenly; }
+
+/* Box styling */
+.grid-demo div {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Justify Content Variants */
+.justify-start   { justify-content: start; }
+.justify-center  { justify-content: center; }
+.justify-end     { justify-content: end; }
+.justify-between { justify-content: space-between; }
+.justify-around  { justify-content: space-around; }
+.justify-evenly  { justify-content: space-evenly; }
+
+
+/* ===================
+   3.7 align-content
+===================== */
+/* Base container for align-content examples */
+.ac-box {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(2, 50px);
+    height: 200px;
+    background: #f8f8f8;
+    padding: 15px;
+    border: 1px solid #ccc;
+    gap: 10px;
+}
+
+/* Grid items (keep same color style) */
+.ac-box div {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 6px;
+}
+
+/* align-content variations */
+.ac-start   { align-content: start; }
+.ac-center  { align-content: center; }
+.ac-end     { align-content: end; }
+.ac-between { align-content: space-between; }
+.ac-around  { align-content: space-around; }
+.ac-evenly  { align-content: space-evenly; }
 
 /* ===============================
    3.8 justify-items (horizontal cell alignment)
 ================================= */
-.grid-justifyitems-start {
-  justify-items: start;
-  grid-template-columns: repeat(3, 100px);
+.ji-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    background: #f8f8f8;
+    padding: 15px;
+    border: 1px solid #ccc;
 }
-.grid-justifyitems-center {
-  justify-items: center;
-  grid-template-columns: repeat(3, 100px);
+
+/* Item boxes */
+.ji-container div {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    border-radius: 6px;
 }
-.grid-justifyitems-end {
-  justify-items: end;
-  grid-template-columns: repeat(3, 100px);
-}
-.grid-justifyitems-stretch {
-  justify-items: stretch;
-  grid-template-columns: repeat(3, 100px);
-}
+
+/* justify-items variations */
+.ji-start   { justify-items: start; }
+.ji-center  { justify-items: center; }
+.ji-end     { justify-items: end; }
+.ji-stretch { justify-items: stretch; }
+
+
 
 /* ===============================
    3.9 align-items (vertical cell alignment)
