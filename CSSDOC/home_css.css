@@ -76,6 +76,10 @@ li {
     letter-spacing: 3px;
 }
 
+ul + p {
+    color: brown;
+}
+
 p, li {
   /*   letter-spacing: 10px; */
     line-height: 29px;
@@ -85,6 +89,7 @@ p, li {
 
 img {
     float: left;
+    overflow: hidden;
 }
 
 
