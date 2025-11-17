@@ -1,0 +1,192 @@
+/* =============================
+   GLOBAL RESET
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background: #f7f9fc;
+  padding: 24px 12%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #0f172a;
+  margin-bottom: 25px;
+}
+
+/* =============================
+   Section Styling
+============================= */
+.css-section {
+  margin: 35px 0;
+  padding: 0 10px;
+}
+
+.css-section h2 {
+  font-size: 1.8rem;
+  color: #0f172a;
+  border-left: 5px solid #3b82f6;
+  padding-left: 10px;
+  margin-bottom: 16px;
+}
+
+.css-section h3 {
+  margin-top: 25px;
+  color: #1e3a8a;
+}
+
+.css-section h4 {
+  margin: 18px 0 6px;
+  color: #0f172a;
+}
+
+.css-section p {
+  margin: 6px 0 12px;
+  color: #374151;
+}
+
+hr {
+  margin: 28px 0;
+  border: none;
+  height: 2px;
+  background: #e5e7eb;
+}
+
+/* =============================
+   Code Block
+============================= */
+pre {
+  background: #eef2ff;
+  padding: 12px;
+  font-size: 14px;
+  border-left: 5px solid #6366f1;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 12px;
+}
+
+pre code {
+  color: #b91c1c;
+  font-family: Consolas, monospace;
+}
+
+/* =============================
+   Example Card Block (PARENT)
+============================= */
+.tf-example-block {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 18px 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+
+  /* Allow rotated/3D elements to breathe */
+  overflow: visible;
+  position: relative;
+}
+
+/* Remove hover effect completely */
+.tf-example-block:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  transform: none;
+}
+
+/* =============================
+   Demo Wrapper (prevents overlap)
+============================= */
+.tf-demo-wrapper {
+  width: 100%;
+  padding: 50px 0;      /* Ensures safe space for rotated elements */
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
+/* =============================
+   Demo Box Base Style
+============================= */
+.tf-demo {
+  width: 180px;
+  height: 80px;
+  background: #dbeafe;
+  border: 2px solid #3b82f6;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1e3a8a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.tf-demo:hover {
+  background: #bfdbfe;
+  transform: scale(1.1);
+}
+
+/* =============================
+   2D TRANSFORMS
+============================= */
+.tf-demo-translate   { transform: translate(40px, 15px); }
+.tf-demo-translateX  { transform: translateX(60px); }
+.tf-demo-translateY  { transform: translateY(40px); }
+.tf-demo-scale       { transform: scale(1.4); }
+.tf-demo-scaleX      { transform: scaleX(1.6); }
+.tf-demo-scaleY      { transform: scaleY(1.6); }
+.tf-demo-rotate      { transform: rotate(30deg); }
+.tf-demo-skew        { transform: skew(15deg, 8deg); }
+.tf-demo-skewX       { transform: skewX(25deg); }
+.tf-demo-skewY       { transform: skewY(25deg); }
+.tf-demo-matrix      { transform: matrix(1, 0.2, 0.3, 1, 25, 15); }
+
+/* =============================
+   3D TRANSFORMS
+============================= */
+.tf-demo-translateZ  { transform: perspective(400px) translateZ(80px); }
+.tf-demo-rotateX     { transform: perspective(400px) rotateX(45deg); }
+.tf-demo-rotateY     { transform: perspective(400px) rotateY(45deg); }
+.tf-demo-rotateZ     { transform: rotateZ(45deg); }
+.tf-demo-scaleZ      { transform: perspective(400px) scaleZ(2); }
+.tf-demo-matrix3d    { transform: perspective(400px) rotateY(20deg) rotateX(15deg); }
+
+/* =============================
+   SPECIAL PROPERTIES
+============================= */
+.tf-demo-origin {
+  transform-origin: left top;
+  transform: rotate(25deg);
+}
+
+.tf-demo-preserve3d {
+  transform-style: preserve-3d;
+  transform: perspective(400px) rotateY(30deg);
+}
+
+.tf-demo-perspective {
+  perspective: 300px;
+  transform: rotateX(30deg);
+}
+
+.tf-demo-perspective-origin {
+  perspective: 400px;
+  perspective-origin: left top;
+  transform: rotateY(25deg);
+}
+
+.tf-demo-backface {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}

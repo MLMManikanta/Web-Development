@@ -3,9 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Effects</title>
+    <link rel="stylesheet" href="./css_effects.css">
 </head>
 <body>
-    
+    <h1>CSS Effects</h1>
+    <section id="transform" class="css-section">
+    <h2>CSS Transform Property</h2>
+
+    <p>
+        The <b>transform</b> property visually manipulates an element without affecting the page layout.
+        It supports 2D and 3D movement, rotation, scaling, and skewing.
+    </p>
+
+    <hr>
+
+    <!-- 1. SYNTAX -->
+    <h3>1. Transform Syntax</h3>
+    <div class="tf-example-block">
+        <pre><code>transform: function(value);</code></pre>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         2. 2D TRANSFORMS
+    ====================================================== -->
+    <h3>2. 2D Transform Functions</h3>
+
+    <!-- translate() -->
+    <h4>2.1 translate(x, y) — Moves an element in 2D space</h4>
+    <div class="tf-example-block">
+        <pre><code>transform: translate(40px, 15px);</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-translate">translate()</div>
+        </div>
+    </div>
+
+    <!-- translateX() -->
+    <h4>2.2 translateX(x) — Moves horizontally</h4>
+    <div class="tf-example-block">
+        <pre><code>transform: translateX(60px);</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-translateX">translateX()</div>
+        </div>
+    </div>
+
+    <!-- translateY() -->
+    <h4>2.3 translateY(y) — Moves vertically</h4>
+    <div class="tf-example-block">
+        <pre><code>transform: translateY(40px);</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-translateY">translateY()</div>
+        </div>
+    </div>
+
+    <!-- scale() -->
+    <h4>2.4 scale(x, y) — Resizes element</h4>
+    <div class="tf-example-block">
+        <pre><code>transform: scale(1.4);</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-scale">scale()</div>
+        </div>
+    </div>
+
+    <!-- scaleX() -->
+    <h4>2.5 scaleX(x) — Stretches horizontally</h4>
+    <div class="tf-example-block">
+        <pre><code>transform: scaleX(1.6);</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-scaleX">scaleX()</div>
+        </div>
+    </div>
+
+    <!-- scaleY() -->
+    <h4>2.6 scaleY(y) — Stretches vertically</h4>
+    <div class="tf-example-block">
+        <pre><code>transform: scaleY(1.6);</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-scaleY">scaleY()</div>
+        </div>
+    </div>
+
+    <!-- rotate -->
+    <h4>2.7 rotate(angle) — Rotates element</h4>
+    <div class="tf-example-block">
+        <pre><code>transform: rotate(30deg);</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-rotate">rotate()</div>
+        </div>
+    </div>
+
+    <!-- skew -->
+    <h4>2.8 skew(x-angle, y-angle) — Slants element</h4>
+    <div class="tf-example-block">
+        <pre><code>transform: skew(15deg, 8deg);</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-skew">skew()</div>
+        </div>
+    </div>
+
+    <!-- skewX -->
+    <h4>2.9 skewX(angle) — Slants horizontally</h4>
+    <div class="tf-example-block">
+        <pre><code>transform: skewX(25deg);</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-skewX">skewX()</div>
+        </div>
+    </div>
+
+    <!-- skewY -->
+    <h4>2.10 skewY(angle) — Slants vertically</h4>
+    <div class="tf-example-block">
+        <pre><code>transform: skewY(25deg);</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-skewY">skewY()</div>
+        </div>
+    </div>
+
+    <!-- matrix -->
+    <h4>2.11 matrix() — Combines scale/translate/skew</h4>
+    <div class="tf-example-block">
+        <pre><code>transform: matrix(1,0.2,0.3,1,25,15);</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-matrix">matrix()</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ======================================================
+         3D TRANSFORMS
+    ====================================================== -->
+    <h3>3. 3D Transform Functions</h3>
+
+    <!-- translateZ -->
+    <h4>3.1 translateZ(z) — Moves forward/backward</h4>
+    <div class="tf-example-block">
+        <pre><code>transform: translateZ(80px);</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-translateZ">translateZ()</div>
+        </div>
+    </div>
+
+    <!-- rotateX -->
+    <h4>3.2 rotateX(angle) — Rotates around X-axis</h4>
+    <div class="tf-example-block">
+        <pre><code>transform: rotateX(45deg);</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-rotateX">rotateX()</div>
+        </div>
+    </div>
+
+    <!-- rotateY -->
+    <h4>3.3 rotateY(angle) — Rotates around Y-axis</h4>
+    <div class="tf-example-block">
+        <pre><code>transform: rotateY(45deg);</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-rotateY">rotateY()</div>
+        </div>
+    </div>
+
+    <!-- rotateZ -->
+    <h4>3.4 rotateZ(angle) — Rotates around Z-axis</h4>
+    <div class="tf-example-block">
+        <pre><code>transform: rotateZ(45deg);</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-rotateZ">rotateZ()</div>
+        </div>
+    </div>
+
+    <!-- scaleZ -->
+    <h4>3.5 scaleZ — Scales along Z-axis</h4>
+    <div class="tf-example-block">
+        <pre><code>transform: scaleZ(2);</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-scaleZ">scaleZ()</div>
+        </div>
+    </div>
+
+    <!-- matrix3d -->
+    <h4>3.6 matrix3d() — Full 3D transformation</h4>
+    <div class="tf-example-block">
+        <pre><code>transform: matrix3d(...);</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-matrix3d">matrix3d()</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- transform-origin -->
+    <h3>4. transform-origin — Sets pivot point</h3>
+    <div class="tf-example-block">
+        <pre><code>transform-origin: left top;</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-origin">transform-origin</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- transform-style -->
+    <h3>5. transform-style — Enables nested 3D</h3>
+    <div class="tf-example-block">
+        <pre><code>transform-style: preserve-3d;</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-preserve3d">preserve-3d</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- perspective -->
+    <h3>6. perspective — Adds camera depth</h3>
+    <div class="tf-example-block">
+        <pre><code>perspective: 300px;</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-perspective">perspective</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- perspective-origin -->
+    <h3>7. perspective-origin — Controls vanishing point</h3>
+    <div class="tf-example-block">
+        <pre><code>perspective-origin: left top;</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-perspective-origin">perspective-origin</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- backface-visibility -->
+    <h3>8. backface-visibility — Hides back surface</h3>
+    <div class="tf-example-block">
+        <pre><code>backface-visibility: hidden;</code></pre>
+
+        <div class="tf-demo-wrapper">
+            <div class="tf-demo tf-demo-backface">backface</div>
+        </div>
+    </div>
+
+</section>
+
+
+
 </body>
 </html>
