@@ -1193,3 +1193,94 @@ pre code {
         20% 100%, 0% 50%
     );
 }
+
+/* =====================================================
+   Cursor Example Block
+===================================================== */
+.cur-example-block {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 18px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+
+    overflow: visible;
+    position: relative;
+}
+
+.cur-example-block:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+/* =====================================================
+   Wrapper (prevents overlap)
+===================================================== */
+.cur-demo-wrapper {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* =====================================================
+   Base Demo Box
+===================================================== */
+.cur-demo {
+    width: 180px;
+    height: 80px;
+
+    background: #e0edff;
+    border-radius: 10px;
+    border: 2px solid #3b82f6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+    font-weight: 600;
+    color: #1e3a8a;
+
+    transition: 0.3s ease;
+}
+
+/* Visual hover effect */
+.cur-demo:hover {
+    transform: scale(1.06);
+    background: #c7ddff;
+}
+
+/* =====================================================
+   Cursor Types
+===================================================== */
+
+/* === Basic Cursors === */
+.cur-pointer      { cursor: pointer; }
+.cur-default      { cursor: default; }
+.cur-text         { cursor: text; }
+.cur-help         { cursor: help; }
+
+/* === Move / Drag === */
+.cur-move         { cursor: move; }
+.cur-grab         { cursor: grab; }
+.cur-grabbing     { cursor: grabbing; }
+
+/* === Resize Cursors === */
+.cur-nw           { cursor: nw-resize; }
+.cur-ne           { cursor: ne-resize; }
+.cur-ew           { cursor: ew-resize; }
+.cur-ns           { cursor: ns-resize; }
+
+/* === System / Special Cursors === */
+.cur-not-allowed  { cursor: not-allowed; }
+.cur-wait         { cursor: wait; }
+.cur-progress     { cursor: progress; }
+
+/* === Custom Cursor === */
+/* You can replace the URL with your own image */
+.cur-custom {
+    cursor: url('cursor.png'), auto;
+}
+
