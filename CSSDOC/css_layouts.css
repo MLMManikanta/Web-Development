@@ -907,8 +907,7 @@ li {
    Matches Flexbox & Grid Design
 ================================= */
 
-/* Generic box style for all column demos */
-.display-demo[class*="column-"] {
+.col-demo-box {
   background: #f9fafb;
   border: 1px solid #d1d5db;
   border-radius: 8px;
@@ -919,75 +918,74 @@ li {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
-.display-demo[class*="column-"]:hover {
+.col-demo-box:hover {
   background: #eef6ff;
   transition: background 0.3s ease;
 }
 
-.display-demo p {
+.col-demo-box p {
   font-size: 0.96rem;
   color: #333;
 }
 
-/* Headings inside demos */
-.display-demo h4 {
-  margin-bottom: 10px;
-  color: #005a8d;
-}
-
-/* ===============================
+/* -----------------------------------
    5.1 column-count
-================================= */
-.column-count-demo {
+----------------------------------- */
+.col-demo-count {
   column-count: 3;
   column-gap: 25px;
 }
-.column-count-demo p {
+
+.col-demo-count p {
   text-align: justify;
 }
 
-/* ===============================
+/* -----------------------------------
    5.2 column-width
-================================= */
-.column-width-demo {
+----------------------------------- */
+.col-demo-width {
   column-width: 200px;
   column-gap: 20px;
 }
-.column-width-demo p {
+
+.col-demo-width p {
   text-align: justify;
 }
 
-/* ===============================
+/* -----------------------------------
    5.3 column-gap
-================================= */
-.column-gap-demo {
+----------------------------------- */
+.col-demo-gap {
   column-count: 3;
   column-gap: 50px;
 }
-.column-gap-demo p {
+
+.col-demo-gap p {
   text-align: justify;
 }
 
-/* ===============================
+/* -----------------------------------
    5.4 column-rule
-================================= */
-.column-rule-demo {
+----------------------------------- */
+.col-demo-rule {
   column-count: 3;
   column-gap: 25px;
   column-rule: 3px solid #007acc;
 }
-.column-rule-demo p {
+
+.col-demo-rule p {
   text-align: justify;
 }
 
-/* ===============================
+/* -----------------------------------
    5.5 column-span
-================================= */
-.column-span-demo {
+----------------------------------- */
+.col-demo-span {
   column-count: 3;
   column-gap: 25px;
 }
-.span-heading {
+
+.col-span-title {
   column-span: all;
   color: #005a8d;
   font-weight: bold;
@@ -995,29 +993,31 @@ li {
   text-align: center;
   margin-bottom: 10px;
 }
-.column-span-demo p {
+
+.col-demo-span p {
   text-align: justify;
 }
 
-/* ===============================
+/* -----------------------------------
    5.6 column-fill
-================================= */
-.column-fill-demo {
+----------------------------------- */
+.col-demo-fill {
   column-count: 3;
   column-fill: auto;
   column-gap: 20px;
 }
-.column-fill-demo p {
+
+.col-demo-fill p {
   text-align: justify;
 }
+
 
 /* ======================================= */
 /* SHARED STYLES FOR ALL DEMO SECTIONS     */
 /* (gap + break property sections)         */
 /* ======================================= */
-
-/* Demo container box */
-.display-demo {
+/* Base box for gap demos */
+.gp-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1029,9 +1029,9 @@ li {
   margin: 20px 0;
 }
 
-/* Each item box */
-.display-demo div,
-.display-demo .box {
+/* Standard item box */
+.gp-box div,
+.brk-box {
   background-color: #4C84FF;
   color: #fff;
   font-weight: 600;
@@ -1043,71 +1043,61 @@ li {
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.display-demo div:hover,
-.display-demo .box:hover {
+.gp-box div:hover,
+.brk-box:hover {
   background-color: #1a5cff;
   transform: scale(1.05);
 }
 
-/* ======================================= */
-/* GAP PROPERTY DEMOS                      */
-/* ======================================= */
+/* GAP demos */
+.gp-demo-all { display: flex; gap: 20px; }
 
-.gap-all-demo {
-  display: flex;
-  gap: 20px;
-}
-
-.row-gap-demo {
+.gp-demo-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 25px;
 }
 
-.column-gap-demo {
+.gp-demo-col {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 30px;
 }
 
-.rowcol-gap-demo {
+.gp-demo-rowcol {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 20px;
   column-gap: 30px;
 }
 
-.gap-flex-vs-grid {
+.gp-demo-flexgrid {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.flex-gap-box {
+.gp-flexbox {
   display: flex;
   gap: 20px;
 }
 
-.grid-gap-box {
+.gp-gridbox {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
-.gap-shorthand {
+.gp-demo-short {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px 25px;
 }
 
-/* ======================================= */
-/* BREAK PROPERTY DEMOS                    */
-/* ======================================= */
-
-/* Multi-column setup for break property examples */
-.break-before-demo,
-.break-after-demo,
-.break-inside-demo {
+/* BREAK demos */
+.brk-demo-before,
+.brk-demo-after,
+.brk-demo-inside {
   column-count: 2;
   column-gap: 30px;
   background-color: #f9fafb;
@@ -1116,54 +1106,12 @@ li {
   padding: 20px;
 }
 
-/* Reuse same box design for visual consistency */
-.break-before-demo .box,
-.break-after-demo .box,
-.break-inside-demo .box {
-  display: inline-block;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 15px;
-  background-color: #4C84FF;
-}
+.brk-before { break-before: column; background-color: #2196f3; }
+.brk-after { break-after: column; background-color: #ff9800; }
+.brk-inside { break-inside: avoid; background-color: #9c27b0; height: 160px; }
 
-/* Specific break behavior */
-.break-before {
-  break-before: column;
-  background-color: #2196f3;
-}
-
-.break-after {
-  break-after: column;
-  background-color: #ff9800;
-}
-
-.break-inside {
-  break-inside: avoid;
-  background-color: #9c27b0;
-  height: 160px; /* to visualize the effect */
-}
-
-.break-before-demo .box,
-.break-after-demo .box {
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.break-before-demo .box:hover,
-.break-after-demo .box:hover {
-  background-color: #1a5cff;
-  transform: scale(1.03);
-}
-
-/* =============================== */
-/* 6.8 WHITE-SPACE PROPERTY DEMOS */
-/* =============================== */
-
-.ws-normal-demo,
-.ws-nowrap-demo,
-.ws-pre-demo,
-.ws-prewrap-demo,
-.ws-preline-demo {
+/* WHITE-SPACE demos */
+.ws-demo {
   border: 1px solid #ccc;
   padding: 10px 15px;
   margin: 15px 0;
@@ -1175,47 +1123,11 @@ li {
   color: #333;
 }
 
-/* Add subtle variation to each */
-.ws-nowrap-demo {
-  background-color: #fff3cd;
-}
-
-.ws-pre-demo {
-  background-color: #d1ecf1;
-}
-
-.ws-prewrap-demo {
-  background-color: #d4edda;
-}
-
-.ws-preline-demo {
-  background-color: #f8d7da;
-}
-
-
-
-/* ===============================
-   CODE STYLING FOR COLUMN SECTION
-================================= */
-.css-section pre {
-  background-color: #f0f4f8;
-  border-left: 5px solid #007acc;
-  color: #c7254e;
-  padding: 10px;
-  border-radius: 6px;
-  font-family: "Consolas", monospace;
-  font-size: 14px;
-  overflow-x: auto;
-  margin-top: 12px;
-}
-
-.css-section code {
-  background: #f5f5f5;
-  padding: 2px 6px;
-  border-radius: 4px;
-  color: #c7254e;
-  font-family: "Consolas", monospace;
-}
+.ws-demo-nowrap { background-color: #fff3cd; white-space: nowrap; }
+.ws-demo-pre { background-color: #d1ecf1; white-space: pre; }
+.ws-demo-prewrap { background-color: #d4edda; white-space: pre-wrap; }
+.ws-demo-preline { background-color: #f8d7da; white-space: pre-line; }
+.ws-demo-normal { white-space: normal; }
 
 /* ===============================
    TYPOGRAPHY CONSISTENCY
@@ -1251,187 +1163,6 @@ hr {
   height: 2px;
   background-color: #e2e8f0;
   margin: 25px 0;
-}
-
-/* ===============================
-   🎯 GAP PROPERTY (SECTION 6)
-   Matches Flexbox/Grid Style
-================================ */
-
-/* Base styling for all gap demos */
-.display-demo[class*="gap"],
-.display-demo[class*="row-gap"],
-.display-demo[class*="column-gap"] {
-  background: #f9fafb;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  padding: 12px;
-  margin: 15px 0 25px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.display-demo[class*="gap"] div,
-.display-demo[class*="row-gap"] div,
-.display-demo[class*="column-gap"] div {
-  background-color: #3b82f6;
-  color: #ffffff;
-  border-radius: 6px;
-  text-align: center;
-  font-weight: 500;
-  padding: 10px;
-  font-family: "Segoe UI", Arial, sans-serif;
-}
-
-.display-demo[class*="gap"] div:hover {
-  background-color: #1d4ed8;
-  transform: scale(1.05);
-}
-
-/* 6.1 gap (Flex Example) */
-.gap-all-demo {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-.gap-all-demo div {
-  background: #60a5fa;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-.gap-all-demo div:hover {
-  transform: translateY(-3px);
-}
-
-/* 6.2 row-gap (Grid Example) */
-.row-gap-demo {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  row-gap: 25px;
-  justify-items: center;
-}
-.row-gap-demo div {
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  background-color: #2563eb;
-  border-radius: 8px;
-}
-
-/* 6.3 column-gap (Grid Example) */
-.column-gap-demo {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 30px;
-  justify-items: center;
-}
-.column-gap-demo div {
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  background-color: #1d4ed8;
-  border-radius: 8px;
-}
-
-/* 6.4 Combined row-gap and column-gap */
-.rowcol-gap-demo {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  row-gap: 20px;
-  column-gap: 30px;
-  justify-items: center;
-}
-.rowcol-gap-demo div {
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  background-color: #3b82f6;
-  border-radius: 8px;
-}
-
-/* 6.5 Flex vs Grid Comparison */
-.gap-flex-vs-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-  align-items: start;
-}
-
-/* Flex container in comparison demo */
-.flex-gap-box {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  padding: 10px;
-  background: #e0f2fe;
-  border: 1px solid #bfdbfe;
-  border-radius: 8px;
-}
-.flex-gap-box div {
-  background: #2563eb;
-  color: #fff;
-  padding: 10px;
-  width: 60px;
-  height: 60px;
-  border-radius: 8px;
-  text-align: center;
-  line-height: 40px;
-}
-
-/* Grid container in comparison demo */
-.grid-gap-box {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 10px;
-  background: #f0f9ff;
-  border: 1px solid #bfdbfe;
-  border-radius: 8px;
-}
-.grid-gap-box div {
-  background: #3b82f6;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-  border-radius: 8px;
-}
-
-/* 6.6 gap shorthand */
-.gap-shorthand {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px 25px; /* row-gap column-gap */
-  justify-items: center;
-}
-.gap-shorthand div {
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  background-color: #2563eb;
-  border-radius: 8px;
-}
-
-/* Headings & Paragraphs (section typography consistency) */
-#gap h3, #gap h4, #gap h5 {
-  color: #005a8d;
-  margin-top: 15px;
-}
-#gap p {
-  color: #333;
-  line-height: 1.6;
-  margin: 10px 0;
-}
-#gap ul {
-  margin-left: 25px;
-  line-height: 1.7;
-}
-#gap li {
-  margin-bottom: 6px;
 }
 
 /* ===============================
