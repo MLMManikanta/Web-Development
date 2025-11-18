@@ -61,7 +61,7 @@ Web-Development/
 
 ### 🎨 Frontend
 - [x] HTML5 
-- [ ] CSS3 
+- [x] CSS3 
 - [ ] JavaScript
 - [ ] Tailwind CSS   
 - [ ] React.js
