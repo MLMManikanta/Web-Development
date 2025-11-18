@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial</title>
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="app.css">
+
+    <!-- 
+    ======================================
+    External JavaScript Using defer
+    ======================================
+    defer → Loads JavaScript after HTML is fully parsed.
+    -->
+    <script src="external.JS" defer></script>
+</head>
+
+<body>
+
+    <h1>JavaScript Tutorial</h1>
+
+    <hr>
+
+    <!-- 
+    ======================================
+    1. INLINE JAVASCRIPT
+    ======================================
+    Inline JavaScript uses event attributes such as onclick, onmouseover, etc.
+    -->
+
+    <section>
+        <h2>1. Inline JavaScript</h2>
+
+        <p>Inline JavaScript is written directly inside an HTML tag using event attributes.</p>
+
+        <button class="example-btn" onclick="alert('Hello! This is Inline JavaScript.')">
+            Click Me (Inline JS)
+        </button>
+
+        <pre><code>
+&lt;button onclick="alert('Hello!')"&gt;
+    Click Me
+&lt;/button&gt;
+        </code></pre>
+    </section>
+
+    <hr>
+
+    <!-- 
+    ======================================
+    2. INTERNAL JAVASCRIPT
+    ======================================
+    Internal JS is written inside a <script> tag in the same HTML file.
+    -->
+
+    <section>
+        <h2>2. Internal JavaScript</h2>
+
+        <p>Internal JavaScript is written inside a <code>&lt;script&gt;</code> tag within the same HTML file.</p>
+
+        <p id="internalText">This text will be changed by Internal JavaScript.</p>
+
+        <pre><code>
+&lt;script&gt;
+    document.getElementById("internalText").style.color = "blue";
+&lt;/script&gt;
+        </code></pre>
+    </section>
+
+    <hr>
+
+    <!-- 
+    ======================================
+    3. EXTERNAL JAVASCRIPT
+    ======================================
+    External JS is stored in a separate .js file (example: external.JS).
+    -->
+
+    <section>
+        <h2>3. External JavaScript</h2>
+
+        <p>External JavaScript is written in a separate file like <code>external.JS</code>.</p>
+
+        <p class="externalJS">This text will be changed by External JavaScript.</p>
+
+        <pre><code>
+&lt;script src="external.JS" defer&gt;&lt;/script&gt;
+
+--- external.JS file ---
+document.querySelector(".externalJS").style.color = "green";
+        </code></pre>
+    </section>
+
+    <hr>
+
+    <!-- 
+    ======================================
+    4. JS IN HEAD USING defer & async
+    ======================================
+    -->
+
+    <section>
+        <h2>4. JavaScript in &lt;head&gt; using <code>defer</code> & <code>async</code></h2>
+
+        <p><b>defer:</b> Runs after the HTML is fully loaded.</p>
+        <p><b>async:</b> Loads independently, useful for analytics.</p>
+
+        <pre><code>
+&lt;script src="file.js" defer&gt;&lt;/script&gt;
+&lt;script src="file.js" async&gt;&lt;/script&gt;
+        </code></pre>
+    </section>
+
+    <hr>
+
+    <!-- Internal JavaScript Action -->
+    <script>
+        document.getElementById("internalText").style.color = "blue";
+    </script>
+
+</body>
+</html>
