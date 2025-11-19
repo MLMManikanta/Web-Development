@@ -1,123 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Tutorial</title>
-
-    <!-- Import CSS -->
+    <title>JavaScript Tutorial – Professional Edition</title>
     <link rel="stylesheet" href="app.css">
-
-    <!-- 
-    ======================================
-    External JavaScript Using defer
-    ======================================
-    defer → Loads JavaScript after HTML is fully parsed.
-    -->
     <script src="external.JS" defer></script>
 </head>
-
 <body>
 
-    <h1>JavaScript Tutorial</h1>
+    <!-- Skip Link (WCAG AA) -->
+    <a class="skip-link" href="#mainContent">Skip to Main Content</a>
 
-    <hr>
+    <!-- HEADER / TITLE -->
+    <header class="site-header">
+        <h1 class="main-title">JavaScript Tutorial</h1>
+    </header>
 
-    <!-- 
-    ======================================
-    1. INLINE JAVASCRIPT
-    ======================================
-    Inline JavaScript uses event attributes such as onclick, onmouseover, etc.
-    -->
+    <!-- MAIN CONTENT WRAPPER -->
+    <main id="mainContent" class="content-wrapper">
 
-    <section>
-        <h2>1. Inline JavaScript</h2>
+        <!-- =========================== -->
+        <!-- PAGE 1 : JAVASCRIPT TYPES   -->
+        <!-- =========================== -->
+        <section id="page1" class="page-content" aria-labelledby="jsTypesHeading">
 
-        <p>Inline JavaScript is written directly inside an HTML tag using event attributes.</p>
+            <h2 id="jsTypesHeading" class="section-title">Types of JavaScript Usage Across Web Pages</h2>
 
-        <button class="example-btn" onclick="alert('Hello! This is Inline JavaScript.')">
-            Click Me (Inline JS)
-        </button>
+            <!-- Table of Contents -->
+            <nav aria-label="Topic Navigation" class="toc-nav">
+                <h3 class="toc-title">Topics in This Page</h3>
+                <ol class="topics-list">
+                    <li><a href="#sectionInlineJS" class="topic-link">Inline JavaScript</a></li>
+                    <li><a href="#sectionInternalJS" class="topic-link">Internal JavaScript</a></li>
+                    <li><a href="#sectionExternalJS" class="topic-link">External JavaScript</a></li>
+                    <li><a href="#sectionHeadJS" class="topic-link">JavaScript in &lt;head&gt; (defer & async)</a></li>
+                </ol>
+            </nav>
 
-        <pre><code>
-&lt;button onclick="alert('Hello!')"&gt;
-    Click Me
-&lt;/button&gt;
-        </code></pre>
-    </section>
+            <!-- Inline JavaScript -->
+            <section id="sectionInlineJS" class="topic-box" aria-labelledby="inlineJSHeading">
+                <h3 id="inlineJSHeading" class="topic-heading">Inline JavaScript</h3>
+                <p>Inline JavaScript is written directly inside an HTML attribute such as <code>onclick</code>.</p>
 
-    <hr>
+                <h4>Example</h4>
+                <button onclick="alert('Hello! This is Inline JavaScript.')">Click Me</button>
 
-    <!-- 
-    ======================================
-    2. INTERNAL JAVASCRIPT
-    ======================================
-    Internal JS is written inside a <script> tag in the same HTML file.
-    -->
+                <pre class="code-block"><code>&lt;button onclick="alert('Hello!')"&gt;Click Me&lt;/button&gt;</code></pre>
+            </section>
 
-    <section>
-        <h2>2. Internal JavaScript</h2>
+            <!-- Internal JavaScript -->
+            <section id="sectionInternalJS" class="topic-box" aria-labelledby="internalJSHeading">
+                <h3 id="internalJSHeading" class="topic-heading">Internal JavaScript</h3>
+                <p>Internal JavaScript is written within a <code>&lt;script&gt;</code> tag inside the same HTML file.</p>
 
-        <p>Internal JavaScript is written inside a <code>&lt;script&gt;</code> tag within the same HTML file.</p>
+                <h4>Example</h4>
+                <p id="internalText">This text will be changed using Internal JS.</p>
 
-        <p id="internalText">This text will be changed by Internal JavaScript.</p>
+                <pre class="code-block"><code>document.getElementById("internalText").style.color = "blue";</code></pre>
+            </section>
 
-        <pre><code>
-&lt;script&gt;
-    document.getElementById("internalText").style.color = "blue";
-&lt;/script&gt;
-        </code></pre>
-    </section>
+            <!-- External JavaScript -->
+            <section id="sectionExternalJS" class="topic-box" aria-labelledby="externalJSHeading">
+                <h3 id="externalJSHeading" class="topic-heading">External JavaScript</h3>
+                <p>External JavaScript is stored in a separate file and linked using the <code>src</code> attribute.</p>
 
-    <hr>
+                <h4>Example</h4>
+                <p class="externalJS">This text will be updated by the external JS file.</p>
 
-    <!-- 
-    ======================================
-    3. EXTERNAL JAVASCRIPT
-    ======================================
-    External JS is stored in a separate .js file (example: external.JS).
-    -->
+                <pre class="code-block"><code>&lt;script src="external.JS" defer&gt;&lt;/script&gt;</code></pre>
+            </section>
 
-    <section>
-        <h2>3. External JavaScript</h2>
+            <!-- Head JS -->
+            <section id="sectionHeadJS" class="topic-box" aria-labelledby="headJSHeading">
+                <h3 id="headJSHeading" class="topic-heading">JavaScript in &lt;head&gt; (defer & async)</h3>
 
-        <p>External JavaScript is written in a separate file like <code>external.JS</code>.</p>
+                <h4>Using defer</h4>
+                <p>Runs after the HTML document is fully parsed.</p>
+                <pre class="code-block"><code>&lt;script src="file.js" defer&gt;&lt;/script&gt;</code></pre>
 
-        <p class="externalJS">This text will be changed by External JavaScript.</p>
+                <h4>Using async</h4>
+                <p>Loads independently and may execute before HTML is finished parsing.</p>
+                <pre class="code-block"><code>&lt;script src="file.js" async&gt;&lt;/script&gt;</code></pre>
+            </section>
+        </section>
 
-        <pre><code>
-&lt;script src="external.JS" defer&gt;&lt;/script&gt;
+        <!-- =========================== -->
+        <!-- PAGE 2 : JS BASICS          -->
+        <!-- =========================== -->
+        <section id="page2" class="page-content" aria-labelledby="jsBasicsHeading" hidden>
 
---- external.JS file ---
-document.querySelector(".externalJS").style.color = "green";
-        </code></pre>
-    </section>
+            <h2 id="jsBasicsHeading" class="section-title">JavaScript Basics</h2>
 
-    <hr>
+            <section class="topic-box">
+                <h3>Introduction</h3>
+                <p>JavaScript Basics include variables, data types, operators, and expressions.</p>
+            </section>
 
-    <!-- 
-    ======================================
-    4. JS IN HEAD USING defer & async
-    ======================================
-    -->
+            <section class="topic-box">
+                <h3>Variables</h3>
+                <p>Variables store values. Use <code>var</code>, <code>let</code>, and <code>const</code>.</p>
+                <pre class="code-block"><code>let name = "John";
+const age = 25;
+var city = "NYC";</code></pre>
+            </section>
 
-    <section>
-        <h2>4. JavaScript in &lt;head&gt; using <code>defer</code> & <code>async</code></h2>
+            <section class="topic-box">
+                <h3>Data Types</h3>
+                <ul>
+                    <li>String</li>
+                    <li>Number</li>
+                    <li>Boolean</li>
+                    <li>Array</li>
+                    <li>Object</li>
+                    <li>Undefined</li>
+                    <li>Null</li>
+                </ul>
+            </section>
 
-        <p><b>defer:</b> Runs after the HTML is fully loaded.</p>
-        <p><b>async:</b> Loads independently, useful for analytics.</p>
+            <section class="topic-box">
+                <h3>Operators</h3>
+                <pre class="code-block"><code>let x = 10;
+let y = 5;
+let sum = x + y;</code></pre>
+            </section>
+        </section>
 
-        <pre><code>
-&lt;script src="file.js" defer&gt;&lt;/script&gt;
-&lt;script src="file.js" async&gt;&lt;/script&gt;
-        </code></pre>
-    </section>
+    </main>
 
-    <hr>
+    <!-- PAGINATION -->
+    <nav class="pagination-nav" aria-label="Pagination Navigation">
+        <button class="pagination-link" data-action="prev">← Previous</button>
+        <button class="pagination-link" data-page="1">1</button>
+        <button class="pagination-link" data-page="2">2</button>
+        <button class="pagination-link" data-page="3">3</button>
+        <button class="pagination-link" data-page="4">4</button>
+        <button class="pagination-link" data-page="5">5</button>
+    <button class="pagination-link" data-action="next">Next →</button>
+</nav>
 
-    <!-- Internal JavaScript Action -->
+
+    <!-- INTERNAL SCRIPT ACTION -->
     <script>
         document.getElementById("internalText").style.color = "blue";
+
+        function showPage(page) {
+            document.querySelectorAll('.page-content').forEach(p => p.hidden = true);
+            document.getElementById(`page${page}`).hidden = false;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     </script>
 
 </body>
