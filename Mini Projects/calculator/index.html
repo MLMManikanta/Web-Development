@@ -5,25 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="./app.css">
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
     <main>
+<div class="flex">
+    
+      <!--   Using inbulit CSS -->
         <div class="hero">
-      <!--   <div class="instructions">
-            <h1>How to Use This Calculator</h1>
-            <ul>
-                <li><strong>AC</strong> – Clears all input and resets the calculator.</li>
-                <li><strong>X</strong> – Deletes the last entered digit.</li>
-                <li><strong>+/-</strong> – Toggles the sign of the current number.</li>
-                <li><strong>÷, ×, −, +</strong> – Perform division, multiplication, subtraction, and addition.</li>
-                <li><strong>0–9</strong> – Click to enter numbers.</li>
-                <li><strong>.</strong> – Adds a decimal point.</li>
-                <li><strong>%</strong> – Calculates percentage.</li>
-                <li><strong>=</strong> – Displays the final result.</li>
-            </ul>
-         <p>Click the buttons to perform calculations, just like a real calculator.</p>
-        </div> -->
-
         <div class="section">
         <div class="display"></div>
         <div class="calculator">
@@ -50,6 +39,37 @@
            </div>
         </div>
     </div>
+
+      <!-- Using Tailwind CSS -->
+     <div class="grid w-[600px] relative">
+        <div class="w-[500px] h-[100px] bg-[#282B33] rounded-t-[40px] absolute left-25"></div>
+        
+        <div class="m-[100px] grid grid-cols-4 gap-5 bg-[#a6a6b07a] justify-center justify-items-center items-center w-[500px] rounded-b-[40px]" >
+            <button class="bg-[#282B33] text-[#ffffff]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px] hover:border-4 hover:text-#ffffff hover:rounded-[5px] hover:decoration-dotted" title="All Clear" >AC</button>
+            <button class="bg-[#282B33] text-[#ff0000]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]" title="backspace" >X</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">+/-</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">÷</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">7</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">8</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">9</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">×</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">4</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">5</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">6</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">-</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">1</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">2</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">3</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">+</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">%</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">0</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">.</button>
+            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">=</button>
+        </div>
+           
+    </div>
+
+</div>
     </main>
 </body>
 </html>
