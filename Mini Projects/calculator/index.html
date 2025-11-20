@@ -4,72 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <!-- Normal CSS File -->
     <link rel="stylesheet" href="./app.css">
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
     <main>
-<div class="flex">
-    
-      <!--   Using inbulit CSS -->
-        <div class="hero">
-        <div class="section">
-        <div class="display"></div>
-        <div class="calculator">
-            <button title="All Clear" class="num aclear">AC</button>
-            <button title="backspace" class="num bspace">X</button>
-            <button class="num">+/-</button>
-            <button class="num">÷</button>
-            <button class="num">7</button>
-            <button class="num">8</button>
-            <button class="num">9</button>
-            <button class="num">×</button>
-            <button class="num">4</button>
-            <button class="num">5</button>
-            <button class="num">6</button>
-            <button class="num">-</button>
-            <button class="num">1</button>
-            <button class="num">2</button>
-            <button class="num">3</button>
-            <button class="num">+</button>
-            <button class="num">%</button>
-            <button class="num">0</button>
-            <button class="num">.</button>
-            <button class="num">=</button>
-           </div>
+        <div class="flex gap-20">
+            <!-- ------------------------------------------------------- -->
+            <!--  1️⃣ CALCULATOR USING NORMAL CSS                        -->
+            <!-- ------------------------------------------------------- -->
+            <div class="hero">
+                <div class="section">
+                    <!-- Display -->
+                    <div class="display"></div>
+                    <!-- Buttons -->
+                    <div class="calculator">
+                        <button title="All Clear" class="num aclear">AC</button>
+                        <button title="backspace" class="num bspace">X</button>
+                        <button class="num">+/-</button>
+                        <button class="num">÷</button>
+                        <button class="num">7</button>
+                        <button class="num">8</button>
+                        <button class="num">9</button>
+                        <button class="num">×</button>
+                        <button class="num">4</button>
+                        <button class="num">5</button>
+                        <button class="num">6</button>
+                        <button class="num">-</button>
+                        <button class="num">1</button>
+                        <button class="num">2</button>
+                        <button class="num">3</button>
+                        <button class="num">+</button>
+                        <button class="num">%</button>
+                        <button class="num">0</button>
+                        <button class="num">.</button>
+                        <button class="num">=</button>
+                    </div>
+                </div>
+            </div>
+            <!-- ------------------------------------------------------- -->
+            <!--  2️⃣ CALCULATOR USING TAILWIND CSS    -->
+            <!-- ------------------------------------------------------- -->
+            <div class="relative w-[600px] ml-[60px] mt-[40px]">
+                <!-- Display -->
+                <div class="w-[500px] h-[100px] bg-[#282B33] rounded-t-[40px] absolute left-[50px] top-0"></div>
+                <!-- Calculator Buttons -->
+                <div class="mt-[100px] grid grid-cols-4 gap-[5px] bg-[#a6a6b07a] w-[500px] rounded-b-[40px] mx-[50px]">           
+                    <button class="bg-[#282B33] text-white w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex items-center justify-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]"
+                            title="All Clear">AC</button>
+                    <button class="bg-[#282B33] text-[#ff0000] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex items-center justify-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]" title="backspace">X</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex items-center justify-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]">+/-</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex items-center justify-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]">÷</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex justify-center items-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]">7</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex justify-center items-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]">8</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex justify-center items-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]">9</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex justify-center items-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]">×</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex justify-center items-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]">4</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex justify-center items-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]">5</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex justify-center items-center hover:border-[5px]hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]">6</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex justify-center items-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]">-</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex justify-center items-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33] ">1</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex justify-center items-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]">2</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex justify-center items-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]">3</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex justify-center items-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]">+</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex justify-center items-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]">%</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex justify-center items-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]">0</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex justify-center items-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]">.</button>
+                    <button class="bg-[#282B33] text-[#87cefa] w-[100px] h-[100px] text-[30px] rounded-[40px] m-[5px] flex justify-center items-center hover:border-[5px] hover:border-white hover:outline hover:outline-dotted hover:outline-2 hover:outline-[#282B33]">=</button>
+                </div>
+            </div>
         </div>
-    </div>
-
-      <!-- Using Tailwind CSS -->
-     <div class="grid w-[600px] relative">
-        <div class="w-[500px] h-[100px] bg-[#282B33] rounded-t-[40px] absolute left-25"></div>
-        
-        <div class="m-[100px] grid grid-cols-4 gap-5 bg-[#a6a6b07a] justify-center justify-items-center items-center w-[500px] rounded-b-[40px]" >
-            <button class="bg-[#282B33] text-[#ffffff]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px] hover:border-4 hover:text-#ffffff hover:rounded-[5px] hover:decoration-dotted" title="All Clear" >AC</button>
-            <button class="bg-[#282B33] text-[#ff0000]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]" title="backspace" >X</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">+/-</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">÷</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">7</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">8</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">9</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">×</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">4</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">5</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">6</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">-</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">1</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">2</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">3</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">+</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">%</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">0</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">.</button>
-            <button class="bg-[#282B33] text-[#87cefa]  w-[100px] h-[100px] text-[30px] rounded-[40px] flex justify-center items-center m-[5px]">=</button>
-        </div>
-           
-    </div>
-
-</div>
     </main>
 </body>
 </html>
