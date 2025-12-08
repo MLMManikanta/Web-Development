@@ -86,7 +86,11 @@ console.log("Split the value for hole",$Full_Name.split());
 console.log("Join the split value = ", $Full_Name.split('').join(""));
 console.log("Join the split value using '-' = ", $Full_Name.split('').join("-"));
 // 9. Includes
-console.log("Includes check the true or false is", $Full_Name.includes(firstName));
+console.log("Includes check the true or false .just like my fullname will get check the first name", $Full_Name.includes(firstName));
+// 9. Trim
+let $Full_Name1 ="         Lakshman Mohan Manikanta              "
+console.log("Trim the removes spaces at the start and end '" + $Full_Name1.trim() + "'");
+
 
 
 
