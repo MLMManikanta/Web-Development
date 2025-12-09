@@ -233,10 +233,55 @@ console.log("&& operator", op1+op2 === op3 && op3-op2 === op1 );
 console.log("|| operator", op1+op2 === op3 || op3+op2 === op1 );
 // 3. Not equals (!)
 console.log("Not equals to",!(op1+op2 === op3));
+/* Arrays */
+let Arra = ['one','two','three','four'];
+console.log(Arra);
+let NesArra = ['one',['two','three',['four']],'five','six','seven',['eight', 'nine','ten']];
+console.log(NesArra);
+console.log("Accessing nested Array", NesArra[1]);
+console.log("Accessing nested Array", NesArra[1][2]);
+console.log("Accessing nested Array", NesArra[1][2][0]);
+// 1. Push
+Arra.push("Eleven");
+console.log("Adding new element using the push method", Arra);
+// 2. Pop
+Arra.pop();
+console.log("Removing last using the pop method", Arra);
+// 3. Shift
+Arra.shift();
+console.log("Removes the first element of an arry", Arra);
+// 3. Unshift
+Arra.unshift("One");
+console.log("Add new element at beginning of an array", Arra);
+// 4. Concats
+Arra1 =['five','six'];
+console.log("Concats the Array",Arra.concat(Arra1));
+// 5. Includes
+console.log("Includes will check the value in the array or not which is", Arra.includes('Six'));
+// 6. Join
+console.log("Help to join the array", Arra.join("----"));
+// 7. Reverse
+console.log("Reverse the array", Arra.reverse());
+// 8. Slice
+console.log("Slicing the Array" ,Arra.slice(0,1));
+//9. Sort
+console.log("Sorting Array", Arra.sort());
 
-
-
-
+/* OBJECTS */
+// const <name> = { key : value} 
+const person = {
+    Number  : 20,
+    Alpha : "MLMM",
+    isPro : true,
+    location: ['Ramnagar', 'Krishna']
+}
+console.log("OBJECTS",person);
+console.log("Accessing indivual OBJECTS",person.Number);
+person.user ="Adim";
+console.log("Adding new object",person);
+console.log("Updaing object",person.user ="Admin", person);
+/* Function */
+// Afunction is a block of that performs a specific task
 
 
 
