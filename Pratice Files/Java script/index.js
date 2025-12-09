@@ -90,6 +90,153 @@ console.log("Includes check the true or false .just like my fullname will get ch
 // 9. Trim
 let $Full_Name1 ="         Lakshman Mohan Manikanta              "
 console.log("Trim the removes spaces at the start and end '" + $Full_Name1.trim() + "'");
+// 10. Convert String to number
+let Num ="22";
+//a. ParseInt
+let Num1;
+Num1 =parseInt(Num);
+console.log(Num1);
+// b. Other Method
+ let Num2;
+ Num2 = +Num;
+ console.log(Num2);
+
+/*  Condition Statements */
+//1. If else if
+console.log("Grade is below :");
+let abc;
+abc = "98";
+if (isNaN(abc)) {
+if (abc >= 90 && abc < 100) {
+    console.log("You got A+ grade");
+}
+else if (abc >= 80 && abc < 90) {
+    console.log("You got A grade");
+}
+else if (abc >= 70 && abc < 80) {
+    console.log("You got B+ grade");
+}
+else if (abc >= 60 && abc < 70) {
+    console.log("You got B grade");
+}
+else if (abc >= 50 && abc < 60) {
+    console.log("You got C grade");
+}
+else if (abc >= 40 && abc < 50) {
+    console.log("You got C grade");
+}
+else if (abc >= 30 && abc < 40) {
+    console.log("You got D grade");
+}
+else if (abc >= 20 && abc < 30) {
+    console.log("You got E grade");
+}
+else if (abc >= 0 && abc < 20) {
+    console.log("You got E grade");
+}
+else {
+    console.log("Invalid input. Enter value between 0 to 100");
+}
+}
+else {
+    console.log("Invalid input. Enter value between 0 to 100");
+}
+
+// Checking the password having 8 char
+let pass ;
+pass = "M.L.M.Manikanta";
+if(pass.length === 8){
+    console.log("Password is too short");
+    
+}
+else {
+     console.log("Password is more than 8");
+}
+
+// 2. Switch
+let x = "Dec";
+switch (x) {
+    case "Jan":
+        console.log("This is Jan month");
+        break;
+    case "Feb":
+        console.log("This is Feb month");
+        break;
+    case "March":
+        console.log("This is March month");
+        break;
+    case "April":
+        console.log("This is April month");
+        break;
+    case "May":
+        console.log("This is May month");
+        break;
+    case "June":
+        console.log("This is June month");
+        break;
+    case "July":
+        console.log("This is July month");
+        break;
+    case "Sep":
+        console.log("This is Sep month");
+        break;
+    case "Oct":
+        console.log("This is Oct month");
+        break;  
+    case "Nov":
+        console.log("This is Nov month");
+        break;
+     case "Dec":
+        console.log("This is Dec month");
+        break;    
+    default:
+        console.log("Invalid month");
+        break;
+}
+/* Loops */
+//1. For Loop
+//for (initialExpression,; condition; increment/desrement Expression) {}
+for (let i=1; i<=5; i++){
+    console.log("Number is",i);
+    
+}
+for (let i=1; i<=10; i++){
+    for (let j=1; j<=i; j++){
+    console.log("*");
+    }
+}
+// 2. While Loops
+/* While (condition) {
+ // code block
+} */
+let z = 1;
+
+while (z <=10){
+    console.log(z," * 5 =",z *5);
+    z++;
+}
+// 3. Do while Loop (Contion will run once if it true or false)
+let A1 = 20;
+do {
+    console.log("Do operation in Do-while", A1);
+    A1++;
+} while (A1<22) {
+    console.log("while loop after do operation", A1);
+}
+/*Logical Operators*/
+// 1. AND (&&)
+let op1 = 4;
+let op2 = 5;
+let op3 = 9;
+console.log("&& operator", op1+op2 === op3 && op3-op2 === op1 );
+// 2. OR (||)
+console.log("|| operator", op1+op2 === op3 || op3+op2 === op1 );
+// 3. Not equals (!)
+console.log("Not equals to",!(op1+op2 === op3));
+
+
+
+
 
 
 
