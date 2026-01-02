@@ -50,8 +50,8 @@ console.log(age + undefined);
 // Relational Operators
 console.log("2 > 4 = " ,2 > 4); // greater than
 console.log("2 < 4 = " ,2 < 4); // less than
-console.log("2 >= 2 =" ,2 >= 4); // greater than or equal to
-console.log("2 =< 2 =" ,2 <= 4); // less than or equal to
+console.log("2 >= 4 =" ,2 >= 4); // greater than or equal to
+console.log("2 =< 4 =" ,2 <= 4); // less than or equal to
 // Equality Operators
 console.log("This 2(num) and '2'(string) used for the below question");
 console.log("==(double equals)", 2 == '2'); // compare the value
