@@ -276,19 +276,37 @@ const person = {
     location: ['Ramnagar', 'Krishna']
 }
 console.log("OBJECTS",person);
-console.log("Accessing indivual OBJECTS",person.Number);
+console.log("First method Accessing indivual OBJECTS(Number)",person["Number"]);
+console.log("second method Accessing indivual OBJECTS(Number)",person.Number);
 person.user ="Adim";
 console.log("Adding new object",person);
 console.log("Updaing object",person.user ="Admin", person);
+console.log("**Function**");
 /* Function */
 // Afunction is a block of that performs a specific task
+function hello(){
+    console.log("Hello JavaScript");
+}
+hello(); // call or run or execute
+hello(); 
+// Function Declaration
+Fname("Lakshman");
+function Fname(name) {
+    console.log(`Hello ${name}`);
+    console.log("Hello"+" "+ name);
+}
 
+function myFunction(x,y) {
+    return x*y;
+}
+const myFunc=myFunction(4,5);
+console.log("Using Return",myFunc);
 
-
-
-
-
-
+// Function Expression
+let UserName = function (user) {
+    console.log(`Handle ${user}`);
+}
+UserName("@mlmmanikanta");
 
 
 
