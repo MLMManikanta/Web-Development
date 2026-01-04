@@ -327,11 +327,29 @@ Callback2("Lakshman",1,function cb2() {
     console.log("This is a call back function");
     
 });
+console.log("** Methods in JS **");
 
+console.log("** First Method **");
+function meth () {
+    return `Hello, my name ${admin.User1} & I am ${admin.age1} years old.`;
+}
 
+const admin = {
+    User1 : "Lakshman",
+    age1 : 25,
+    meth,
+}
+console.log(admin.meth());
 
-
-
+console.log("** Second Method **");
+const admin2 = {
+    User1 : "Maruthi",
+    age1 : 23,
+    meth1 : function () {
+    return `Hello, my name ${admin2.User1} & I am ${admin2.age1} years old.`;
+}
+}
+console.log(admin2.meth1());
 
 
 
