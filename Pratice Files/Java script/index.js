@@ -393,7 +393,13 @@ date.setDate(date.getDate() + 75);
 console.log("+2 Increment :", date.toLocaleDateString());
 date.setDate(date.getDate() - 4);
 console.log("-4 decrement :", date.toLocaleDateString());
-
+// Set Interval
+const interval = setInterval(() => console.log("This function will be executed every 1 sec"), 1000);
+// Set Timeout
+setTimeout(function () {
+    clearInterval(interval);
+    console.log("Interval Stopped at 10 sec");
+}, 11000)
 
 
 
