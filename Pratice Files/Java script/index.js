@@ -389,9 +389,10 @@ console.log(`seconds:  ${seconds}`);
 console.log("Date in String :", date.toDateString());
 console.log("Date in ISO String :", date.toISOString());
 console.log("Date in Local String :", date.toLocaleDateString());
-
-
-
+date.setDate(date.getDate() + 75);
+console.log("+2 Increment :", date.toLocaleDateString());
+date.setDate(date.getDate() - 4);
+console.log("-4 decrement :", date.toLocaleDateString());
 
 
 
