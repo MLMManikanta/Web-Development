@@ -328,16 +328,14 @@ Callback2("Lakshman",1,function cb2() {
     
 });
 console.log("** Methods in JS **");
-
 console.log("** First Method **");
 function meth () {
     return `Hello, my name ${admin.User1} & I am ${admin.age1} years old.`;
 }
-
 const admin = {
     User1 : "Lakshman",
     age1 : 25,
-    meth,
+    meth, 
 }
 console.log(admin.meth());
 
