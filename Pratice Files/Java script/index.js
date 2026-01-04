@@ -307,6 +307,58 @@ let UserName = function (user) {
     console.log(`Handle ${user}`);
 }
 UserName("@mlmmanikanta");
+console.log("**Call Back Function**");
+/* When we provide function as an (argument) to other function that function is known as callback function. */
+function showCallFun(fn) {
+    let value =20;
+    fn(value);
+}
+
+showCallFun(function (value) {
+     console.log(value);
+});
+
+function Callback2(name, id, cb2) {
+    console.log(`Hi, I am ${name} my id is ${id}`);
+    cb2();
+}
+
+Callback2("Lakshman",1,function cb2() {
+    console.log("This is a call back function");
+    
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
