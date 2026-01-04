@@ -349,9 +349,21 @@ const admin2 = {
 }
 console.log(admin2.meth1());
 
+console.log("**JSON = Javascript Object Notation**");
+const Per = {
+    name: "Lakshman",
+    handle : "@mlmmanikanta",
+    age: 25,
+    address : {
+        Place: "Krishna",
+        Pincode: 521126,
+    },
+};
 
-
-
+const jsonString = JSON.stringify(Per);
+console.log("Print the JSON to string", jsonString);
+const parsedString = JSON.parse(jsonString);
+console.log("Print the string to JSON", parsedString);
 
 
 
