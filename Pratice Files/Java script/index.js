@@ -365,7 +365,30 @@ console.log("Print the JSON to string", jsonString);
 const parsedString = JSON.parse(jsonString);
 console.log("Print the string to JSON", parsedString);
 
+console.log("** Date and Time **");
+const date =  new Date();
+console.log(`Current Date: ${date}`);  
+// year, month, day,hours, minutes, seconds, milliseconds
+const year = date.getFullYear();
+const month = date.getMonth(); // Month is 0-based (0: January, 1: February, ..., 11: December)
+const DATE = date.getDate();
+const day = date.getDay();
+ const hours = date.getHours();
+const minutes = date.getMinutes();
+const seconds = date.getSeconds();
+ const milliseconds = date.getMilliseconds();
 
+console.log(`year:  ${year}`);
+console.log(`month:  ${month}`);
+console.log(`day:  ${day}`);
+console.log(`date:  ${DATE}`);
+console.log(`hours:  ${hours}`);
+console.log(`minutes:  ${minutes}`);
+console.log(`seconds:  ${seconds}`);
+
+console.log("Date in String :", date.toDateString());
+console.log("Date in ISO String :", date.toISOString());
+console.log("Date in Local String :", date.toLocaleDateString());
 
 
 
