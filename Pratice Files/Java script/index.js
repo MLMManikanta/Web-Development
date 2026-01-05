@@ -399,7 +399,7 @@ const interval = setInterval(() => console.log("This function will be executed e
 setTimeout(function () {
     clearInterval(interval);
     console.log("Interval Stopped at 10 sec");
-}, 11000)
+}, 10000)
 
 
 
