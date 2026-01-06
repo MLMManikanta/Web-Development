@@ -53,7 +53,7 @@ const user ={
     age: 22,
 }
 let clone ={...user, location:"Krishna", ...SArrayT};
-let clone1 =[...SArrayT, ...user];
+// let clone1 =[...SArrayT, ...user];
 console.log(clone);
 // console.log(clone1);
 
