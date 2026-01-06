@@ -28,7 +28,36 @@ let lib ={
 console.log("Adding two number",lib.sum(22,45));
 console.log("Multiply two number",lib.Mult(22,45));
 
-let PersonES ={
-    
+Multiply1 = (a=1,b=1) => { return a*b; }
+console.log( "Multiply two number a and b is ",Multiply1(2,5));
+// Spread Operator itis a new addition to the set of operators in JS.
+console.log("## Using Spread Operator");
+console.log("1. Array Spread Operator");
+SpreadArray=(a,b,c,d) => {
+    console.log(`a is ${a}`);
+    console.log(`b is ${b}`);
+    console.log(`c is ${c}`);
+    console.log(`d is ${d}`);
 }
+let SArray =[1,2,3,4];
+SpreadArray(SArray);
+SpreadArray(...SArray);
+let SArray2 =[5,6,7,8];
+let SArrayTN =[SArray, SArray2, 9,10]
+let SArrayT =[...SArray, ...SArray2, 9,10]
+console.log("Combine Nested Array", SArrayTN);
+console.log("Combine Array", SArrayT);
+
+const user ={
+    name:"Lakshman",
+    age: 22,
+}
+let clone ={...user, location:"Krishna", ...SArrayT};
+let clone1 =[...SArrayT, ...user];
+console.log(clone);
+// console.log(clone1);
+
+
+
+
 
