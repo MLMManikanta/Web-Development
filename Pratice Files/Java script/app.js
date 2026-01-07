@@ -62,6 +62,47 @@ function User123(a,...b) {
     console.log(a);
     console.log(b);
 }
-User123(1,2,3,4,5,6,7,8,9);
+User123("Rest parameter",1,2,3,4,5,6,7,8,9);
+
+// Destructing allows us to "unpack" values from data-structures (Arrays, objects) into separate distinct variables.
+const deSt = ["Destructing",1,2,3,4]
+const [a,b,c,d,e,f] = deSt;
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+console.log(e);
+console.log(f);
+let deSt1, deSt2;
+[deSt1 = 5, deSt2 =10] = [8];
+console.log(`Destructing values are ${deSt1} and ${deSt2}`);
+
+deSt_function = () => {return [1,2]};
+let aa,bb;
+[aa,bb] = deSt_function();
+console.log(aa);
+console.log(bb);
+let [as,...bs] = [1,2,3,4,5,6];
+console.log(bs);
+
+const person = {
+    name1 : "Lakshman",
+    age: 25,
+    gender: "male",
+    country: "India",
+}
+const { name1,country, gender, age} = person;
+console.log(name1 ,",", gender);
+
+
+
+
+
+
+
+
+
+
+
 
 
