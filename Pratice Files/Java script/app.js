@@ -53,11 +53,15 @@ const user ={
     age: 22,
 }
 let clone ={...user, location:"Krishna", ...SArrayT};
-// let clone1 =[...SArrayT, ...user];
 console.log(clone);
-// console.log(clone1);
+/*  let clone1 =[...SArrayT, ...user];
+console.log(clone1);*/
 
-
-
+// The rest parameter syntax allows a function to accept an indefinite number of arguments.
+function User123(a,...b) {
+    console.log(a);
+    console.log(b);
+}
+User123(1,2,3,4,5,6,7,8,9);
 
 
