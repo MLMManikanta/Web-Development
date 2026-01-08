@@ -94,6 +94,13 @@ const person = {
 const { name1,country, gender, age} = person;
 console.log(name1 ,",", gender);
 
+// Ternary Operator (Short form if else statement)
+// condition ? exprIfTrue : exprIfFalse
+let Vage = 18;
+Vage >= 18 ? console.log("Can Vote") : console.log("Can't vote");
+let Voteage =Vage >= 20 ? "Can Vote" : "Can't vote";
+console.log(Voteage);
+
 
 
 
